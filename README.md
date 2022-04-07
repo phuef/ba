@@ -1,0 +1,1 @@
+Dies ist das Ropository für meine Bachelorarbeit am ifgi.
