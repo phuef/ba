@@ -21,7 +21,7 @@ IVs = [
     }
 ]
 def get_data():
-    f = open('data\\json\\ToAnalyze.json', 'r')
+    f = open('data\\json\\ToAnalyze2.json', 'r')
     data = json.load(f)
     return data
 
