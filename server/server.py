@@ -1,37 +1,32 @@
 # server.py
 
 from flask import Flask, jsonify, request, json
+from flask_cors import CORS
+import re
 
 app = Flask(__name__)
+CORS(app)
+import logging
+logging.basicConfig(filename='error.log',level=logging.DEBUG)
 
-IVs = [
-    {
-        'url': 'www.google.de',
-        'topics': ['suche', 'suchmaschine', 'google'],
-        'preview': 'image_url',
-        'description': 'Google is a search engine',
-        'type':'none'
-    },
-    {
-        'url': 'www.test.de',
-        'topics': ['test', 'website'],
-        'preview': 'image_url',
-        'description': 'This is a website for test purposes',
-        'type':'IV'
-    }
-]
-def get_data():
-    f = open('data\\json\\ToAnalyze2.json', 'r')
+# returns the filtered json data
+def get_data(string):
+    f = open('data\\json\\ToAnalyze.json', 'r')
     data = json.load(f)
+    if string:
+        help=[]
+        for i in data:
+            if string in i["topics"] or re.search(rf"{string}", i["url"]):#or re.search(rf"{string}", i["microlink"]["data"]["description"])
+                help.append(i)
+        return help
     return data
 
 @app.route('/search', methods=['GET'])
 def get_tasks():
     if request.method == 'GET':
         args = request.args
-        search_query=args.get("search_query") # =abc, wenn /search?search_query=abc 
-        #return search_query
-        return jsonify(get_data())
+        search_query=args.get("search_query") # =birds, wenn /search?search_query=birds 
+        return jsonify(get_data(search_query))
 
 if __name__ == '__main__':
     app.run(debug=True)

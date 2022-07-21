@@ -1,359 +1,2620 @@
 [
     {
         "url": "https://wiediversistmeingarten.org/view/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["birds", "citizen science", "overview", "stations", "measurements", "diversity"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Birdiary View",
+                "description": "Birdiary Stations Overview",
+                "lang": "en",
+                "author": null,
+                "publisher": "wiediversistmeingarten.org",
+                "image": {
+                    "url": "https://a.tile.openstreetmap.org/7/66/42.png",
+                    "type": "png",
+                    "size": 54575,
+                    "height": 256,
+                    "width": 256,
+                    "size_pretty": "54.6 kB"
+                },
+                "date": "2022-06-03T21:12:44.000Z",
+                "url": "https://wiediversistmeingarten.org/view/",
+                "logo": {
+                    "url": "https://wiediversistmeingarten.org/view/logo192.png",
+                    "type": "png",
+                    "size": 5347,
+                    "height": 192,
+                    "width": 192,
+                    "size_pretty": "5.35 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "connection": "keep-alive",
+                "content-length": "902",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 13:36:57 GMT",
+                "etag": "\"629a794c-386\"",
+                "last-modified": "Fri, 03 Jun 2022 21:12:44 GMT",
+                "server": "nginx/1.15.8"
+            }
+        }
     },
     {
         "url": "https://covidvisualizer.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["covid", "corona", "country", "vaccinated", "deaths", "cases", "people", "globe"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "COVID-19 Visualizer",
+                "description": "An interactive COVID-19 (coronavirus) visualizer that highlights countries around the world based on the most recent cases.",
+                "lang": "en",
+                "author": "Navid Mamoon and Gabriel Rasskin",
+                "publisher": "covidvisualizer.com",
+                "image": {
+                    "url": "https://www.covidvisualizer.com/assets/opengraph.png",
+                    "type": "png",
+                    "size": 326960,
+                    "height": 576,
+                    "width": 1080,
+                    "size_pretty": "327 kB"
+                },
+                "date": "2021-09-24T22:01:58.000Z",
+                "url": "https://www.covidvisualizer.com/",
+                "logo": {
+                    "url": "https://covidvisualizer.com/assets/favicon.png",
+                    "type": "png",
+                    "size": 5544,
+                    "height": 30,
+                    "width": 30,
+                    "size_pretty": "5.54 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+                "cache-control": "public, max-age=0",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b2ecab4f2f19c3-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 13:42:59 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "last-modified": "Fri, 24 Sep 2021 22:01:58 GMT",
+                "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=58aMaosc%2BNkGvbVRiDT%2BImp6avt5uFMBEu1k2Erx3wBPtr9rE8z0N%2BOQlK68YBimT23Cy57gdwYujsyvFoTiV9gPZeogJPFgNmD08A0lpqig1R3sS6NvWSN6jrkrak1oZz%2BPqIfZ\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "server": "cloudflare",
+                "via": "1.1 vegur",
+                "x-powered-by": "Express"
+            }
+        }
     },
     {
         "url": "https://geoxc-apps4.bd.esri.com/earthquakes-viz/index.html",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["earthquakes", "magnitude", "spheres", "depth"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Earthquakes in 2019",
+                "description": "In 2019, there were 13456 earthquakes with magnitude higher or equal to 4. In this visualization, small yellow spheres (",
+                "lang": "en",
+                "author": null,
+                "publisher": "esri.com",
+                "image": null,
+                "date": "2022-01-06T14:20:54.000Z",
+                "url": "https://geoxc-apps4.bd.esri.com/earthquakes-viz/index.html",
+                "logo": {
+                    "url": "https://esri.com/favicon.ico",
+                    "type": "ico",
+                    "size": 1406,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "1.41 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "content-length": "2113",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:13:44 GMT",
+                "etag": "\"ee00ca480dc028f34f81ad76a15d3433\"",
+                "last-modified": "Thu, 06 Jan 2022 14:20:54 GMT",
+                "server": "AmazonS3",
+                "via": "1.1 a0845df335efaa79f84feeb1d7861c1a.cloudfront.net (CloudFront)",
+                "x-amz-cf-id": "9GZSGCQ4wkFBAKSFCXFEa4MTdA7SKKofB5Mpicom8hCPNG5dtzXlHQ==",
+                "x-amz-cf-pop": "EWR52-C4",
+                "x-cache": "Hit from cloudfront"
+            }
+        }
     },
     {
         "url": "https://www.washingtonpost.com/graphics/2020/world/mapping-spread-new-coronavirus/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["covid", "corona", "country", "vaccinated", "deaths", "cases", "people"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Mapping the worldwide spread of the coronavirus",
+                "description": "Covid-19 has killed more than 5 million people around the world. Case rates remain high as the world grapples with unequal vaccine rollouts and new variants.",
+                "lang": "en",
+                "author": "Chris Alcantara, Youjin Shin, Leslie Shapiro, Adam Taylor, Armand Emamdjomeh",
+                "publisher": "The Washington Post",
+                "image": null,
+                "date": "2022-06-28T17:43:40.437Z",
+                "url": "https://www.washingtonpost.com/graphics/2020/world/mapping-spread-new-coronavirus/",
+                "logo": null
+            },
+            "statusCode": 200,
+            "headers": {
+                "akamai-true-ttl": "120\n120",
+                "cache-control": "must-revalidate, max-age=120, s-maxage=120",
+                "content-encoding": "gzip",
+                "content-length": "117539",
+                "content-security-policy": "upgrade-insecure-requests",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:35:07 GMT",
+                "etag": "W/\"5f1132c64caa03576c9269720a3f46b7\"",
+                "expires": "Fri, 15 Jul 2022 14:37:07 GMT",
+                "last-modified": "Fri, 15 Jul 2022 14:20:01 GMT",
+                "server": "AmazonS3",
+                "set-cookie": "wp_devicetype=0; expires=Sun, 14-Aug-2022 14:35:07 GMT; path=/; domain=.washingtonpost.com; secure; SameSite=None\nwp_ak_v_v=0|20210407; expires=Sun, 14-Aug-2022 14:35:07 GMT; path=/; domain=.washingtonpost.com; secure; SameSite=None\nwp_ak_wab=1|1|2|0|1|20220711; max-age=31536000; path=/; domain=.washingtonpost.com; SameSite=None; secure\nwp_ak_twc=1|20220628; max-age=2419200; path=/; domain=.washingtonpost.com; SameSite=None; secure\nwp_geo=US|NJ|501|07011|; max-age=3600; path=/; domain=.washingtonpost.com; SameSite=None; secure\nwp_country=US; max-age=3600; path=/; domain=.washingtonpost.com; SameSite=None; secure\nak_bmsc=A8A9D8C45E7DF965CBC482C63B1B0AA5~000000000000000000000000000000~YAAQVIPXF5RWRP6BAQAAmOFIAhCfUvFV1fK6gvJuBZNEvm3Q4Ekm1iJJlncXTgogV2BQmA/QdvhI4HuHsXooQ/0ERa8/f6srKkwQwdGJtKjK5FNfxkmTPcUixaTO/K5a3o/rOdeb4FP5ueFPV0XPzR0QFGWwhNwmAKogictqiAkVIJk7By1JxEqdCOSa8/ECt4Z0cHKiLxp2nRFOV5DFEh2IaP+VbxFbiWbRb3UABtDZH9LbSeuOOeBtuArwsxMrELisJSS1bI1fe0+igdcwC0Vc4+ELM5el2GBHP3ZdwDGvs2rw6vDfPrxi8bM3zqQ3wAe61IPRozwaTNlCs39w9H6UORmBVpYxgp20ErU2KdAh0+WSZolvOMjwk7S0MVA+hwvpXmG10DDU1xrzGZXzCchr; Domain=.washingtonpost.com; Path=/; Expires=Fri, 15 Jul 2022 16:35:06 GMT; Max-Age=7199; HttpOnly",
+                "vary": "Accept-Encoding",
+                "x-amz-cf-id": "TZeJl9i_elZcW5WHksSwgAuitcmDYoc6cH2j70g-K1rp-zwQyFcxJg==",
+                "x-amz-cf-pop": "EWR53-C1",
+                "x-amz-version-id": "null"
+            }
+        }
     },
     {
         "url": "https://www.amcharts.com/demos/rotating-globe-with-circles/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["country", "population", "inhabitants", "globe"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Rotating Globe with Circles - amCharts",
+                "description": "With amCharts 5 you can create amazing Map charts and you don’t have to be limited to flattened representation of Earth. As you can see in this demo, you can use an orthographic projection to display the planet as an interactive globe. Learn more about map projections in our documentation.",
+                "lang": "en",
+                "author": null,
+                "publisher": "amCharts",
+                "image": {
+                    "url": "https://www.amcharts.com/wp-content/uploads/2019/04/demo_13710_none-1.png",
+                    "type": "png",
+                    "size": 237252,
+                    "height": 750,
+                    "width": 1113,
+                    "size_pretty": "237 kB"
+                },
+                "date": "2021-11-18T08:40:28.000Z",
+                "url": "https://www.amcharts.com/demos/rotating-globe-with-circles/",
+                "logo": {
+                    "url": "https://www.amcharts.com/wp-content/themes/amcharts4/css/img/favicon/mstile-310x310.png",
+                    "type": "png",
+                    "size": 215715,
+                    "height": 558,
+                    "width": 558,
+                    "size_pretty": "216 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-store, no-cache, must-revalidate",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b31a86ba2c18d0-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:14:17 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+                "link": "<https://www.amcharts.com/wp-json/>; rel=\"https://api.w.org/\"\n<https://www.amcharts.com/wp-json/wp/v2/demo/13710>; rel=\"alternate\"; type=\"application/json\"\n<https://www.amcharts.com/?p=13710>; rel=shortlink",
+                "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "pragma": "no-cache",
+                "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=7sYAaC6A5Syu5Ou75KCh0IWxSuJUkmUNVEbA%2FwgAsWrj2wubcVekq4agESU5e03Cku2vYf0K8%2BrT1BhLDO%2FYw5gq0j0lZ%2Fh1TIvD0mblK9UombcNqr0mBmeY11IHh28l74E%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "server": "cloudflare",
+                "set-cookie": "PHPSESSID=369b41a8e4820523e90e147e6922c7b6; path=/; secure",
+                "vary": "Accept-Encoding,User-Agent",
+                "x-powered-by": "PHP/7.4.30",
+                "x-turbo-charged-by": "LiteSpeed"
+            }
+        }
     },
     {
         "url": "https://online.cartovista.com/experience-en/view?language=en&page=mapGallery&mapid=33e06956-5308-4926-a998-9537f63d4bea",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["population", "ratio", "university", "diploma", "income"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Demo 2 - Geomarketing Analysis",
+                "description": null,
+                "lang": "en",
+                "author": null,
+                "publisher": "cartovista.com",
+                "image": {
+                    "url": "https://online.cartovista.com/MapThumbnail.aspx?id=33e06956-5308-4926-a998-9537f63d4bea&time=637638535287510230&type=HTML5",
+                    "type": "aspx",
+                    "size": 6487,
+                    "size_pretty": "6.49 kB"
+                },
+                "date": "2022-07-15T14:14:13.000Z",
+                "url": "https://online.cartovista.com/experience-en/view?language=en&page=mapGallery&mapid=33e06956-5308-4926-a998-9537f63d4bea",
+                "logo": {
+                    "url": "https://online.cartovista.com/experience-en/cartovistawebportal-7.4.3.363/img/favicon.ico",
+                    "type": "ico",
+                    "size": 1150,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "1.15 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "access-control-allow-headers": "Origin,X-Requested-With,Content-Type,Accept,X-CSRF-Token,apiKey,range",
+                "access-control-allow-methods": "GET,POST,OPTIONS,PUT,DELETE",
+                "access-control-allow-origin": "*",
+                "cache-control": "private",
+                "content-length": "2679",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:14:13 GMT",
+                "server": "~",
+                "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+                "x-aspnet-version": "4.0.30319",
+                "x-content-type-options": "nosniff",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://interaktiv.morgenpost.de/laermkarte-berlin/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["berlin", "german", "decibel", "day", "night", "volume"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Lärmkarte Berlin 2018 – So laut ist es vor Ihrer Haustür",
+                "description": "Die interaktive Karte der Berliner Morgenpost zeigt die Lärmpegel an allen Berliner Hausfassaden. Checken Sie Ihre Adresse.",
+                "lang": "de",
+                "author": null,
+                "publisher": "Berliner Morgenpost",
+                "image": {
+                    "url": "https://interaktiv.morgenpost.de/laermkarte-berlin/images/thumb_neu.jpg",
+                    "type": "jpg",
+                    "size": 268817,
+                    "height": 696,
+                    "width": 1265,
+                    "size_pretty": "269 kB"
+                },
+                "date": "2022-07-15T14:14:25.000Z",
+                "url": "https://interaktiv.morgenpost.de/laermkarte-berlin/",
+                "logo": {
+                    "url": "https://www.morgenpost.de/resources/26592/img/favicon.ico",
+                    "type": "ico",
+                    "size": 3638,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "3.64 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=300\npublic, must-revalidate",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:14:25 GMT",
+                "etag": "W/\"6223bed6-4aa7\"",
+                "expires": "Fri, 15 Jul 2022 14:19:25 GMT",
+                "server": "Funke Digital Cloud - SpeedCDN <speed@funkedigital.de>",
+                "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+                "x-cache": "HIT",
+                "x-content-type-options": "nosniff",
+                "x-key": "httpsorigin-interaktiv.morgenpost.de/laermkarte-berlin/",
+                "x-page-speed": "1.13.35.2-0",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://www.strava.com/heatmap#7.00/-120.90000/38.36000/hot/all",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["sports", "sportsman", "athletes", "activities", "heat", "heatmap"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Strava Global Heatmap",
+                "description": "Over 1 billion activities, 13 trillion data points create the ultimate map of athlete playgrounds.",
+                "lang": "en",
+                "author": null,
+                "publisher": "Strava",
+                "image": {
+                    "url": "https://d3nn82uaxijpm6.cloudfront.net/assets/website/heatmap/fb/heatmap-d31ff07df8339b44371bc78dee596642d9faca031132c130a03efba03aa82b57.jpg",
+                    "type": "jpg",
+                    "size": 416727,
+                    "height": 821,
+                    "width": 1413,
+                    "size_pretty": "417 kB"
+                },
+                "date": "2022-07-15T14:14:30.000Z",
+                "url": "https://www.strava.com/heatmap",
+                "logo": {
+                    "url": "https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-180x180.png?v=dLlWydWlG8",
+                    "type": "png",
+                    "size": 1988,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "1.99 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-cache, no-store",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:14:30 GMT",
+                "etag": "W/\"33427ef9cca6d1eaae58e8194c7452b9\"",
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+                "pragma": "no-cache",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "nginx/1.21.3",
+                "set-cookie": "_strava4_session=66h34d6i9d6hnmbvmce6u75pc365li0l; domain=strava.com; path=/; secure; HttpOnly",
+                "status": "200 OK",
+                "via": "1.1 linkerd, 1.1 linkerd, 1.1 4a7ef8cbf68469938b3b0dd42dbc4de8.cloudfront.net (CloudFront)",
+                "x-amz-cf-id": "jEzp1_E40PN037UxFjx-0QxYQCfqdNSGYoZ6YMrBm3rAv158Ad8FFQ==",
+                "x-amz-cf-pop": "EWR52-C3",
+                "x-cache": "Miss from cloudfront",
+                "x-content-type-options": "nosniff",
+                "x-download-options": "noopen",
+                "x-frame-options": "DENY",
+                "x-permitted-cross-domain-policies": "none",
+                "x-request-id": "ffa96023-0046-4c53-99c4-d5b42a6f7376",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://chicagosmilliondollarblocks.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["chicago", "america", "million", "dollar", "neighborhood", "money"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Chicago’s Million Dollar Blocks",
+                "description": "Illinois allocates an incredible amount of money to incarcerate people from Chicago’s poorest neighborhoods — sometimes millions for residents on individual city blocks. There are more effective ways to invest public dollars.",
+                "lang": "en",
+                "author": "DataMade",
+                "publisher": "Chicago's Million Dollar Blocks",
+                "image": {
+                    "url": "https://chicagosmilliondollarblocks.com/images/logo.png",
+                    "type": "png",
+                    "size": 405686,
+                    "height": 500,
+                    "width": 652,
+                    "size_pretty": "406 kB"
+                },
+                "date": "2018-03-16T22:17:02.000Z",
+                "url": "https://chicagosmilliondollarblocks.com/",
+                "logo": {
+                    "url": "https://chicagosmilliondollarblocks.com/favicon.ico",
+                    "type": "png",
+                    "size": 3746,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "3.75 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "connection": "keep-alive",
+                "content-length": "21106",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:14:50 GMT",
+                "etag": "\"5aac425e-5272\"",
+                "last-modified": "Fri, 16 Mar 2018 22:17:02 GMT",
+                "server": "nginx/1.12.2"
+            }
+        }
     },
     {
         "url": "https://mangomap.com/examples/maps/51682/bubble-map#",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["bubble", "map", "markers", "circular", "numerical", "attributes","population", "america"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Bubble Map",
+                "description": "A bubble map shows different sized circular markers for points, lines, and polygon features. The bubble sizes are based on a selected numerical attribute value from your layer.",
+                "lang": "en",
+                "author": null,
+                "publisher": "mangomap.com",
+                "image": {
+                    "url": "https://mangomap.com/images/thumnails/647791ac-1129-11e6-8e77-22000bb3a3a1_big.png",
+                    "type": "png",
+                    "size": 100549,
+                    "height": 386,
+                    "width": 488,
+                    "size_pretty": "101 kB"
+                },
+                "date": "2022-07-15T14:28:46.000Z",
+                "url": "https://mangomap.com/examples/maps/51682/Bubble%20Map?map_id=51682",
+                "logo": {
+                    "url": "https://mangomap.com/assets/apple-touch-icon-180x180.png",
+                    "type": "png",
+                    "size": 3819,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "3.82 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=0, private, must-revalidate",
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:28:46 GMT",
+                "server": "nginx/1.6.2 + Phusion Passenger 5.1.7",
+                "set-cookie": "_mango_gis_v2_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTk5YzMzMDc5MjQyMDNkODFiNThiYzU5ZWNkNzY2ZGExBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXUxK2FyYnRUbUtYM3ByOTdqYm5WUGJ5YnRxSE1uQnFwbm1UWFpNbGlKOEU9BjsARg%3D%3D--9bb3b693ea9eed9544c3c01cffb3903a5a984c61; path=/; expires=Sat, 15 Jul 2023 13:04:45 -0000; HttpOnly; SameSite=None; Secure",
+                "status": "200 OK",
+                "strict-transport-security": "max-age=0",
+                "transfer-encoding": "chunked",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-powered-by": "Phusion Passenger 5.1.7",
+                "x-request-id": "533f3ea5-77fe-48bb-871b-515e37bcae34",
+                "x-runtime": "0.450846",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "http://insideairbnb.com/barcelona/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["barcelona", "spain", "room", "activiy", "rentals", "hosts"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Barcelona",
+                "description": "Adding data to the debate",
+                "lang": "en",
+                "author": null,
+                "publisher": "insideairbnb.com",
+                "image": null,
+                "date": "2022-06-24T15:14:51.000Z",
+                "url": "http://insideairbnb.com/barcelona/",
+                "logo": {
+                    "url": "http://insideairbnb.com/favicon.ico",
+                    "type": "ico",
+                    "size": 4286,
+                    "height": 32,
+                    "width": 32,
+                    "size_pretty": "4.29 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-length": "240731",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:14:40 GMT",
+                "etag": "\"59f3a0857f6deb49d54054ddbcc624e5\"",
+                "last-modified": "Fri, 24 Jun 2022 15:14:51 GMT",
+                "server": "AmazonS3",
+                "x-amz-id-2": "8rItpm2j5odrYLHxCOTCAmy9Lcv+6xT9WH36OSrJVhFnFnlSRKkS73xbFtb7M6RzrbsRHAOfk3k=",
+                "x-amz-request-id": "PRT6NDG8RH4JZB7Y"
+            }
+        }
     },
     {
         "url": "https://memorial.nsc.org/index.html",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["honor", "memories", "death", "opioids", "stories"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Honor Loved Ones Lost to Opioids - National Safety Council",
+                "description": "Making a tribute gift to NSC is a meaningful way to memorialize a loved one, while supporting NSC efforts to save lives and prevent injuries.",
+                "lang": "en",
+                "author": null,
+                "publisher": "nsc.org",
+                "image": {
+                    "url": "https://nsccdn.azureedge.net/nsc.org/media/site-media/logo/nsc-menu.png?ext=.png",
+                    "type": "png",
+                    "size": 4095,
+                    "height": 42,
+                    "width": 168,
+                    "size_pretty": "4.09 kB"
+                },
+                "date": "2022-07-15T14:14:43.000Z",
+                "url": "https://www.nsc.org/home-safety/get-involved/memorial/",
+                "logo": {
+                    "url": "https://nsccdn.azureedge.net/nsc.org/media/site-media/icon/favicon.png",
+                    "type": "png",
+                    "size": 1329,
+                    "height": 192,
+                    "width": 192,
+                    "size_pretty": "1.33 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "access-control-expose-headers": "Request-Context",
+                "cache-control": "private",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b31b23ac1e3350-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:14:43 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "request-context": "appId=cid-v1:8c99460a-23ca-4a2d-bd2a-e5ae45c80b97",
+                "server": "cloudflare",
+                "set-cookie": "ASP.NET_SessionId=0nqus1qfai2lrb4cwmsdezbh; path=/; HttpOnly; SameSite=Lax\nASP.NET_SessionId=0nqus1qfai2lrb4cwmsdezbh; path=/; HttpOnly; SameSite=Lax\n__RequestVerificationToken=K2UltH6vtHWLHMmmUDBQ0hnJpkdkJOzO9rHmaXUhq4ole7EKgzZSoDikM5huNyI-_0oi5ptPkSlkY8A6KgXGEdffM_CU3XHa3s8hh_iyZNY1; path=/; HttpOnly\nARRAffinity=7883d528e2f2fd79a0b584d02a135ee13688e9825dc3f8bbaea9b4d05eb7eb03;Path=/;HttpOnly;Secure;Domain=www.nsc.org\nARRAffinitySameSite=7883d528e2f2fd79a0b584d02a135ee13688e9825dc3f8bbaea9b4d05eb7eb03;Path=/;HttpOnly;SameSite=None;Secure;Domain=www.nsc.org",
+                "vary": "Accept-Encoding",
+                "x-aspnet-version": "4.0.30319",
+                "x-aspnetmvc-version": "5.2",
+                "x-powered-by": "ASP.NET"
+            }
+        }
     },
     {
         "url": "https://mangomap.com/mango-business/maps/57040/socio-economic-data#",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["sozio", "economic", "survey", "dealer", "income", "unemployment", "population"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Socio-Economic Data",
+                "description": "from 2014 American Community Survey",
+                "lang": null,
+                "author": null,
+                "publisher": "mangomap.com",
+                "image": {
+                    "url": "https://mangomap.com/images/thumnails/a3800dd8-a4cd-11e6-9744-06c182e4d011_big.png",
+                    "type": "png",
+                    "size": 108091,
+                    "height": 386,
+                    "width": 488,
+                    "size_pretty": "108 kB"
+                },
+                "date": "2022-07-15T14:29:03.000Z",
+                "url": "https://mangomap.com/mango-business/maps/57040/Socio-Economic%20Data?map_id=57040",
+                "logo": {
+                    "url": "https://mangomap.com/assets/apple-touch-icon-180x180.png",
+                    "type": "png",
+                    "size": 3819,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "3.82 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=0, private, must-revalidate",
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:29:03 GMT",
+                "server": "nginx/1.6.2 + Phusion Passenger 5.1.7",
+                "set-cookie": "_mango_gis_v2_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTJiMmJjNGU5MjEwYWIxMGU5OWI2MTc4ODBmN2I3OWQ3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtRVBjYWVNOTIxWHlHamFUMys5ZzNENWpYUTNEQkNyMVVLSFJ5VmtvOG89BjsARg%3D%3D--8e3aeeb435e95cfeb3e58b5b7db39e3a1c1e3fd9; path=/; expires=Sat, 15 Jul 2023 05:15:50 -0000; HttpOnly; SameSite=None; Secure",
+                "status": "200 OK",
+                "strict-transport-security": "max-age=0",
+                "transfer-encoding": "chunked",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-powered-by": "Phusion Passenger 5.1.7",
+                "x-request-id": "66ef09bf-897d-457d-bfe1-ac2bd5999d49",
+                "x-runtime": "1.511847",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://jhaddadin.github.io/trashcity/rodentpestmap.html",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["boston", "city", "trash", "mice", "rat", "rodest", "bedbugs", "pest"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "rodentpestmap.html",
+                "description": null,
+                "lang": "pt",
+                "author": null,
+                "publisher": "github.io",
+                "image": null,
+                "date": "2018-10-21T01:50:16.000Z",
+                "url": "https://jhaddadin.github.io/trashcity/rodentpestmap.html",
+                "logo": {
+                    "url": "https://github.io/favicon.ico",
+                    "type": "ico",
+                    "size": 14491,
+                    "size_pretty": "14.5 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "connection": "keep-alive",
+                "content-length": "236",
+                "server": "GitHub.com",
+                "content-type": "text/html; charset=utf-8",
+                "permissions-policy": "interest-cohort=()",
+                "last-modified": "Sun, 21 Oct 2018 01:50:16 GMT",
+                "access-control-allow-origin": "*",
+                "etag": "\"5bcbdb58-ec\"",
+                "expires": "Fri, 15 Jul 2022 14:24:56 GMT",
+                "cache-control": "max-age=600",
+                "x-proxy-cache": "MISS",
+                "x-github-request-id": "990A:1EE9:20EBB4:46C5EE:62D17660",
+                "accept-ranges": "bytes",
+                "date": "Fri, 15 Jul 2022 14:14:56 GMT",
+                "via": "1.1 varnish",
+                "age": "0",
+                "x-served-by": "cache-ewr18156-EWR",
+                "x-cache": "HIT",
+                "x-cache-hits": "1",
+                "x-timer": "S1657894497.583512,VS0,VE0",
+                "vary": "Accept-Encoding",
+                "x-fastly-request-id": "dc511bc914749833be8b18c16db16c5473442102"
+            }
+        }
     },
     {
         "url": "https://senseable.mit.edu/wanderlust/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["human","mobility", "interact", "physical", "spaces", "inhabit", "travel", "urban"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Wanderlust :: MIT Senseable City Lab",
+                "description": "Wanderlust: The universal visitation law of human mobility that captures both the temporal and spatial spectrum of population movement on the basis of large-scale mobility data from diverse cities around the globe.",
+                "lang": "en",
+                "author": "MIT Senseable City Lab",
+                "publisher": "mit.edu",
+                "image": {
+                    "url": "https://senseable.mit.edu/wanderlust/img/ogcover.jpg",
+                    "type": "jpg",
+                    "size": 605941,
+                    "height": 1080,
+                    "width": 1920,
+                    "size_pretty": "606 kB"
+                },
+                "date": "2021-06-03T17:33:45.000Z",
+                "url": "https://senseable.mit.edu/wanderlust/",
+                "logo": {
+                    "url": "https://senseable.mit.edu/wanderlust/icons/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 5719,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "5.72 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "access-control-allow-credentials": "true",
+                "access-control-allow-headers": "Origin,Content-Type,Accept,Authorization",
+                "access-control-allow-methods": "GET, POST, OPTIONS, PUT, DELETE, HEAD",
+                "access-control-allow-origin": "*",
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:14:57 GMT",
+                "etag": "W/\"60b91279-f8c\"",
+                "last-modified": "Thu, 03 Jun 2021 17:33:45 GMT",
+                "server": "nginx",
+                "transfer-encoding": "chunked",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "SAMEORIGIN"
+            }
+        }
     },
     {
         "url": "https://www.largelots.org/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["chicago", "lots", "planning", "sale"],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Large Lots",
+                "description": "The City of Chicago is selling vacant residential lots for $1. Here’s how you get one.",
+                "lang": "en",
+                "author": "Large Lots",
+                "publisher": "Large Lots",
+                "image": {
+                    "url": "https://largelots.org/static/images/logo_square.png",
+                    "type": "png",
+                    "size": 12302,
+                    "height": 200,
+                    "width": 200,
+                    "size_pretty": "12.3 kB"
+                },
+                "date": "2022-07-15T14:23:45.000Z",
+                "url": "https://largelots.org/",
+                "logo": {
+                    "url": "https://largelots.org/static/images/favicon.ico",
+                    "type": "ico",
+                    "size": 1150,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "1.15 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:23:45 GMT",
+                "server": "nginx/1.10.1",
+                "transfer-encoding": "chunked",
+                "vary": "Accept-Encoding\nCookie",
+                "x-frame-options": "SAMEORIGIN"
+            }
+        }
     },
     {
         "url": "https://interaktiv.morgenpost.de/deutschlandwahlkarte2017/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["election","germany", "votes" ],
+        "previewImageLink": "",
+        "type": "IGV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Interaktive Karte zur Bundestagswahl: Alle Stimmen, alle Wahlkreise",
+                "description": "Die Karte der Berliner Morgenpost zeigt die 299 Wahlkreise mit Sofort-Analysen von Wechselwählern bis Rechtsruck.",
+                "lang": "de",
+                "author": "Interaktiv-Team",
+                "publisher": "Berliner Morgenpost",
+                "image": null,
+                "date": "2017-09-24T12:00:00.000Z",
+                "url": "https://interaktiv.morgenpost.de/deutschlandwahlkarte2017/",
+                "logo": {
+                    "url": "https://interaktiv.morgenpost.de/assets/images/favicon.ico",
+                    "type": "ico",
+                    "size": 32956,
+                    "height": 64,
+                    "width": 64,
+                    "size_pretty": "33 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=300\npublic, must-revalidate",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:15:13 GMT",
+                "etag": "W/\"6223b6bd-a86f\"",
+                "expires": "Thu, 14 Jul 2022 15:34:02 GMT",
+                "server": "Funke Digital Cloud - SpeedCDN <speed@funkedigital.de>",
+                "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+                "x-cache": "UPDATING",
+                "x-content-type-options": "nosniff",
+                "x-key": "httpsorigin-interaktiv.morgenpost.de/deutschlandwahlkarte2017/",
+                "x-page-speed": "1.13.35.2-0",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://dashboard.smartcity.ms/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["city", "dashboard","bycicles", "weather", "pedestrians", "parking"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Smart City Münster Dashboard",
+                "description": "Smart City Münster Dashboard",
+                "lang": "de",
+                "author": null,
+                "publisher": "smartcity.ms",
+                "image": {
+                    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAAA/CAYAAAAxKS7NAAAACXBIWXMAAAsSAAALEgHS3X78AAAL10lEQVR4nO2d21Ib2RWG1+qWQBIYge2yMzM24HhymBwYkqlKVa5GeYLBT2DNE4RccmV8xWXIE1jzBjgvYJybuYsxldwkmRlB2TWFhwELgwQ69E4taTVuene3Tq1Ta31VKlDvlnp3a/97rb32CZVSIHizsVtcBIBFj8T82lIqrx0VhAEwUiLe2C1mtIPvWQaAWe1og6A0EumCdrQ5zwFgZW0p9bazuxGEcIj16jlu7BZJNCselmyWReUFpX3qcXwY+RwAtgPuRRD6Qk8s8cZucR0AHmkJ0eTLtaVUToqrMCiMsK87ZgImstoRQegjoYqYXehxErAgDJywLfE4tg+lTSwMlFACW2yBl4uW+mOp1jg2E0OIo3ZqFElLERYGSVci3tgtkhXa5EgtkIC/flfVznMTQzieNPBESwCAKQOMlImWlgAACQNn5kyc0xKYG2NSawiCk45FzALe7sQSVRXMVWvKU4xnZMkr3UfMqaJYmDSMj5NmWrQtRJlu2sSbw+xKUkXxzbmV/keheqQlCkKE6EjE3Ab+XEsYQkqWur5/YZWk0ApRpVNLPFIR2W/PLbHGQmQJtYtpWANLpzX1kXYwRHiihCAMhJ6NnW6Fgwur9EO5VihbcNHL65gIyd+kzJ651Hcnjb9v7BZbtfY7FE+QWVBCWAxExFUF8PKkcnRhqesAkNRO6AH/KtZ69t2LibYcGoolZGlG1tpSakdLFYQ2CX3sdCv8+13lkAXcFxIG7g1ZwaCo/jYHCAWhK/ou4rOaotdNLWH8SMvkCSEMAt1pthRZnhd8yX9L1uTrsvX6ZhyrH8SNhXYCWqdVVeqXCz0CyLhroWt8RcwC3vaapH+h1B5FfE9rCvLnFnwwYRx9Nm225B4Xa+pNhytpRBGJagtdE+ROb3oJ2Ivvy9b178tWERrtzwOPUwRB6BFBIn6oHQng23PrR2h055z7nxVNzmpq2AJnwhjhKeJOBi+ULJjQDgqC0HM8RRy1ttq1GPq2/QVh1PEs3O9q6qdlx4zeuAEwYwZHoIfZjY4hNp/kLAgjyhUR8yJ32bIFC0GT+//zppQ6LF5Nv38jkaQ+4JcnlfpfmwkDDwx4L/BazVJwWmnehjTQAMN7cYBADJwB18IB56aRLFSbf1U65ueYCMLwcinijd1irtVg1mmlEYl2Yql6/y/UFFwZo1y21O0rJyrYA0s172KywltK99jA0vG79usDAgFKtyaN6kIydi0W7IwIwkComx7eWaGtaLSbmNFodyZNjJQ5UwDJgwvrGo31rvrUK8qnWSII/cAufFe2R6ERWEY94Nz6yKp0Mlb/rkQnLvAIQGO9X5/XCgtJU1vN5LCiqtNNYga9AhHd+0XtKKWGbmsZRKyPE283b4h4ZQsepdS2K43GM6y4v5euF/ZzmJ+/s8hasWeg0fvt/f1XTWekISJ97q1SKnDSC98TuM/j5+cc4ZdXStWva1tNbY+jX6RaL5W3r8VLEybe1hIixmHZqgzTHSEiNYG+A4BnjtcxIg7jmOzjdoaZUmFGRCqkL5z3h4jKLuiMJlRE7NX2Oos8DDnDr2wbPTmU/y3tqAMW6guumC7h3zPv+p2/Q8T69/m6vvcTRuJ+wiiQRdYSmcmYAQtzkwUKammJw4SBt8LIzYU1PBM3EHGVm0B/UUrRdjxU6VJA70ueszyysHexzQJ94HF/deGStVJKaVZ4iFlAxJWA7GmVLz+LJ1wBzDmexe/sSiGwLfdJykx/kjLhR9fqk7GPppKO2LTmXg4hUZxwQYXhK6XUZa3NhVnbFwoR15VS6yx82zXdJteU3Tx74zsSTs4pCi5EK2zZFllAW0qpnM81Mg7PLsf/29Yqy+l59+ddrPPbjDMv7vvjvGXpuvDeZbWvZ18LOF9Z/t/zupR/+5loiQ1X+q17IpAzbX//VSvTSgssVD+LvMrnOLHv4YrA2d2uV9a+ltgJtZGdL0CIaycJw8wjRKRC+FcW4wq7pjl2zWZZnPWCbLdfmSy/8g7r+AQRN133+4iF8oy/P+Pl6rZIxl2Z+EBi9do2yKv3Y5HzrYmN3fNHTfIbZKyC0pzQ8/6CKx93HjKcb7fAZ8ERU/Cio0gyLQerHRT6DQnqIVmQoB/YAdXaf2L3kwrtU3bH6ViWa/oMT3q5tDhkxeh8/rvO5z32cv24LfeAz69bUbJ8tqVkYa77WUMHC500CciKelzLfr/JVm5V+2Dj2EuvoNP8/J3l+fk7TZ8vnUPnaglXIYHu+Ty7LP8m7iCZLeotL/FDLxYFSJnhtD+FYLhw/o0tSJ6squ0++rDuchXrltR5jAvx8xaCNX6bBpBw/FzFdgl1DTK26ls+AlrxaoYwmy0GyZbdASkfcu6KhCvhh1554Aj0A/5+CmbtkMfjrLhDF3HCHL8J/4fVFgav9AClFBWGe1x4Muwiu93hruFI8Tq/VgMKdVgC7hXr7uAS/5/uY95JqGlXDwI90z2/CpCPLzqCek+44q7/DjLOMAQqPdiovVWopma30f6RW7UILcFt3xcO6zzrY83CJvT1x9iqPXfln0T81O5z7TV8naeuPGS9rLAr73bTJMMVd96OXwRGpyNBiIMwsNHdNrSeBv3IXDuHKbI/U+XgbMdyP+wz7czwKHBl5GmZumSdPZZFFtSKTzu5l2zaeeD7XGgmYieUb/YgaIzAcvQtMYYn4kkD32gHh4+gCGtbOLpoWi5gIbHdK2vPMQAKLq3abnW/78+ZBzug1YEncPk7ty3iEDYsFEKACqC77cvvsyyCrrGDXh4DFHrtTm9y21UTF91jC23+QkC7Hdga2wtADqodv8l5+CKo+cPxCK9Ao/2Znbbd6RO/WQBjzJSBg3CzqSAusmu7w23WFUdaWFD7LceCessBtE7aq2R5NnmooO+gCuDKAxG/4i60DFdKeRamPTjF9/MsTLvrzWtgyRaLoN7Fpn3ag/39Vzg/f6fumezvv6o/3/n5O9vgSmuDHPfb7wU9C75X6oN/7rjnFe4KpGbOW1vEoQUREsb4zde7lzBOBiDijGscL3DBzHm4Zo89umzyfNxNznku9StzRNq+xpZXN4nPNdz5tSPbQefZ181yxeEcLUafW3UUer97WOW0jFdbkwo+VyaZJgIC1/PIu74vKM3NY9dzpTx86fEstl3nUWW04/qdd5zPgcZh0lTEls0rDcEMWjCA+Pq4XFJ+hdpSe/Cu3L8uGZroPxXOADPaSeL36fiVvM9PGqWlKdP7XpvzfG0p1W4NLnSIwy1dtK2xYzDIyNK2Ox1voRU9FzdOjipWpPuLfzJhwM+TxuGMibKbxeiQ4T5W4HHnIy9g6ETEtNZWs7nGH0/Fbjs2TBsoaOKpApiGgD2ZECE2GzN83Yt0HBeop+pnCTP5h5krj0wEPEJw2zjI5R1JOuonvpcwyt+c+1taWsbm05n49f+dVQ+OK9aM07VGgGTdd28sMu+9uF7Q+loea2hdQt1Jrn7h6Rge//ZafJrfduXG35owfKdlCsKg6EjENEWxaMER7fygJTIk5F9Ox7SFAs4tVfpnI/ilpfWCDyfNG1K6hCjT8Ygt2nvppGbAqwvr4LSmymcWeFrOmoLEuWOxvDiirwUPm9uTxuGNCUNcXiHSdDXsktrHv0qZbVnUs5oq2R4vdTmf1Ty1X+e4og6U8na5T2uWUfGpOGixvg8Txt10TAQsRJ+Bjp0mlztored0LMjlNrUjgjCO+CtIEISRQEQsCCOOiLgNbsZlYzZh+Oi7iKdMHMgqGGGAAL4DQjpkVJZaFYaYgVji+oqZAjSZiSMILTEQEf86ZR5qB8ePQhSHAAr9x+DN1PoKTRr4bNo8GmODTALOrC2lxJ0WuqbtqYhhYgGUClV1WKgqz0Ebw8bNOP4wbeJZF9myF2DfEgELYWFHW/e6nRzQCQZAci6Gd+dGZ+Pf3NpSKhLT14ToYLeJpWC2hrZDgCAMmro7DY2NxnPdbjQecfbWllJeC5YJwkC5FDELOeNay6dVZnnhrqhiB6LEEgtDxxURD4IuouPLHS7w595Zvxlb3BaWQJQwfADA/wGIJ3HNRe41qAAAAABJRU5ErkJggg==",
+                    "type": "png",
+                    "size": 3109,
+                    "height": 63,
+                    "width": 241,
+                    "size_pretty": "3.11 kB"
+                },
+                "date": "2022-07-15T14:15:33.000Z",
+                "url": "https://dashboard.smartcity.ms/",
+                "logo": {
+                    "url": "https://dashboard.smartcity.ms/favicon-196.png",
+                    "type": "png",
+                    "size": 7666,
+                    "height": 196,
+                    "width": 196,
+                    "size_pretty": "7.67 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "1",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:15:33 GMT",
+                "etag": "\"e83cb8d32d7c2138a00557ae03a36840-ssl-df\"",
+                "server": "Netlify",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "x-nf-request-id": "01G813DX1NM2XRGA7A890T26Q8"
+            }
+        }
     },
     {
         "url": "https://www.tableau.com/data-insights/dashboard-showcase/tale-100-entrepreneurs",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["entrepreneurs", "growth", "company", "tale"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Tale of 100 Entrepreneurs – Dashboard",
+                "description": "Back to Dashboard Showcase",
+                "lang": "en",
+                "author": "Simon Beaumont",
+                "publisher": "Tableau",
+                "image": {
+                    "url": "https://public.tableau.com/s/sites/default/files/styles/votd_more_vizzes/public/media/sportsvizsunday_-_the_open_championship_a_very_special_relationship_6.png?itok=uZW-WKHn",
+                    "type": "png",
+                    "size": 101230,
+                    "height": 338,
+                    "width": 600,
+                    "size_pretty": "101 kB"
+                },
+                "date": "2022-07-15T14:15:38.000Z",
+                "url": "https://www.tableau.com/data-insights/dashboard-showcase/tale-100-entrepreneurs",
+                "logo": {
+                    "url": "https://www.tableau.com/themes/custom/tableau_www/favicon.ico",
+                    "type": "ico",
+                    "size": 10134,
+                    "height": 32,
+                    "width": 32,
+                    "size_pretty": "10.1 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "cache-control": "max-age=0, no-cache, no-store",
+                "content-encoding": "gzip",
+                "content-language": "en-US",
+                "content-length": "29931",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:15:39 GMT",
+                "etag": "W/\"1657894538\"",
+                "expires": "Fri, 15 Jul 2022 14:15:39 GMT",
+                "last-modified": "Fri, 15 Jul 2022 14:15:38 GMT",
+                "permissions-policy": "interest-cohort=()",
+                "pragma": "no-cache",
+                "server": "nginx",
+                "strict-transport-security": "max-age=31622400",
+                "traceparent": "00-ad66379bd3af471f807fce0a5798e09f-4bd85cf8247e69f8-00",
+                "vary": "Accept-Encoding, Cookie, Cookie, Cookie",
+                "x-cache-hits": "0, 1",
+                "x-cloud-trace-context": "ad66379bd3af471f807fce0a5798e09f/5465220368648006136;o=0",
+                "x-content-type-options": "nosniff",
+                "x-drupal-dynamic-cache": "MISS",
+                "x-frame-options": "SAMEORIGIN",
+                "x-pantheon-styx-hostname": "styx-fe4-b-5fc44d9759-6vc5z",
+                "x-served-by": "cache-chi-klot8100158-CHI, cache-iad-kjyo7100119-IAD",
+                "x-styx-req-id": "9a0d5c63-0448-11ed-8962-56cf42a213a7",
+                "x-timer": "S1657894539.824384,VS0,VE522"
+            }
+        }
     },
     {
         "url": "https://www.faz.net/aktuell/finanzen/boersen-maerkte/indizes/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["finances","indices", "tops", "flops", "index"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Indizes: Aktuelle Kurse der Aktienindizes weltweit - FAZ.NET",
+                "description": "Die weltweit wichtigsten Indizes im Überblick: Aktuelle Kurse von Dax, Dow Jones, Euro-Stoxx, Nasdaq, Nikkei und weiteren Aktienindizes online auf FAZ.NET.",
+                "lang": "de",
+                "author": "Frankfurter Allgemeine Zeitung GmbH",
+                "publisher": "faz.net",
+                "image": {
+                    "url": "https://media0.faz.net/ppmedia/aktuell/1081766624/1.6604870/navigation_image_link_hq/hq/zeitung.jpg",
+                    "type": "jpg",
+                    "size": 2809,
+                    "height": 36,
+                    "width": 123,
+                    "size_pretty": "2.81 kB"
+                },
+                "date": "2022-07-15T14:12:13.000Z",
+                "url": "https://www.faz.net/aktuell/finanzen/boersen-maerkte/indizes/",
+                "logo": {
+                    "url": "https://www.faz.net/favicon.ico",
+                    "type": "ico",
+                    "size": 6870,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "6.87 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "cache-control": "max-age=60",
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-length": "174668",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:15:41 GMT",
+                "expires": "Fri, 15 Jul 2022 14:13:13 GMT",
+                "last-modified": "Fri, 15 Jul 2022 14:12:13 GMT",
+                "p3p": "policyref=\"/w3c/p3p.xml\", CP=\"NOI DSP CURa ADMa DEVa TAIi PSAi PSDi OUR STP UNI COM NAV INT STA PRE\"",
+                "server": "nginx",
+                "vary": "Accept-Encoding,X-USF-Cookie,Cookie",
+                "x-debug-v-cookie": "",
+                "x-debug-v-fazpay-jwt-payload-claim-id": "",
+                "x-debug-v-sub": "",
+                "x-debug-v-x-fazpay-jwt-payload-claim-premium": "",
+                "x-debug-v-x-fazpay-jwt-payload-raw": "",
+                "x-debug-v-jwt_type_faj": "",
+                "x-fazpay-content": "public",
+                "x-request-id": "06f04ba18fbc70e115f61ec2e8af6b65",
+                "x-content-type-options": "nosniff",
+                "x-debug-laa": "",
+                "x-usf-cache": "MISS",
+                "x-usf-cachen": "61",
+                "x-usf-esi-frame": "1",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://observablehq.com/@d3/hierarchical-edge-bundling",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["relationships", "software", "hierachy"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Hierarchical Edge Bundling / D3 / Observable",
+                "description": "chart = {",
+                "lang": null,
+                "author": null,
+                "publisher": "Observable",
+                "image": {
+                    "url": "https://avatars.observableusercontent.com/avatar/5af16e327a90b2873351dda8a596c0d2d3bf954f64523deefe80177c9764d0f7?s=60",
+                    "type": "jpg",
+                    "size": 1771,
+                    "height": 60,
+                    "width": 60,
+                    "size_pretty": "1.77 kB"
+                },
+                "date": "2022-07-15T14:15:48.000Z",
+                "url": "https://observablehq.com/@d3/hierarchical-edge-bundling",
+                "logo": {
+                    "url": "https://static.observablehq.com/favicon-512.0667824687f99c942a02e06e2db1a060911da0bf3606671676a255b1cf97b4fe.png",
+                    "type": "png",
+                    "size": 15584,
+                    "height": 512,
+                    "width": 512,
+                    "size_pretty": "15.6 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "public, max-age=30",
+                "cf-cache-status": "MISS",
+                "cf-ray": "72b31cbf596b8c51-EWR",
+                "content-encoding": "gzip",
+                "content-security-policy": "default-src 'self' https://api.observablehq.com https://events.observablehq.com https://static.observablehq.com https://observablehq.com https://*.static.observableusercontent.com; connect-src 'self' https://api.observablehq.com https://events.observablehq.com https://static.observablehq.com wss://ws.observablehq.com https://connector.observableusercontent.com https://js.stripe.com https://*.ingest.sentry.io https://www.google-analytics.com https://stats.g.doubleclick.net/j/collect https://www.googleapis.com https://graph.microsoft.com; font-src https://fonts.gstatic.com; frame-ancestors 'none'; frame-src https://observablehq.com https://*.static.observableusercontent.com https://js.stripe.com https://docs.google.com data: blob:; img-src https://api.observablehq.com https://*.static.observableusercontent.com https://static.observablehq.com https://observablehq.com https://*.githubusercontent.com https://*.stripe.com https://avatars.observableusercontent.com https://www.google-analytics.com https://www.google.com/ads/ga-audiences static.observableusercontent.com data: blob:; manifest-src 'none'; media-src https://static.observablehq.com; object-src 'none'; script-src 'self' 'sha256-nnRzvGsB15enSSxWufoVP+C4WOA6Spq28ybk2OobhJo=' https://static.observablehq.com https://www.google-analytics.com https://www.googleapis.com https://apis.google.com https://js.stripe.com; style-src https://static.observablehq.com https://observablehq.com https://fonts.googleapis.com 'unsafe-inline'; worker-src https://observablehq.com",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:15:48 GMT",
+                "etag": "\"1fe9e-ohYQEMTzZWy8fBloo6hfTZV37rc\"",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "server": "cloudflare",
+                "strict-transport-security": "max-age=86400; includeSubDomains",
+                "vary": "cookie, Accept-Encoding",
+                "via": "1.1 vegur",
+                "x-powered-by": "Next.js"
+            }
+        }
     },
     {
         "url": "https://codesandbox.io/s/xv0v19l1pp",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["month", "orders", "count"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Cube.js React 101 - 1 - CodeSandbox",
+                "description": "Cube.js React 101 - 1 by keydunov using @cubejs-client/core, @cubejs-client/react, bootstrap, moment, numeral, react, react-dom, react-scripts, reactstrap",
+                "lang": "en",
+                "author": "keydunov",
+                "publisher": "CodeSandbox",
+                "image": {
+                    "url": "https://codesandbox.io/api/v1/sandboxes/xv0v19l1pp/screenshot.png",
+                    "type": "png",
+                    "size": 5424,
+                    "height": 630,
+                    "width": 1200,
+                    "size_pretty": "5.42 kB"
+                },
+                "date": "2021-08-06T09:26:18.000Z",
+                "url": "https://codesandbox.io/s/xv0v19l1pp",
+                "logo": {
+                    "url": "https://codesandbox.io/csb-ios.svg",
+                    "type": "svg",
+                    "size": 2428,
+                    "size_pretty": "2.43 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "date": "Fri, 15 Jul 2022 14:15:58 GMT",
+                "content-type": "text/html; charset=utf-8",
+                "transfer-encoding": "chunked",
+                "connection": "keep-alive",
+                "cf-ray": "72b31cfd2ee28c36-EWR",
+                "cache-control": "max-age=0, private, must-revalidate",
+                "vary": "Accept-Encoding",
+                "via": "1.1 google",
+                "cf-cache-status": "DYNAMIC",
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "x-request-id": "FwIGUSBG4kgUoasSWZyG",
+                "server": "cloudflare",
+                "content-encoding": "br"
+            }
+        }
     },
     {
         "url": "https://formidable.com/open-source/victory/gallery/histogram-with-slider",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["attempts", "histogram", "game", "averages"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Victory | Histogram with Slider",
+                "description": "Victory Documentation",
+                "lang": "en",
+                "author": null,
+                "publisher": "formidable.com",
+                "image": null,
+                "date": "2022-06-22T01:44:31.000Z",
+                "url": "https://formidable.com/open-source/victory/gallery/histogram-with-slider/",
+                "logo": {
+                    "url": "https://formidable.com/open-source/victory/favicon/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 11615,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "11.6 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "1",
+                "cache-control": "max-age=600,public",
+                "content-encoding": "gzip",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:16:16 GMT",
+                "etag": "W/\"25625275669dc6390e3a13711e983bcc\"",
+                "last-modified": "Wed, 22 Jun 2022 01:44:31 GMT",
+                "server": "AmazonS3",
+                "vary": "Accept-Encoding",
+                "via": "1.1 2f5727cd85b40e905349d2b5268f3dbc.cloudfront.net (CloudFront)",
+                "x-amz-cf-id": "JjM4fkMMbrwG2cWunjIrrvm6am9my3LQXvtLWdPluPDfzICDcPCKmA==",
+                "x-amz-cf-pop": "EWR52-C2",
+                "x-cache": "Hit from cloudfront"
+            }
+        }
     },
     {
         "url": "http://uber.github.io/react-vis/examples/showcases/plots",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["plots", "components", "chart"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "plots",
+                "description": null,
+                "lang": null,
+                "author": null,
+                "publisher": "github.io",
+                "image": null,
+                "date": "2022-07-15T14:16:19.000Z",
+                "url": "http://uber.github.io/react-vis/examples/showcases/plots",
+                "logo": {
+                    "url": "http://uber.github.io/favicon.ico",
+                    "type": "ico",
+                    "size": 242750,
+                    "height": 256,
+                    "width": 229,
+                    "size_pretty": "243 kB"
+                }
+            },
+            "statusCode": 404,
+            "headers": {
+                "server": "GitHub.com",
+                "content-type": "text/html; charset=utf-8",
+                "permissions-policy": "interest-cohort=()",
+                "access-control-allow-origin": "*",
+                "etag": "W/\"5ed2d387-726\"",
+                "content-encoding": "gzip",
+                "x-proxy-cache": "MISS",
+                "x-github-request-id": "52BA:022D:1EBB91:442050:62D176B3",
+                "content-length": "844",
+                "accept-ranges": "bytes",
+                "date": "Fri, 15 Jul 2022 14:16:19 GMT",
+                "via": "1.1 varnish",
+                "age": "0",
+                "connection": "keep-alive",
+                "x-served-by": "cache-ewr18162-EWR",
+                "x-cache": "HIT",
+                "x-cache-hits": "1",
+                "x-timer": "S1657894579.358601,VS0,VE0",
+                "vary": "Accept-Encoding",
+                "x-fastly-request-id": "25d1d2375ebd981c9f2474e0829d7c2630f423df"
+            }
+        }
     },
     {
         "url": "https://codesandbox.io/s/9t79p",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["days", "time", "points"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Heatmap Charts in Vue.js - CodeSandbox",
+                "description": "Heatmap Charts in Vue.js by vitalikda using @amcharts/amcharts4, @vue/cli-plugin-babel, apexcharts, echarts, v-charts, vue, vue-apexcharts, vue-echarts",
+                "lang": "en",
+                "author": "vitalikda",
+                "publisher": "CodeSandbox",
+                "image": {
+                    "url": "https://codesandbox.io/api/v1/sandboxes/9t79p/screenshot.png",
+                    "type": "png",
+                    "size": 23716,
+                    "height": 630,
+                    "width": 1200,
+                    "size_pretty": "23.7 kB"
+                },
+                "date": "2020-12-11T13:33:00.000Z",
+                "url": "https://codesandbox.io/s/9t79p",
+                "logo": {
+                    "url": "https://codesandbox.io/csb-ios.svg",
+                    "type": "svg",
+                    "size": 2428,
+                    "size_pretty": "2.43 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+                "cache-control": "max-age=0, private, must-revalidate",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b31d8b6e57e6f0-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:16:21 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "server": "cloudflare",
+                "vary": "Accept-Encoding",
+                "via": "1.1 google",
+                "x-request-id": "FwIGVnfD4LoV3xQcxr3h"
+            }
+        }
     },
     {
         "url": "https://chartkick.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["charts", "ruby", "javascript"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Chartkick - Create beautiful JavaScript charts with one line of Ruby",
+                "description": "Create beautiful JavaScript charts with one line of Ruby",
+                "lang": "en",
+                "author": null,
+                "publisher": "chartkick.com",
+                "image": null,
+                "date": "2022-07-15T14:16:29.000Z",
+                "url": "https://chartkick.com/",
+                "logo": {
+                    "url": "https://chartkick.com/favicon.ico",
+                    "type": "ico",
+                    "duration": null,
+                    "duration_pretty": null,
+                    "size": 0
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=0, private, must-revalidate",
+                "content-encoding": "gzip",
+                "content-security-policy": "default-src 'none'; font-src 'none'; img-src 'self' data: blob:; object-src 'none'; script-src 'self' data: 'unsafe-eval' 'unsafe-inline' https://api.tiles.mapbox.com; style-src 'self' 'unsafe-inline' https://api.tiles.mapbox.com; connect-src 'self' https://api.mapbox.com https://*.tiles.mapbox.com; worker-src blob:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:16:29 GMT",
+                "etag": "W/\"429604d7f8647f801a45fa3965884741\"",
+                "link": "</assets/application-d4559e92987db9649382cab3e11c36cb9fdabd13ae3ac0f3ce3c24464eb6c161.css>; rel=preload; as=style; nopush,</assets/application-3b065fd71c9943ee7f446e01b4dc69d27820d487b89e30bd3977a5e2186bd9bb.js>; rel=preload; as=script; nopush",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "nginx",
+                "strict-transport-security": "max-age=31556952; includeSubDomains; preload\nmax-age=15724800; includeSubdomains",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-download-options": "noopen",
+                "x-frame-options": "SAMEORIGIN",
+                "x-permitted-cross-domain-policies": "none",
+                "x-request-id": "cd4d5bd1-5517-4c46-b6a8-cc1fe35d0c92",
+                "x-runtime": "0.007039",
+                "x-xss-protection": "0"
+            }
+        }
     },
     {
         "url": "https://www.amcharts.com/demos/range-area-chart/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["range", "date", "area"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Range Area Chart - amCharts",
+                "description": "Range Area Chart is a type of area chart where rather than starting on the axis, the area is represented by the space between two values. These charts are useful for displaying ranges of values, such as between minimum and maximum prices over a timespan, or projected values for the future when the p…",
+                "lang": "en",
+                "author": null,
+                "publisher": "amCharts",
+                "image": {
+                    "url": "https://www.amcharts.com/wp-content/uploads/2013/12/demo_1068_none-2.png",
+                    "type": "png",
+                    "size": 85191,
+                    "height": 750,
+                    "width": 1113,
+                    "size_pretty": "85.2 kB"
+                },
+                "date": "2022-03-10T14:19:44.000Z",
+                "url": "https://www.amcharts.com/demos/range-area-chart/",
+                "logo": {
+                    "url": "https://www.amcharts.com/wp-content/themes/amcharts4/css/img/favicon/mstile-310x310.png",
+                    "type": "png",
+                    "size": 215715,
+                    "height": 558,
+                    "width": 558,
+                    "size_pretty": "216 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-store, no-cache, must-revalidate",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b31dd1bed81a2c-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:16:32 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+                "link": "<https://www.amcharts.com/wp-json/>; rel=\"https://api.w.org/\"\n<https://www.amcharts.com/wp-json/wp/v2/demo/1068>; rel=\"alternate\"; type=\"application/json\"\n<https://www.amcharts.com/?p=1068>; rel=shortlink",
+                "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "pragma": "no-cache",
+                "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=BBR7xQ485LJKvGDyxAyQjAYDv%2F7AXTP5bc95OrS7uQmXuyCNBYkmKE78HNi1V%2B4sK0wPlHdbc9uh2aOIhuw03ZP2PxLDuf3TvsXeGchgsF1DZveu314kXHGfdEnZrGsvosc%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "server": "cloudflare",
+                "set-cookie": "PHPSESSID=6d176d100c21122e4d7ca75d385af1af; path=/; secure",
+                "vary": "Accept-Encoding,User-Agent",
+                "x-powered-by": "PHP/7.4.30",
+                "x-turbo-charged-by": "LiteSpeed"
+            }
+        }
     },
     {
         "url": "https://www.federalreserve.gov/releases/z1/dataviz/dfa/compare/chart/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["assets", "wealth", "percentile", "group", "2022"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "The Fed - Comparison: Compare Wealth Components across Groups",
+                "description": "The Federal Reserve Board of Governors in Washington DC.",
+                "lang": "en",
+                "author": null,
+                "publisher": "federalreserve.gov",
+                "image": {
+                    "url": "https://www.federalreserve.gov/images/USAGov%402x.png",
+                    "type": "png",
+                    "size": 2775,
+                    "height": 60,
+                    "width": 188,
+                    "size_pretty": "2.77 kB"
+                },
+                "date": "2022-06-21T21:16:39.000Z",
+                "url": "https://www.federalreserve.gov/releases/z1/dataviz/dfa/compare/chart/",
+                "logo": {
+                    "url": "https://www.federalreserve.gov/favicon.ico",
+                    "type": "ico",
+                    "size": 32814,
+                    "height": 89,
+                    "width": 89,
+                    "size_pretty": "32.8 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=30",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b339c25fa31871-EWR",
+                "content-encoding": "gzip",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:35:36 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "last-modified": "Tue, 21 Jun 2022 21:16:39 GMT",
+                "server": "cloudflare",
+                "set-cookie": "__cf_bm=CPQryEyTYOrwZBZ6TYOwm1G_tZMrAtK5y6RTPLpm8YM-1657895736-0-AT5o6wIzjs532LsNqmhuUHtX+f14uzhYgzVevD5Fp4dYrZgMQHj7gFpj/VVP+VTSrjdfSKorTD1X58WLAWFILDM=; path=/; expires=Fri, 15-Jul-22 15:05:36 GMT; domain=.federalreserve.gov; HttpOnly; Secure; SameSite=None",
+                "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                "vary": "Accept-Encoding",
+                "x-frame-options": "SAMEORIGIN"
+            }
+        }
     },
     {
         "url": "https://informationisbeautiful.net/visualizations/ukraine-russian-war-infographics-data-visuals/#RussianGas",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["gas", "countries", "imports", "exports", "oil"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Ukraine-Russian War Infographics & Data Visuals — Information is Beautiful",
+                "description": "Most helpful & contextualising graphics & visualisations from around the web.",
+                "lang": "en",
+                "author": "David McCandless",
+                "publisher": "Information is Beautiful",
+                "image": {
+                    "url": "https://infobeautiful4.s3.amazonaws.com/2022/03/russian-oil-IIB-decorative-1030x2-3-960x485.png",
+                    "type": "png",
+                    "size": 12364,
+                    "height": 485,
+                    "width": 960,
+                    "size_pretty": "12.4 kB"
+                },
+                "date": "2022-06-01T09:46:41.000Z",
+                "url": "https://informationisbeautiful.net/visualizations/ukraine-russian-war-infographics-data-visuals/",
+                "logo": {
+                    "url": "https://informationisbeautiful.net/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 2178,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "2.18 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=0",
+                "content-encoding": "gzip",
+                "content-length": "7566",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:35:39 GMT",
+                "expires": "Fri, 15 Jul 2022 14:35:39 GMT",
+                "last-modified": "Fri, 15 Jul 2022 05:25:44 GMT",
+                "server": "nginx",
+                "vary": "Accept-Encoding",
+                "x-cache-status": "MISS",
+                "x-powered-by": "PHP/7.3.33\nPleskLin"
+            }
+        }
     },
     {
         "url": "http://lsxs.me/warpbuffer",
         "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "LSXS Interactive Visualizer",
+                "description": "Where the action is!",
+                "lang": "en",
+                "author": "LSXS",
+                "publisher": "lsxs.me",
+                "image": {
+                    "url": "http://lsxs.me/assets/img/logo/cover.png",
+                    "type": "png",
+                    "size": 115590,
+                    "height": 1440,
+                    "width": 3500,
+                    "size_pretty": "116 kB"
+                },
+                "date": "2022-07-15T14:35:41.000Z",
+                "url": "http://lsxs.me/",
+                "logo": {
+                    "url": "http://lsxs.me/images/favicon3.ico",
+                    "type": "ico",
+                    "size": 15086,
+                    "height": 48,
+                    "width": 48,
+                    "size_pretty": "15.1 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:35:41 GMT",
+                "etag": "W/\"b293-ZXpAimPmAKCMn9N7ladaKUKv0j0\"",
+                "server": "Cowboy",
+                "transfer-encoding": "chunked",
+                "vary": "Accept-Encoding",
+                "via": "1.1 vegur",
+                "x-powered-by": "Express"
+            }
+        }
     },
     {
         "url": "https://www.hellotimo.co/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["todo", "tracking", "time"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "No more context switching - todo list and time tracking with Timo",
+                "description": "Track your daily tasks and time spent doing them all in one place. For freelancers and contractors with timesheets and invoices to send.",
+                "lang": "en",
+                "author": null,
+                "publisher": "hellotimo.co",
+                "image": {
+                    "url": "https://www.hellotimo.co/twitter-card.png",
+                    "type": "png",
+                    "size": 86824,
+                    "height": 600,
+                    "width": 1200,
+                    "size_pretty": "86.8 kB"
+                },
+                "date": "2022-07-15T14:35:49.000Z",
+                "url": "https://www.hellotimo.co/",
+                "logo": {
+                    "url": "https://www.hellotimo.co/timo.png",
+                    "type": "png",
+                    "size": 921,
+                    "height": 32,
+                    "width": 32,
+                    "size_pretty": "921 B"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "0",
+                "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:35:49 GMT",
+                "etag": "W/\"24fbe-U3ubXF7DMpo5bq3wdrOqnOfuFDM\"",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "x-frame-options": "DENY",
+                "x-matched-path": "/",
+                "x-powered-by": "Next.js",
+                "x-vercel-cache": "MISS",
+                "x-vercel-id": "iad1::sfo1::4lcfd-1657895746049-0febff12275f"
+            }
+        }
     },
     {
         "url": "https://poll.lowyinstitute.org/report/2020/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["trust", "global", "powers", "countries", "leaders"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "2020 Report - Lowy Institute Poll",
+                "description": "Conducted as the COVID-19 crisis was unfolding, the 2020 Lowy Institute Poll reveals unprecedented changes in how Australians view the world around them.",
+                "lang": "en",
+                "author": "Natasha Kassam",
+                "publisher": "lowyinstitute.org",
+                "image": {
+                    "url": "https://poll.lowyinstitute.org/img/lowy-institute-poll-2022-cover.jpg",
+                    "type": "jpg",
+                    "size": 71330,
+                    "height": 630,
+                    "width": 1200,
+                    "size_pretty": "71.3 kB"
+                },
+                "date": "2022-07-15T14:35:53.000Z",
+                "url": "https://poll.lowyinstitute.org/report/2020/",
+                "logo": null
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "0",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:35:53 GMT",
+                "etag": "\"7d59347f576ba89aef1bde658cf41ca6-ssl-df\"",
+                "server": "Netlify",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "x-nf-request-id": "01G814K5T9YAVWKX5X24PB3A3N"
+            }
+        }
     },
     {
         "url": "https://play.grafana.org/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["server", "requests", "memory", "cpu", "traffic", "logins", "client"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Grafana",
+                "description": null,
+                "lang": "en",
+                "author": null,
+                "publisher": "grafana.org",
+                "image": {
+                    "url": "https://play.grafana.org/public/img/grafana_icon.svg",
+                    "type": "svg",
+                    "size": 5690,
+                    "size_pretty": "5.69 kB"
+                },
+                "date": "2022-07-15T14:35:57.000Z",
+                "url": "https://play.grafana.org/",
+                "logo": {
+                    "url": "https://play.grafana.org/public/img/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 15718,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "15.7 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-cache",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:35:57 GMT",
+                "expires": "-1",
+                "pragma": "no-cache",
+                "server": "nginx/1.15.10",
+                "strict-transport-security": "max-age=15724800",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "deny",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://visualize.data.gov.in/?inst=5f477c42-b44c-480e-9379-f05995a4b34b&vid=106986",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["pension", "schemes", "employees", "india"],
+        "previewImageLink": "",
+        "type": "IV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "fail",
+            "data": {
+                "url": "The request reached timeout after 28s."
+            },
+            "code": "ETIMEOUT",
+            "more": "https://microlink.io/etimeout",
+            "report": "mailto:hello@microlink.io?subject=%5Bmicrolink%5D%20Request%20failed&body=Hello%2C%20The%20following%20API%20request%20wasn't%20processed%20properly%3A%0A%0A%20%20-%20request%20id%20%20%3A%208b3385ec-f1a5-4a1a-94f2-7d2c2abc03c3%0A%20%20-%20request%20uri%20%3A%20https%3A%2F%2Fapi.microlink.io%2F%3Furl%3Dhttps%3A%2F%2Fvisualize.data.gov.in%2F%3Finst%253D5f477c42-b44c-480e-9379-f05995a4b34b%2526vid%253D106986%0A%20%20-%20error%20code%20%20%3A%20ETIMEOUT%20(https%3A%2F%2Fmicrolink.io%2Fetimeout).%0A%0ACan%20you%20take%20a%20look%3F%20Thanks!%0A",
+            "message": "The request has been not processed. See the errors above to know why."
+        }
     },
     {
         "url": "https://wiediversistmeingarten.org/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["birds", "citizen science", "diversity", "workshops", "analysis"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Wie divers ist mein Garten?",
+                "description": "Durch anthropogenes Handeln sind derzeit mehr Arten vom Aussterben bedroht, als jemals zuvor. Um diese Notlage ins Bewusstsein der Gesellschaft zu rücken, ist die Beteiligung aller Bürger*innen gefragt. Mit…",
+                "lang": "de",
+                "author": null,
+                "publisher": "wiediversistmeingarten.org",
+                "image": {
+                    "url": "https://wiediversistmeingarten.org/static/img/work_1.JPG",
+                    "type": "jpeg",
+                    "duration": null,
+                    "duration_pretty": null,
+                    "size": 5940587,
+                    "size_pretty": "5.94 MB"
+                },
+                "date": "2022-06-03T21:08:04.000Z",
+                "url": "https://wiediversistmeingarten.org/",
+                "logo": null
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "connection": "keep-alive",
+                "content-length": "25399",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:36:31 GMT",
+                "etag": "\"629a7834-6337\"",
+                "last-modified": "Fri, 03 Jun 2022 21:08:04 GMT",
+                "server": "nginx/1.15.8"
+            }
+        }
     },
     {
         "url": "https://mixkit.co/free-stock-video/people/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["stock", "free", "photos"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Download the Best Free People Videos | Mixkit",
+                "description": "Choose from 902 Free People Stock Videos to download. Bring the energy that only people can add to your screens. From candid videos of friends wandering between stalls on market day, to colleagues discuss",
+                "lang": "en",
+                "author": null,
+                "publisher": "mixkit.co",
+                "image": {
+                    "url": "https://mixkit.imgix.net/videos/preview/mixkit-people-pouring-a-warm-drink-around-a-campfire-513-0.jpg?q=80&auto=format%2Ccompress&w=460",
+                    "type": "jpg",
+                    "size": 25088,
+                    "height": 259,
+                    "width": 460,
+                    "size_pretty": "25.1 kB"
+                },
+                "date": "2022-07-15T06:21:29.000Z",
+                "url": "https://mixkit.co/free-stock-video/people/",
+                "logo": {
+                    "url": "https://mixkit.co/build/favicons/apple-icon-180x180-bd3d5e368063b793b955fa228a1d9311b54a29ac871f53c2e0c69e81d5fa0d48.png",
+                    "type": "png",
+                    "size": 10966,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "11 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "26320",
+                "cache-control": "max-age=86400, public, stale-while-revalidate=3600, stale-if-error=28800, s-maxage=604800",
+                "content-encoding": "gzip",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 06:21:29 GMT",
+                "etag": "W/\"6115555b752aec5d19cc537619c0ac78\"",
+                "link": "<https://mixkit.co/build/application-cd436492f8258a4606c189230f6bd2ec7a9f7f0590ef9e82ea1da34ef53857ca.css>; rel=preload; as=style; nopush,<https://mixkit.co/build/packs/js/application-7bbe6a6903b5d99ed27d.js>; rel=preload; as=script; crossorigin=anonymous; nopush",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Cowboy",
+                "strict-transport-security": "max-age=63072000; includeSubDomains",
+                "vary": "Accept-Encoding",
+                "via": "1.1 vegur, 1.1 6f21edc64d8594b28f80c9ab159bcddc.cloudfront.net (CloudFront)",
+                "x-amz-cf-id": "6I5UdELt70067GsxY4IKeICgHKHrIMQFCvO0ntkKIcFRL-mlxWrefQ==",
+                "x-amz-cf-pop": "EWR52-C2",
+                "x-cache": "Hit from cloudfront",
+                "x-content-type-options": "nosniff",
+                "x-download-options": "noopen",
+                "x-frame-options": "SAMEORIGIN",
+                "x-permitted-cross-domain-policies": "none",
+                "x-request-id": "eca4a98e-a036-420c-a90b-6bc24c2172b9",
+                "x-runtime": "3.320348",
+                "x-xss-protection": "0"
+            }
+        }
     },
     {
         "url": "https://onepagelove.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["websites", "onepage", "html", "templates", "resources", "inspiration"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "One Page Love - One Page Website Inspiration and Templates",
+                "description": "One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.",
+                "lang": "en",
+                "author": "Rob Hope, robhope",
+                "publisher": "onepagelove.com",
+                "image": {
+                    "url": "https://onepagelove.com/wp-content/themes/onepagelove/frontend/img/social/one-page-love-meta.jpg",
+                    "type": "jpg",
+                    "size": 106881,
+                    "height": 628,
+                    "width": 1200,
+                    "size_pretty": "107 kB"
+                },
+                "date": "2022-07-15T14:37:03.000Z",
+                "url": "https://onepagelove.com/",
+                "logo": {
+                    "url": "https://onepagelove.com/wp-content/themes/onepagelove/frontend/img/favicon/favicon-32x32.png",
+                    "type": "png",
+                    "size": 1189,
+                    "height": 32,
+                    "width": 32,
+                    "size_pretty": "1.19 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "72b33bdd09213342-EWR",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:37:03 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "fastly-restarts": "1",
+                "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "referrer-policy": "no-referrer-when-downgrade",
+                "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=coEWEp%2Boh9n9CXmA9pSbT4WPBq%2FrKrIyhrDxi0TsjNd17T%2FEGWHdNtbCON9ECYY1A9DqMKCnHhdsqRySHiwMKAK5c67IeYeCPhHycy4vL4jOn0PPOAclJERlZPLZEG%2BO2bc%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "server": "cloudflare",
+                "vary": "Accept-Encoding",
+                "x-cache": "HIT",
+                "x-cache-hits": "1",
+                "x-cacheable": "YES",
+                "x-content-type-options": "nosniff",
+                "x-fw-dynamic": "TRUE",
+                "x-fw-hash": "fbfqcvs8hx",
+                "x-fw-serve": "TRUE",
+                "x-fw-server": "Flywheel/5.1.0",
+                "x-fw-static": "NO",
+                "x-fw-type": "VISIT",
+                "x-fw-version": "5.0.0",
+                "x-served-by": "cache-ewr18134-EWR",
+                "x-timer": "S1657895823.916611,VS0,VE116",
+                "x-xss-protection": "1"
+            }
+        }
     },
     {
         "url": "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["corona", "covid", "cases", "vaccinated", "germany"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "RKI - Coronavirus SARS-CoV-2 - COVID-19: Fallzahlen in Deutschland und weltweit",
+                "description": "Regionale Verteilung der COVID-19-Fälle weltweit",
+                "lang": "de",
+                "author": null,
+                "publisher": "rki.de",
+                "image": {
+                    "url": "https://www.rki.de/SiteGlobals/StyleBundles/Bilder/Farbschema_A/logo_a.jpg;jsessionid=A332879FFE669468EFD74ABF8B29B2FA.internet092?__blob=normal&v=7",
+                    "type": "jpg",
+                    "size": 7508,
+                    "height": 82,
+                    "width": 271,
+                    "size_pretty": "7.51 kB"
+                },
+                "date": "2022-07-15T14:37:05.000Z",
+                "url": "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html",
+                "logo": {
+                    "url": "https://www.rki.de/SiteGlobals/StyleBundles/Bilder/favicon.gif;jsessionid=A332879FFE669468EFD74ABF8B29B2FA.internet092?__blob=normal&v=2",
+                    "type": "gif",
+                    "duration": 0.1,
+                    "size": 526,
+                    "height": 16,
+                    "width": 16,
+                    "duration_pretty": "100ms",
+                    "size_pretty": "526 B"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "public, max-age=14400",
+                "cf-cache-status": "EXPIRED",
+                "cf-ray": "72b33beb58cf188d-EWR",
+                "content-encoding": "gzip",
+                "content-language": "de",
+                "content-security-policy": "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com piwik.itzbund.de; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com piwik.itzbund.de;object-src 'self' multimedia.gsb.bund.de piwik.itzbund.de; frame-src 'self' multimedia.gsb.bund.de blob: data:; media-src 'self' multimedia.gsb.bund.de *.youtube.com www.quirksmode.org *.googleapis.com piwik.itzbund.de; child-src *.facebook.com *.twitter.com *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de covapp.charite.de covapp-rki.hpsgc.de; img-src 'self' data: *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de; font-src 'self' data: *.googleapis.com *.gstatic.com piwik.itzbund.de; connect-src 'self' *.itzbund.de; frame-ancestors *.prod.gsb.rki.in.bund.de piwik.itzbund.de *.facebook.com",
+                "content-type": "text/html;charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:37:05 GMT",
+                "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "expires": "Fri, 15 Jul 2022 18:37:05 GMT",
+                "last-modified": "Fri, 15 Jul 2022 14:37:05 GMT",
+                "pragma": "no-cache\nno-cache",
+                "server": "cloudflare",
+                "set-cookie": "__cf_bm=3sIhtzoSiz6XZl3jYeOnkaMXkEXfJkCneI94PWDgDRA-1657895825-0-Ac6kSqbmH1QkrTF2S8WVYoXTbZPPBf1UGask/681178w3ALlsZQw6kRCNefxTxevTkqANFaJO/Qk9fM8snl1x1ECz9DzmsjXLw/WRMbT9d1M; path=/; expires=Fri, 15-Jul-22 15:07:05 GMT; domain=.rki.de; HttpOnly; Secure; SameSite=None\n__cfruid=4bbe6d5830f624e7d47c41883407d5f10b420f84-1657895825; path=/; domain=.rki.de; HttpOnly; Secure; SameSite=None",
+                "strict-transport-security": "max-age=16070400",
+                "vary": "X-Forwarded-Proto,Accept-Encoding",
+                "x-content-security-policy": "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com piwik.itzbund.de; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com piwik.itzbund.de;object-src 'self' multimedia.gsb.bund.de piwik.itzbund.de; frame-src 'self' multimedia.gsb.bund.de blob: data:; media-src 'self' multimedia.gsb.bund.de *.youtube.com www.quirksmode.org *.googleapis.com piwik.itzbund.de; child-src *.facebook.com *.twitter.com *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de covapp.charite.de covapp-rki.hpsgc.de; img-src 'self' data: *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de; font-src 'self' data: *.googleapis.com *.gstatic.com piwik.itzbund.de; connect-src 'self' *.itzbund.de; frame-ancestors *.prod.gsb.rki.in.bund.de piwik.itzbund.de *.facebook.com",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "sameorigin",
+                "x-permitted-cross-domain-policies": "none",
+                "x-ua-compatible": "IE=edge",
+                "x-webkit-csp": "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com piwik.itzbund.de; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com piwik.itzbund.de;object-src 'self' multimedia.gsb.bund.de piwik.itzbund.de; frame-src 'self' multimedia.gsb.bund.de; media-src 'self' multimedia.gsb.bund.de *.youtube.com www.quirksmode.org *.googleapis.com piwik.itzbund.de; child-src *.facebook.com *.twitter.com *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de covapp.charite.de covapp-rki.hpsgc.de; img-src 'self' data: *.google.com *.gstatic.com *.youtube.com *.googleapis.com piwik.itzbund.de; font-src 'self' data: *.googleapis.com *.gstatic.com piwik.itzbund.de; connect-src 'self' *.itzbund.de; frame-ancestors *.prod.gsb.rki.in.bund.de piwik.itzbund.de *.facebook.com",
+                "x-xss-protection": "1;mode=block"
+            }
+        }
     },
     {
         "url": "https://vuejs.org/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["framework", "progressive", "javascript"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Vue.js - The Progressive JavaScript Framework | Vue.js",
+                "description": "Vue.js - The Progressive JavaScript Framework",
+                "lang": "en",
+                "author": null,
+                "publisher": "vuejs.org",
+                "image": {
+                    "url": "https://vuejs.org/images/logo.png",
+                    "type": "png",
+                    "size": 3451,
+                    "height": 400,
+                    "width": 400,
+                    "size_pretty": "3.45 kB"
+                },
+                "date": "2022-07-15T05:36:03.000Z",
+                "url": "https://vuejs.org/",
+                "logo": {
+                    "url": "https://vuejs.org/logo.svg",
+                    "type": "svg",
+                    "size": 316,
+                    "size_pretty": "316 B"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "32466",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-encoding": "br",
+                "content-length": "7610",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 05:36:03 GMT",
+                "etag": "\"52fa9c1e79f8f26c4567e80ad54d11c8-ssl-df\"",
+                "server": "Netlify",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "x-frame-options": "DENY",
+                "x-nf-request-id": "01G814NGCYV3HMAQGSBQ58TNH7"
+            }
+        }
     },
     {
         "url": "https://www.deepl.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["translation", "languages", "detect"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "DeepL Translate: The world’s most accurate translator",
+                "description": "Translate texts & full document files instantly. Accurate translations for individuals and Teams. Millions translate with DeepL every day.",
+                "lang": "en",
+                "author": null,
+                "publisher": "deepl.com",
+                "image": {
+                    "url": "https://static.deepl.com/img/favicon/deepl_logo_600_300.png",
+                    "type": "png",
+                    "size": 13903,
+                    "height": 300,
+                    "width": 600,
+                    "size_pretty": "13.9 kB"
+                },
+                "date": "2022-07-14T19:15:25.000Z",
+                "url": "https://www.deepl.com/translator",
+                "logo": {
+                    "url": "https://static.deepl.com/img/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 4788,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "4.79 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-store, no-cache, must-revalidate, max-age=0",
+                "content-encoding": "gzip",
+                "content-security-policy": "frame-ancestors 'self' *.deepl.com",
+                "content-type": "text/html",
+                "date": "Thu, 14 Jul 2022 19:15:25 GMT",
+                "server": "nginx",
+                "strict-transport-security": "max-age=2592000; includeSubDomains; preload"
+            }
+        }
     },
     {
         "url": "https://en.wikipedia.org/wiki/Game",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["encyclopedia", "game", "aricle" ,"read"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Game - Wikipedia",
+                "description": "This article is about all types of games in general. For games played on a consumer electronic, see Video game. For other uses, see Game (disambiguation).",
+                "lang": "en",
+                "author": "Contributors to Wikimedia projects",
+                "publisher": "Wikimedia Foundation, Inc.",
+                "image": {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paris_-_Tout%C3%A2nkhamon%2C_le_Tr%C3%A9sor_du_Pharaon_-_Plateau_de_jeu_miniature_en_ivoire_-_005.jpg/1200px-Paris_-_Tout%C3%A2nkhamon%2C_le_Tr%C3%A9sor_du_Pharaon_-_Plateau_de_jeu_miniature_en_ivoire_-_005.jpg",
+                    "type": "jpg",
+                    "size": 158613,
+                    "height": 1200,
+                    "width": 1200,
+                    "size_pretty": "159 kB"
+                },
+                "date": "2022-06-04T13:57:46.000Z",
+                "url": "https://en.wikipedia.org/wiki/Game",
+                "logo": {
+                    "url": "https://en.wikipedia.org/static/apple-touch/wikipedia.png",
+                    "type": "png",
+                    "size": 1313,
+                    "height": 160,
+                    "width": 160,
+                    "size_pretty": "1.31 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "date": "Thu, 14 Jul 2022 18:47:15 GMT",
+                "vary": "Accept-Encoding,Cookie,Authorization",
+                "server": "ATS/8.0.8",
+                "x-content-type-options": "nosniff",
+                "content-language": "en",
+                "last-modified": "Tue, 12 Jul 2022 19:13:27 GMT",
+                "content-type": "text/html; charset=UTF-8",
+                "content-encoding": "gzip",
+                "age": "71397",
+                "x-cache": "cp1079 miss, cp1077 hit/18",
+                "x-cache-status": "hit-front",
+                "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp1077\"",
+                "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+                "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 86400, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+                "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 86400, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+                "set-cookie": [
+                    "WMF-Last-Access=15-Jul-2022;Path=/;HttpOnly;secure;Expires=Tue, 16 Aug 2022 12:00:00 GMT",
+                    "WMF-Last-Access-Global=15-Jul-2022;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Tue, 16 Aug 2022 12:00:00 GMT",
+                    "GeoIP=US:NJ:Clifton:40.84:-74.14:v4; Path=/; secure; Domain=.wikipedia.org"
+                ],
+                "accept-ch": "Sec-CH-UA-Arch,Sec-CH-UA-Bitness,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform-Version",
+                "permissions-policy": "interest-cohort=(),ch-ua-arch=(self \"intake-analytics.wikimedia.org\"),ch-ua-bitness=(self \"intake-analytics.wikimedia.org\"),ch-ua-full-version-list=(self \"intake-analytics.wikimedia.org\"),ch-ua-model=(self \"intake-analytics.wikimedia.org\"),ch-ua-platform-version=(self \"intake-analytics.wikimedia.org\")",
+                "x-client-ip": "159.203.103.161",
+                "cache-control": "private, s-maxage=0, max-age=0, must-revalidate",
+                "accept-ranges": "bytes",
+                "content-length": "45493"
+            }
+        }
     },
     {
         "url": "https://sensebox.de/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["digital", "education", "citizen science", "environment", "monitoring"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Home",
+                "description": "Dein Toolkit für digitale Bildung, Citizen Science und Umweltmonitoring",
+                "lang": "de",
+                "author": null,
+                "publisher": "senseBox.de",
+                "image": {
+                    "url": "https://piwik.uni-muenster.de/matomo.php?idsite=25&rec=1",
+                    "type": "gif",
+                    "duration": 0.1,
+                    "size": 43,
+                    "height": 1,
+                    "width": 1,
+                    "duration_pretty": "100ms",
+                    "size_pretty": "43 B"
+                },
+                "date": "2022-07-14T23:27:31.000Z",
+                "url": "https://sensebox.de/",
+                "logo": {
+                    "url": "https://sensebox.de/images/favicon.png",
+                    "type": "png",
+                    "size": 1559,
+                    "height": 56,
+                    "width": 56,
+                    "size_pretty": "1.56 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "age": "54584",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-encoding": "br",
+                "content-length": "14951",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Thu, 14 Jul 2022 23:27:31 GMT",
+                "etag": "\"d245aca60edc48ce4481b9470b681d61-ssl-df\"",
+                "server": "Netlify",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "x-nf-request-id": "01G814NP3KRV1GWD572N8H8HYM"
+            }
+        }
     },
     {
         "url": "https://www.uni-muenster.de/Geoinformatics/en/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["university" ,"institute","geoinformatics"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Institute for Geoinformatics",
+                "description": "Geoinformatics is the science of modelling spatio-temporal processes computationally. The Institute of Geoinformatics in Münster provides bachelor, master and phd degrees in geoinformatics. Our research areas are modelling spatio-temporal processes, semantic interoperability, spatial assistance syst…",
+                "lang": "en",
+                "author": "Westfälische Wilhelms-Universität Münster, Institut für Geoinformatik",
+                "publisher": "uni-muenster.de",
+                "image": {
+                    "url": "https://www.uni-muenster.de/imperia/md/images/geoinformatics/fittosize_761_381_6b2e0f7db6d1d96b7b90d99408e0f222_2021-sliderimage_en.png",
+                    "type": "png",
+                    "size": 441988,
+                    "height": 381,
+                    "width": 762,
+                    "size_pretty": "442 kB"
+                },
+                "date": "2022-03-22T15:10:35.000Z",
+                "url": "https://www.uni-muenster.de/Geoinformatics/en/",
+                "logo": {
+                    "url": "https://www.uni-muenster.de/imperia/md/content/allgemein/farbunabhaengig/favicon.ico",
+                    "type": "ico",
+                    "size": 2430,
+                    "height": 32,
+                    "width": 32,
+                    "size_pretty": "2.43 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "connection": "Keep-Alive",
+                "content-encoding": "gzip",
+                "content-length": "8393",
+                "content-type": "text/html",
+                "date": "Fri, 15 Jul 2022 14:37:20 GMT",
+                "etag": "\"67f4-5dad003c76b33-gzip\"",
+                "keep-alive": "timeout=1, max=500",
+                "last-modified": "Tue, 22 Mar 2022 15:10:35 GMT",
+                "server": "Apache/2.4",
+                "vary": "Accept-Encoding"
+            }
+        }
     },
     {
         "url": "https://www.offiziellecharts.de/charts/dance",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["music", "charts", "ranking", "german", "official"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Offizielle Deutsche Charts - Offizielle Deutsche Charts",
+                "description": "Hier gibt’s die Offiziellen Deutschen Charts in ihrer ganzen Vielfalt. Denn: Hier zählt die Musik.",
+                "lang": "de",
+                "author": null,
+                "publisher": "offiziellecharts.de",
+                "image": {
+                    "url": "https://www.offiziellecharts.de/templates/gfktemplate/images/charts_logo.svg",
+                    "type": "svg",
+                    "size": 17313,
+                    "size_pretty": "17.3 kB"
+                },
+                "date": "2022-07-15T14:37:25.000Z",
+                "url": "https://www.offiziellecharts.de/charts/dance",
+                "logo": {
+                    "url": "https://www.offiziellecharts.de/templates/gfktemplate/favicon.ico",
+                    "type": "png",
+                    "size": 4103,
+                    "height": 67,
+                    "width": 66,
+                    "size_pretty": "4.1 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+                "content-encoding": "gzip",
+                "content-length": "9777",
+                "content-security-policy": "default-src 'self' 'unsafe-inline' *.ioam.de data-aac883f83b.offiziellecharts.de",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:37:26 GMT",
+                "expires": "Wed, 17 Aug 2005 00:00:00 GMT",
+                "last-modified": "Fri, 15 Jul 2022 14:37:25 GMT",
+                "p3p": "CP=\"NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"",
+                "permissions-policy": "interest-cohort=()",
+                "pragma": "no-cache",
+                "server": "nginx",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "x-content-powered-by": "K2 v2.10.3 (by JoomlaWorks)",
+                "x-content-security-policy": "default-src 'self' 'unsafe-inline' *.ioam.de data-aac883f83b.offiziellecharts.de",
+                "x-content-type-options": "nosniff",
+                "x-logged-in": "False",
+                "x-webkit-csp": "default-src 'self' 'unsafe-inline' *.ioam.de data-aac883f83b.offiziellecharts.de"
+            }
+        }
     },
     {
         "url": "https://www.vogelbescherming.nl/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["nederlands", "birds", "observation"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Samen voor vogels en natuur",
+                "description": "Vogelbescherming Nederland komt op voor vogels en hun leefgebieden. Helpt u mee?",
+                "lang": "nl",
+                "author": "Vogelbescherming Nederland",
+                "publisher": "vogelbescherming.nl",
+                "image": {
+                    "url": "https://cdn-img.newstory.nl/vbn/images/optimized/dc875ad2-4e08-4c1f-ad4b-e962bfe1998f.jpg&h=630&w=1000&mode=crop&v=1655390697",
+                    "type": "jpg",
+                    "size": 118865,
+                    "height": 630,
+                    "width": 1000,
+                    "size_pretty": "119 kB"
+                },
+                "date": "2022-07-15T14:37:31.000Z",
+                "url": "https://www.vogelbescherming.nl/",
+                "logo": {
+                    "url": "https://cdn-cf.newstory.nl/vbn/vogelbescherming.nl/media/img/apple-touch-icon-144-precomposed.png",
+                    "type": "png",
+                    "size": 3584,
+                    "height": 144,
+                    "width": 144,
+                    "size_pretty": "3.58 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "access-control-allow-headers": "Authorization, Cache-Control, X-Requested-With, Content-Type",
+                "access-control-allow-methods": "GET,POST,PUT,OPTIONS",
+                "access-control-allow-origin": "*",
+                "content-encoding": "gzip",
+                "content-language": "nl-NL",
+                "content-length": "12113",
+                "content-type": "text/html;charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:37:31 GMT",
+                "etag": "\"A18A9898EA3F1B3486E52A1567585184-gzip\"",
+                "p3p": "CP=\"CAO PSA OUR\"",
+                "server": "Apache",
+                "set-cookie": "AWSALB=FOuEYTjmVovQi4xt9NCOxcCJYCY9JBXxV4ddeEMVpqgYvyUgsbsHZmZDZWOmPW1tlInnTVWDqijCdQNkxLJDY1z823YWKohJvRHNOv8Y7x5nI6a2kKQNuYhu86Ib; Expires=Fri, 22 Jul 2022 14:37:31 GMT; Path=/\nAWSALBCORS=FOuEYTjmVovQi4xt9NCOxcCJYCY9JBXxV4ddeEMVpqgYvyUgsbsHZmZDZWOmPW1tlInnTVWDqijCdQNkxLJDY1z823YWKohJvRHNOv8Y7x5nI6a2kKQNuYhu86Ib; Expires=Fri, 22 Jul 2022 14:37:31 GMT; Path=/; SameSite=None; Secure\ncfid=9542fe9c-912a-41fb-93d2-01fcf4181b8d;Path=/;Expires=Thu, 04-Aug-2022 16:15:35 UTC;HttpOnly;HttpOnly;Secure\ncftoken=0;Path=/;Expires=Thu, 04-Aug-2022 16:15:35 UTC;HttpOnly;HttpOnly;Secure",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding,User-Agent",
+                "x-content-type-options": "nosniff",
+                "x-instance": "Vogelbescherming Nederland",
+                "x-instanceid": "i-0fbbc843dad8f54d3"
+            }
+        }
     },
     {
         "url": "https://www.bundesregierung.de/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["germany", "government", "information"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Webseite der Bundesregierung | Startseite",
+                "description": "Presse- und Informationsamt der Bundesregierung. Hier finden Sie aktuelle Informationen und Hintergründe sowie Service-Angebote: Erfahren Sie mehr über die Arbeit der Bundesregierung.",
+                "lang": "de",
+                "author": null,
+                "publisher": "Webseite der Bundesregierung | Startseite",
+                "image": {
+                    "url": "https://www.bundesregierung.de/resource/image/2061968/16x9/500/281/ab18990a8d868eddbe7eb3b7942cd26b/rq/2022-07-13-ahrtal-2022.jpg",
+                    "type": "jpg",
+                    "size": 38273,
+                    "size_pretty": "38.3 kB"
+                },
+                "date": "2022-07-15T14:37:35.000Z",
+                "url": "https://www.bundesregierung.de/breg-de",
+                "logo": {
+                    "url": "https://www.bundesregierung.de/resource/blob/974430/974430/34846dc660215d3aa5a281be68288bd6/startseite-breg-relaunch-de-appleTouchIcon.png",
+                    "type": "png",
+                    "size": 9950,
+                    "height": 192,
+                    "width": 192,
+                    "size_pretty": "9.95 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-language": "de",
+                "content-security-policy-report-only": "default-src 'self'; frame-ancestors 'self' *.bundesregierung.de *.bundeskanzlerin.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de; frame-src *.bundesregierung.de *.bundeskanzler.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de *.g7germany.de *.germany4ukraine.de streaming.talk42.de app.datawrapper.de datawrapper.dwcdn.net 'self'; style-src *.bundesregierung.de *.bundeskanzler.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de *.g7germany.de *.germany4ukraine.de https://cdn.leafletjs.com/leaflet/v0.7.7/ https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/ 'unsafe-inline'; img-src *.bundesregierung.de *.bundeskanzler.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de *.g7germany.de *.germany4ukraine.de https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org https://a.tile.openstreetmap.de https://b.tile.openstreetmap.de https://c.tile.openstreetmap.de data: 'unsafe-inline'; script-src *.bundesregierung.de *.bundeskanzler.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de *.g7germany.de *.germany4ukraine.de https://ssl.p.jwpcdn.com/player/ https://www.youtube.com https://s.ytimg.com/yts/jsbin/ https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/ https://vjs.zencdn.net/5.9.2/ 'unsafe-inline'; font-src *.bundesregierung.de *.bundeskanzler.de *.deutschland-kann-das.de *.deutscher-kurzfilmpreis.de *.eu-gleichbehandlungsstelle.de *.integrationsbeauftragte.de *.bund.de *.open-government-deutschland.de *.nationaler-aktionsplan-integration.de *.70jahregrundgesetz.de *.dieglorreichen17.de *.g7germany.de *.germany4ukraine.de https://ssl.p.jwpcdn.com data: 'self'; media-src *.bundesregierung.de 'self';",
+                "content-type": "text/html;charset=UTF-8",
+                "date": "Fri, 15 Jul 2022 14:37:35 GMT",
+                "etag": "\"myra-993686\"",
+                "expires": "Fri, 15 Jul 2022 14:37:48 GMT",
+                "server": "myracloud",
+                "strict-transport-security": "max-age=31536000",
+                "transfer-encoding": "chunked",
+                "x-cdn": "1",
+                "x-content-type-options": "nosniff\nnosniff",
+                "x-frame-options": "bundesregierung.de",
+                "x-xss-protection": "1; mode=block",
+                "cache-control": "max-age=120",
+                "vary": "accept-encoding"
+            }
+        }
     },
     {
         "url": "https://www.tagesschau.de/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["germany", "news", "independent"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Aktuelle Nachrichten - Inland Ausland Wirtschaft Kultur Sport - ARD Tagesschau",
+                "description": "tagesschau.de - die erste Adresse für Nachrichten und Information: An 365 Tagen im Jahr, rund um die Uhr aktualisiert - die wichtigsten News des Tages",
+                "lang": "de",
+                "author": null,
+                "publisher": "tagesschau.de",
+                "image": {
+                    "url": "http://www.tagesschau.de/multimedia/bilder/tagesschauapp104~_v-grossfrei16x9.jpg",
+                    "type": "png",
+                    "size": 70608,
+                    "height": 288,
+                    "width": 512,
+                    "size_pretty": "70.6 kB"
+                },
+                "date": "2022-07-15T16:35:58.000Z",
+                "url": "https://www.tagesschau.de/",
+                "logo": {
+                    "url": "https://www.tagesschau.de/res/assets/image/favicon/mstile-310x310.png",
+                    "type": "png",
+                    "size": 63921,
+                    "height": 310,
+                    "width": 310,
+                    "size_pretty": "63.9 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "cache-control": "max-age=27",
+                "content-encoding": "gzip",
+                "content-length": "121384",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:37:43 GMT",
+                "vary": "Accept-Encoding",
+                "x-debug-data": "origin=gcp"
+            }
+        }
     },
     {
         "url": "https://sprout.place/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["virtual", "space", "meet", "chat", "interaction", "people"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Sprout | Your space, your call",
+                "description": "Meet, create & play in customizable spaces. Video chat. Take notes. Browse together. No login needed.",
+                "lang": "en",
+                "author": null,
+                "publisher": "sprout.place",
+                "image": {
+                    "url": "https://sprout.place/assets/opengraph_v1.1.1.jpg",
+                    "type": "jpg",
+                    "size": 277819,
+                    "height": 1260,
+                    "width": 2400,
+                    "size_pretty": "278 kB"
+                },
+                "date": "2022-07-15T14:37:50.000Z",
+                "url": "https://sprout.place/",
+                "logo": {
+                    "url": "https://sprout.place/_site/assets/favicon-256x256.png",
+                    "type": "png",
+                    "size": 10637,
+                    "height": 256,
+                    "width": 256,
+                    "size_pretty": "10.6 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "access-control-allow-origin": "*",
+                "age": "1312709",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-encoding": "br",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Fri, 15 Jul 2022 14:37:50 GMT",
+                "etag": "W/\"83d27c08c0602a66bfb8b5f0a8b71e55\"",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "x-matched-path": "/",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "iad1:iad1::zhzhk-1657895870240-075365c16335"
+            }
+        }
     },
     {
         "url": "https://www.lalal.ai/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["extract", "vocals", "accompaniment"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Vocal Remover | Isolate Voice & Instrumental Online | LALAL.AI",
+                "description": "Split vocal and instrumental tracks quickly and accurately with Lalal.ai. Upload any audio file and receive high-quality extracted tracks in a few seconds.",
+                "lang": "en",
+                "author": "OmniSale GMBH",
+                "publisher": "lalal.ai",
+                "image": {
+                    "url": "https://s.lalal.ai/share/share-default.png",
+                    "type": "png",
+                    "size": 20966,
+                    "height": 1260,
+                    "width": 2400,
+                    "size_pretty": "21 kB"
+                },
+                "date": "2022-07-20T09:18:00.000Z",
+                "url": "https://www.lalal.ai/",
+                "logo": {
+                    "url": "https://s.lalal.ai/icons/apple/apple-touch-icon.png",
+                    "type": "png",
+                    "size": 658,
+                    "height": 180,
+                    "width": 180,
+                    "size_pretty": "658 B"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "cache-control": "max-age=600",
+                "content-encoding": "gzip",
+                "content-language": "en",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Wed, 20 Jul 2022 09:18:00 GMT",
+                "etag": "W/\"7a9160a1bd4ac5de4836a4be0b51f272\"",
+                "expires": "Wed, 20 Jul 2022 09:22:56 GMT",
+                "server": "nginx",
+                "set-cookie": "csrftoken=by8s3oBBz1JU0pp9083tRhffhgLRS02dxLVSt7OeK1cZsPwJaJRhPKRRXPigWFrP; expires=Wed, 19 Jul 2023 09:12:56 GMT; Max-Age=31449600; Path=/",
+                "strict-transport-security": "max-age=604800",
+                "vary": "Cookie, Cache-Country, Cache-Referral-Click, Cache-Referral-Registration, Accept-Language",
+                "x-frame-options": "DENY"
+            }
+        }
     },
     {
         "url": "https://regex101.com/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["regular", "expression", "test", "explanation", "syntax"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "regex101: build, test, and debug regex",
+                "description": "Regular expression tester with syntax highlighting, explanation, cheat sheet for PHP/PCRE, Python, GO, JavaScript, Java, C#/.NET.",
+                "lang": "en",
+                "author": "Firas Dib",
+                "publisher": "regex101",
+                "image": {
+                    "url": "https://regex101.com/static/assets/card.png",
+                    "type": "png",
+                    "size": 14299,
+                    "height": 629,
+                    "width": 1200,
+                    "size_pretty": "14.3 kB"
+                },
+                "date": "2022-07-20T09:18:50.000Z",
+                "url": "https://regex101.com/",
+                "logo": {
+                    "url": "https://regex101.com/static/assets/icon-192.png",
+                    "type": "png",
+                    "size": 1321,
+                    "height": 192,
+                    "width": 192,
+                    "size_pretty": "1.32 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "content-encoding": "br",
+                "content-security-policy": "default-src 'self' 'unsafe-eval' http: https: data: blob: 'unsafe-inline'",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Wed, 20 Jul 2022 09:18:50 GMT",
+                "etag": "W/\"f050-JMlDTvh4v3MpZnEwSDnetfhk3OU\"",
+                "referrer-policy": "no-referrer-when-downgrade",
+                "server": "nginx",
+                "service-worker-allowed": "/",
+                "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                "vary": "Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "SAMEORIGIN",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     },
     {
         "url": "https://datos.gob.es/es/",
-        "topics": [],
-        "previewImage": "",
-        "type": "",
-        "description": ""
+        "topics": ["government", "spain", "initiative", "highlights"],
+        "previewImageLink": "",
+        "type": "noIV",
+        "classifiedType":"",
+        "description": "",
+        "microlink": {
+            "status": "success",
+            "data": {
+                "title": "Datos abiertos del Gobierno de España – Datos.gob.es",
+                "description": "Datos abiertos del Gobierno de España para la apertura de la información pública y desarrollo de servicios avanzados basados en datos. Es promovida por el Ministerio de Asuntos Económicos y Transformación Digital y la Entidad Pública Empresarial Red.es.",
+                "lang": "es",
+                "author": "datos.gob.es - Oficina del Dato",
+                "publisher": "datos.gob.es",
+                "image": {
+                    "url": "https://datos.gob.es/sites/default/files/styles/carousel_style/public/02-cursos-inteligencia-artificial.jpg?itok=xmJcGbG9",
+                    "type": "jpg",
+                    "size": 210499,
+                    "height": 500,
+                    "width": 980,
+                    "size_pretty": "210 kB"
+                },
+                "date": "2022-07-20T08:40:42.000Z",
+                "url": "https://datos.gob.es/es/",
+                "logo": {
+                    "url": "https://datos.gob.es/sites/all/themes/dge_theme/favicon.ico",
+                    "type": "ico",
+                    "size": 1150,
+                    "height": 16,
+                    "width": 16,
+                    "size_pretty": "1.15 kB"
+                }
+            },
+            "statusCode": 200,
+            "headers": {
+                "accept-ranges": "bytes",
+                "age": "1226",
+                "cache-control": "public, max-age=1800",
+                "connection": "keep-alive",
+                "content-encoding": "gzip",
+                "content-language": "es",
+                "content-length": "18315",
+                "content-security-policy": "default-src https: data: 'unsafe-inline' 'unsafe-eval'",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Wed, 20 Jul 2022 09:21:28 GMT",
+                "etag": "\"1658306442-1\"",
+                "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+                "last-modified": "Wed, 20 Jul 2022 08:40:42 GMT",
+                "link": "<https://datos.gob.es/es>; rel=\"canonical\"",
+                "permissions-policy": "interest-cohort=()",
+                "strict-transport-security": "max-age=15768000; includeSubDomains",
+                "vary": "Cookie,Accept-Encoding",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "SAMEORIGIN",
+                "x-xss-protection": "1; mode=block"
+            }
+        }
     }
 ]

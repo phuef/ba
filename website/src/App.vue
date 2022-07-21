@@ -7,7 +7,7 @@
     >
     <v-spacer></v-spacer>
       <div class="d-flex align-center">
-        search engine
+        a search engine for interactive webbased visualizations
       </div>
 
       <v-spacer></v-spacer>
