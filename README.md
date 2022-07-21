@@ -1,14 +1,14 @@
-Repository für meine Bachelorarbeit am ifgi.
+Repository for my bachelor thesis 'a search engine for web based interarctive visualizations' at ifgi.
 
 
-# Server starten
+# start server
 
 ```
 cd server 
 python server.py 
 ```
 
-# Website starten 
+# start website 
 
 ```
 cd website
