@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="de" class="dark-theme">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Die interaktive Karte der Berliner Morgenpost zeigt die Lärmpegel an allen Berliner Hausfassaden.">
+    <meta name="robots" content="index,follow">
+
+    <title>Lärmkarte Berlin – So laut ist es vor Ihrer Haustür</title>
+    <meta property="og:title" content="Lärmkarte Berlin 2018 – So laut ist es vor Ihrer Haustür"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://interaktiv.morgenpost.de/laermkarte-berlin/"/>
+    <meta property="og:image" content="https://interaktiv.morgenpost.de/laermkarte-berlin/images/thumb_neu.jpg"/>
+    <meta property="og:site_name" content="Berliner Morgenpost"/>
+    <meta property="og:description" content="Die interaktive Karte der Berliner Morgenpost zeigt die Lärmpegel an allen Berliner Hausfassaden. Checken Sie Ihre Adresse."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@morgenpost">
+    <meta name="twitter:title" content="Lärmkarte Berlin 2018 – So laut ist es vor Ihrer Haustür">
+    <meta name="twitter:description" content="Die interaktive Karte der @morgenpost zeigt die Lärmpegel an allen Berliner Hausfassaden. Checken Sie Ihre Adresse.">
+    <meta name="twitter:image:src" content="https://interaktiv.morgenpost.de/laermkarte-berlin/images/thumb_neu.jpg">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script>  
+    var isIframe = false;
+
+    if ((top !== parent || window != window.top)) {
+      isIframe = true;
+    }
+    </script>
+  
+    <link rel="shortcut icon" href="https://www.morgenpost.de/resources/26592/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+      <div style="display: none;">
+          <!-- inject:svg --><svg xmlns="https://www.w3.org/2000/svg"><symbol id="arrow-left" viewBox="0 0 24 14"><path d="M0 7.002a.999.999 0 0 0 .286.693l.006.012 6 6a1 1 0 0 0 1.414-1.414L3.414 7.998H23a1 1 0 0 0 0-2H3.414l4.292-4.291A1 1 0 0 0 6.292.293l-6 6-.006.01a.978.978 0 0 0-.208.313.974.974 0 0 0-.078.382v.004z" fill-rule="evenodd"></path></symbol><symbol id="interaktiv" viewBox="0 0 64 71"><path d="M31.877 53.924c.3-.392-.569-1.882-.569-1.882L12.225 18.989s-2.019-3.397 1.403-5.374c3.422-1.975 5.441 1.422 5.441 1.422L33.947 40.81l-4.287-7.43s-1.976-3.421 1.445-5.397c3.422-1.975 5.397 1.447 5.397 1.447l4.29 7.428-3.3-5.717s-1.976-3.422 1.445-5.398c3.422-1.976 5.399 1.446 5.399 1.446l3.299 5.718-2.312-4.006s-1.975-3.422 1.446-5.399c3.422-1.975 5.397 1.447 5.397 1.447l2.313 4.007s-.798-1.386 5.128 8.88c2.493 4.318 9.3 19.26-1.615 25.562L47.077 69.7c-5.96 3.44-13.456-.77-15.642-1.886-1.682-.856-12.898-13.743-15.314-15.14-.374-.218-4.053-.86-4.303-1.154-1.448-1.696.198-4.18 2.516-5.091 1.683-.664 4.049-.39 6.993.727 3.364 1.276 10.252 7.158 10.55 6.767zm-18.161-26.67l-1.977-3.423c-4.823-.891-8.492-5.123-8.492-10.202 0-5.724 4.657-10.381 10.38-10.381 5.726 0 10.384 4.657 10.384 10.381 0 1.164-.2 2.278-.556 3.324l1.988 3.442a13.53 13.53 0 0 0 1.815-6.766C27.258 6.114 21.143 0 13.628 0 6.113 0 0 6.114 0 13.63c0 7.515 6.113 13.628 13.628 13.628.03 0 .058-.004.088-.004z" fill-rule="evenodd"></path></symbol><symbol id="locate" viewBox="0 0 30 30"><path d="M15 9.643c-2.947 0-5.357 2.41-5.357 5.357s2.41 5.357 5.357 5.357 5.357-2.41 5.357-5.357c0-2.946-2.41-5.357-5.357-5.357zm12.786 3.928c-.643-5.928-5.429-10.714-11.357-11.357V0H13.57v2.214C7.643 2.857 2.857 7.643 2.214 13.571H0v2.858h2.214c.643 5.928 5.429 10.714 11.357 11.357V30h2.857v-2.214c5.929-.643 10.715-5.429 11.358-11.357H30V13.57h-2.214zM15 25C9.5 25 5 20.5 5 15S9.5 5 15 5s10 4.5 10 10-4.5 10-10 10z" fill-rule="nonzero"/></symbol><symbol id="info" viewBox="0 0 30 30"><path d="M15 0C6.716 0 0 6.716 0 15c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15zm0 28.125C7.762 28.125 1.875 22.238 1.875 15S7.762 1.875 15 1.875 28.125 7.762 28.125 15 22.238 28.125 15 28.125zm0-16.875c-1.035 0-1.875.84-1.875 1.875V22.5a1.875 1.875 0 1 0 3.75 0v-9.375c0-1.035-.84-1.875-1.875-1.875zm-1.875-3.72a1.875 1.875 0 1 0 3.75 0 1.875 1.875 0 0 0-3.75 0z" fill-rule="evenodd"/></symbol></svg><!-- endinject -->
+       </div>
+      <div class="app">
+      <div class="attspace" data-template="#ad-template"></div>
+
+      <canvas id="line-canvas"></canvas>
+      
+      <header>
+        <div class="topline">
+          <a href="https://www.morgenpost.de" target="_blank">
+            <img src="images/logo-small-white.png" class="mp-logo dark mobile-only">
+            <img src="images/logo-large-white.png" class="mp-logo-large dark desktop-only">
+          </a>
+          
+          <span class="headline-wrapper" data-template="#headline-template">
+            <h1 class="headline">Lärmkarte Berlin 2018</h1>
+            <h2 class="subline tablet-only">So laut ist es vor Ihrer Haustür</h2>
+
+
+          </span>
+          
+          <div class="social clearfix">
+
+            <a class="wa-btn"></a>
+            
+            <iframe class="fb-iframe tablet-only" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:24px;" allowtransparency="true"></iframe>
+            
+            <a target="_blank" class="fb-button social-button">
+                <i class="social_facebook social-button"></i>
+            </a>
+
+            <a target="_blank" class="tw-button social-button">
+                <i class="social_twitter"></i> 
+            </a>
+
+          </div>
+
+          <!-- <div class="language-switch-wrapper clearfix">
+              <div class="separator"></div>
+              <div class="language-switch">
+                <span class="language-label" data-template="#language-template"></span>
+                <div class="light-button flag-de flag active" data-lang="de" ><img src="https://interaktiv.morgenpost.de/wmspieler/img/flag_de.png"></div>
+                <div class="light-button flag-en flag" data-lang="en"><img src="https://interaktiv.morgenpost.de/wmspieler/img/flag_en.png"></div>
+              </div>
+          </div> -->
+        </div>
+      </header>
+
+      <div class="calltoaction">
+          <strong>Wie laut ist es bei Ihnen?</strong> Geben Sie Ihre Adresse ein, zoomen Sie in die Karte hinein und fahren Sie mit dem Mauszeiger über die eingefärbten Punkte, um Lärmwerte zu erhalten.
+      </div>
+
+      <div class="map-wrapper" id="map-wrapper">
+        <div class="touch-overlay"></div>
+
+        <!--<div class="day-night-switch topright tablet-only" data-template="#switch-template"></div>-->
+
+        <div class="map-is-loading loader">
+            <i class="spin icon_loading"></i>
+        </div>
+        
+        <div class="content-box box"></div>
+
+        <div class="info-box box" data-template="#infobox-template"></div>
+
+        <div class="info-button">
+          <svg class="icon icon-interaktiv"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#info"></use></svg>
+        </div>
+
+        <div class="credits" data-template="#credits-template"></div>
+        
+<!--         <div class="embed-box box" data-template="#embed-template"></div>
+        <div class="embed-button bottomleft">
+            &lt;&#47;&gt;
+        </div> -->
+        
+        <div class="legend" data-template="#legend-template"></div>
+  
+        
+        <div class="geocoder tablet-only" data-template="#geocoder-template"></div>
+
+        <div id="map" class="dark">
+          <div class="map-tooltip-wrapper"></div>
+        </div>
+
+      </div>
+      
+      <div class="filter" data-offcanvas>
+          <div class="swiper-button-wrapper swiper-btn-prev">
+              <div class="swiper-button-prev">
+                  <i class="arrow_carrot-left"></i>
+              </div>
+          </div>
+          <div class="swiper-container">
+              <div class="swiper-wrapper"></div>
+          </div>
+          <div class="swiper-button-wrapper swiper-btn-next">
+              <div class="swiper-button-next">
+                  <i class="arrow_carrot-right"></i>
+              </div>
+          </div>
+      </div>
+
+      <div class="iframe-overlay">
+        <i class="icon_close"></i>
+          <div class="embed-inner">
+              <!-- <img src="images/icon-interaktiv-black.png"/> -->
+              <svg class="icon icon-interaktiv"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#interaktiv"></use></svg>
+              <div class="embed-title">Klicken oder Tippen Sie hier, um die interaktive Anwendung zu nutzen</div>
+          </div>
+      </div>
+    </div>
+    <div class="embed-teaser"><a href="https://interaktiv.morgenpost.de/laermkarte-berlin" target="_top">Zur ausführlichen Version <svg class="icon icon-arrow-left"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use></svg></a></div>
+
+    <div id="offcanvas" data-template="#offcanvas-template"></div>
+
+    <!-- <div class="filter-menu-wrapper" data-template="#desktopfilter-template"></div> -->
+
+    <div class="browser-message" id="browser-message">Bitte installieren Sie einen aktuellen Browser, um die Anwendung zu nutzen.</div>
+
+
+    <!-- Templates -->
+
+    <script type="js/tmpl" id="contentbox-template">
+    <div class="close">
+      <i class="icon_close"></i>
+    </div>
+
+    <div class="content-title">{{ title }}</div>
+    <iframe width="100%" height="315" src="{{ youtubeUrl }}" frameborder="0" allowfullscreen></iframe>
+    <p class="img-sub">{{ text }}</p>
+    </script>
+    
+    <script type="js/tmpl" id="offcanvas-template">
+
+      <div class="filter-menu">
+      {{#filter}}
+        <div class="off-filter touchy">
+          <div class="title">{{ title }}</div>
+          <div class="subtitle">{{ subtitle }}</div>
+        </div>
+      {{/filter}}
+      </div>
+
+    </script>
+
+    <script type="js/tmpl" id="desktopfilter-template">
+
+      <div class="filter-menu">
+        {{#filter}}
+          <div class="filter-btn clearfix">
+            <div class="close"><i class="icon_close"></i></div>
+            <div class="filter-header clearfix">
+            <div class="title-wrapper">
+            <div class="title">{{ title }}</div>
+            <div class="subtitle">{{ subtitle }}</div>
+            </div>
+            <div class="thumb"><img src="{{ thumb }}"/></div>
+            </div>
+            <div class="content-wrapper"></div>
+          </div>
+        {{/filter}}
+      </div>
+
+    </script>
+
+    <script type="js/tmpl" id="desktopfilter-inner-template">
+      <iframe width="100%" height="315" src="{{ youtubeUrl }}" frameborder="0" allowfullscreen></iframe>
+    </script>
+
+    <script type="js/tmpl" id="geocoder-template">
+      <form class="input-group">
+        <input type="text" placeholder="{{ geocoder.placeholder }}"/>
+        <!-- <button class="find-button">{{ geocoder.searchLabel }}</button> -->
+        <button class="find-button"><i class="icon_search"></i></button>
+
+        <!--<div class="btn-group">
+          <button><i class="icon_pin"></i></button>
+          <button>Finden</button>
+        </div>-->
+      </form>
+
+      <div class="place-select">
+        <div class="place-select-close">
+          <i class="icon_close"></i>
+        </div>
+        <div class="place-select-title">{{ placeselect.title }}</div>
+        <div class="place-list"></div>
+      </div>
+    </script>
+
+    <script type="js/tmpl" id="switch-template">
+      <div class="btn-group">
+        <button data-threshold="57%" data-load="day"><div class="custom-icon icon_day">
+          <svg width="14px" height="14px">
+            <circle cx="7" cy="7" r="6"></circle>
+          </svg>
+        </div>{{ daynightswitch.day }}</button>
+        <button data-threshold="28.5%" data-load="night">
+        <div class="custom-icon icon_moon">
+        <svg width="14" height="14">
+          <path d="M11.4805583,10.9906565 C10.3816651,12.2235773 8.78150415,13 7,13 C3.6862915,13 1,10.3137085 1,7 C1,3.79961984 3.50569193,1.18447539 6.66229888,1.00934354 C5.7171824,2.06973215 5.14285714,3.46779565 5.14285714,5 C5.14285714,8.3137085 7.82914864,11 11.1428571,11 C11.2561855,11 11.36878,10.996858 11.4805583,10.9906565 L11.4805583,10.9906565 Z"></path>
+        </svg>
+        </div>
+        {{ daynightswitch.night }}</button>
+      </div>
+    </script>
+
+    <script type="js/tmpl" id="headline-template">
+      <h1 class="headline">{{ header.title }}</h1>
+      <h2 class="subline tablet-only">{{ header.subtitle }}</h2>
+      <div class="offcanvas-toggle mobile-only touchy">
+        <i class="icon_menu"></i>
+        <i class="arrow_carrot-left"></i>
+      </div>
+    </script>
+
+    <script type="js/tmpl" id="infobox-template">
+      <div class="close touchy">
+        <i class="icon_close"></i>
+      </div>
+      <div class="info-box-inner">
+        <div class="info-title">{{ infobox.infoTitle }}</div>
+        <div class="into-text">{{{ infobox.infoText }}}</div>
+      </div>
+    </script>
+
+    <script type="js/tmpl" id="language-template">
+     {{ header.language }}:
+    </script>
+
+    <script type="js/tmpl" id="ad-template">
+     <span class="att-label">{{ header.ad }}</span>
+    </script>
+  
+    <script type="js/tmpl" id="tooltip-template">
+      <div class="map-tooltip" style="border-left:5px solid {{ color }}">
+        <div class="close touchy">
+          <i class="icon_close"></i>
+        </div>
+        
+        <div class="header clearfix">
+          <div class="header-left">
+            <div class="number">{{ dayVal }}</div>
+            <div class="tt-label"> 
+              <div class="tt-header">Lautstärke</div>
+              <div class="tt-key">Dezibel</div>
+            </div>
+          </div>
+          <div class="header-right">
+            
+            <div class="nightval">
+              <img src="images/icons/icon-moon.svg" />
+            <strong> {{ nightVal }}</strong> Dezibel
+
+            </div>
+            
+            {{#isDangerous}}<div class="dangerous">
+              <img src="images/icons/icon-headphone.svg" />
+              <strong> {{ dangerous }}</strong>
+            </div>{{/isDangerous}}
+          </div>
+        </div>
+
+        <div class="mid clearfix">
+            {{#hasValues}}
+              <div class="mid-header">Lärmquellen</div>
+
+              {{#tooltipData}}
+
+                {{#hasValue}}
+                <div class="tt-item">
+                  <div class="tt-header"><img src="images/icons/{{ icon }}" /></div>
+                  <div class="tt-key">{{ value }}</div>
+                  <div class="db tt-light">Dezibel</div>
+                </div>
+                {{/hasValue}}
+
+                {{^hasValue}}
+                <div class="empty">
+                  <i class="icon_circle-empty"></i>
+                </div>
+                {{/hasValue}}
+              {{/tooltipData}}
+            {{/hasValues}}
+          
+
+        </div>
+
+        <div class="bottom">
+
+          {{#isLoudest}}
+            <div class="tt-light">An der Fassade ist es mit am lautesten</div>
+          {{/isLoudest}}
+
+          {{^isLoudest}}
+
+            {{#isQuiet}}
+            <div class="tt-light">An <strong>{{ quietPercent }}%</strong> der Hausfassaden ist es lauter</div>
+            {{/isQuiet}}
+
+            {{#isLoud}}
+            <div class="tt-light">An <strong>{{ loudPercent }}%</strong> der Hausfassaden ist es leiser</div>
+            {{/isLoud}}
+
+          {{/isLoudest}}
+        </div>
+      </div>
+    </script>
+
+    <script type="js/tmpl" id="legend-template">
+        <div class="legend-title"></div>
+        <div class="legend-subtitle">{{ legend.subtitle }}</div>
+        <div class="legend-special clearfix">
+          <div class="min">sehr leise</div>
+          <div class="max">sehr laut</div>
+        </div>
+
+        <ul class="clearfix">
+            <li class="threshold"></li>
+            <li class="first"> 
+                <div class="color-u35 legend-item"></div>
+                <div class="legend-text">{{ legend.itemA }}</div>
+            </li>
+            <li class="first"> 
+                <div class="color-35 legend-item"></div>
+                <div class="legend-text">{{ legend.itemB }}</div>
+            </li>            
+            <li class="first">
+                <div class="color-40 legend-item"></div>
+                <div class="legend-text">{{ legend.itemC }}</div>
+            </li>
+            <li class="first">
+                <div class="color-45 legend-item"></div>
+                <div class="legend-text">{{ legend.itemD }}</div>
+            </li>
+            <li class="first">
+                <div class="color-50 legend-item"></div>
+                <div class="legend-text">{{ legend.itemE }}</div>
+            </li>
+            <li class="first">
+                <div class="color-55 legend-item"></div>
+                <div class="legend-text">{{ legend.itemF }}</div>
+            </li>            
+            <li class="first">
+                <div class="color-60 legend-item"></div>
+                <div class="legend-text">{{ legend.itemG }}</div>
+            </li>    
+            <li class="first">
+                <div class="color-65 legend-item"></div>
+                <div class="legend-text">{{ legend.itemH }}</div>
+            </li>    
+            <li class="first">
+                <div class="color-70 legend-item"></div>
+                <div class="legend-text">{{ legend.itemI }}</div>
+            </li>    
+            <li class="first">
+                <div class="color-75 legend-item"></div>
+                <div class="legend-text">{{ legend.itemJ }}</div>
+            </li>    
+            <li class="first">
+                <div class="color-80 legend-item"></div>
+                <div class="legend-text">{{ legend.itemK }}</div>
+            </li>    
+        </ul>
+        <button class="btn circle locate">
+          <svg class="icon icon-interaktiv"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#locate"></use></svg>
+          <span class="title">Zeige Lärm hier</span>
+        </button>
+
+    </script>
+
+    <script type="js/tmpl" id="credits-template">
+     {{& credits }}
+    </script>
+
+    <script type="js/tmpl" id="embed-template">
+        <div class="close touchy">
+            <i class="icon_close"></i>
+        </div>
+        <div class="embed-content">
+            <div class="embed-msg">{{ embedMessage }}</div>
+            <input type="text" />
+        </div>
+    </script>
+    
+    <script type="js/tmpl" id="filter-template">
+      <div class="swiper-slide">
+        <i class="icon_close"></i>
+        <div class="filter-title">{{ title }}</div>
+        <div class="filter-subtitle">{{ subtitle }}</div>
+      </div>
+    </script>
+    
+     <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.getElementById('map-wrapper').style.display = 'none';
+        document.getElementById('browser-message').style.display = 'block';
+      </script>
+    <![endif]-->
+
+    <!--[if (gte IE 9) | (!IE)]> -->
+      <script src="js/main.js"></script>
+    <!-- <![endif]-->
+
+
+  </body>
+</html>

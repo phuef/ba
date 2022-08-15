@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualization Engine v3.0</title>
+  <!--[if IE]>
+    <style>
+    html {
+      overflow-x: hidden;
+    }
+    </style>
+  <![endif]-->
+  <script type="text/javascript">
+  document.domain = "visualize.data.gov.in";
+  var vizurl = "https://visualize.data.gov.in";
+  var vizapiurl = "https://visualizeapi.data.gov.in";
+  var dataapiurl = "https://api.data.gov.in";
+  var maptoken = "S2fKEWuAuMoR3n4vnJPtGebm4HuR5vEdqnCTaIsap2a8IDPzhaN6vT7iKGc0owLOVP2Vhb8uqz4w2UQRCqhvGQ..";
+  </script>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico"/>
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery.layout/layout-default-latest.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/bootstrap/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jqueryui/jquery-ui.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery.custom-scrollbar/jquery.custom-scrollbar.min.css" />
+
+  <link type="text/css" rel="stylesheet" href="js/lib/nvd3/nv.d3.min.css"/>
+  <link type="text/css" rel="stylesheet" href="js/lib/c3/c3.min.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="js/lib/geomap/lib/jquery-jvectormap.min.css" />
+  <!--<link rel="stylesheet" media="all" href="js/lib/multimap/jquery-jvectormulti-map.css"/>--->
+  <link type="text/css" rel="stylesheet" media="all" href="js/lib/leaflet/leaflet.min.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="js/lib/noUiSlider/nouislider.space.min.css" />
+  <link rel="stylesheet" type="text/css" href="js/lib/ui-slider-pips/jquery-ui-slider-pips.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/reset.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.min.css">
+  <link type="text/css" rel="stylesheet" href="css/style.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/theme1/style.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/theme1/responsive.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery-data-table/jquery.dataTables.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery-steps/css/normalize.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery-steps/css/main.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/lib/jquery-steps/css/jquery.steps.min.css" />
+  <!-- <link type="text/css" rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script> -->
+  <link type="text/css" rel="stylesheet" href="js/lib/rsgis/esri.css"/>
+  <script type="text/javascript" src="js/lib/export/jspdf.min.js"></script>
+  <script type="text/javascript" src="min_js/combined.1.js"></script>
+<script type="text/javascript" src="js/home_script.min.js"></script>
+<script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+</head>
+<body class="" >
+    <header class="wrapper header-wrapper">
+		<div class="container top-container">
+			<a class="goi" href="http://india.gov.in/" target="_blank" rel = "noopener noreferrer" ><img alt="GOVERNMENT OF INDIA" src="https://community.data.gov.in/wp-content/themes/datablog/assets/images/india.gif"><span title="Government Of India (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">GOVERNMENT
+					OF INDIA</span> </a>
+					<div class="slogan" title="A Digital India Initiative">
+					<span class="ad">A Digital </span><span class="ad2">India </span><span class="ad3">Initiative</span>
+				</div>
+			<div class="accessibility clearfix">
+				<ul class="clearfix">
+					<!-- <li><a href="#skip" id="skip-content"  title="Skip to main content">Skip to main content</a></li> -->
+					<li class="font-controll clearfix"><a class="decrease" href="javascript:void(0);" title="Decrease font size" onclick="set_font_size('decrease')">A<sup>-</sup>
+					</a> <a class="default" href="javascript:void(0);" title="Reset font size" onclick="set_font_size('')">A<sup>&nbsp;</sup>
+					</a> <a class="increase" href="javascript:void(0);" title="Increase font size" onclick="set_font_size('increase')">A<sup>+</sup>
+					</a>
+					</li>
+					<li class="high-contrast clearfix" id="site_url_js"><a class="dark" href="javascript:void(0);" onclick="chooseStyle();" title="Dark">A</a> <a class="light" href="javascript:void(0);" onclick="chooseStyle();" title="Light">A</a>
+					</li>
+					<li class="social clearfix"><a class="facebook ext" target="_blank" rel = "noopener noreferrer" title="Facebook (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" href="https://www.facebook.com/dataportalofindia">Facebook</a> <a class="twitter ext" target="_blank" rel = "noopener noreferrer" title="Twitter (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" href="https://twitter.com/DataPortalIndia">Twitter</a> <a class="rss-feeds ext" target="_blank" rel = "noopener noreferrer" title="Rss" href="https://data.gov.in/rss.xml">Rss Feeds</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<nav class="wrapper nav-wrapper">
+			<div class="container nav-container">
+				<h1 class="logo">
+					<a href="https://visualize.data.gov.in" title="visualize.data.gov.in"><img src="../images/Logo-for-vis.png" alt="Open Government Data Community"> </a> <br>
+				</h1>
+				<div class="menu-toggle" style="">
+					<a href="javascript:void(0)" title="menu"><span>toggle menu</span></a>
+				</div>
+				<div class="menu-header">
+					<ul id="menu-menu-1" class="menu" style="display: block;">
+
+						<li><span id="user-login-info-home" class="register"><a href="javascript:void(0)" title="Login/Register">Login/Register</a></span></li>
+            <li class="mega_menu_icon"><a class="actdblclk" href="javascript:void(0);" title="mega menu"><img src="../images/mega-menu-icon.png" alt="mega menu"/></a></li>
+         <li ><a href="https://data.gov.in" title="Data Portal of India" target="_blank" rel = "noopener noreferrer"><img src="../images/datagov-link-logo.png" alt="data gov"/></a></li>
+					</ul>
+				</div>
+				<div class="mega-menu-wrapper">
+	  <span class="close-mega-menu" title="close"><img src="../images/close-mega-menu.png" alt="close"></span>
+        <div class="mega-menu">
+          <ul>
+            <li class="create-visualisation">
+			<img src="../images/create-visualization.png" alt="Create Visualization" title="Create Visualization">
+            <h3><a href="javascript:void(0);">Create Visualization</a></h3>
+              <a href="https://visualize.data.gov.in/potential_instance.php" title="Potential Instances">Potential Instances</a>
+			  <a href="https://visualize.data.gov.in/?page=my-data" title="External Data Sources">External Data Sources</a>
+			  </li>
+
+				<li id= "megamenu-show" class="my-visualisation create-visualisation">
+				<img src="../images/my-visualization.png" alt="My Words" title="My Words">
+				<h3><a href="https://visualize.data.gov.in/my-visualization.php" title="My Words">My Works</a></h3>
+				<a href="https://visualize.data.gov.in/my-visualization.php" title="My visualizations">My visualizations</a>
+				<a href="https://visualize.data.gov.in/my-instance.php" title="My Instances">My Instances</a>
+				</li>
+
+				<li id= "megamenu-hide" class="my-visualisation create-visualisation disabled">
+				<img src="../images/my-visualization.png" alt="image">
+				<h3><a href="javascript:void(0);">My Works</a></h3>
+				<a href="javascript:void(0);">My visualizations</a>
+				<a href="javascript:void(0);">My Instances</a>
+				</li>
+
+				<li class="gallery-section create-visualisation">
+					<img src="../images/gallery-section.png" alt="Visualization Gallery" title="Visualization Gallery">
+					<h3><a href="/#skip" title="Visualization Gallery" id="skip2">Visualization Gallery</a></h3>
+					<a href="/#skip" title="VODs" id="skip1">VODs<span>Visualization Of the Day</span></a>
+	        <a href="https://visualize.data.gov.in/all_visualization.php" title="All Visualizations">All Visualizations</a>
+				</li>
+          </ul>
+        </div>
+      </div>
+
+			</div>
+		</nav>
+	</header>
+
+  <div id="instance-title" class="title container">
+    <h3>Title Instance/data</h3>
+  </div>
+  <div id="outer-north" class="ui-layout-north">
+
+    <div id="header-bar">
+      <div id="header-buttons">
+        <div id="opendataviz-view-operation" class="left" >
+
+          <ul id="menu-list-container" class="opendataviz-menu"></ul>
+          <!--<span id="user-login-info"></span> -->
+        </div>
+          <div class="clear"></div>
+      </div>
+
+    </div>  </div>
+  <div class="clear"></div>
+
+  <div id="outer-center" class="ui-layout-center ">
+    <div id="overlay-container"></div>
+    <div class="clear"></div>
+    <div id="inner-center" class="ui-layout-center  ">
+
+      <div id="chart-container">
+	 <!-- <a class="zoom-img" data-fancybox="gallery" href="javascript:void(0);" id="zoom_icon" ><img src="images/Zoom-Icon-2.png" title = "Zoom the Visualization"/></a>-->
+	  <a class="goto_viz"  href="" id="goto_viz" target="blank"><img src="images/Back-Icon-2.png" title="Open the visualization on a new tab"/></a>
+	  <a class="refresh" href="javascript:void(0);" id="refresh_viz"><img src="images/Refesh-Icon-2.png" onClick="window.location.reload();return false;" title="Reload the Visualization"/></a>
+	  <a class="viz_download" href="javascript:void(0);" id="download_viz">
+		<img src="css/theme1/images/download-icon.png" onClick="return printPNG()" title="Download the Visualization"/>
+	  </a>
+        <div id="sidebar">
+          <ul id="menu-side-list-container" class="left-nav"></ul>
+        </div>
+        <h4 id="opendataviz-chart-title">.</h4>
+        <div id="opendataviz-view-title-content" >
+          <p id="opendataviz-view-title"></p>
+          <div class="map-info-ico"></div>
+        </div>
+        <div id="backfordrillbar"><a href="#" class = "ClickForBack" title='Back'>Back</a>
+          <span id="barClickValue"></span>
+          <span class="multichart_text"></span>
+          <span class="statename_text"></span>
+         </div>
+        <div id="chart">
+          <div id = "unauthorized"><img src="images/unauthorised-access.png" alt="image"></div>
+          <svg id="chart-svg" height="800px" width="100%"></svg>
+
+        </div>
+        <div id="refresh_time">
+          <span class="ref_time"></span>
+        </div>
+        <div id="datasource">
+            <p><img src="css/theme1/images/datasource.png" title="Data Source" alt="Data Source data.gov.in"><p>
+        </div>
+        <div id="pwb">
+		        <p><img src="css/theme1/images/Watermark-datagov.png" title="Powered by visualize.data.gov.in" alt="Powered by visualize.data.gov.in"><p>
+        </div>
+        <div id="info"></div>
+      </div>
+    </div>
+
+    <div id="inner-west" class="ui-layout-west">
+      <div id="table" style="height: 100%"></div>
+    </div>
+    <div class="clear" style="float:left"></div>
+  </div>
+
+  <div id="outercenter-botton">
+    <div id="chart-step-controler" >
+      <ul id="chart-step-controler-list" class="opendataviz-menu">
+        <li><a class="menu-ico play-ico" title="Play" onClick="Dataviz.Helper.Chart.animate.play();"></a></li>
+        <li><a class="menu-ico pause-ico" title="Pause" onClick="Dataviz.Helper.Chart.animate.pause();"></a></li>
+        <li><a class="menu-ico stop-ico" title="Stop" onClick="Dataviz.Helper.Chart.animate.stop();"></a></li>
+      </ul>
+      </div>
+    <div id="slider"></div>
+        
+    <div id = "share_wrap">
+      <div class="dl-share">
+    <a href="https://data.gov.in/feedback" target="_blank" rel = "noopener noreferrer" onclick= "feedbackUrl()" class="report_bug" title="Report a Bug">Report a Bug</a>
+    <a id="downloadpng" href="javascript:void(0)"  class="dl chartdownload" >
+		<small>
+    <span onclick= "return printPNG()" class="download_csv csv_only" title="Download CSV">csv</span>
+		<span onclick= "return printPNG()" class="download_png no_csv" title="Download as PNG">png</span>
+		<span onclick= "return printJPEG()" class="download_jpg no_csv" title="Download as JPEG">jpeg</span>
+    <span onclick= "return printPDF()" class="download_pdf no_csv" title="Download as PDF">pdf</span>
+		</small>
+	</a>
+  <div id = "all-map-download">
+    <a id="btn-Preview-Image" href="javascript:void(0)" onclick = 'ddbm()' class="dl mapdownload">
+      <small>
+      <span onclick= "return printPNG()" class="download_csv csv_only" title="Download CSV">csv</span>
+      <span onclick= "return ddbmPNG()" class="download_png no_csv" title="Download as PNG">png</span>
+      <span onclick= "return ddbmJPEG()" class="download_jpg no_csv" title="Download as JPEG">jpeg</span>
+      </small>
+    </a>
+    <span onclick= "return ddbmPDF()" class="download_pdf no_csv" title="Download as PDF">pdf</span>
+  </div>
+		<a href="javascript:void(0)" onclick= "embedurl()" class="emb" title="Embed Url">Embed URL</a>
+      <div class="social-media">
+        <ul>
+              <li><a href="javascript:void(0)" class="social-icon fb" title="Share with Facebook (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)"
+            onclick="return shareFB('')">Facebook</a></li>
+
+                <li><a href="javascript:void(0)" class="social-icon tt" title="Share with Twitter (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)"
+            onclick="return shareTT('Visualization','')">Twitter</a></li>
+        </ul>
+      </div>
+      <a href="javascript:void(0)" class="share" title="Share" >share</a>
+      </div>
+    </div>
+            </div>
+
+  <div id="dialog-new-view" class="dialog-content" title="New View">
+	<form id="dialog-new-view-form">
+		<label>Title</label><input id="dialog-new-view-title" name="title" title="Edit Title" type="text" maxlength="150"/>
+	</form>
+</div>
+
+<div id="dialog-edit-view" class="dialog-content" title="Edit Title and Note">
+	<form id="dialog-edit-view-form">
+		<label>Title</label><input id="dialog-edit-view-title" name="title" title="Edit Title and Note" type="text" maxlength="150"/>
+		<label>Note</label><textarea id="dialog-edit-view-note" title="Edit Title and Note" name="note"></textarea>
+	</form>
+</div>
+
+<div id="dialog-pi-save" class="dialog-content" title="New View">
+	<form id="dialog-pi-save-form">
+		<label>Title for New view</label><input id="dialog-pi-save-title" title="Save title" name="title" type="text" maxlength="150"/>
+	</form>
+</div>
+
+<div id="dialog-new-wlview" class="dialog-content" title="New View">
+	<form id="dialog-new-wlview-form">
+		<label>Title for New view</label><input id="dialog-new-wlview-title" title="title" name="title" type="text" maxlength="150"/>
+	</form>
+</div>
+
+<div id="dialog_view_public" class="dialog-content" title="Public View">
+	<span>Your visualization will be public after moderation by the admin and your data will also be pubically available. If you like to give your consent, then click agree.</span>
+</div>
+<div id="dialog_save_view_public" class="dialog-content" title="Public View">
+	<span>You have made modifications in your Published Visualization, the changes will be visible after moderation by the admin only. Till that time the Published Visualization will be Private. Do you agree to proceed?</span>
+</div>
+<div id="dialog_save_view_private" class="dialog-content" title="Private View">
+	<span>You are changing an existing view, so the view needs to be reviwed by admin before you make it public. Would you like to proceed?</span>
+</div>
+
+<div id="dialog_view_reject" class="dialog-content" title="Reject View">
+	<form id="dialog_view_reject_form">
+		<textarea  id="dialog_view_reject_content" style = "height:135px; width:100%" title="Reason for Rejecting" placeholder="Reason for Rejecting the view :"></textarea>
+	</form>
+</div>
+<div id="dialog_view_approve" class="dialog-content" title="Approve View">
+	<form id="dialog_view_approve_form">
+		<textarea  id="dialog_view_approve_content" style = "height:135px; width:100%" title="Any Commnmets" placeholder="Any Commnmets On the View :"></textarea>
+	</form>
+</div>
+
+<div id="dialog-view-note" class="dialog-content" title="Note">
+	<form id="dialog-view-note-form">
+		<p id="dialog-view-note-content"></p>
+	</form>
+</div>
+
+<div id="dialog-view-tc" class="dialog-content" title="Terms and Conditions">
+	Publishing of personal identity or financial information of sensitive nature on the websites or public domain is a punishable act as per
+	 <a href = "https://uidai.gov.in/legal-framework/acts.html" target="_blank" rel = "noopener noreferrer" title="Aadhaar act 2016 (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" style="color:#333; text-decoration:underline; opacity:1!important; font-weight:bold" >Aadhaar act 2016 </a> and
+	 <a href = "http://www.meity.gov.in/content/information-technology-act" target="_blank" rel = "noopener noreferrer" title="IT Act 2000 (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" style="color:#333; text-decoration:underline;opacity:1!important; font-weight:bold"> IT Act 2000</a>.
+	With the acceptance of the terms, I ensure that all the data uploaded by me are in compliance with
+	<a href = "http://www.meity.gov.in/content/information-technology-act" target="_blank" rel = "noopener noreferrer" title="IT Act 2000 (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" style="color:#333; text-decoration:underline;opacity:1!important; font-weight:bold"> IT Act 2000</a> and
+	<a href = "https://uidai.gov.in/legal-framework/acts.html" target="_blank" rel = "noopener noreferrer" title="Aadhaar act 2016 (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)" style="color:#333; text-decoration:underline; opacity:1!important; font-weight:bold" >Aadhaar act 2016 </a>.
+</div>
+<div id="dialog-embed-url" class="dialog-content" title="Embed the url">
+</div>
+<div id="dialog-delete-confirm" class="dialog-content" title="Delet the item">
+	These items will be permanently deleted and can not be recovered. Are you sure to delete??
+</div>
+
+<div id="dialog-chart-type" class="dialog-content" title="Chart Type">
+	<div id="chart-button-container" charttypevalue="#dialog-chart-type">
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="bar" title="Bar Chart -> Bar chart is the best chart type for comparing multiple values.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels.
+Check ‘Show Values’ for values on chart.
+">
+		<span class="barchart-image"></span>
+		</br>Bar Chart
+		</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="multibar" title="Stacked Bar – Stacked bar chart is used to represent multiple types of data within a single bar.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels.
+Check ‘Show Values’ for values on chart and Check ‘Stack Bars’ for representing multiple types of data in a single bar. "><span class="multibar-image"></span>
+		</br>Stacked Bar
+		</div>
+	<!--	<div class="chart-type-button" charttype="multibarline" title="Bar Line Chart"><span class="multibarline-image"></span> </br>Bar Line Chart</div>	-->
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="pie" title="Pie Chart - Pie chart displays contribution of each value to a total. Use it when values can be added to 100% or when there is only one data series and values are positive.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.">
+		<span class="piechart-image"></span>
+		</br>Pie Chart
+		</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="line" title="Line Chart - Line Chart is used to display trends over time.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+ Add X and Y axis labels. Check ‘Show Values’ for values on chart and ‘Spline Chart’ for smooth line.">
+		<span class="linechart-image"></span>
+		</br>Line Chart
+		</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="area" title="Area Chart – Area chart emphasizes differences between several sets of data over a period of time.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart. ">
+		<span class="areachart-image"></span>
+		</br> Area Chart
+		</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="bubble" title="Bubble Chart – Bubble chart plots data defined in terms of three distinct numeric parameters. Use it when values being charted are not in X axis and Y axis order or when they represent separate measurements. The third value determines the size of the bubble marker.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Size Axis: Third data value for bubble size measurements.
+Chart Settings:
+Add X and Y axis labels.">
+		<span class="bubblechart-image"></span> </br>Bubble
+		</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="map" title="Map – The map plots data over geographical region of India. Geographical region can be states or districts.
+For India map with states –
+Chart Series:
+X Axis - State/UT,
+Y Axis – Value to plot on states.
+Check ‘New State’ for Telangana in ‘Map Settings’.
+For India map with districts - Check ‘District Map’ option in ‘Map Settings’.
+Chart Series:
+X Axis - District, X1 Axis - State/UT, Y Axis – Value to plot on districts.
+Map Settings provide options for color, legends, steps etc.">
+		<span class="mapchart-image"></span>
+		</br>Map
+		</div>
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="latlongmap" title="LatLong Map – The map plots data values over geographical region of India, with reference to longitude and latitude values.
+Chart Series:
+Longitude: Select Field having longitude value,
+Latitude: Select field having latitude value.
+Y axis – Data to be displayed on map.">
+		<span class="mapchart-image"></span>
+		</br>LatLong Map
+	</div>
+
+	<!--	<div onClick="selectCharttype(this);" class="chart-type-button" charttype="statemap" title="State Map – The map plots values over geographical region of a particular State/UT with respect to districts.
+Chart Series:
+X Axis – District, X1 Axis – State/UT,
+Y Axis – Values to be displayed on map.
+Map Settings provide options for color, legends, steps etc.">
+		<span class="mapchart-image"></span>
+		</br>State Map</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="state_district_map" title="State District Map – The map plots values over geographical region of a particular State/UT with respect to districts.
+Chart Series:
+X Axis – District, X1 Axis – State/UT,
+Y Axis – Values to be displayed on map.
+Map Settings provide options for color, legends, steps etc.">
+		<span class="mapchart-image"></span>
+	</br>State with District Map</div>
+
+<div onClick="selectCharttype(this);" class="chart-type-button" charttype="rsgis_map" title="State District Map – The map plots values over geographical region of a particular State/UT with respect to districts.
+Chart Series:
+X Axis – District, X1 Axis – State/UT,
+Y Axis – Values to be displayed on map.
+Map Settings provide options for color, legends, steps etc.">
+	<span class="mapchart-image"></span>
+</br>RSGIS Map</div>---->
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="lineviewfinder" title="Line with view finder – Line with view finder chart is similar to Line chart and used to display trends over time. It provides an extra functionality of viewing data over a specific time frame.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart.">
+		<span class="lineviewfinder-image"></span>
+		</br>Line with View Finder</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="horizontalmultibar" title="Horizontal Multi Bar Chart – Horizontal Multi Bar chart represents data in horizontal bar. Option of ‘Stack Bars’ in ‘Chart Series’ can be used to represent multiple types of data within a single bar.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart and Check ‘Stack Bars’ for representing multiple types of data in a single bar.">
+		<span class="horizontalmultibar-image"></span>
+		</br>Horizontal Multi Bar</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="multichart" title="Multi Chart – Multi chart facilitates combining of line, bar and area in a single chart, displaying data series having different measurements units on two different axis ie. Y and Y1 axis.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Two chart series can be added by adding multiple data series on Y axis for single data on X axis. Choose types of the chart from ‘Chart Type’ list.
+Chart Settings:
+Add X, Y and Y1 axis labels. Y axis label and Y1 axis label represents label for different chart series. Check ‘Show Values’ for values on chart. ">
+		<span class=" multibarline-image"></span>
+		</br>Multi Chart</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="radar" title="Radar Chart – Radar chart displays value relative to a centre point. Use it when the categories are not directly comparable.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Multiple chart series can be added by adding multiple data series on Y axis for single data on X axis.
+ Chart Settings:
+Add X and Y axis labels.">
+		<span class="radarchart-image"></span>
+		</br>Radar Chart</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="donut" title="Donut Chart – Donut Chart displays the contribution of each value to a total like a pie chart.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.">
+		<span class="donut-image"></span>
+		</br>Donut Chart</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="step" title="Step Chart – A Step chart is a Line chart which uses vertical and horizontal lines to connect the data points in a series forming a step-like progression.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Multiple series can be added by adding multiple data series on Y axis with respect to single data on X axis.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart.
+		">
+		<span class="stepchart-image"></span>
+		</br>Step Chart </div>
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="drillbar" title="Drill Down Chart – Drill down charts are used to give another level of detailed reporting to charts.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+'Chart Type' and 'Drill Type' are used for two levels of charts. Charts used here on levels are Bar, Pie and Horizontal Bar charts.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart.
+		">
+		<span class="drillchart-image"></span>
+	</br>DrillDown Chart</div>
+
+		<!--<div onClick="selectCharttype(this);" class="chart-type-button" charttype="boxPlot" title="boxPlot Chart">
+			<span class="boxPlot-image"></span>
+		</br>boxPlot Chart</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="candlestick" title="candlestick Chart">
+			<span class="candlestick-image"></span>
+		</br>candleStick Chart</div> -->
+
+	</div>
+	<div class="field-content">
+		<div class="field-field">
+			<button id="dialog-chart-setting_button" class="charttype-close" type="button" onclick="jQuery( '#dialog-chart-type' ).dialog( 'close' );">Close</button>
+	</div>
+</div>
+</div>
+
+<div id="dialog-chart-other-setting" class="dialog-content" title="Chart Other Settings">
+	<div class="field-content">
+	<label>Comments:</label>
+		<div class="field-field">
+			<input type="text" id="chart-comment" class="viz_chart-comment" title="Chart Other Settings" updatecommentvalue = "#dialog-chart-other-setting" onkeyup="updateChartComment(this);" maxlength="99" />
+		</div>
+	</div>
+	<div class="field-content">
+	<label>Show update time:</label>
+		<div class="field-field">
+			<input type="checkbox" id="select-last-update-time" title="Chart Settings" class="viz_select-last-update-time" updatetimevalue = "#dialog-chart-other-setting" onClick="updateLastUpdateTime(this);"  value=1 />
+		</div>
+	</div>
+
+	<div class="field-content">
+			<label>.</label>
+			<div class="field-field">
+			<button id="dialog-chart-advanced-settings_button" class="viz_dialog-chart-advanced-settings_button" type="button">Apply Settings</button>
+			<button id="dialog-chart-setting_button" type="button" onclick="jQuery('#dialog-chart-other-setting').dialog( 'close' );">Close</button>
+		</div>
+	</div>
+</div>
+
+<div id="dialog-chart-setting" class="dialog-content" title="Chart Settings">
+	<div id="chartsetting">
+		<div id="chart-type-setting">
+			<div class="field-content">
+				<label>X Axis Label:</label>
+				<div class="field-field">
+					<input type="text" id="chart-x_axis_label" class="viz_chart-x_axis_label" title="Type X axis label here" maxlength="128" onkeyup="updateXAxisLabel(this);"/>
+					<span title="Type X axis label here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Y Axis Label:</label>
+				<div class="field-field">
+					<input type="text" id="chart-y_axis_label" class="viz_chart-y_axis_label" title="Type Y axis label here" maxlength="128" onkeyup="updateYAxisLabel(this);"/>
+					<span title="Type Y axis label here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Y1 Axis Label:</label>
+				<div class="field-field">
+					<input type="text" id="chart-y1_axis_label" title="Type Y1 axis" class="viz_chart-y1_axis_label" maxlength="128" onkeyup="updateY1AxisLabel(this);"/>
+					<span title="Type Y1 axis label here for other chart when chart type is ‘Multi Chart’" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content y-max-values">
+				<label>Y Axis Max Val:</label>
+				<div class="field-field">
+					<input title="Set Y axis max value here" type="text" id="y_axis_max_val" class="viz_y_axis_max_val" onkeyup="updateYAxisMaxVal(this);"/>
+					<span title="Set Y axis max value here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content y-max-values">
+				<label>Y1 Axis Max Val:</label>
+				<div class="field-field">
+					<input type="text" id="y1_axis_max_val" title="Set Y1 axis max value here" class="viz_y1_axis_max_val" onkeyup="updateY1AxisMaxVal(this);"/>
+					<span title="Set Y1 axis max value here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content axis-tick">
+				<label>Rotate X-axis Tick:</label>
+				<div class="field-field ">
+					<input type="text" id="x-axis-tick" title="Rotate" class="viz_x-axis-tick" onkeyup="xAxisTick(this);"/>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Advanced:</label>
+				<div class="field-field advanced_value">
+					<textarea id="chart-advanced" title="Use range" class="viz_chart-advanced" onkeyup="showAdvancevalue(this);" maxlength="500"> </textarea>
+					<span title="Use range in case of radar chart. For example, range={&quot;max&quot;:100};"  class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content" >
+				<label>X Tick Cull:</label>
+				<div class="field-field">
+					<select id="x-tick-cull" class="viz_x-tick-cull" charttickcullvalue = "#dialog-chart-setting" onchange="cullXtick(this)">
+						<option value="auto">Auto</option>
+						<option value="all">Show All</option>
+					</select>
+					<span title="Select the number of ticks you want show on X-axis" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content top-list">
+				<label>Top/Buttom List:</label>
+				<div class="field-field ">
+					<input type="text" id="chart-top-list" title="Top List" class="viz_top-list" onkeyup="topListFromSeries(this);"/>
+				</div>
+			</div>
+			<div class="field-content hide_sort">
+				<label class="sorting-lable">Sort Bars:</label>
+				<div class="field-field sorting-type">
+					<input type="radio" id="chart_sort_bars_r1" title="Sort Bars" class="viz_chart_sort_bars desc" name="sort" value="Decending" onClick="sortBar(this);"> Decending
+					<input type="radio" id="chart_sort_bars_r2" title="Sort Bars" class="viz_chart_sort_bars asc" name="sort" value="Accending" onClick="sortBar(this);"> Accending
+					<input type="radio" id="chart_sort_bars_r3" title="Sort Bars" class="viz_chart_sort_bars none" name="sort" value="None" onClick="sortBar(this);"> None
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Show Values:</label>
+				<div class="field-field">
+					<input type="checkbox" id="chart-show_value" onClick="chartShowvalue(this)" title="Shows data" chartshowvalue="#dialog-chart-setting" class="viz_chart-show_value" value=1/>
+					<span title="Shows data value on charts, plotted on Y axis." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Hide X Tick:</label>
+				<div class="field-field">
+					<input type="checkbox" id="chart-x-tick" class="viz_chart-x-tick" title="Hide X Tick Values" charttickvalue = "#dialog-chart-setting" onClick="hideXTick(this);"  value=1 />
+						<span title="Hide X Tick Values" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content hide_stack_bar">
+				<label>Stack Bars:</label>
+				<div class="field-field">
+					<input type="checkbox" title="Stacks multiple series to a single bar." id="chart-stack_bars" class="viz_chart-stack_bars" onClick="chartStackBar(this)" value=1/>
+					<span title="Stacks multiple series to a single bar." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content spline_hide">
+				<label>Spline Chart:</label>
+				<div class="field-field">
+					<input type="checkbox" id="chart-spline_line" onClick="chartSpline(this);" title="Converts Line" class="viz_chart-spline_line" value=1/>
+					<span title="Converts Line to the Special line in Line Chart." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div class="field-content">
+					<label>.</label>
+					<div class="field-field">
+					<button id="dialog-chart-advanced-settings_button" class="viz_dialog-chart-advanced-settings_button" type="button">Apply Settings</button>
+					<button id="dialog-chart-setting_button" type="button" onclick="jQuery( '#dialog-chart-setting' ).dialog( 'close' );">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--Html code for drilldown district map start here-->
+<div id="dialog-district-map-setting" class="dialog-content" title="District Settings">
+	<div id="mapsetting">
+		<div id="map-setting">
+			<div class="field-content">
+				<label>Steps(Districts)</label>
+				<div class="field-field">
+					<select id="map-setting-form-steps-district" onClick="distmapSettingsfromsteps(this);" class="viz_district_map-setting-form-steps chart-selected-field"><option>3</option><option>4</option><option>5</option></select>
+					<span title="Represents number of data intervals." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content district-field-content">
+				<label>Scale(Districts)</label>
+				<div id="field-district-map-setting-form-color-wrapper" class="viz_field-district-map-setting-form-color-wrapper field-field">
+					<input class="division" title="division" value="" type="text"/>
+					<input class="color scalecolor" title="division" value="EEDFFF" maxlength="6"/><br/>
+					<input class="division" title="division" value="" type="text"/>
+					<input class="color scalecolor" title="division" value="CD9FFF" maxlength="6"/><br/>
+					<input class="color scalecolor" title="division" value="7B00FF" maxlength="6"/>
+					<span title="Represents color for data intervals." class="info-ico">i</span>
+				</div>
+					<span class="field-field"><span title="Represents color for data intervals." class="info-ico">i</span></span>
+			</div>
+			<div class="field-content" style = "z-index: 9999991!important">
+				<label>Map Fill Color:</label>
+				<div class="field-field">
+					<input id="district-map-setting-form-fill-color" title="Color of the map" class="viz_district_map-setting-form-fill-color color" value="A1A1A1" />
+						<span title="Color of the map when no data value is associated." class="info-ico">i</span>
+				</div>
+			</div>
+			<!-- <div class="field-content">
+				<label>Link District:</label>
+				<div class="field-field">
+					<input id="district_link" class="viz_district_link" value="" type="text" maxlength="150"/>
+						<span title="District Link Url" class="info-ico">i</span>
+				</div>
+			</div> -->
+
+			<div class="field-content">
+			 <label>.</label>
+			 <div class="field-field">
+				 <button id="field-form-apply-chart-settings_button" class="viz_apply_map_settings" mapsettingvalue="#dialog-district-map-setting" onClick="applyDistMapsettings(this);" type="button">Apply Settings</button>
+				 <button id="field-form-close_button" type="button" onclick="jQuery( '#dialog-district-map-setting' ).dialog( 'close' );">Close</button>
+			 </div>
+		 </div>
+		</div>
+	</div>
+</div>
+<!--Html code for drilldown district map ends here-->
+
+<div id="dialog-map-setting" class="dialog-content" title="Map Settings">
+	<div id="mapsetting">
+		<div id="map-setting">
+			<div class="field-content">
+				<label>Steps:</label>
+				<div class="field-field">
+					<select id="map-setting-form-steps" onClick="mapSettingsfromsteps(this);" class="viz_map-setting-form-steps chart-selected-field"><option>3</option><option>4</option><option>5</option></select>
+					<span title="Represents number of data intervals." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Scale:</label>
+				<div id="field-map-setting-form-color-wrapper" class="viz_field-map-setting-form-color-wrapper field-field">
+					<input class="division" title="division" value="" type="text"/>
+					<input class="color scalecolor" title="division" value="EEDFFF" maxlength="6"/><br/>
+					<input class="division" title="division" value="" type="text"/>
+					<input class="color scalecolor" title="division" value="CD9FFF" maxlength="6"/><br/>
+					<input class="color scalecolor" title="division" value="7B00FF" maxlength="6"/>
+					<span title="Represents color for data intervals." class="info-ico">i</span>
+				</div>
+					<span class="field-field"><span title="Represents color for data intervals." class="info-ico">i</span></span>
+			</div>
+			<div class="field-content">
+				<label>Legend Title:</label>
+				<div class="field-field">
+					<input id="map-setting-form-legend-title" title="Type legend title." class="viz_map-setting-form-legend-title" value="" type="text" maxlength="35"/>
+						<span title="Type legend title." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content" style = "z-index: 9999991!important">
+				<label>Map Fill Color:</label>
+				<div class="field-field">
+					<input id="map-setting-form-fill-color" title="Color" class="viz_map-setting-form-fill-color color" value="A1A1A1" />
+						<span title="Color of the map when no data value is associated." class="info-ico">i</span>
+				</div>
+			</div>
+			<!--<div class="field-content" style = "z-index: 9999991!important">
+				<label>Map Stroke Color:</label>
+				<div class="field-field">
+					<input id="map-setting-form-stroke-color" class="viz_map-setting-form-stroke-color color" value="505050" />
+						<span title="Choose boundary color here." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Stroke Width:</label>
+				<div class="field-field">
+				<select id="map-setting-form-stroke-width" class="viz_map-setting-form-stroke-width chart-selected-field"><option>0</option><option>1</option><option>2</option></select>
+					<span title="Select boundary stroke width." class="info-ico">i</span>
+				</div>
+			</div>-->
+			<div class="field-content">
+				<label>Show Label on Map:</label>
+				<div class="field-field">
+					<select id="map-show_label" class="viz_map-show_label chart-selected-field"><option value=0>No</option><option value=1>Yes</option></select>
+					<span title="This shows name of state/district on map" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content">
+				<label>Select State:</label>
+				<div class="field-field">
+					<select id="state_name_from_list" class="viz_state_name_from_list">
+						<option value="">Select State</option>
+					  <option value="35">ANDAMAN NICOBAR</option>
+						<option value="37">ANDHRAPRADESH</option>
+						<option value="12">ARUNACHAL PRADESH</option>
+						<option value="18">ASSAM</option>
+						<option value="10">BIHAR</option>
+						<option value="04">CHANDIGARH</option>
+						<option value="22">CHHATTISGARH</option>
+						<option value="26">DADRA NAGAR</option>
+						<option value="25">DAMAN DIU</option>
+						<option value="07">DELHI</option>
+						<option value="30">GOA</option>
+						<option value="24">GUJARAT</option>
+						<option value="06">HARYANA</option>
+						<option value="02">HIMACHAL PRADESH</option>
+						<option value="01">JAMMU & KASHMIR</option>
+						<option value="20">JHARKHAND</option>
+						<option value="29">KARNATAKA</option>
+						<option value="32">KERALA</option>
+						<option value="31">LAKSHADWEEP</option>
+						<option value="23">MADHYA PRADESH</option>
+						<option value="27">MAHARASHTRA</option>
+						<option value="14">MANIPUR</option>
+						<option value="17">MEGHALAYA</option>
+						<option value="15">MIZORAM</option>
+						<option value="13">NAGALAND</option>
+						<option value="21">ODISHA</option>
+						<option value="34">PUDUCHERRY</option>
+						<option value="03">PUNJAB</option>
+						<option value="08">RAJASTHAN</option>
+						<option value="11">SIKKIM</option>
+						<option value="33">TAMILNADU</option>
+						<option value="36">TELANGANA</option>
+						<option value="16">TRIPURA</option>
+						<option value="09">UTTAR PRADESH</option>
+						<option value="05">UTTARAKHAND</option>
+						<option value="19">WEST BENGAL</option>
+					</select>
+						<span title="Select state name on which data to be plotted in state map." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<!--<div class="field-content">
+				<label>District Map:</label>
+				<div class="field-field">
+					<input type="checkbox" id="chart-district_map" class="viz_chart-district_map" onClick="createNewState(this);" value=1/>
+						<span title="Check option for creating district map." class="info-ico">i</span>
+				</div>
+			</div>-->
+
+
+		 <div class="field-content">
+	  	<label>.</label>
+	  	<div class="field-field">
+	  		<button id="field-form-apply-chart-settings_button" class="viz_apply_map_settings" mapsettingvalue="#dialog-map-setting" onClick="applyMapsettings(this);" type="button">Apply Settings</button>
+	  		<button id="field-form-close_button" type="button" onclick="jQuery( '#dialog-map-setting' ).dialog( 'close' );">Close</button>
+	  	</div>
+	  </div>
+		</div>
+	</div>
+</div>
+
+<div id="dialog-chart-series" class="dialog-content" title="Chart Series">
+	<div id="chart-series">
+<!---Eidt for edit chart series starts here-->
+		<div id="chart-series-form-default-edit" class="section-editseries viz-chart-series-form-default">
+			<div class="toggle-chart-series">
+					<button type="button" class="btn-toggle-chart-series1" onclick= "showAddSeries()">Back to Add Series</button>
+			</div>
+			<div class="field-content">
+				<label>Series Name:</label>
+				<div class="field-field">
+					<input id="chart-series-form-key-edit" title="Provide series name here" class="viz_chart-series-form-key-edit" type="text" maxlength="50" />
+					<span title="Provide series name here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "bgkp" class="field-content viz_bgkp">
+				<label>X Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-x-for-edit" title="select field" class="viz_chart-series-form-x-for-edit chart-selected-field-populate"></select>
+					<span title="Select field to plot on X axis or Select State name field while creating India map or
+		Select District name field while creating India/State map with districts" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "ddbm-edit" class="viz_ddbm field-content">
+				<label>X1 Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-x1-for-edit" title=" Select State name" class="viz_chart-series-form-x1-edit chart-selected-field-populate"></select>
+					<span title=" Select State name field here while creating India/State map with districts." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div id = "long" class="viz_long field-content">
+				<label>Longitude:</label>
+				<div class="field-field">
+					<select id="chart-series-form-longitude-edit" title="Select field having Longitude." class="viz_chart-series-form-longitude-edit chart-selected-field-populate"></select>
+					<span title="Select field having Longitude." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "lat" class="viz_lat field-content">
+				<label>Latitude:</label>
+				<div class="field-field">
+					<select id="chart-series-form-latitude-edit" title="Select field having Longitude." title="Select field having Latitude." class="viz_chart-series-form-latitude-edit chart-selected-field-populate"></select>
+					<span title="Select field having Latitude." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div class="field-content">
+				<label>Y Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y-edit" title="Select field to plot on Y axis" class="viz_chart-series-form-y-edit chart-selected-field-populate" multiple ></select>
+					<span title="Select field to plot on Y axis" class="info-ico">i</span>
+				</div>
+			</div>
+			<!-- <div class="field-content viz_size_axis" id="size_axis">
+				<label>Size Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-size" class="viz_chart-series-form-size chart-selected-field-populate"></select>
+					<span title="Select field for the measurement of bubble size." class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content viz_size_axis_2" id="size_axis2">
+				<label>Size Axis 2:</label>
+				<div class="field-field">
+					<select id="chart-series-form-size-2" class="viz_chart-series-form-size-2 chart-selected-field-populate"></select>
+					<span title="Select field for the Map Value." class="info-ico">i</span>
+				</div>
+			</div> -->
+			<div class="field-content viz_color_type" id="color_type">
+				<label>Color:</label>
+				<div class="field-field">
+					<input id="chart-series-form-color-edit" title="Select color for chart" class="viz_chart-series-form-color-edit color" value="" />
+					<span title="Select color for chart" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-type" class="viz_series-chart-type field-content" >
+				<label>Chart Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y-chart-type" class="viz_chart-series-form-y-chart-type-edit">
+						<option value="bar">Bar</option>
+						<option value="line">Line</option>
+						<option value="spline">Spline</option>
+						<option value="area">Area</option>
+						<option value="area-spline">Spline Area</option>
+					</select>
+					<span title="Choose charts from given list." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-side" class="viz_series-chart-side field-content" >
+				<label>Chart Side:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y-chart-side" class="viz_chart-series-form-y-chart-side-edit">
+						<option value="1">Left</option>
+						<option value="2">Right</option>
+					</select><span title="Choose side for displaying Y and Y1 axis." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-base-type" class="viz_series-chart-base-type field-content" >
+				<label>Chart Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-basetype" class="viz_chart-series-form-basetype-edit">
+						<option value="bar">Bar</option>
+						<option value="pie">Pie</option>
+						<option value="horizontalmultibar">HorizontalBar</option>
+					</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-drill-type" class="viz_series-chart-drill-type field-content" >
+				<label>Drill Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-drilltype" class="viz_chart-series-form-drilltype-edit">
+						<option value="bar">Bar</option>
+						<option value="pie">Pie</option>
+						<option value="horizontalmultibar">HorizontalBar</option>
+					</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div class="field-content">
+				<label>.</label>
+				<div class="field-field">
+					<button onClick="saveEditedSeries(this);" chartseriesEditid="#dialog-chart-series" id="chart-series-form-add_button" type="button">Save Series</button>
+					<button id="chart-series-form-close_button" type="button" onclick="jQuery( '#dialog-chart-series' ).dialog( 'close' );">Close</button>
+				</div>
+			</div>
+		</div>
+
+<!--Eidt for chart series ends here-->
+
+		<div id="chart-series-form-default" class= "section-addseries viz-chart-series-form-default">
+			<div class="field-content">
+				<label>Series Name:</label>
+				<div class="field-field">
+					<input id="chart-series-form-key" title="Provide series name here" class="viz_chart-series-form-key" type="text" maxlength="50" />
+					<span title="Provide series name here" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "bgkp" class="field-content viz_bgkp">
+				<label>X Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-x" title="select field" class="viz_chart-series-form-x chart-selected-field-populate"></select>
+					<span title="Select field to plot on X axis or Select State name field while creating India map or
+Select District name field while creating India/State map with districts" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "ddbm" class="viz_ddbm field-content">
+				<label>X1 Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-x1" title="select field" class="viz_chart-series-form-x1 chart-selected-field-populate"></select>
+					<span title=" Select State name field here while creating India/State map with districts." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div id = "long" class="viz_long field-content">
+				<label>Longitude:</label>
+				<div class="field-field">
+					<select id="chart-series-form-longitude" title="Select field having Longitude." class="viz_chart-series-form-longitude chart-selected-field-populate"></select>
+					<span title="Select field having Longitude." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id = "lat" class="viz_lat field-content">
+				<label>Latitude:</label>
+				<div class="field-field">
+					<select id="chart-series-form-latitude" title="Select field having Latitude." class="viz_chart-series-form-latitude chart-selected-field-populate"></select>
+					<span title="Select field having Latitude." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div class="field-content">
+				<label>Y Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y" title="Select field to plot on Y axis" class="viz_chart-series-form-y chart-selected-field-populate" multiple ></select>
+					<span title="Select field to plot on Y axis" class="info-ico">i</span>
+				</div>
+			</div>
+			<div class="field-content viz_size_axis" id="size_axis">
+				<label>Size Axis:</label>
+				<div class="field-field">
+					<select id="chart-series-form-size" title="Select field" class="viz_chart-series-form-size chart-selected-field-populate"></select>
+					<span title="Select field for the measurement of bubble size." class="info-ico">i</span>
+				</div>
+			</div>
+			<!-- <div class="field-content viz_size_axis_2" id="size_axis2">
+				<label>Size Axis 2:</label>
+				<div class="field-field">
+					<select id="chart-series-form-size-2" class="viz_chart-series-form-size-2 chart-selected-field-populate"></select>
+					<span title="Select field for the Map Value." class="info-ico">i</span>
+				</div>
+			</div> -->
+			<div class="field-content viz_color_type" id="color_type">
+				<label>Color:</label>
+				<div class="field-field">
+					<input id="chart-series-form-color" title="Select color for chart" class="viz_chart-series-form-color color" value="" />
+					<span title="Select color for chart" class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-type" class="viz_series-chart-type field-content" >
+				<label>Chart Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y-chart-type" class="viz_chart-series-form-y-chart-type">
+					  <option value="bar">Bar</option>
+					  <option value="line">Line</option>
+					  <option value="spline">Spline</option>
+					  <option value="area">Area</option>
+					  <option value="area-spline">Spline Area</option>
+					</select>
+					<span title="Choose charts from given list." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-side" class="viz_series-chart-side field-content" >
+				<label>Chart Side:</label>
+				<div class="field-field">
+					<select id="chart-series-form-y-chart-side" class="viz_chart-series-form-y-chart-side">
+					  <option value="1">Left</option>
+					  <option value="2">Right</option>
+					</select><span title="Choose side for displaying Y and Y1 axis." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-base-type" class="viz_series-chart-base-type field-content" >
+				<label>Chart Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-basetype" class="viz_chart-series-form-basetype">
+						<option value="bar">Bar</option>
+						<option value="pie">Pie</option>
+						<option value="horizontalmultibar">HorizontalBar</option>
+					</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+				</div>
+			</div>
+			<div id="series-chart-drill-type" class="viz_series-chart-drill-type field-content" >
+				<label>Drill Type:</label>
+				<div class="field-field">
+					<select id="chart-series-form-drilltype" class="viz_chart-series-form-drilltype">
+						<option value="bar">Bar</option>
+						<option value="pie">Pie</option>
+						<option value="horizontalmultibar">HorizontalBar</option>
+					</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+				</div>
+			</div>
+
+			<div class="field-content">
+				<label>.</label>
+				<div class="field-field">
+					<button onClick="addChartseries(this);" chartseriesid="#dialog-chart-series" id="chart-series-form-add_button" type="button">Add Series</button>
+					<button id="chart-series-form-close_button" type="button" onclick="jQuery( '#dialog-chart-series' ).dialog( 'close' );">Close</button>
+				</div>
+			</div>
+		</div>
+		<ul class="viz_chart-series-list" id="chart-series-list"></ul>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div id="dialog-data-field" class="dialog-content" title="Field" >
+	<div id="fields-form-default">
+	  <div class="field-content">
+	  	<label>Field:</label>
+	  	<div class="field-field">
+	  		<select id="field-field" title="Field" class="chart-field-populate" multiple></select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>Group Function:</label>
+	  	<div class="field-field">
+	  		<select id="group-function-function-field">
+				<option value="">Select Function</option>
+				<option value="avg">avg</option>
+				<option value="count">count</option>
+				<option value="max">max</option>
+				<option value="min">min</option>
+				<option value="sum">sum</option>
+			</select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>.</label>
+	  	<div class="field-field">
+	  		<button id="field-form-add_button" type="button">Add Field</button>
+	  		<button id="field-form-close_button" type="button" onclick="jQuery( '#dialog-data-field' ).dialog( 'close' );">Close</button>
+	  	</div>
+	  </div>
+	</div>
+	<ul id="field-list"></ul>
+	<div class="clear"></div>
+</div>
+
+<div id="dialog-data-filter" class="dialog-content" title="Filter Option" >
+	<div class="viz_series-form-default" id="series-form-default">
+	  <div id="field-and-or" class="viz_field-and-or field-content">
+	  	<label>AND/OR:</label>
+	  	<div class="field-field">
+	  		<select class="viz_filter-and-or" id="filter-and-or" >
+	  		  <option value="and">and</option>
+	  		  <option value="or">or</option>
+	  		</select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>Field:</label>
+	  	<div class="field-field">
+	  		<select id="filter-field" title="field" class="viz_filter-field chart-field-populate"></select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>Operator:</label>
+	  	<div class="field-field">
+	  		<select class="viz_filter-operator" id="filter-operator">
+	  		  <option value="">Select Operator</option>
+	  		  <option value="=">=</option>
+	  		  <option value="!=">!=</option>
+			  	<option value="<=">&lt=</option>
+			  	<option value=">=">&gt=</option>
+	  		  <option value="starts with">starts with</option>
+	  		  <option value="ends with">ends with</option>
+	  		  <option value="contains">contains</option>
+	  		  <option value="matches">matches</option>
+	  		</select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>Value:</label>
+	  	<div class="field-field">
+	  		<input class="viz_filter-value" title="title" type="text" value="" id="filter-value" maxlength="50" />
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>.</label>
+	  	<div class="field-field">
+	  		<button class="viz_filter-form-add_button" id="filter-form-add_button" onclick="getFiltervalue(this);" filterformvalue="#dialog-data-filter" type="button">Add Filter</button>
+	  		<button id="filter-form-close_button" type="button" onclick="jQuery( '#dialog-data-filter' ).dialog( 'close' );">Close</button>
+	  	</div>
+	  </div>
+	</div>
+	<ul class="viz_filter-list" id="filter-list"></ul>
+	<div class="clear"></div>
+</div>
+
+<div id="dialog-data-group" class="dialog-content" title="Group Option" >
+	<div id="group-form-default">
+	  <div class="field-content">
+	  	<label>Field:</label>
+	  	<div class="field-field">
+	  		<select id="group-field" title="Field" class="chart-field-populate" multiple ></select>
+	  	</div>
+	  </div>
+	  <div class="field-content">
+	  	<label>.</label>
+	  	<div class="field-field">
+	  		<button id="group-form-add_button" type="button">Add Group</button>
+	  		<button id="group-form-close_button" type="button" onclick="jQuery( '#dialog-data-group' ).dialog( 'close' );">Close</button>
+	  	</div>
+	  </div>
+	</div>
+	<ul id="group-list"></ul>
+	<div class="clear"></div>
+</div>
+
+<div id="dialog-view-list" class="dialog-content" title="Charts" >
+	<!-- <h2 id="opendataviz-instance-title" ><img src="images/instance.png" /><span>Instance</span></h2>  -->
+<div id="accordion2"></div>
+<div id="opendataviz-new-inst-content">
+</div>	<button id="dialog-view-close_button" type="button" onclick="jQuery( '#dialog-view-list' ).dialog( 'close' );">Close</button>
+</div>
+
+<div id="dialog-info-details" class="dialog-content" title="Dataset Info" >
+	<div id="opendataviz-node-details">
+</div>	<button id="dialog-info-close_button" type="button" onclick="jQuery( '#dialog-info-details' ).dialog( 'close' );">Close</button>
+</div>
+<div id="dialog-mydata-login" class="dialog-content" title="Visualization Login" >
+	<p><h4>To save and share your visualization please login with your credentials</h4></p>
+	<button id="mydata-login_button" type="button" onclick="window.location = 'https://visualizeapi.data.gov.in/auth/login?destination=/?page=my-data';">Log in</button>
+	<button id="mydata-login-close_button" type="button" onclick="jQuery( '#dialog-mydata-login' ).dialog( 'close' );">Cancel</button>
+</div>
+
+<div id="dialog-mydata--force-login" class="dialog-content" title="Visualization Login" >
+	<p><h4>To save external Url you must login with your credentials</h4></p>
+	<button id="mydata-login_button" type="button" onclick="window.location = 'https://visualizeapi.data.gov.in/auth/login?destination=/?page=my-data';">Log in</button>
+	<button id="mydata-login-close_button" type="button" onclick="jQuery( '#dialog-mydata--force-login' ).dialog( 'close' ); jQuery('select').each(function() { this.selectedIndex = 0 });">Cancel</button>
+</div>
+
+<div id="dialog-mydata-save" class="dialog-content" title="Mydata Save" >
+	<p><h4>Save your Data before visualize it.</h4></p>
+	<button id="mydata-save_button" type="button" onclick="saveinstantView()">Save</button>
+	<button id="mydata-save-close_button" type="button" onclick="jQuery( '#dialog-mydata-save' ).dialog( 'close' );">Cancel</button>
+</div>
+<div id="dialog-error" class="dialog-content" title="Error message" >
+	<p><h4>Instance creation has been temporarily halted</h4></p>
+	<button id="dialog-error-close_button" type="button" onclick="jQuery( '#dialog-error' ).dialog( 'close' );">Cancel</button>
+</div>
+
+<div id="dialog-mydata-loginforsave" class="dialog-content" title="Visualization Login" >
+	<p><h4>To save and share your visualization please login with your credentials</h4></p>
+	<button id="mydata-login_button" type="button" onclick="saveinstantView_wl(0)">Log in</button>
+	<button id="mydata-login-close_button" type="button" onclick="jQuery('#dialog-mydata-loginforsave').dialog( 'close' );">Cancel</button>
+</div>
+<!---Html code for Wizard goes from here---->
+<div id="dialog-wizards-url" class="dialog-content" title="Help Wizard">
+	<div id="wizard">
+			<h2>Apply Filter</h2>
+			<section>
+				<div id="dialog-data-field-2" title="Filter Option" title="Filter Option" >
+					<div class="viz_series-form-default" id="series-form-default-2">
+					  <div id="field-and-or-2" class="viz_field-and-or field-content">
+					  	<label>AND/OR:</label>
+					  	<div class="field-field">
+					  		<select class="viz_filter-and-or" id="filter-and-or-2" >
+					  		  <option value="and">and</option>
+					  		  <option value="or">or</option>
+					  		</select>
+					  	</div>
+					  </div>
+					  <div class="field-content">
+					  	<label>Field:</label>
+					  	<div class="field-field">
+					  		<select id="filter-field-2" title="field" class="viz_filter-field chart-field-populate"></select>
+					  	</div>
+					  </div>
+					  <div class="field-content">
+					  	<label>Operator:</label>
+					  	<div class="field-field">
+					  		<select class="viz_filter-operator" id="filter-operator-2">
+					  		  <option value="">Select Operator</option>
+					  		  <option value="=">=</option>
+					  		  <option value="!=">!=</option>
+							  <option value="<=">&lt=</option>
+							  <option value=">=">&gt=</option>
+					  		  <option value="starts with">starts with</option>
+					  		  <option value="ends with">ends with</option>
+					  		  <option value="contains">contains</option>
+					  		  <option value="matches">matches</option>
+					  		</select>
+					  	</div>
+					  </div>
+					  <div class="field-content">
+					  	<label>Value:</label>
+					  	<div class="field-field">
+					  		<input class="viz_filter-value" title="title" type="text" value="" id="filter-value-2" maxlength="50" />
+					  	</div>
+					  </div>
+					  <div class="field-content">
+					  	<label>.</label>
+					  	<div class="field-field">
+					  		<button class="viz_filter-form-add_button" id="filter-form-add_button-2" filterformvalue="#dialog-wizards-url" onclick="getFiltervalue(this);" type="button">Add Filter</button>
+					  	</div>
+					  </div>
+					</div>
+					<ul class="viz_filter-list" id="filter-list"></ul>
+					<div class="clear"></div>
+				</div>
+			</section>
+
+			<h2>Visualization Type</h2>
+			<section>
+				<div id="dialog-chart-type-2" class="dialog-content" title="Chart Type">
+				<div id="chart-button-container-2" title="chartType" charttypevalue="#dialog-chart-type-2">
+				<div onClick="selectCharttype(this);" class="chart-type-button" charttype="bar" title="Bar Chart -> Bar chart is the best chart type for comparing multiple values.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels.
+Check ‘Show Values’ for values on chart.
+">
+						<span class="barchart-image"></span>
+						</br>Bar Chart
+						</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="multibar" title="Stacked Bar – Stacked bar chart is used to represent multiple types of data within a single bar.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels.
+Check ‘Show Values’ for values on chart and Check ‘Stack Bars’ for representing multiple types of data in a single bar. "><span class="multibar-image"></span>
+						</br>Stacked Bar
+						</div>
+					<!--	<div class="chart-type-button" charttype="multibarline" title="Bar Line Chart"><span class="multibarline-image"></span> </br>Bar Line Chart</div>	-->
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="pie" title="Pie Chart - Pie chart displays contribution of each value to a total. Use it when values can be added to 100% or when there is only one data series and values are positive.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.">
+						<span class="piechart-image"></span>
+						</br>Pie Chart
+						</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="line" title="Line Chart - Line Chart is used to display trends over time.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+ Add X and Y axis labels. Check ‘Show Values’ for values on chart and ‘Spline Chart’ for smooth line.">
+						<span class="linechart-image"></span>
+						</br>Line Chart
+						</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="area" title="Area Chart – Area chart emphasizes differences between several sets of data over a period of time.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart. ">
+						<span class="areachart-image"></span>
+						</br> Area Chart
+						</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="bubble" title="Bubble Chart – Bubble chart plots data defined in terms of three distinct numeric parameters. Use it when values being charted are not in X axis and Y axis order or when they represent separate measurements. The third value determines the size of the bubble marker.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Size Axis: Third data value for bubble size measurements.
+Chart Settings:
+Add X and Y axis labels.">
+						<span class="bubblechart-image"></span> </br>Bubble
+						</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="map" title="Map – The map plots data over geographical region of India. Geographical region can be states or districts.
+For India map with states –
+Chart Series:
+X Axis - State/UT,
+Y Axis – Value to plot on states.
+Check ‘New State’ for Telangana in ‘Map Settings’.
+For India map with districts - Check ‘District Map’ option in ‘Map Settings’.
+Chart Series:
+X Axis - District, X1 Axis - State/UT, Y Axis – Value to plot on districts.
+Map Settings provide options for color, legends, steps etc.">
+						<span class="mapchart-image"></span>
+						</br>Map
+						</div>
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="latlongmap" title="LatLong Map – The map plots data values over geographical region of India, with reference to longitude and latitude values.
+				Chart Series:
+				Longitude: Select Field having longitude value,
+				Latitude: Select field having latitude value.
+				Y axis – Data to be displayed on map.">
+						<span class="mapchart-image"></span>
+						</br>LatLong Map
+					</div>
+
+				<!--		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="statemap" title="State Map – The map plots values over geographical region of a particular State/UT with respect to districts.
+Chart Series:
+X Axis – District, X1 Axis – State/UT,
+Y Axis – Values to be displayed on map.
+Map Settings provide options for color, legends, steps etc.">
+						<span class="mapchart-image"></span>
+					</br>State Map</div>-->
+
+					<!--	<div onClick="selectCharttype(this);" class="chart-type-button" charttype="state_district_map" title="State District Map – The map plots values over geographical region of a particular State/UT with respect to districts.
+				Chart Series:
+				X Axis – District, X1 Axis – State/UT,
+				Y Axis – Values to be displayed on map.
+				Map Settings provide options for color, legends, steps etc.">
+						<span class="mapchart-image"></span>
+					</br>State with District Map</div> -->
+
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="lineviewfinder" title="Line with view finder – Line with view finder chart is similar to Line chart and used to display trends over time. It provides an extra functionality of viewing data over a specific time frame.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart.">
+						<span class="lineviewfinder-image"></span>
+						</br>Line with View Finder</div>
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="horizontalmultibar" title="Horizontal Multi Bar Chart – Horizontal Multi Bar chart represents data in horizontal bar. Option of ‘Stack Bars’ in ‘Chart Series’ can be used to represent multiple types of data within a single bar.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Multiple data series can be added on Y axis with respect to single data on X axis.
+Multiple series can be added in chart series.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart and Check ‘Stack Bars’ for representing multiple types of data in a single bar.">
+						<span class="horizontalmultibar-image"></span>
+						</br>Horizontal Multi Bar</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="multichart" title="Multi Chart – Multi chart facilitates combining of line, bar and area in a single chart, displaying data series having different measurements units on two different axis ie. Y and Y1 axis.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Two chart series can be added by adding multiple data series on Y axis for single data on X axis. Choose types of the chart from ‘Chart Type’ list.
+Chart Settings:
+Add X, Y and Y1 axis labels. Y axis label and Y1 axis label represents label for different chart series. Check ‘Show Values’ for values on chart. ">
+						<span class=" multibarline-image"></span>
+						</br>Multi Chart</div>
+
+						<div onClick="selectCharttype(this);" class="chart-type-button" charttype="radar" title="Radar Chart – Radar chart displays value relative to a centre point. Use it when the categories are not directly comparable.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Multiple chart series can be added by adding multiple data series on Y axis for single data on X axis.
+ Chart Settings:
+Add X and Y axis labels.">
+						<span class="radarchart-image"></span>
+						</br>Radar Chart</div>
+
+						<!--<div class="chart-type-button" charttype="circularHeat" title="circularHeat"><span class="circularheat-image"></span>
+						</br>Circular Heat</div>-->
+
+		<div onClick="selectCharttype(this);" class="chart-type-button" charttype="donut" title="Donut Chart – Donut Chart displays the contribution of each value to a total like a pie chart.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.">
+						<span class="donut-image"></span>
+						</br>Donut Chart</div>
+
+			<div onClick="selectCharttype(this);" class="chart-type-button" charttype="step"
+			title="Step Chart – A Step chart is a Line chart which uses vertical and horizontal lines to connect the data points in a series forming a step-like progression.
+Chart Series:
+X Axis – Data to plot on X axis.
+Y Axis – Data to plot on Y axis.
+Multiple series can be added by adding multiple data series on Y axis with respect to single data on X axis.
+Chart Settings:
+Add X and Y axis labels. Check ‘Show Values’ for values on chart.
+">
+			<span class="stepchart-image"></span>
+			</br>Step Chart</div>
+			<div onClick="selectCharttype(this);" class="chart-type-button" charttype="drillbar" title="Drill Down Chart – Drill down charts are used to give another level of detailed reporting to charts.
+	Chart Series:
+	X Axis – Data to plot on X axis.
+	Y Axis – Data to plot on Y axis.
+	'Chart Type' and 'Drill Type' are used for two levels of charts. Charts used here on levels are Bar, Pie and Horizontal Bar charts.
+	Chart Settings:
+	Add X and Y axis labels. Check ‘Show Values’ for values on chart.
+			">
+			<span class="drillchart-image"></span>
+		</br>DrillDown Chart</div>
+
+					</div>
+				</div>
+				<input id="chartType" name="Chart Type" title="chartType" type="text" class="required">
+			</section>
+
+			<h2>Add Series</h2>
+			<section><div id="dialog-chart-series-2" class="dialog-content" title="Chart Series">
+				<div id="chart-series">
+					<!---Eidt for chart series in wizard starts here-->
+							<div id="chart-series-form-default-edit" class="section-editseries viz-chart-series-form-default">
+								<div class="toggle-chart-series">
+										<button type="button" class="btn-toggle-chart-series1" onclick= "showAddSeries()">Back to Add Series</button>
+								</div>
+								<div class="field-content">
+									<label>Series Name:</label>
+									<div class="field-field">
+										<input id="chart-series-form-key-edit" title="title" class="viz_chart-series-form-key-edit" type="text" maxlength="50" />
+										<span title="Provide series name here" class="info-ico">i</span>
+									</div>
+								</div>
+								<div id = "bgkp" class="field-content viz_bgkp">
+									<label>X Axis:</label>
+									<div class="field-field">
+										<select id="chart-series-form-x-for-edit" title="field" class="viz_chart-series-form-x-for-edit chart-selected-field-populate"></select>
+										<span title="Select field to plot on X axis or Select State name field while creating India map or
+							Select District name field while creating India/State map with districts" class="info-ico">i</span>
+									</div>
+								</div>
+								<div id = "ddbm-edit" class="viz_ddbm field-content">
+									<label>X1 Axis:</label>
+									<div class="field-field">
+										<select id="chart-series-form-x1-for-edit" title=" Select State name" class="viz_chart-series-form-x1-edit chart-selected-field-populate"></select>
+										<span title=" Select State name field here while creating India/State map with districts." class="info-ico">i</span>
+									</div>
+								</div>
+
+								<div id = "long" class="viz_long field-content">
+									<label>Longitude:</label>
+									<div class="field-field">
+										<select id="chart-series-form-longitude-edit" title="Select field" class="viz_chart-series-form-longitude-edit chart-selected-field-populate"></select>
+										<span title="Select field having Longitude." class="info-ico">i</span>
+									</div>
+								</div>
+								<div id = "lat" class="viz_lat field-content">
+									<label>Latitude:</label>
+									<div class="field-field">
+										<select id="chart-series-form-latitude-edit" title="Select field" class="viz_chart-series-form-latitude-edit chart-selected-field-populate"></select>
+										<span title="Select field having Latitude." class="info-ico">i</span>
+									</div>
+								</div>
+
+								<div class="field-content">
+									<label>Y Axis:</label>
+									<div class="field-field">
+										<select id="chart-series-form-y-edit" title="Select field" class="viz_chart-series-form-y-edit chart-selected-field-populate" multiple ></select>
+										<span title="Select field to plot on Y axis" class="info-ico">i</span>
+									</div>
+								</div>
+								<!-- <div class="field-content viz_size_axis" id="size_axis">
+									<label>Size Axis:</label>
+									<div class="field-field">
+										<select id="chart-series-form-size" class="viz_chart-series-form-size chart-selected-field-populate"></select>
+										<span title="Select field for the measurement of bubble size." class="info-ico">i</span>
+									</div>
+								</div>
+								<div class="field-content viz_size_axis_2" id="size_axis2">
+									<label>Size Axis 2:</label>
+									<div class="field-field">
+										<select id="chart-series-form-size-2" class="viz_chart-series-form-size-2 chart-selected-field-populate"></select>
+										<span title="Select field for the Map Value." class="info-ico">i</span>
+									</div>
+								</div> -->
+								<div class="field-content viz_color_type" id="color_type-2">
+									<label>Color:</label>
+									<div class="field-field">
+										<input id="chart-series-form-color-edit" title="Select color for chart" class="viz_chart-series-form-color-edit color" value="" />
+										<span title="Select color for chart" class="info-ico">i</span>
+									</div>
+								</div>
+								<div id="series-chart-type" title="Chart Type" class="viz_series-chart-type field-content" >
+									<label>Chart Type:</label>
+									<div class="field-field">
+										<select id="chart-series-form-y-chart-type" class="viz_chart-series-form-y-chart-type-edit">
+											<option value="bar">Bar</option>
+											<option value="line">Line</option>
+											<option value="spline">Spline</option>
+											<option value="area">Area</option>
+											<option value="area-spline">Spline Area</option>
+										</select>
+										<span title="Choose charts from given list." class="info-ico">i</span>
+									</div>
+								</div>
+								<div id="series-chart-side" title="Chart Side" class="viz_series-chart-side field-content" >
+									<label>Chart Side:</label>
+									<div class="field-field">
+										<select id="chart-series-form-y-chart-side" class="viz_chart-series-form-y-chart-side-edit">
+											<option value="1">Left</option>
+											<option value="2">Right</option>
+										</select><span title="Choose side for displaying Y and Y1 axis." class="info-ico">i</span>
+									</div>
+								</div>
+								<div id="series-chart-base-type" title="Chart Type" class="viz_series-chart-base-type field-content" >
+									<label>Chart Type:</label>
+									<div class="field-field">
+										<select id="chart-series-form-basetype" class="viz_chart-series-form-basetype-edit">
+											<option value="bar">Bar</option>
+											<option value="pie">Pie</option>
+											<option value="horizontalmultibar">HorizontalBar</option>
+										</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+									</div>
+								</div>
+								<div id="series-chart-drill-type" title="Drill Type" class="viz_series-chart-drill-type field-content" >
+									<label>Drill Type:</label>
+									<div class="field-field">
+										<select id="chart-series-form-drilltype" class="viz_chart-series-form-drilltype-edit">
+											<option value="bar">Bar</option>
+											<option value="pie">Pie</option>
+											<option value="horizontalmultibar">HorizontalBar</option>
+										</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+									</div>
+								</div>
+								<div class="field-content">
+									<label>.</label>
+									<div class="field-field">
+										<button onClick="saveEditedSeries(this);" chartseriesEditid="#dialog-chart-series-2" id="chart-series-form-add_button-2" type="button">Save Series</button>
+										<!--<button id="chart-series-form-close_button" type="button" onclick="jQuery( '#dialog-chart-series' ).dialog( 'close' );">Close</button>-->
+									</div>
+								</div>
+							</div>
+
+					<!--Edit for chart series in wizard ends here-->
+
+					<div id="chart-series-form-default" title="Series Name" class= "section-addseries viz-chart-series-form-default">
+						<div class="field-content">
+							<label>Series Name:</label>
+							<div class="field-field">
+								<input id="chart-series-form-key" title="Provide series name here" class="viz_chart-series-form-key" type="text" maxlength="50" />
+								<span title="Provide series name here" class="info-ico">i</span>
+							</div>
+						</div>
+						<div id = "bgkp" title="Series Name" class="field-content viz_bgkp">
+							<label>X Axis:</label>
+							<div class="field-field">
+								<select id="chart-series-form-x" title="select field" class="viz_chart-series-form-x chart-selected-field-populate"></select>
+								<span title="Select field to plot on X axis or Select State name field while creating India map or
+			Select District name field while creating India/State map with districts" class="info-ico">i</span>
+							</div>
+						</div>
+						<div id = "ddbm" title="Series Name" class="viz_ddbm field-content">
+							<label>X1 Axis:</label>
+							<div class="field-field">
+								<select id="chart-series-form-x1" title="select field" class="viz_chart-series-form-x1 chart-selected-field-populate"></select>
+								<span title=" Select State name field here while creating India/State map with districts." class="info-ico">i</span>
+							</div>
+						</div>
+
+						<div id = "long" title="Longitude" class="viz_long field-content">
+							<label>Longitude:</label>
+							<div class="field-field">
+								<select id="chart-series-form-longitude" title="select field" class="viz_chart-series-form-longitude chart-selected-field-populate"></select>
+								<span title="Select field having Longitude." class="info-ico">i</span>
+							</div>
+						</div>
+						<div id = "lat" title="Latitude" class="viz_lat field-content">
+							<label>Latitude:</label>
+							<div class="field-field">
+								<select id="chart-series-form-latitude" title="Select field having Latitude." class="viz_chart-series-form-latitude chart-selected-field-populate"></select>
+								<span title="Select field having Latitude." class="info-ico">i</span>
+							</div>
+						</div>
+
+						<div class="field-content" title="Y Axis">
+							<label>Y Axis:</label>
+							<div class="field-field">
+								<select id="chart-series-form-y" title="Select field to plot on Y axis" class="viz_chart-series-form-y chart-selected-field-populate" multiple ></select>
+								<span title="Select field to plot on Y axis" class="info-ico">i</span>
+							</div>
+						</div>
+						<!-- <div class="field-content viz_size_axis" id="size_axis-2">
+							<label>Size Axis:</label>
+							<div class="field-field">
+								<select id="chart-series-form-size" class="viz_chart-series-form-size chart-selected-field-populate"></select>
+								<span title="Select field for the measurement of bubble size." class="info-ico">i</span>
+							</div>
+						</div>
+						<div class="field-content viz_size_axis_2" id="size_axis2">
+							<label>Size Axis 2:</label>
+							<div class="field-field">
+								<select id="chart-series-form-size-2" class="viz_chart-series-form-size-2 chart-selected-field-populate"></select>
+								<span title="Select field for the Map Value." class="info-ico">i</span>
+							</div>
+						</div>-->
+						<div class="field-content viz_color_type" title="Color" id="color_type-2">
+							<label>Color:</label>
+							<div class="field-field">
+								<input title="Select color for chart" id="chart-series-form-color" class="viz_chart-series-form-color color" value="" />
+								<span title="Select color for chart" class="info-ico">i</span>
+							</div>
+						</div>
+						<div id="series-chart-type" title="Chart Type" class="viz_series-chart-type field-content" >
+							<label>Chart Type:</label>
+							<div class="field-field">
+								<select id="chart-series-form-y-chart-type" class="viz_chart-series-form-y-chart-type">
+									<option value="bar">Bar</option>
+									<option value="line">Line</option>
+									<option value="spline">Spline</option>
+									<option value="area">Area</option>
+									<option value="area-spline">Spline Area</option>
+								</select>
+								<span title="Choose charts from given list." class="info-ico">i</span>
+							</div>
+						</div>
+						<div id="series-chart-side" title="Chart Side" class="viz_series-chart-side field-content" >
+							<label>Chart Side:</label>
+							<div class="field-field">
+								<select id="chart-series-form-y-chart-side" class="viz_chart-series-form-y-chart-side">
+									<option value="1">Left</option>
+									<option value="2">Right</option>
+								</select><span title="Choose side for displaying Y and Y1 axis." class="info-ico">i</span>
+							</div>
+						</div>
+						<div id="series-chart-base-type" title="Chart Type" class="viz_series-chart-base-type field-content" >
+							<label>Chart Type:</label>
+							<div class="field-field">
+								<select id="chart-series-form-basetype" class="viz_chart-series-form-basetype">
+									<option value="bar">Bar</option>
+									<option value="pie">Pie</option>
+									<option value="horizontalmultibar">HorizontalBar</option>
+								</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+							</div>
+						</div>
+						<div id="series-chart-drill-type" title="Drill Type" class="viz_series-chart-drill-type field-content" >
+							<label>Drill Type:</label>
+							<div class="field-field">
+								<select id="chart-series-form-drilltype" class="viz_chart-series-form-drilltype">
+									<option value="bar">Bar</option>
+									<option value="pie">Pie</option>
+									<option value="horizontalmultibar">HorizontalBar</option>
+								</select><span title="Choose chart type for Drill-Down." class="info-ico">i</span>
+							</div>
+						</div>
+						<div class="field-content">
+							<label>.</label>
+							<div class="field-field">
+								<button onClick="addChartseries(this);" chartseriesid="#dialog-chart-series-2" id="chart-series-form-add_button-2" type="button">Add Series</button>
+							</div>
+						</div>
+					</div>
+					<ul class="viz_chart-series-list" id="chart-series-list-2"></ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</section>
+
+		<h2>Apply Settings</h2>
+			<section>
+				<div id="dialog-chart-setting-2" class="dialog-content" title="Chart Settings">
+					<div id="chartsetting-2">
+						<div id="chart-type-setting-2">
+							<div class="field-content">
+								<label>X Axis Label:</label>
+								<div class="field-field">
+									<input type="text" id="chart-x_axis_label-2" title="Type X axis label here" class="viz_chart-x_axis_label" maxlength="128" onkeyup="updateXAxisLabel(this);"/>
+									<span title="Type X axis label here" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Y Axis Label:</label>
+								<div class="field-field">
+									<input type="text" id="chart-y_axis_label-2" title="Type Y axis label here" class="viz_chart-y_axis_label" maxlength="128" onkeyup="updateYAxisLabel(this);"/>
+									<span title="Type Y axis label here" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Y1 Axis Label:</label>
+								<div class="field-field">
+									<input type="text" title="Type Y1 axis" id="chart-y1_axis_label-2" class="viz_chart-y1_axis_label" maxlength="128" onkeyup="updateY1AxisLabel(this);"/>
+									<span title="Type Y1 axis label here for other chart when chart type is ‘Multi Chart’" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content y-max-values">
+								<label>Y Axis Max Val:</label>
+								<div class="field-field">
+									<input type="text" title="Set Y axis max value here" id="y_axis_max_val-2" class="viz_y_axis_max_val" onkeyup="updateYAxisMaxVal(this);"/>
+									<span title="Set Y axis max value here" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content y-max-values">
+								<label>Y1 Axis Max Val:</label>
+								<div class="field-field">
+									<input type="text" id="y1_axis_max_val-2" title="Set Y1 axis max value here" class="viz_y1_axis_max_val" onkeyup="updateY1AxisMaxVal(this);"/>
+									<span title="Set Y1 axis max value here" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content axis-tick">
+								<label>Rotate X-axis Tick:</label>
+								<div class="field-field ">
+									<input type="text" id="x-axis-tick" title="Rotate" class="viz_x-axis-tick" onkeyup="xAxisTick(this);"/>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Advanced:</label>
+								<div class="field-field ">
+									<textarea id="chart-advanced-2" title="Use range" class="viz_chart-advanced" onkeyup="showAdvancevalue(this);" maxlength="500"> </textarea>
+									<span title="Use range in case of radar chart. For example, range={&quot;max&quot;:100};"  class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content" >
+								<label>X Tick Cull:</label>
+								<div class="field-field">
+									<select id="x-tick-cull" class="viz_x-tick-cull" charttickcullvalue = "#dialog-chart-setting" onchange="cullXtick(this)">
+									<option value="auto">Auto</option>
+									<option value="all">Show All</option>
+									</select>
+									<span title="Put The number of ticks you want show on X-axis" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content top-list">
+								<label>Top List:</label>
+								<div class="field-field ">
+									<input type="text" id="chart-top-list" class="viz_top-list" title="Top List" onkeyup="topListFromSeries(this);"/>
+								</div>
+							</div>
+							<div class="field-content hide_sort">
+								<label class="sorting-lable">Sort Bars:</label>
+								<div class="field-field sorting-type">
+									<input type="radio" id="chart_sort_bars_r1_2" title="Sort Bars" class="viz_chart_sort_bars desc" name="sort_2" value="Decending" onClick="sortBar(this);"> Decending
+									<input type="radio" id="chart_sort_bars_r2_2" title="Sort Bars" class="viz_chart_sort_bars asc" name="sort_2" value="Accending" onClick="sortBar(this);"> Accending
+									<input type="radio" id="chart_sort_bars_r3_2" title="Sort Bars" class="viz_chart_sort_bars none" name="sort_2" value="None" onClick="sortBar(this);"> None
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Show Values:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-show_value-2" title="Shows data value" onClick="chartShowvalue(this)" chartshowvalue="#dialog-chart-setting-2" class="viz_chart-show_value" value=1/>
+									<span title="Shows data value on charts, plotted on Y axis." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Hide X Tick:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-x-tick-2" class="viz_chart-x-tick" title="Hide X Tick Values" charttickvalue = "#dialog-chart-setting" onClick="hideXTick(this);" value=1 />
+										<span title="Hide X Tick Values" class="info-ico">i</span>
+								</div>
+							</div>
+							<!--<div class="field-content">
+								<label>Sort Bars:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-sort_bars" value=1/>
+								</div>
+							</div>-->
+							<div class="field-content hide_stack_bar">
+								<label>Stack Bars:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-stack_bars-2" title="Stacks multiple series to a single bar." class="viz_chart-stack_bars" onClick="chartStackBar(this)" value=1/>
+									<span title="Stacks multiple series to a single bar." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content spline_hide">
+								<label>Spline Chart:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-spline_line-2" onClick="chartSpline(this);" title="Converts Line" class="viz_chart-spline_line" value=1/>
+									<span title="Converts Line to the Special line in Line Chart." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+									<label>.</label>
+									<div class="field-field">
+									<button id="dialog-chart-advanced-settings_button-2" class="viz_dialog-chart-advanced-settings_button" type="button">Apply Settings</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--Html code for drilldown district map start here-->
+				<div id="dialog-district-map-setting-2" class="dialog-content" title="District Settings">
+					<div id="mapsetting-2">
+						<div id="map-setting-2">
+							<div class="field-content">
+								<label>Steps(Districts)</label>
+								<div class="field-field">
+									<select id="map-setting-form-steps-district-2" onClick="distmapSettingsfromsteps(this);" class="viz_district_map-setting-form-steps chart-selected-field"><option>3</option><option>4</option><option>5</option></select>
+									<span title="Represents number of data intervals." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content district-field-content">
+								<label>Scale(Districts)</label>
+								<div id="field-district-map-setting-form-color-wrapper-2" class="viz_field-district-map-setting-form-color-wrapper field-field">
+									<input class="division" title="division" value="" type="text"/>
+									<input class="color scalecolor" title="division" value="EEDFFF" maxlength="6"/><br/>
+									<input class="division" value="" title="division" type="text"/>
+									<input class="color scalecolor" title="division" value="CD9FFF" maxlength="6"/><br/>
+									<input class="color scalecolor" title="division" value="7B00FF" maxlength="6"/>
+									<span title="Represents color for data intervals." class="info-ico">i</span>
+								</div>
+									<span class="field-field"><span title="Represents color for data intervals." class="info-ico">i</span></span>
+							</div>
+							<div class="field-content" style = "z-index: 9999991!important">
+								<label>Map Fill Color:</label>
+								<div class="field-field">
+									<input id="district-map-setting-form-fill-color-2" title="Color of the map" class="viz_district_map-setting-form-fill-color color" value="A1A1A1" />
+										<span title="Color of the map when no data value is associated." class="info-ico">i</span>
+								</div>
+							</div>
+							<!-- <div class="field-content">
+								<label>Link District:</label>
+								<div class="field-field">
+									<input id="district_link" class="viz_district_link" value="" type="text" maxlength="150"/>
+										<span title="District Link Url" class="info-ico">i</span>
+								</div>
+							</div> ///--->
+
+							<div class="field-content">
+							 <label>.</label>
+							 <div class="field-field">
+								 <button id="field-form-apply-chart-settings_button-3" class="viz_apply_map_settings" mapsettingvalue="#dialog-district-map-setting" onClick="applyDistMapsettings(this);" type="button">Apply Settings</button>
+								 <button id="field-form-close_button-2" type="button" onclick="jQuery( '#dialog-district-map-setting' ).dialog( 'close' );">Close</button>
+							 </div>
+						 </div>
+						</div>
+					</div>
+				</div>
+
+				<div id="dialog-map-setting-2" class="dialog-content" title="Map Settings">
+					<div id="mapsetting-2">
+						<div id="map-setting-2">
+							<div class="field-content">
+								<label>Steps:</label>
+								<div class="field-field">
+									<select id="map-setting-form-steps-2" onClick="mapSettingsfromsteps(this);" class="viz_map-setting-form-steps chart-selected-field"><option>3</option><option>4</option><option>5</option></select>
+									<span title="Represents number of data intervals." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Scale:</label>
+								<div id="field-map-setting-form-color-wrapper-2" class="viz_field-map-setting-form-color-wrapper field-field">
+									<input class="division" title="division" value="" type="text"/>
+									<input class="color scalecolor" title="division" value="EEDFFF" maxlength="6"/><br/>
+									<input class="division" title="division" value="" type="text"/>
+									<input class="color scalecolor" title="division" value="CD9FFF" maxlength="6"/><br/>
+									<input class="color scalecolor" title="division" value="7B00FF" maxlength="6"/>
+									<span title="Represents color for data intervals." class="info-ico">i</span>
+								</div>
+									<span class="field-field"><span title="Represents color for data intervals." class="info-ico">i</span></span>
+							</div>
+							<div class="field-content">
+								<label>Legend Title:</label>
+								<div class="field-field">
+									<input id="map-setting-form-legend-title-2" title="Type legend title." class="viz_map-setting-form-legend-title" value="" type="text" maxlength="35"/>
+										<span title="Type legend title." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content" style = "z-index: 9999991!important">
+								<label>Map Fill Color:</label>
+								<div class="field-field">
+									<input id="map-setting-form-fill-color-2" title="Color" class="viz_map-setting-form-fill-color color" value="A1A1A1" />
+										<span title="Color of the map when no data value is associated." class="info-ico">i</span>
+								</div>
+							</div>
+							<!--<div class="field-content" style = "z-index: 9999991!important">
+								<label>Map Stroke Color:</label>
+								<div class="field-field">
+									<input id="map-setting-form-stroke-color-2" class="viz_map-setting-form-stroke-color color" value="505050" />
+										<span title="Choose boundary color here." class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Stroke Width:</label>
+								<div class="field-field">
+								<select id="map-setting-form-stroke-width-2" class="viz_map-setting-form-stroke-width chart-selected-field"><option>0</option><option>1</option><option>2</option></select>
+									<span title="Select boundary stroke width." class="info-ico">i</span>
+								</div>
+							</div>-->
+							<div class="field-content">
+								<label>Show Label on Map:</label>
+								<div class="field-field">
+									<select id="map-show_label-2" class="viz_map-show_label chart-selected-field"><option value=0>No</option><option value=1>Yes</option></select>
+									<span title="This shows name of state/district on map" class="info-ico">i</span>
+								</div>
+							</div>
+							<div class="field-content">
+								<label>Select State:</label>
+								<div class="field-field">
+									<select id="state_name_from_list-2" class="viz_state_name_from_list">
+										<option value="">Select State</option>
+									  <option value="35">ANDAMAN NICOBAR</option>
+										<option value="37">ANDHRAPRADESH</option>
+										<option value="12">ARUNACHAL PRADESH</option>
+										<option value="18">ASSAM</option>
+										<option value="10">BIHAR</option>
+										<option value="04">CHANDIGARH</option>
+										<option value="22">CHHATTISGARH</option>
+										<option value="26">DADRA NAGAR</option>
+										<option value="25">DAMAN DIU</option>
+										<option value="07">DELHI</option>
+										<option value="30">GOA</option>
+										<option value="24">GUJARAT</option>
+										<option value="06">HARYANA</option>
+										<option value="02">HIMACHAL PRADESH</option>
+										<option value="01">JAMMU & KASHMIR</option>
+										<option value="20">JHARKHAND</option>
+										<option value="29">KARNATAKA</option>
+										<option value="32">KERALA</option>
+										<option value="31">LAKSHADWEEP</option>
+										<option value="23">MADHYA PRADESH</option>
+										<option value="27">MAHARASHTRA</option>
+										<option value="14">MANIPUR</option>
+										<option value="17">MEGHALAYA</option>
+										<option value="15">MIZORAM</option>
+										<option value="13">NAGALAND</option>
+										<option value="21">ODISHA</option>
+										<option value="34">PUDUCHERRY</option>
+										<option value="03">PUNJAB</option>
+										<option value="08">RAJASTHAN</option>
+										<option value="11">SIKKIM</option>
+										<option value="33">TAMILNADU</option>
+										<option value="36">TELANGANA</option>
+										<option value="16">TRIPURA</option>
+										<option value="09">UTTAR PRADESH</option>
+										<option value="05">UTTARAKHAND</option>
+										<option value="19">WEST BENGAL</option>
+									</select>
+										<span title="Select state name on which data to be plotted in state map." class="info-ico">i</span>
+								</div>
+							</div>
+
+							<!--<div class="field-content">
+								<label>District Map:</label>
+								<div class="field-field">
+									<input type="checkbox" id="chart-district_map-2" onClick="createNewState(this);" class="viz_chart-district_map"  value=1/>
+										<span title="Check option for creating district map." class="info-ico">i</span>
+								</div>
+							</div>-->
+
+
+						 <div class="field-content">
+					  	<label>.</label>
+					  	<div class="field-field">
+					  		<button id="field-form-apply-chart-settings_button-2" class="viz_apply_map_settings" mapsettingvalue="#dialog-map-setting-2" onClick="applyMapsettings(this);" type="button">Apply Settings</button>
+					  	</div>
+					  </div>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+	<button id="mydata-login-close_button-2" type="button" onclick="$('#dialog-wizards-url').dialog( 'close' );">Exit</button>
+</div>
+  <footer class="wrapper footer-wrapper">
+  <script>
+    $(document).ready(function() {
+      getUpdatedDate();
+    });
+  </script>
+  <div class="container footer-container">
+    <div class="footer-left clearfix">
+      <ul>
+        <li><a href="https://data.gov.in/about-us" target="_blank" rel = "noopener noreferrer" title="About Portal">About Portal</a></li>
+        <!-- <li><a href="https://data.gov.in/opendatasites" target="_blank" rel = "noopener noreferrer" title="Open Data Sites">Open Data Sites</a></li> -->
+        <li><a href="https://data.gov.in/help" target="_blank" rel = "noopener noreferrer" title="Help">Help</a></li>
+        <li><a href="https://data.gov.in/datacontrollers" title="Chief Data Officers" target="_blank" rel = "noopener noreferrer">Chief Data Officers</a></li>
+        <li><a href="https://data.gov.in/faqs" target="_blank" rel = "noopener noreferrer" title="FAQ">FAQ</a></li>
+        <li><a href="https://data.gov.in/tell-a-friend" target="_blank" rel = "noopener noreferrer" title="Tell A Friend">Tell A Friend</a></li>
+        <li><a href="https://data.gov.in/link-to-us" target="_blank" rel = "noopener noreferrer" title="Link To Us">Link To Us</a></li>
+        <li><a href="https://data.gov.in/accessibility-statement" target="_blank" rel = "noopener noreferrer" title="Accessibility Statement">Accessibility Statement</a></li>
+        <li><a href="https://data.gov.in/terms-of-use" target="_blank" rel = "noopener noreferrer" title="Terms of Use">Terms of Use</a></li>
+        <li><a href="https://data.gov.in/policies" target="_blank" rel = "noopener noreferrer" title="Policies">Policies</a></li>
+        <li><a href="https://data.gov.in/sitemap" target="_blank" rel = "noopener noreferrer" title="Sitemap">Sitemap</a></li>
+        <li><a href="https://data.gov.in/connect-with-us" target="_blank" rel = "noopener noreferrer" title="Connect With Us">Connect With Us</a></li>
+        <li><a href="https://data.gov.in/newsletters" target="_blank" rel = "noopener noreferrer" title="Newsletters">Newsletters</a></li>
+      </ul>
+    </div>
+    <div class="footer-right clearfix">
+      <div class="link-box">
+        <p> <a href="http://www.nic.in" target="_blank" rel = "noopener noreferrer"><img src="../images/logo-nic.png" alt="logo NIC" title="Nic (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)"></a> </p>
+        <p>This site is designed, hosted and maintained by National Informatics Centre (NIC), Ministry of Electronics &amp; Information Technology,
+          Government of India.</p>
+      </div>
+      <div class="footer-poweredby">
+        <a class="digitalindia ext" target="_blank" rel = "noopener noreferrer" href="http://www.digitalindia.gov.in" title="Digital India (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">digitalindia</a> <a class="mygov ext" href="https://mygov.in/" target="_blank" rel = "noopener noreferrer" title="My Gov (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">mygov</a> <a class="npi ext" href="http://www.india.gov.in" target="_blank" rel = "noopener noreferrer" title="National Portal of India (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">npi</a> <a class="opengov ext" target="_blank" rel = "noopener noreferrer" href="http://ogpl.gov.in" title="Open Gov Platform (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">opengov</a> </div>
+    </div>
+  </div>
+  <div class="ad-footer-block ">
+    <div class="container">
+      <div class="footer-banner left"> &copy; 2012-2022 <a href="http://india.gov.in" target="_blank" rel = "noopener noreferrer" title="GOVERNMENT OF INDIA (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)">GOVERNMENT OF INDIA</a> All rights reserved. </div>
+      <div class="footer-banner right">
+        <ul class="footer-banner-list">
+          <li><a href="https://data.gov.in/sites/default/files/NDSAP.pdf" title="Open Data Policy of India"><img alt="Open Data Policy of India Banner" src="https://data.gov.in/sites/default/files/banners/ndsap.jpg"></a></li>
+          <li><a href="https://data.gov.in/sites/default/files/NDSAP_Implementation_Guidelines_2.2.pdf" title="Open Data Implementation Guidelines"><img alt="Open Data Implementation Guidelines" src="https://data.gov.in/sites/default/files/banners/open-data-implementation_0.jpg"></a></li>
+          <li><a href="http://vocab.nic.in/" title="Controlled Vocabulary Services (You are being redirected to an external website. Please note that Open Data Portal is not responsible for external websites content & privacy policies.)"><img alt="Controlled Vocabulary Services" src="https://data.gov.in/sites/default/files/banners/controlled-vocabulary-services-banner_0.jpg"></a></li>
+          <li><a href="https://data.gov.in/suggested-datasets-list" title="Suggest Dataset or Apps"><img alt="Suggest Dataset or Apps" src="https://data.gov.in/sites/default/files/banners/footer-banner2.jpg"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    function newdateformat(inputDate){
+      var monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+      var d = new Date(inputDate);
+      var data = d.getDate();
+      var month = monthNames[d.getMonth()];
+      var year = d.getFullYear();
+      var dateToDisplay = "";
+      dateToDisplay +=  month;
+      dateToDisplay += " " +data;
+      dateToDisplay += ", " + year;
+      return dateToDisplay;
+    }
+    function getUpdatedDate(){
+      $.ajax({
+          url: "https://community.data.gov.in/wp-admin/admin-ajax.php?action=getPostsByViz&token=17727725&category=visualization&vod=yes&count=4",
+          dataType: "json",
+          cache: false,
+          success: function (response) {
+            $(".server-info").html('Last Updated on '+newdateformat(response.posts[0].date));
+          }
+        });
+    }
+  </script>
+  <div class="footer-lastupate-bottom">
+    <div class="server-info" title="Last Updated"></div>
+    <p style='margin-top:0px;'>w86w-vtrv2r-bb1-visualize-01.novalocal</p>
+  </div>
+</footer>
+
+<!-- Home Page Design Ends Here -->
+
+</body>
+</html>

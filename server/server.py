@@ -6,8 +6,8 @@ import re
 
 app = Flask(__name__)
 CORS(app)
-import logging
-logging.basicConfig(filename='error.log',level=logging.DEBUG)
+#import logging
+#logging.basicConfig(filename='error.log',level=logging.DEBUG)
 
 # returns the filtered json data
 def get_data(string):

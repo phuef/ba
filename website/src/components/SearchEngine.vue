@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <!-- search field-->
         <v-card>
             <!-- search bar -->
             <v-text-field
@@ -18,9 +19,9 @@
               {{searchText}}
           </v-card-text>
         </v-card>
-        <v-spacer></v-spacer>   
+        <v-divider></v-divider>
         <!-- filter options -->
-        <v-list>
+        <!--<v-list>
                 <v-row>                    
                     <v-spacer></v-spacer>
                 <v-checkbox
@@ -47,31 +48,33 @@
                 <v-spacer></v-spacer>
 
                 </v-row>
-        </v-list>
+        </v-list>-->
         <!-- search results -->
-    <v-row>
-        <v-list :key=item.url v-for="item in items" class="pa-2"> 
-        <v-card v-if="isInFilter(item.type)" > <!--:color="getColor(item.type)"-->
-            <v-card-title>
-                {{getTitle(item.microlink)}} ({{item.type}})
-            </v-card-title>
-            <v-card-subtitle>
-                {{getDescription(item.microlink)}}
-            </v-card-subtitle>
-            <v-card-text>
-                 <a
-                    :href="item.url"
-                    class="text-decoration-none"
-                    >{{item.url}}</a>
-                
-            </v-card-text>
-            <v-card-text>
-                {{beautifyTopics(item.topics)}}
-            </v-card-text>
+        <v-row>
+            <v-list :key=item.url v-for="item in items" class="pa-4"> 
+            <v-card v-if="isInFilter(item.type)" > <!--:color="getColor(item.type)"-->
+            <!-- ({{item.type}}) -->
+                <v-card-title> 
+                    {{getTitle(item.microlink)}} 
+                </v-card-title>
+                <v-card-subtitle>
+                    {{getDescription(item.microlink)}}
+                </v-card-subtitle>
+                <v-card-text>
+                    <a
+                        :href="item.url"
+                        class="text-decoration-none"
+                        >{{item.url}}</a>
+                    
+                </v-card-text>
+                <v-card-text>
+                    {{beautifyTopics(item.topics)}}
+                </v-card-text>
+                <v-divider></v-divider>
 
-        </v-card>
-        </v-list>
-    </v-row>
+            </v-card>
+            </v-list>
+        </v-row>
   </v-container>
 </template>
 
@@ -122,8 +125,10 @@
         },
 
         // checks whether a filter exists and if the given type is included in the filter
-        isInFilter(type){
-            if(this.filter===null){ //does a filter exist
+       isInFilter(type){
+           console.log(type)
+           return true
+            /*if(this.filter===null){ //does a filter exist
                 return true
             }
             else if (type===this.filter){ //is the type equal to the filter
@@ -134,16 +139,7 @@
             }
             else {
                 return false
-            }
-        },
-
-        // returns a customized color for the type 
-        getColor(type){
-            switch (type){
-                case "IV": return "brown lighten-4"
-                case "IGV": return "orange lighten-4"
-                case "noIV": return "teal lighten-4"
-            }
+            }*/
         },
 
         // returns the title that the microlink api returned

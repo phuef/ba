@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+				<head>
+				<meta property="og:title" content="Demo 2 - Geomarketing Analysis">
+				<meta property="og:image" content="https://online.cartovista.com/MapThumbnail.aspx?id=33e06956-5308-4926-a998-9537f63d4bea&time=637638535287510230&type=HTML5">
+				<meta property="og:image:width" content="850">
+				<meta property="og:image:height" content="530">
+    <title>CartoVista Portal</title>
+    <link rel="icon" href="cartovistawebportal-7.4.3.363/img/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="cartovistawebportal-7.4.3.363/styles/reset.css">
+    <!--<link rel="stylesheet" type="text/css" title="mainCSS" href="cartovistawebportal-7.4.3.363/styles/GetStyleSheetPortal">-->
+    <script type="text/javascript">
+        var extAuthToken = null;
+        if (window.location.search) {
+            // split up the query string and store in an associative array
+            var params = window.location.search.slice(1).split("&");
+
+            for (var i = 0; i < params.length; i++) {
+                var tmp = params[i].split("=");
+
+                if (tmp[0].toLowerCase() === "extauthtoken" && !!tmp[1]) {
+                    extAuthToken = unescape(tmp[1]);
+                }
+            }
+        }
+        if (extAuthToken === null) {
+            document.writeln('<link rel="stylesheet" type="text/css" title="mainCSS" href="cartovistawebportal-7.4.3.363/styles/GetStyleSheetPortal">');
+        } else {
+            document.writeln('<link rel="stylesheet" type="text/css" title="mainCSS" href="cartovistawebportal-7.4.3.363/styles/GetStyleSheetPortal?extAuthToken=' + extAuthToken + '">');
+        }
+    </script>
+    <script defer="" type="text/javascript" src="cartovistawebportal-7.4.3.363/scripts/cartovista.server.webportal.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="prevent-autofill-username" name="username" autocomplete="login username" style="width:0;height:0;visibility:hidden;position:absolute;left:0;top:0">
+    <input type="password" id="prevent-autofill-password" name="password" autocomplete="login password" style="width:0;height:0;visibility:hidden;position:absolute;left:0;top:0">
+    <div id="fullscreenLoadingOverlay" class="fullscreenLoadingOverlay active">
+        <div class="cartoVistaLoaderLogo cv-preloader-imgDiv"></div>
+        <div class="loader"></div>
+    </div>
+    <div id="cartoVista" class="cartoVistaWebPortal">
+    </div>
+</body>
+
+</html>

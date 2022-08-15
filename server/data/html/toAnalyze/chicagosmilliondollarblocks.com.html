@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>
+    
+      Chicago's Million Dollar Blocks
+    
+  </title>
+  <meta charset='utf-8' />
+  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+  
+    <meta content="Illinois allocates an incredible amount of money to incarcerate people from Chicago's poorest neighborhoods — sometimes millions for residents on individual city blocks. There are more effective ways to invest public dollars." name='description' />
+  
+  <meta content='DataMade' name='author' />
+
+  <!-- Facebook metadata -->
+  <meta content="Chicago's Million Dollar Blocks" property="og:site_name">
+  
+    <meta content="Chicago's Million Dollar Blocks" property="og:title">
+  
+  
+    <meta content="website" property="og:type">
+  
+  
+    <meta content="Illinois allocates an incredible amount of money to incarcerate people from Chicago's poorest neighborhoods — sometimes millions for residents on individual city blocks. There are more effective ways to invest public dollars." property="og:description">
+  
+  
+    <meta content="https://chicagosmilliondollarblocks.com/" property="og:url">
+  
+  
+  
+    <meta content="https://chicagosmilliondollarblocks.com/images/logo.png" property="og:image">
+  
+  
+  
+
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DataMadeCo">
+  <meta name="twitter:creator" content="@DataMadeCo">
+  <meta name="twitter:description" content="Illinois spending on incarceration, sometimes millions on individual Chicago blocks, is ineffective & costly to all. There are better ways to invest public dollars.">
+  
+    <meta name="twitter:title" content="Chicago's Million Dollar Blocks">
+  
+  
+    <meta name="twitter:url" content="https://chicagosmilliondollarblocks.com/">
+  
+  
+    <meta name="twitter:image:src" content="https://chicagosmilliondollarblocks.com/images/logo.png">
+  
+
+  <link href='/favicon.ico' rel='shortcut icon' />
+
+  <title>Chicago's Million Dollar Blocks</title>
+  <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  <link rel="stylesheet" href="css/bootstrap.darkly.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/highcharts.js"></script>
+
+  <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+  <script src="js/accounting.min.js"></script>
+  <script src="js/jquery.address.js"></script>
+  
+  <style>
+    html, body {width:100%; height:100%; padding: 0; margin: 0;}
+    #cartodb-map { width: 100%; height:100%; background: black;}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="/">Chicago's Million Dollar Blocks</a>
+
+      </div>
+      <div id="navbar">
+        <ul id="sections" class="nav navbar-nav">
+          <li><a href="#section-1">Intro</a></li>
+          <li><a href="#section-2">Alternatives</a></li>
+          <li><a href="#section-3">Evidence</a></li>
+          <li><a href="#section-4">About</a></li>
+          <li><a href="/map.html"><span class="desktop-only">Full </span>Map</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5 no-padding">
+  <div id="cartodb-map" class="desktop-only"></div>
+  <div id='menu' class="desktop-only">
+    <a href="#drug" id="drug" class="selected button drug">Drug-related</a>
+    <a href="#total" id="total" class="button total">All offenses</a>
+  </div>
+</div>
+<div id="scroll-arrow" class="desktop-only">
+  <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+</div>
+<div id="content" class="col-sm-7 scroll" data-spy="scroll" data-target="#navbar">
+  <div id="section-1">
+    <h1>Million Dollar Blocks</h1>
+    <p class="intro-blurb">
+      Illinois spending on incarceration is ineffective & costly to all. There are better ways to invest public dollars.
+    </p>
+    <hr>
+
+    <p>
+      With roughly $8 billion in unpaid bills, the State of Illinois is facing a fiscal crisis.
+    </p>
+
+    <p>
+      Meanwhile, in 2015, Illinois committed $1.4 billion dollars to the Department of Corrections, and that number is on the rise <i>despite declining crime levels</i>.
+    </p>
+
+    <p class="h3">
+      A war on neighborhoods
+    </p>
+
+    <p>
+      We hand out harsh sentences for all types of offenses. We give these sentences, overwhelmingly, to Chicagoans who live in our segregated, low-income neighborhoods on the west and south sides. This amounts to a war on neighborhoods.
+    </p>
+
+    <div>
+      <p id="chart-title">Community Areas with the Highest Spending</p>
+      <p id="chart-subtitle">Millions Committed to Incarceration, 2005-2009</p>
+      <div id="top-mdb-chart">
+      </div>
+    </div>
+    <br>
+
+    <p class='desktop-only'>To see how incarceration spending is highly concentrated in a small number of community areas, zoom out on the map.</p>
+
+    <p class="h3">
+      Millions allocated to incarcerate residents on individual city blocks
+    </p>
+    <p>
+      In Chicago, over a 5 year period from 2005-2009, there were:
+    </p>
+    <div class="row desktop-only">
+      <div class="col-xs-5 col-xs-offset-1">
+        <p class="text-emphasis">
+          851 blocks
+        </p>
+        <p class="text-small">
+          with over $1 million committed to prison sentences
+        </p>
+      </div>
+      <div class="col-xs-5">
+        <p class="text-emphasis">
+          121 blocks
+        </p>
+        <p class="text-small">
+          with over $1 million committed to prison sentences <i>for non-violent drug offenses</i>
+        </p>
+      </div>
+    </div>
+    <div class="row mobile-only">
+      <div class="col-xs-6">
+        <p class="text-emphasis">
+          851 blocks
+        </p>
+        <p class="text-small">
+          with over $1 million committed to prison sentences
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p class="text-emphasis">
+          121 blocks
+        </p>
+        <p class="text-small">
+          with over $1 million committed to prison sentences for non-violent drug offenses
+        </p>
+      </div>
+    </div>
+    <br>
+    <div id="map-image" class="mobile-only">
+      <div id="map-button">
+        <a href='/map.html' class="btn btn-danger">Explore map of spending by block <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+      </div>
+    </div>
+
+    <p>
+      This is wasteful spending at its worst, especially given that research has shown that incarceration does not necessarily reduce crime in neighborhoods.
+    </p>
+
+    <p>
+      The good news is that there are many innovative, common-sense, and creative approaches being used elsewhere in the United States to expand the menu of options for public safety.
+    </p>
+
+  </div>
+  <div id="section-2">
+    <h2>Alternatives to Incarceration</h2>
+    <p class="h3">
+      Reinvesting tax dollars to address root causes, not just symptoms
+    </p>
+    <p>
+      <i>Justice Reinvestment</i> is an approach that identifies key drivers of state incarceration rates, and develops practical solutions to reduce or altogether eliminate those drivers. At its core, the approach is committed to shifting government dollars from the unproductive use of mass incarceration to more effective and uplifting investments.
+    </p>
+
+    <p>
+      The <i>Justice Reinvestment</i> approach has been successfully launched in many states, including : Alabama, Arizona, Connecticut, Hawaii, Idaho, Indiana, Kansas, Michigan, Nebraska, Nevada, New Hampshire, North Carolina, Ohio, Oklahoma, Pennsylvania, Rhode Island, Texas, Washington, West Virginia, and Vermont. For more background on the successes and challenges of each of these projects, see the <a href="http://csgjusticecenter.org/" target="_blank">Justice Center at the Council on State Government</a>.
+    </p>
+
+    <p>
+      <i>Justice Reinvestment</i> is realized differently in the various states that have adopted the approach. Meanwhile, there are many interventions that have shown promise in reducing crime, reducing government expenditures and improving cities, neighborhoods, and human lives.
+    </p>
+
+    <p class="h3">
+      Effective approaches
+    </p>
+    <p>
+      For example, the following interventions are more cost-effective than incarceration, and have all been shown to produce successful results:
+    </p>
+
+    <ul>
+      <li>
+        <a href="http://www.delanceystreetfoundation.org/facsf.php" target="_blank">Workforce Development</a>
+      </li>
+      <li>
+        <a href="http://www.drugpolicy.org/new-mexico/treatment-not-incarceration" target="_blank">Addiction Treatment</a>
+      </li>
+      <li>
+        <a href="http://bexar.tx.networkofcare.org/mh/services/agency.aspx?pid=BexarCountyJailDiversionProgram_364_2_0" target="_blank">Mental Health Diversions</a>
+      </li>
+    </ul>
+
+    <p class="h3">
+      Beyond low-hanging fruit
+    </p>
+
+    <p>
+      While addiction treatment and mental health diversion programs are absolutely essential, they do not actively rebuild healthy economies in high-incarceration areas. As demonstrated by organizations like the <a href="http://www.delanceystreetfoundation.org/" target="_blank">Delancey Street Foundation</a>, rebuilding local economies requires a more fundamental approach to criminal justice reform.
+    </p>
+
+    <p>
+      True justice system reform must go beyond common-sense, low-hanging fruit options such as reductions in sentences for low-level drug offenders. Although this is an important component of reform, drug reforms alone will not go far enough to reverse the effects that incarceration has had on urban neighborhoods. A more successful reform agenda will include deeper reforms for all types of offenses, and stronger reinvestment into solutions that will actually improve communities.
+    </p>
+
+  </div>
+  <div id="section-3">
+    <h2>Research and Evidence</h2>
+    <p class="h3">
+      Incarceration has had a devastating impact on low-income African-American neighborhoods
+    </p>
+    <p>
+      Starting with the identification of "million-dollar blocks" in the early 2000s, researchers have been identifying “hot spots” for mass incarceration. From this analysis, an emerging consensus has developed: incarceration has had a devastating impact on low-income African-American neighborhoods. Meanwhile, more affluent and white areas have gone largely unscathed.
+    </p>
+    <p class="h3">
+      Nowhere is this national trend more clear than in Chicago
+    </p>
+    <p>
+      Not only are the highest incarceration rates concentrated on the city’s west and south sides, but this spatial unevenness has held constant for more than two decades. 
+      <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3043762/' target='_blank'>Punishment’s place: the local concentration of mass incarceration</a><br>Sampson & Loeffler, 2010">1</span> As a result, most urban residents with felony convictions come from and return to a small number of neighborhoods. The impact on residents is dramatic. In parts of Chicago’s West Side, nearly 70 percent of men between ages 18 and 54 are likely to have been subject to the criminal justice system. <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='http://www.nlen.org/wp-content/uploads/2014/06/Drugs-Crime-and-Consequences.pdf' target='_blank'>Drugs, Crime, and Consequences</a><br>McKean & Raphael, 2002">2</span>
+    </p>
+    <p class="h3">
+      We are unjustly punishing people for their circumstances, not just their actions
+    </p>
+    <p>
+      Though mass incarceration definitely targets specific places, it is driven by much more than the behavior of people within any given locale.  Research has made clear that local crime levels are not purely responsible for incarceration rates. <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3043762/' target='_blank'>Punishment’s place: the local concentration of mass incarceration</a><br>Sampson & Loeffler, 2010">3</span> In other words, we are not simply punishing people for the crimes they commit. We are also punishing them for the places where they live, the schools that failed them and the employers that rejected them. And, without question, we are punishing them for the darkness of their skin. These factors work together to shape who gets portrayed as a criminal, and who escapes such portrayals.
+    </p>
+
+    <p class="h3">
+      Incarceration has been shown to be an ineffective solution to reducing crime, and now more so than ever
+    </p>
+    <p>
+      In Illinois, more than 50% of prisoners eventually return to prison within three years. <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='http://csgjusticecenter.org/wp-content/uploads/2014/06/ReducingRecidivism_StatesDeliverResults.pdf' target='_blank'>Reducing Recidivism: States Deliver Results</a><br>Council on State Governments Justice Center, 2014">4</span> What’s more, recent research shows that prison cycling &mdash; the constant cycling of people in and out of prison in neighborhoods like Chicago’s west and south sides &mdash; may actually lead to more crime. <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='https://www.ncjrs.gov/pdffiles1/nij/grants/247318.pdf' target='_blank'>Predicting Crime Through Incarceration: The Impact of Rates of Prison Cycling on Rates of Crime in Communities</a><br>Clear, Frost, Carr, Dhont, Braga, Warfield, 2014">5</span> Another recent study indicates that incarceration, at best, likely had zero effect on crime between the years of 2000-2013. At worst it may have increased crime. <span class="citation" data-toggle="popover" data-placement="top" data-content="<a href='https://www.brennancenter.org/sites/default/files/analysis/Crime_rate_report_web.pdf' target='_blank'>What Caused the Crime Decline?</a><br>Roeder, Eisen, and Bowling, 2015">6</span> Thus, reducing incarceration and reinvesting in improving communities holds the best promise for improving neighborhoods.
+    </p>
+  </div>
+  <div id="section-4">
+    <h2>About</h2>
+    <p>
+      This project was developed by Dr. Daniel Cooper and Dr. Ryan Lugalia-Hollon, with the guidance and hands-on support of DataMade.
+    </p>
+    <ul>
+      <li>Dr. Cooper is the Co-Executive Director of the Institute of Social Exclusion at <a href='http://www.adler.edu'>Adler University</a>, where he actively supports community-based alternatives to incarceration and detention.</li>
+      <li>Dr. Ryan Lugalia-Hollon is a Texas-based writer and strategist.</li>
+      <li><a href="https://datamade.us/" target="_blank">DataMade</a> is a civic technology company that helps leaders and organizations tell their stories through interactive data visualizations.</li>
+      <li>Matt Barrington is a Research Assistant at Adler School of Professional Psychology</li>
+    </ul>
+    <p>
+      This project draws from years of scholarship and practice <span class="citation" data-toggle="popover" data-placement="top" data-content="<strong>Project Directors</strong>: Laura Kurgan, Eric Cadora<br><strong>Research Associates</strong>: David Reinfurt, Sarah Williams<br><strong>Publications</strong><br><a href='http://www.spatialinformationdesignlab.org/sites/default/files/publication_pdfs/PDF_04.pdf' target='_blank'>Architecture and Justice</a><br><a href='http://www.spatialinformationdesignlab.org/sites/default/files/publication_pdfs/ScenarioPlanning.pdf' target='_blank'>Scenario Planning</a><br><a href='http://www.spatialinformationdesignlab.org/sites/default/files/publication_pdfs/ThePattern.pdf' target='_blank'>The Pattern</a><br><a href='http://www.spatialinformationdesignlab.org/publications/justice-re-investment-new-orleans' target='_blank'>Justice Re-Investment New Orleans</a><br><a href='http://www.zonebooks.org/titles/KURG_CLO.html' target='_blank'>Close Up at a Distance: Mapping, Technology, and Politics</a>">7</span> by Laura Kurgan of the <a href='http://www.spatialinformationdesignlab.org/'>Spatial Information Design Lab</a> and Eric Cadora of the <a href="http://www.justicemapping.org/" target="_blank">Justice Mapping Center</a>, who have, since coining the term “<a href='http://www.spatialinformationdesignlab.org/projects.php%3Fid%3D16'>million dollar blocks</a>,” helped reframe the public debate around community justice in cities across the country.
+    <p class="h3">
+      Methodology
+    </p>
+    <p>
+      The <span class="mobile-only"><a href="/map.html">spending map</a></span><span class="desktop-only">map</span> is based on data obtained by the <a href="http://chicagojustice.org/" target="_blank">Chicago Justice Project</a> from the Cook County Circuit Court. It represents all adult convictions between the years of 2005-2009. For each conviction, we have data for what the offense was, the length of the sentence, and the offender's residential address.
+    </p>
+    <p>
+      We derive dollar amounts from sentence lengths. Our cost assumption is that, on average, the Illinois Department of Corrections spends approximately $22,000 per year for each inmate. Life sentences are calculated based on average life expectancy.</p>
+    <p>
+      Our cost calculation is conservative. We assume that all those convicted will only serve their minimum sentence; the actual length of time served could be longer. For people with multiple offenses, we only used the sentence from the most severe offense &mdash; while this excludes some sentences from our calculations, it means that our drug incarceration figures represent strictly nonviolent offenders. We also exclude court and policing costs, which are substantial.
+    </p>
+    <p>
+      The code for this project is open source and available on <a href="https://github.com/datamade/million-dollar-blocks" target="_blank">github</a>.
+    </p>
+    <hr>
+    <div id="call-to-action">
+      <div id="question">
+        <h3>Did you find this compelling?</h3>
+          <a class="btn btn-danger" id="button-yes">Yes!</a> <a class="btn btn-danger" id="button-no">Nope</a>
+          <p></p>
+        </h3>
+      </div>
+      <div id="answer-yes">
+        <h3>Glad to hear it.</h3>
+        <p>The first step is awareness; the next step is action. Want to stay posted on how you can help advocate for justice reform?</p>
+        <a href="http://eepurl.com/czknBT" target="_blank" class="btn btn-danger">Stay in touch</a>
+        <p class="small">* We'll treat your inbox with the utmost respect. We won't bombard or spam you.</p>
+      </div>
+      <div id="answer-no">
+        <h3>Sorry to hear that.</h3>
+        <br>
+        <a href="https://docs.google.com/forms/d/19IN4nAmHcpMIp7fLLAeofgrgw2MnX8ots2DdeU0ihsk/viewform" target="_blank" class="btn btn-danger">Share what could have been better <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/map.js"></script>
+<script src="js/charts.js"></script>
+
+    </div>
+  </div>
+
+  <script src="js/analytics_lib.js"></script>
+  <script>
+    $('body').scrollspy({ target: '#sections' })
+    $('.citation').popover({ html : true })
+
+    $('#cartodb-map').animate({ marginLeft: '-=1000'}, 0)
+                    .delay(600)
+                    .animate({ marginLeft: '+=1000'}, 1200);
+    $(function () {
+      var $element = $('#scroll-arrow');
+      setInterval(function () {
+        $element.fadeIn(0, function () {
+          $element.fadeOut(600, function () {
+            $element.fadeIn(600)
+          });
+        });
+      }, 1200);
+    });
+
+    $( "#content" ).scroll(function() {
+      $( "#scroll-arrow" ).fadeOut(600, function(){
+        this.remove();
+      });
+    });
+
+    $(document).ready( function() {
+      /* Check width on page load*/
+      if ( $(window).width() < 768) {
+        $( "#scroll-arrow" ).remove();
+      }
+
+      $('#answer-yes').hide()
+      $('#answer-no').hide()
+    });
+
+
+    $('#button-yes').click(function() {
+      _trackClickEventWithGA("WasThisCompelling", "Click", "Yes");
+      $('#question').fadeOut(400, function () {
+        $('#answer-yes').fadeIn(400)
+      });
+
+    });
+    $('#button-no').click(function() {
+      _trackClickEventWithGA("WasThisCompelling", "Click", "No");
+      $('#question').fadeOut(400, function () {
+        $('#answer-no').fadeIn(400)
+      });
+    });
+
+  </script>
+</body>
+</html>

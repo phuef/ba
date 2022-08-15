@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chartkick - Create beautiful JavaScript charts with one line of Ruby</title>
+    <meta charset="utf-8">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cHZQnINmWIXUDS599xzsRw-bYOVnvFhP3Sb4eDA8syvurI6awC6lej69ne5HrXZXX4mlY3HV7oqXFIMkorsrbg" />
+
+    <link rel="canonical" href="https://chartkick.com/" />
+    <link rel="stylesheet" href="/assets/application-d4559e92987db9649382cab3e11c36cb9fdabd13ae3ac0f3ce3c24464eb6c161.css" media="all" />
+
+    <script src="/assets/application-3b065fd71c9943ee7f446e01b4dc69d27820d487b89e30bd3977a5e2186bd9bb.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container">
+        <span class="navbar-brand">Chartkick</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Ruby</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/mher/chartkick.py">Python</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/ankane/chartkick.js">JavaScript</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/react">React</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/vue">Vue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/buren/chartkick-ex">Elixir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/yfractal/chartkick">Clojure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mapkick">Maps</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav flex-row my-2 my-lg-0">
+            <a href="https://github.com/ankane/chartkick" class="btn btn-outline-success my-2 my-sm-0">View on GitHub</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <p class="display-4 text-center" style="padding-right: 40px; padding-left: 40px;">Create beautiful JavaScript charts with one line of Ruby</p>
+
+<div id="chart-0" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.LineChart("chart-0", {"2021-05-13":2,"2021-05-14":5,"2021-05-15":3,"2021-05-16":8,"2021-05-17":6,"2021-05-18":6,"2021-05-19":12,"2021-05-20":5,"2021-05-21":5,"2021-05-22":3,"2021-05-23":1,"2021-05-24":6,"2021-05-25":1,"2021-05-26":3,"2021-05-27":2,"2021-05-28":3,"2021-05-29":2,"2021-05-30":8,"2021-05-31":5}, {});
+</script>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<pre><code class="ruby">gem &quot;chartkick&quot;
+</code></pre>
+
+<p>Then follow the instructions for your framework:</p>
+
+<ul>
+<li><a href="#rails-7-importmap">Rails 7 / Importmap</a></li>
+<li><a href="#rails-6-webpacker">Rails 6 / Webpacker</a></li>
+<li><a href="#rails-5-sprockets">Rails 5 / Sprockets</a></li>
+</ul>
+
+<p>This sets up Chartkick with <a href="https://www.chartjs.org/">Chart.js</a>. For other charting libraries and frameworks, see <a href="#installation">detailed instructions</a>.</p>
+
+<h3 id="rails-7-importmap">Rails 7 / Importmap</h3>
+
+<p>In <code>config/importmap.rb</code>, add:</p>
+
+<pre><code class="ruby">pin &quot;chartkick&quot;, to: &quot;chartkick.js&quot;
+pin &quot;Chart.bundle&quot;, to: &quot;Chart.bundle.js&quot;
+</code></pre>
+
+<p>And in <code>app/javascript/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick&quot;
+import &quot;Chart.bundle&quot;
+</code></pre>
+
+<h3 id="rails-6-webpacker">Rails 6 / Webpacker</h3>
+
+<p>Run:</p>
+
+<pre><code class="sh">yarn add chartkick chart.js
+</code></pre>
+
+<p>And in <code>app/javascript/packs/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick/chart.js&quot;
+</code></pre>
+
+<h3 id="rails-5-sprockets">Rails 5 / Sprockets</h3>
+
+<p>In <code>app/assets/javascripts/application.js</code>, add:</p>
+
+<pre><code class="js">//= require chartkick
+//= require Chart.bundle
+</code></pre>
+
+<h2 id="charts">Charts</h2>
+
+<p>Line chart</p>
+
+<div id="chart-1" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.LineChart("chart-1", {"2021-05-13":2,"2021-05-14":5,"2021-05-15":3,"2021-05-16":8,"2021-05-17":6,"2021-05-18":6,"2021-05-19":12,"2021-05-20":5,"2021-05-21":5,"2021-05-22":3,"2021-05-23":1,"2021-05-24":6,"2021-05-25":1,"2021-05-26":3,"2021-05-27":2,"2021-05-28":3,"2021-05-29":2,"2021-05-30":8,"2021-05-31":5}, {});
+</script>
+
+<pre><code class="erb">&lt;%= line_chart User.group_by_day(:created_at).count %&gt;
+</code></pre>
+
+<div class="alert alert-info">
+  Install <a href="https://github.com/ankane/groupdate">Groupdate</a> to use the group_by_day method
+</div>
+
+<p>Pie chart</p>
+
+<div id="chart-2" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.PieChart(document.getElementById("chart-2"), [["Blueberry",44],["Strawberry",23],["Banana",22],["Apple",21],["Grape",13]], {});
+</script>
+
+<pre><code class="erb">&lt;%= pie_chart Yogurt.group(:flavor).count %&gt;
+</code></pre>
+
+<p>Column chart</p>
+
+<div id="chart-3" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.ColumnChart("chart-3", [["Sun",32],["Mon",46],["Tue",28],["Wed",21],["Thu",20],["Fri",13],["Sat",27]], {});
+</script>
+
+<pre><code class="erb">&lt;%= column_chart Order.group_by_day_of_week(:created_at, format: &quot;%a&quot;).count %&gt;
+</code></pre>
+
+<p>Bar chart</p>
+
+<div id="chart-4" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">
+  Loading...
+</div>
+<script type="text/javascript">
+  new Chartkick.BarChart("chart-4", [["X-Small",5],["Small",27],["Medium",10],["Large",14],["X-Large",10]], {});
+</script>
+
+<pre><code class="erb">&lt;%= bar_chart Shirt.group(:size).sum(:price) %&gt;
+</code></pre>
+
+<p>Area chart</p>
+
+<div id="chart-5" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">
+  Loading...
+</div>
+<script type="text/javascript">
+  new Chartkick.AreaChart("chart-5", {"2021-07-27 07:00:00 UTC":2,"2021-07-27 07:01:00 UTC":5,"2021-07-27 07:02:00 UTC":3,"2021-07-27 07:03:00 UTC":3,"2021-07-27 07:04:00 UTC":2,"2021-07-27 07:05:00 UTC":5,"2021-07-27 07:06:00 UTC":1,"2021-07-27 07:07:00 UTC":3,"2021-07-27 07:08:00 UTC":4,"2021-07-27 07:09:00 UTC":3,"2021-07-27 07:10:00 UTC":2}, {});
+</script>
+
+<pre><code class="erb">&lt;%= area_chart Visit.group_by_minute(:created_at).maximum(:load_time) %&gt;
+</code></pre>
+
+<p>Scatter chart</p>
+
+<div id="chart-8" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">
+  Loading...
+</div>
+<script>
+  new Chartkick.ScatterChart("chart-8", [[174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9]], {xtitle: "Size", ytitle: "Population"});
+</script>
+
+<pre><code class="erb">&lt;%= scatter_chart City.pluck(:size, :population), xtitle: &quot;Size&quot;, ytitle: &quot;Population&quot; %&gt;
+</code></pre>
+
+<p>Multiple series</p>
+
+<div id="chart-7" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.LineChart("chart-7", [{"name":"Workout","data":{"2021-02-10":3,"2021-02-17":3,"2021-02-24":3,"2021-03-03":1,"2021-03-10":4,"2021-03-17":3,"2021-03-24":2,"2021-03-31":3}},{"name":"Go to concert","data":{"2021-02-10":0,"2021-02-17":0,"2021-02-24":0,"2021-03-03":0,"2021-03-10":2,"2021-03-17":1,"2021-03-24":0,"2021-03-31":0}},{"name":"Wash face","data":{"2021-02-10":0,"2021-02-17":1,"2021-02-24":0,"2021-03-03":0,"2021-03-10":0,"2021-03-17":1,"2021-03-24":0,"2021-03-31":1}},{"name":"Call parents","data":{"2021-02-10":5,"2021-02-17":3,"2021-02-24":2,"2021-03-03":0,"2021-03-10":0,"2021-03-17":1,"2021-03-24":1,"2021-03-31":0}},{"name":"Eat breakfast","data":{"2021-02-10":3,"2021-02-17":2,"2021-02-24":1,"2021-03-03":0,"2021-03-10":2,"2021-03-17":2,"2021-03-24":3,"2021-03-31":0}}], {});
+</script>
+
+<pre><code class="erb">&lt;%= line_chart @goals.map { |goal|
+    {name: goal.name, data: goal.feats.group_by_week(:created_at).count}
+} %&gt;
+</code></pre>
+
+<p>or</p>
+
+<pre><code class="erb">&lt;%= line_chart Feat.group(:goal_id).group_by_week(:created_at).count %&gt;
+</code></pre>
+
+<h2 id="data">Data</h2>
+
+<p>Data can be a hash, array, or URL.</p>
+
+<h4 id="hash">Hash</h4>
+
+<pre><code class="erb">&lt;%= line_chart({&quot;2021-01-01&quot; =&gt; 2, &quot;2021-01-02&quot; =&gt; 3}) %&gt;
+</code></pre>
+
+<h4 id="array">Array</h4>
+
+<pre><code class="erb">&lt;%= line_chart [[&quot;2021-01-01&quot;, 2], [&quot;2021-01-02&quot;, 3]] %&gt;
+</code></pre>
+
+<h4 id="url">URL</h4>
+
+<p>Make your pages load super fast and stop worrying about timeouts. Give each chart its own endpoint.</p>
+
+<pre><code class="erb">&lt;%= line_chart completed_tasks_charts_path %&gt;
+</code></pre>
+
+<p>And in your controller, pass the data as JSON.</p>
+
+<pre><code class="ruby">class ChartsController &lt; ApplicationController
+  def completed_tasks
+    render json: Task.group_by_day(:completed_at).count
+  end
+end
+</code></pre>
+
+<p>For multiple series, add <code>chart_json</code> at the end.</p>
+
+<pre><code class="ruby">render json: Task.group(:goal_id).group_by_day(:completed_at).count.chart_json
+</code></pre>
+
+<h2 id="options">Options</h2>
+
+<p>Id, width, and height</p>
+
+<pre><code class="erb">&lt;%= line_chart data, id: &quot;users-chart&quot;, width: &quot;800px&quot;, height: &quot;500px&quot; %&gt;
+</code></pre>
+
+<p>Min and max values</p>
+
+<pre><code class="erb">&lt;%= line_chart data, min: 1000, max: 5000 %&gt;
+</code></pre>
+
+<p><code>min</code> defaults to 0 for charts with non-negative values. Use <code>nil</code> to let the charting library decide.</p>
+
+<p>Min and max for x-axis - <em>Chart.js</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, xmin: &quot;2021-01-01&quot;, xmax: &quot;2022-01-01&quot; %&gt;
+</code></pre>
+
+<p>Colors</p>
+
+<pre><code class="erb">&lt;%= line_chart data, colors: [&quot;#b00&quot;, &quot;#666&quot;] %&gt;
+</code></pre>
+
+<p>Stacked columns or bars</p>
+
+<pre><code class="erb">&lt;%= column_chart data, stacked: true %&gt;
+</code></pre>
+
+<p>Discrete axis</p>
+
+<pre><code class="erb">&lt;%= line_chart data, discrete: true %&gt;
+</code></pre>
+
+<p>Label (for single series)</p>
+
+<pre><code class="erb">&lt;%= line_chart data, label: &quot;Value&quot; %&gt;
+</code></pre>
+
+<p>Axis titles</p>
+
+<pre><code class="erb">&lt;%= line_chart data, xtitle: &quot;Time&quot;, ytitle: &quot;Population&quot; %&gt;
+</code></pre>
+
+<p>Straight lines between points instead of a curve</p>
+
+<pre><code class="erb">&lt;%= line_chart data, curve: false %&gt;
+</code></pre>
+
+<p>Hide points</p>
+
+<pre><code class="erb">&lt;%= line_chart data, points: false %&gt;
+</code></pre>
+
+<p>Show or hide legend</p>
+
+<pre><code class="erb">&lt;%= line_chart data, legend: false %&gt;
+</code></pre>
+
+<p>Specify legend position</p>
+
+<pre><code class="erb">&lt;%= line_chart data, legend: &quot;bottom&quot; %&gt;
+</code></pre>
+
+<p>Donut chart</p>
+
+<pre><code class="erb">&lt;%= pie_chart data, donut: true %&gt;
+</code></pre>
+
+<p>Prefix, useful for currency - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, prefix: &quot;$&quot; %&gt;
+</code></pre>
+
+<p>Suffix, useful for percentages - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, suffix: &quot;%&quot; %&gt;
+</code></pre>
+
+<p>Set a thousands separator - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, thousands: &quot;,&quot; %&gt;
+</code></pre>
+
+<p>Set a decimal separator - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, decimal: &quot;,&quot; %&gt;
+</code></pre>
+
+<p>Set significant digits - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, precision: 3 %&gt;
+</code></pre>
+
+<p>Set rounding - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, round: 2 %&gt;
+</code></pre>
+
+<p>Show insignificant zeros, useful for currency - <em>Chart.js, Highcharts</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, round: 2, zeros: true %&gt;
+</code></pre>
+
+<p>Friendly byte sizes - <em>Chart.js</em></p>
+
+<pre><code class="erb">&lt;%= line_chart data, bytes: true %&gt;
+</code></pre>
+
+<p>Specify the message when data is loading</p>
+
+<pre><code class="erb">&lt;%= line_chart data, loading: &quot;Loading...&quot; %&gt;
+</code></pre>
+
+<p>Specify the message when data is empty</p>
+
+<pre><code class="erb">&lt;%= line_chart data, empty: &quot;No data&quot; %&gt;
+</code></pre>
+
+<p>Refresh data from a remote source every <code>n</code> seconds</p>
+
+<pre><code class="erb">&lt;%= line_chart url, refresh: 60 %&gt;
+</code></pre>
+
+<p>You can pass options directly to the charting library with:</p>
+
+<pre><code class="erb">&lt;%= line_chart data, library: {backgroundColor: &quot;#eee&quot;} %&gt;
+</code></pre>
+
+<p>See the documentation for <a href="https://www.chartjs.org/docs/">Chart.js</a>, <a href="https://developers.google.com/chart/interactive/docs/gallery">Google Charts</a>, and <a href="https://api.highcharts.com/highcharts">Highcharts</a> for more info.</p>
+
+<p>To customize datasets in Chart.js, use:</p>
+
+<pre><code class="erb">&lt;%= line_chart data, dataset: {borderWidth: 10} %&gt;
+</code></pre>
+
+<p>You can pass this option to individual series as well.</p>
+
+<h3 id="global-options">Global Options</h3>
+
+<p>To set options for all of your charts, create an initializer <code>config/initializers/chartkick.rb</code> with:</p>
+
+<pre><code class="ruby">Chartkick.options = {
+  height: &quot;400px&quot;,
+  colors: [&quot;#b00&quot;, &quot;#666&quot;]
+}
+</code></pre>
+
+<p>Customize the html</p>
+
+<pre><code class="ruby">Chartkick.options[:html] = &#39;&lt;div id=&quot;%{id}&quot; style=&quot;height: %{height};&quot;&gt;%{loading}&lt;/div&gt;&#39;
+</code></pre>
+
+<p>You capture the JavaScript in a content block with:</p>
+
+<pre><code class="ruby">Chartkick.options[:content_for] = :charts_js
+</code></pre>
+
+<p>Then, in your layout, use:</p>
+
+<pre><code class="erb">&lt;%= yield :charts_js %&gt;
+</code></pre>
+
+<p>For Padrino, use <code>yield_content</code> instead of <code>yield</code>.</p>
+
+<p>This is great for including all of your JavaScript at the bottom of the page.</p>
+
+<h3 id="multiple-series">Multiple Series</h3>
+
+<p>You can pass a few options with a series:</p>
+
+<ul>
+<li><code>name</code></li>
+<li><code>data</code></li>
+<li><code>color</code></li>
+<li><code>dataset</code> - <em>Chart.js only</em></li>
+<li><code>points</code> - <em>Chart.js only</em></li>
+<li><code>curve</code> - <em>Chart.js only</em></li>
+</ul>
+
+<h3 id="code">Code</h3>
+
+<p>If you want to use the charting library directly, get the code with:</p>
+
+<pre><code class="erb">&lt;%= line_chart data, code: true %&gt;
+</code></pre>
+
+<p>The code will be logged to the JavaScript console. JavaScript functions cannot be logged, so it may not be identical.</p>
+
+<h3 id="download-charts">Download Charts</h3>
+
+<p><em>Chart.js only</em></p>
+
+<p>Give users the ability to download charts. It all happens in the browser - no server-side code needed.</p>
+
+<div id="download" style="height: 300px; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px;">Loading...</div><script>
+new Chartkick.LineChart("download", {"2021-05-13":2,"2021-05-14":5,"2021-05-15":3,"2021-05-16":8,"2021-05-17":6,"2021-05-18":6,"2021-05-19":12,"2021-05-20":5,"2021-05-21":5,"2021-05-22":3,"2021-05-23":1,"2021-05-24":6,"2021-05-25":1,"2021-05-26":3,"2021-05-27":2,"2021-05-28":3,"2021-05-29":2,"2021-05-30":8,"2021-05-31":5}, {download: true});
+</script>
+
+<pre><code class="erb">&lt;%= line_chart data, download: true %&gt;
+</code></pre>
+
+<p>Safari will open the image in a new window instead of downloading.</p>
+
+<p>Set the filename</p>
+
+<pre><code class="erb">&lt;%= line_chart data, download: {filename: &quot;boom&quot;} %&gt;
+</code></pre>
+
+<p>Set the background color</p>
+
+<pre><code class="erb">&lt;%= line_chart data, download: {background: &quot;#ffffff&quot;} %&gt;
+</code></pre>
+
+<p>Set title</p>
+
+<pre><code class="erb">&lt;%= line_chart data, title: &quot;Awesome chart&quot; %&gt;
+</code></pre>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre><code class="ruby">gem &quot;chartkick&quot;
+</code></pre>
+
+<p>Next, choose your charting library.</p>
+
+<ul>
+<li><a href="#chart-js">Chart.js</a></li>
+<li><a href="#google-charts">Google Charts</a></li>
+<li><a href="#highcharts">Highcharts</a></li>
+</ul>
+
+<h3 id="chart-js">Chart.js</h3>
+
+<p>For Rails 7 / Importmap, in <code>config/importmap.rb</code>, add:</p>
+
+<pre><code class="ruby">pin &quot;chartkick&quot;, to: &quot;chartkick.js&quot;
+pin &quot;Chart.bundle&quot;, to: &quot;Chart.bundle.js&quot;
+</code></pre>
+
+<p>And in <code>app/javascript/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick&quot;
+import &quot;Chart.bundle&quot;
+</code></pre>
+
+<p>For Rails 6 / Webpacker, run:</p>
+
+<pre><code class="sh">yarn add chartkick chart.js
+</code></pre>
+
+<p>And in <code>app/javascript/packs/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick/chart.js&quot;
+</code></pre>
+
+<p>For Rails 5 / Sprockets, in <code>app/assets/javascripts/application.js</code>, add:</p>
+
+<pre><code class="js">//= require chartkick
+//= require Chart.bundle
+</code></pre>
+
+<h3 id="google-charts">Google Charts</h3>
+
+<p>In your layout or views, add:</p>
+
+<pre><code class="erb">&lt;%= javascript_include_tag &quot;https://www.gstatic.com/charts/loader.js&quot; %&gt;
+</code></pre>
+
+<p>For Rails 7 / Importmap, in <code>config/importmap.rb</code>, add:</p>
+
+<pre><code class="ruby">pin &quot;chartkick&quot;, to: &quot;chartkick.js&quot;
+</code></pre>
+
+<p>And in <code>app/javascript/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick&quot;
+</code></pre>
+
+<p>For Rails 6 / Webpacker, run:</p>
+
+<pre><code class="sh">yarn add chartkick
+</code></pre>
+
+<p>And in <code>app/javascript/packs/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick&quot;
+</code></pre>
+
+<p>For Rails 5 / Sprockets, in <code>app/assets/javascripts/application.js</code>, add:</p>
+
+<pre><code class="js">//= require chartkick
+</code></pre>
+
+<p>To specify a language or Google Maps API key, use:</p>
+
+<pre><code class="js">Chartkick.configure({language: &quot;de&quot;, mapsApiKey: &quot;...&quot;})
+</code></pre>
+
+<p>before your charts.</p>
+
+<h3 id="highcharts">Highcharts</h3>
+
+<p>For Rails 7 / Importmap, run:</p>
+
+<pre><code class="sh">bin/importmap pin highcharts --download
+</code></pre>
+
+<p>And in <code>config/importmap.rb</code>, add:</p>
+
+<pre><code class="ruby">pin &quot;chartkick&quot;, to: &quot;chartkick.js&quot;
+</code></pre>
+
+<p>And in <code>app/javascript/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick&quot;
+import Highcharts from &quot;highcharts&quot;
+
+window.Highcharts = Highcharts
+</code></pre>
+
+<p>For Rails 6 / Webpacker, run:</p>
+
+<pre><code class="sh">yarn add chartkick highcharts
+</code></pre>
+
+<p>And in <code>app/javascript/packs/application.js</code>, add:</p>
+
+<pre><code class="js">import &quot;chartkick/highcharts&quot;
+</code></pre>
+
+<p>For Rails 5 / Sprockets, download <a href="https://code.highcharts.com/highcharts.js">highcharts.js</a> into <code>vendor/assets/javascripts</code> (or use <code>yarn add highcharts</code> in Rails 5.1+), and in <code>app/assets/javascripts/application.js</code>, add:</p>
+
+<pre><code class="js">//= require chartkick
+//= require highcharts
+</code></pre>
+
+<h3 id="sinatra-and-padrino">Sinatra and Padrino</h3>
+
+<p>Download <a href="https://raw.githubusercontent.com/ankane/chartkick/master/vendor/assets/javascripts/chartkick.js">chartkick.js</a> and include it manually.</p>
+
+<pre><code class="html">&lt;script src=&quot;chartkick.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Then include the charting library.</p>
+
+<p>Chart.js - download <a href="https://unpkg.com/chart.js@3/dist/chart.js">Chart.js</a> and the <a href="https://unpkg.com/chartjs-adapter-date-fns@2/dist/chartjs-adapter-date-fns.bundle.js">date-fns adapter bundle</a></p>
+
+<pre><code class="html">&lt;script src=&quot;chart.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;chartjs-adapter-date-fns.bundle.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Google Charts</p>
+
+<pre><code class="html">&lt;script src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Highcharts - download <a href="https://code.highcharts.com/highcharts.js">highcharts.js</a></p>
+
+<pre><code class="html">&lt;script src=&quot;highcharts.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h3 id="multiple-libraries">Multiple Libraries</h3>
+
+<p>If more than one charting library is loaded, choose between them with:</p>
+
+<pre><code class="erb">&lt;%= line_chart data, adapter: &quot;google&quot; %&gt; &lt;!-- or highcharts or chartjs --&gt;
+</code></pre>
+
+<h2 id="javascript-api">JavaScript API</h2>
+
+<p>Access a chart with:</p>
+
+<pre><code class="javascript">var chart = Chartkick.charts[&quot;chart-id&quot;]
+</code></pre>
+
+<p>Get the underlying chart object with:</p>
+
+<pre><code class="javascript">chart.getChartObject()
+</code></pre>
+
+<p>You can also use:</p>
+
+<pre><code class="javascript">chart.getElement()
+chart.getData()
+chart.getOptions()
+chart.getAdapter()
+</code></pre>
+
+<p>Update the data with:</p>
+
+<pre><code class="javascript">chart.updateData(newData)
+</code></pre>
+
+<p>You can also specify new options:</p>
+
+<pre><code class="javascript">chart.setOptions(newOptions)
+// or
+chart.updateData(newData, newOptions)
+</code></pre>
+
+<p>Refresh the data from a remote source:</p>
+
+<pre><code class="javascript">chart.refreshData()
+</code></pre>
+
+<p>Redraw the chart with:</p>
+
+<pre><code class="javascript">chart.redraw()
+</code></pre>
+
+<p>Destroy the chart with:</p>
+
+<pre><code class="javascript">chart.destroy()
+</code></pre>
+
+<p>Loop over charts with:</p>
+
+<pre><code class="javascript">Chartkick.eachChart( function(chart) {
+  // do something
+})
+</code></pre>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>Check out <a href="https://github.com/ankane/chartkick/blob/master/guides/Content-Security-Policy.md">how to configure CSP</a></p>
+
+<h2 id="no-ruby-no-problem">No Ruby? No Problem</h2>
+
+<p>Check out <a href="https://github.com/ankane/chartkick.js">chartkick.js</a></p>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<ul>
+<li><a href="https://gorails.com/episodes/charts-with-chartkick-and-groupdate">Charts with Chartkick and Groupdate</a></li>
+<li><a href="https://www.youtube.com/watch?v=W92AlkwQn3M">Creando gráficos en Ruby on Rails con Chartkick y Chart.js</a></li>
+<li><a href="https://www.sitepoint.com/make-easy-graphs-and-charts-on-rails-with-chartkick/">Make Easy Graphs and Charts on Rails with Chartkick</a></li>
+<li><a href="https://www.sitepoint.com/graphs-on-rails-chartkick-in-practice/">Practical Graphs on Rails: Chartkick in Practice</a></li>
+</ul>
+
+<h2 id="upgrading">Upgrading</h2>
+
+<h3 id="4-0">4.0</h3>
+
+<p>If you use Sprockets, update the gem and you’re good to go!</p>
+
+<p>If you use Webpacker, run:</p>
+
+<pre><code class="sh">yarn upgrade chartkick --latest
+</code></pre>
+
+<p>If you use Chart.js with Webpacker, also run:</p>
+
+<pre><code class="sh">yarn upgrade chart.js --latest
+</code></pre>
+
+<p>And in <code>app/javascript/packs/application.js</code>, change:</p>
+
+<pre><code class="js">require(&quot;chartkick&quot;)
+require(&quot;chart.js&quot;)
+</code></pre>
+
+<p>to:</p>
+
+<pre><code class="js">require(&quot;chartkick/chart.js&quot;)
+</code></pre>
+
+<h2 id="history">History</h2>
+
+<p>View the <a href="https://github.com/ankane/chartkick/blob/master/CHANGELOG.md">changelog</a></p>
+
+<h2 id="contributing" data-track-section="contributing">Contributing</h2>
+
+<p>Everyone is encouraged to help improve this project. Here are a few ways you can help:</p>
+
+<ul>
+<li><a href="https://github.com/ankane/chartkick/issues">Report bugs</a></li>
+<li>Fix bugs and <a href="https://github.com/ankane/chartkick/pulls">submit pull requests</a></li>
+<li>Write, clarify, or fix documentation</li>
+<li>Suggest or add new features</li>
+</ul>
+
+<h2>Recommended Projects</h2>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm" style="background-color: #f8f9fa; padding: 20px; margin-right: 10px;">
+      <a href="https://github.com/ankane/strong_migrations">Strong Migrations</a><br />Catch unsafe migrations
+    </div>
+    <div class="col-sm" style="background-color: #f8f9fa; padding: 20px; margin-right: 10px;">
+      <a href="https://github.com/ankane/blazer">Blazer</a><br />Business intelligence made simple
+    </div>
+    <div class="col-sm" style="background-color: #f8f9fa; padding: 20px;">
+      <a href="https://github.com/ankane/searchkick">Searchkick</a><br />Intelligent search made easy
+    </div>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
