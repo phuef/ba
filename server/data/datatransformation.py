@@ -15,6 +15,8 @@ def createsAndSavesJson(filename, urls):
         microlink = 'https://api.microlink.io'
         params = {'url': url}
         response = requests.get(microlink, params)
+        screenshot= requests("https://screenshot.abstractapi.com/v1/?api_key=25f26f7dc1de480e86079777d057c066&url=" + url)
+        
         if response.status_code == 200:
             print (response.json)
             jsonData.append( 
@@ -34,8 +36,13 @@ def createsAndSavesJson(filename, urls):
         
     
     
-urlsToAnalyze=getUrls('toAnalyze')
+#urlsToAnalyze=getUrls('toAnalyze')
 
-createsAndSavesJson('json/ToAnalyze2.json', urlsToAnalyze)
+#urlsToAnalyze=getUrls('toEvaluate')
 
+#createsAndSavesJson('json/ToEvaluateWithScreenshot.json', urlsToAnalyze)
 
+url="https://google.com/"
+screenshot= requests.get("https://screenshot.abstractapi.com/v1/?api_key=25f26f7dc1de480e86079777d057c066&url=" + url)
+print(screenshot.status_code)
+print(screenshot.content)

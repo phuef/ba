@@ -11,7 +11,7 @@ CORS(app)
 
 # returns the filtered json data
 def get_data(string):
-    f = open('data\\json\\ToAnalyze.json', 'r')
+    f = open('data\\json\\ToEvaluate.json', 'r')
     data = json.load(f)
     if string:
         help=[]
