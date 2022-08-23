@@ -1,4 +1,6 @@
 import pandas as pd, json, requests
+from slugify import slugify
+
 
 #returns a list of urls from a given file
 def getUrls(urls):
@@ -15,8 +17,7 @@ def createsAndSavesJson(filename, urls):
         microlink = 'https://api.microlink.io'
         params = {'url': url}
         response = requests.get(microlink, params)
-        screenshot= requests("https://screenshot.abstractapi.com/v1/?api_key=25f26f7dc1de480e86079777d057c066&url=" + url)
-        
+        screenshot= slugify(url) +'.png'
         if response.status_code == 200:
             print (response.json)
             jsonData.append( 
@@ -26,6 +27,7 @@ def createsAndSavesJson(filename, urls):
                     "previewImageLink":"",
                     "type":"",
                     "description":"",
+                    "screenshot":screenshot,
                     "microlink": response.json()
                     
                 }

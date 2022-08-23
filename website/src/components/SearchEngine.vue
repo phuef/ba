@@ -20,59 +20,43 @@
           </v-card-text>
         </v-card>
         <v-divider></v-divider>
-        <!-- filter options -->
-        <!--<v-list>
-                <v-row>                    
-                    <v-spacer></v-spacer>
-                <v-checkbox
-                    v-model="filter"
-                    dense
-                    label="interactive visualizations (IV / IGV)"
-                    value="IV"
-                ></v-checkbox>
-                <v-spacer></v-spacer>
-                <v-checkbox
-                    v-model="filter"
-                    dense
-                    input-value
-                    label="interactive geo visualizations (IGV)"
-                    value="IGV"
-                ></v-checkbox>
-                <v-spacer></v-spacer>
-                <v-checkbox
-                    v-model="filter"
-                    dense
-                    label="no interactive visualizations (noIV)"
-                    value="noIV"
-                ></v-checkbox>
-                <v-spacer></v-spacer>
-
-                </v-row>
-        </v-list>-->
-        <!-- search results -->
         <v-row>
-            <v-list :key=item.url v-for="item in items" class="pa-4"> 
-            <v-card v-if="isInFilter(item.type)" > <!--:color="getColor(item.type)"-->
-            <!-- ({{item.type}}) -->
-                <v-card-title> 
-                    {{getTitle(item.microlink)}} 
-                </v-card-title>
-                <v-card-subtitle>
-                    {{getDescription(item.microlink)}}
-                </v-card-subtitle>
-                <v-card-text>
-                    <a
-                        :href="item.url"
-                        class="text-decoration-none"
-                        >{{item.url}}</a>
-                    
-                </v-card-text>
-                <v-card-text>
-                    {{beautifyTopics(item.topics)}}
-                </v-card-text>
-                <v-divider></v-divider>
-
-            </v-card>
+            <v-list :key=item.url v-for="item in items"> 
+            <v-col cols=12>
+                <v-card v-if="isInFilter(item.type)" 
+                        class="ma-auto my-12"
+                        max-width="350"
+                        d-flex flex-column flex
+                >                     
+                    <v-col >
+                        <v-img
+                            contain    
+                            max-height="300"
+                            min-height="100"
+                            max-width="300"
+                            min-width="100"
+                            :src="screenshotLink(item.screenshot)"
+                        ></v-img>
+                    </v-col>
+                    <v-col >
+                        <v-card-title :href="item.url" target="_blank"> 
+                            <a
+                                :href="item.url"
+                                class="text-decoration-none"
+                                >{{getTitle(item.microlink)}}</a> 
+                        </v-card-title>
+                        <v-card-subtitle>
+                            {{getDescription(item.microlink)}}
+                        </v-card-subtitle>
+                            <v-card-text>
+                                <v-chip-group column=True>
+                                <v-chip v-for="topic in item.topics" :key="topic" @click="chipSelected(topic)">{{topic}}</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                        
+                    </v-col>
+                </v-card>
+            </v-col >
             </v-list>
         </v-row>
   </v-container>
@@ -116,32 +100,24 @@
                 console.error(err);
             })
            },
-
+        chipSelected(topic){
+            this.currentSearchQuery=topic
+            this.getSearchResults()
+            },
+        screenshotLink(string){
+            return "http://localhost:5000/img" +"?img=" +string
+            },
         // transforms the search results to a json
         transformSearchResults(results){
             //returns the transformed search results
             return(JSON.parse(JSON.stringify(results)))
 
         },
-
         // checks whether a filter exists and if the given type is included in the filter
        isInFilter(type){
            console.log(type)
            return true
-            /*if(this.filter===null){ //does a filter exist
-                return true
-            }
-            else if (type===this.filter){ //is the type equal to the filter
-                return true //ToDO: enable multiple filters --> IV and noIV is a possibility
-            }
-            else if (type==="IGV" && this.filter==="IV"){
-                return true
-            }
-            else {
-                return false
-            }*/
         },
-
         // returns the title that the microlink api returned
         getTitle(microlink){
             var micro=JSON.parse(JSON.stringify(microlink))
@@ -152,7 +128,6 @@
             var micro=JSON.parse(JSON.stringify(microlink))
             return micro.data.description;
         },
-
         //returns a string with the topics in the following style: "Topics: topic1, topic2, ... topicN"
         beautifyTopics(topicsArray){
             var temp="Topics:";
@@ -164,3 +139,8 @@
     }
     }
 </script>
+<style>
+.v-list {
+    display: block;
+    padding: 2px 0;}
+</style>

@@ -1,6 +1,6 @@
 # server.py
 
-from flask import Flask, jsonify, request, json
+from flask import Flask, jsonify, request, json, send_file
 from flask_cors import CORS
 import re
 
@@ -28,5 +28,12 @@ def get_tasks():
         search_query=args.get("search_query") # =birds, wenn /search?search_query=birds 
         return jsonify(get_data(search_query))
 
+@app.route('/img', methods=['GET'])
+def get_img():
+    if request.method == 'GET':
+        args = request.args
+        img=args.get("img") 
+        return send_file("data/previewImages/" +img)
+    
 if __name__ == '__main__':
     app.run(debug=True)
