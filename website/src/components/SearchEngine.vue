@@ -1,4 +1,5 @@
 <template>
+
     <v-container>
         <!-- search field-->
         <v-card>
@@ -29,14 +30,37 @@
                         d-flex flex-column flex
                 >                     
                     <v-col >
-                        <v-img
-                            contain    
-                            max-height="300"
-                            min-height="100"
-                            max-width="300"
-                            min-width="100"
-                            :src="screenshotLink(item.screenshot)"
-                        ></v-img>
+                        <div class="text-center">
+                            <v-dialog
+                            v-model="dialog"
+                            width="100%"
+                            height="100%"
+                            :key="screenshotLink(item.screenshot)"
+                            >
+                            <template v-slot:activator="{ on, attrs }">
+                                <v-img
+                                    contain    
+                                    max-height="300"
+                                    min-height="100"
+                                    max-width="300"
+                                    min-width="100"
+                                    :src="screenshotLink(item.screenshot)"
+                                    :key="screenshotLink(item.screenshot)"
+                                    v-on="on"
+                                    v-bind="attrs"
+                                ></v-img>
+                            </template>
+                            <div @click="dialog = false">
+                                <v-img
+                                    contain    
+                                    height="100%"
+                                    width="100%"
+                                    :src="screenshotLink(item.screenshot)"
+                                    @click="dialog = false">
+                                </v-img>
+                            </div>
+                            </v-dialog>
+                        </div>
                     </v-col>
                     <v-col >
                         <v-card-title :href="item.url" target="_blank"> 
@@ -49,8 +73,8 @@
                             {{getDescription(item.microlink)}}
                         </v-card-subtitle>
                             <v-card-text>
-                                <v-chip-group column=True>
-                                <v-chip v-for="topic in item.topics" :key="topic" @click="chipSelected(topic)">{{topic}}</v-chip>
+                                <v-chip-group column>
+                                <v-chip v-for="topic in item.topics" :key="topic" small @click="chipSelected(topic)">{{topic}}</v-chip>
                             </v-chip-group>
                         </v-card-text>
                         
