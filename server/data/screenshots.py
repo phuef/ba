@@ -23,7 +23,9 @@ def get_screenshot_of_website(url):
 
 
 # api -> https://pypi.org/project/html2image/
-hti = Html2Image()
+hti = Html2Image(
+    custom_flags=['--virtual-time-budget=10000', '--hide-scrollbars']
+)
 #ToDo: replace absolute path with relative
 hti.output_path = 'C:\\Users\\Phil\\OneDrive - Universität Münster\\Dokumente\\coding\\ba\\ba\\server\\data\\previewImages'
 

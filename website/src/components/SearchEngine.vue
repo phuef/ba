@@ -95,7 +95,7 @@
                 items:[],
                 filter: null,
                 searchText: undefined,
-                currentSearchQuery: undefined,
+                currentSearchQuery: "",
 
             
     }),
