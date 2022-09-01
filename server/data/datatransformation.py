@@ -8,7 +8,25 @@ def getUrls(urls):
     df = pd.DataFrame(data, columns= ['urls']) # add 
     #print (df)
     return df['urls'].tolist()
+
+# returns whether an given url has an interactive visualization (IV) or not
+def isIV(url):
+    # if the website has an external IV framework --> return true
+    return False
     
+# returns whether an given url has an interactive geo visualization (IGV) or not
+def isIGV(url):
+    # if the website has an external IV framework --> return true
+    return False
+
+# classifies a given website according to the decision tree   
+def classifyWebsite(url):
+    if isIV(url):
+        return 'IV'
+    if isIGV(url):
+        return 'IGV'            
+    return 'noIV'
+ 
 #creates a json object for each url and saves it in another file
 def createsAndSavesJson(filename, urls):
     jsonData=[]
@@ -18,6 +36,7 @@ def createsAndSavesJson(filename, urls):
         params = {'url': url}
         response = requests.get(microlink, params)
         screenshot= slugify(url) +'.png'
+        classifiedType=classifyWebsite()
         if response.status_code == 200:
             print (response.json)
             jsonData.append( 
@@ -28,7 +47,9 @@ def createsAndSavesJson(filename, urls):
                     "type":"",
                     "description":"",
                     "screenshot":screenshot,
+                    "classifiedType":classifiedType,
                     "microlink": response.json()
+                    
                     
                 }
             )
@@ -38,13 +59,13 @@ def createsAndSavesJson(filename, urls):
         
     
     
-#urlsToAnalyze=getUrls('toAnalyze')
+urlsToAnalyze=getUrls('toAnalyze')
 
 #urlsToAnalyze=getUrls('toEvaluate')
 
-#createsAndSavesJson('json/ToEvaluateWithScreenshot.json', urlsToAnalyze)
+createsAndSavesJson('json/ToEvaluateWithScreenshot.json', urlsToAnalyze)
 
-url="https://google.com/"
-screenshot= requests.get("https://screenshot.abstractapi.com/v1/?api_key=25f26f7dc1de480e86079777d057c066&url=" + url)
-print(screenshot.status_code)
-print(screenshot.content)
+#url="https://google.com/"
+#screenshot= requests.get("https://screenshot.abstractapi.com/v1/?api_key=25f26f7dc1de480e86079777d057c066&url=" + url)
+#print(screenshot.status_code)
+#print(screenshot.content)
