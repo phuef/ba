@@ -1,0 +1,1 @@
+The whole crawling folder was not used in the end due to some unresolveable errors during crawling and only getting the information for a few websites. Therefore, it was switched from scrapy to the hti package by python. The files that got initially extracted with scrapy can be seen in the files iv.json and iv2.json
