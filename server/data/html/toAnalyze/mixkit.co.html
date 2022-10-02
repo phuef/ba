@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Download the Best Free People Videos | Mixkit</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://mixkit.imgix.net" />
+    <link rel="preconnect" href="https://mixkit.co" />
+  <link rel="preconnect" href="https://envato-shoebox-0.imgix.net" />
+    <link rel="preconnect" href="https://cdn.rollbar.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preload" href="https://mixkit.co/build/mixkit-logo--black-a90b84b6ac6ad0fbd410b16466b4cb252d399b5caaf03603f36c52ffc648455c.svg" as="image" />
+  
+
+  <link rel="apple-touch-icon" sizes="72x72" href="https://mixkit.co/build/favicons/apple-icon-72x72-65d8de4120b737fcccf4be0dd5e3604c7d0aa062eeb594876e4aac1f3aaf22a6.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://mixkit.co/build/favicons/apple-icon-180x180-bd3d5e368063b793b955fa228a1d9311b54a29ac871f53c2e0c69e81d5fa0d48.png" />
+  <link rel="icon" type="image/png" href="https://mixkit.co/build/favicons/favicon-96x96-b47a57aea9303a5f92e644e78aa343575b21f12b38d469be00fdc5acd983684d.png" />
+
+    <script>
+      var _rollbarConfig = {
+        accessToken: "d2fdc4fdd90941689b8ca88fd4286319",
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: "production"
+        },
+        itemsPerMinute: 2,
+        maxItems: 5,
+        ignoredMessages: [
+          "The operation was aborted",
+          /The play\(\) request was interrupted/,
+          "The user aborted a request",
+          "The fetching process for the media resource was aborted by the user agent at the user's request",
+          "Script error",
+          "The provided double value is non-finite",
+          "Value being assigned is not a finite floating-point value",
+          "Cannot read property getBoundingClientRect of undefined/null expression",
+          "null is not an object .+drawer\.wrapper", // to match "TypeError: null is not an object (evaluating 'r.drawer.wrapper.clientWidth')"
+          "Cannot read property.+clientWidth", // to match "Uncaught TypeError: Cannot read property 'clientWidth' of null"
+          "Cannot read properties.+clientWidth", // to match "Uncaught TypeError: Cannot read properties of null (reading 'clientWidth')"
+          "ResizeObserver loop limit exceeded",
+          "The element has no supported sources",
+          "Failed to load because no supported source was found",
+          "^Failed to fetch$",
+          "NetworkError when attempting to fetch resource",
+          "Failed to read property from 'Window': Access is denied for this document",
+        ],
+        checkIgnore: function() {
+          var browserSupportsAbortController = typeof AbortController !== "undefined"
+          var browserSupportsCss = !!((window.CSS && window.CSS.supports) || window.supportsCSS || false);
+          var browserSupportsCustomElements = !!(window.customElements);
+          var isIE = navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1;
+          if (browserSupportsAbortController && browserSupportsCss && browserSupportsCustomElements && !isIE) {
+            return false;
+          }
+          return true;
+        }
+      };
+      // Rollbar Snippet
+      !function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(5);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.21.1/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2),t=o(3);function a(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var l=0;function i(r,e){this.options=r,this._rollbarOldOnError=null;var o=l++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var s=o(4),d=function(r,e){return new i(r,e)},c=function(r){return new s(d,r)};function u(r){return a((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}i.prototype.loadFull=function(r,e,o,n,t){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=a((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,a,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(a=n.args||[],i=0;i<a.length;++i)if("function"==typeof(l=a[i])){l(e);break}}"function"==typeof t&&t(e)}()}})),d.insertBefore(i,s)},i.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<p.length;++f)i.prototype[p[f]]=u(p[f]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var l=new c(e);return a((function(){e.captureUncaught&&(l._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,l,!0),e.wrapGlobalEventHandlers&&t(r,l,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,l,!0);var a=e.autoInstrument;return!1!==e.enabled&&(void 0===a||!0===a||"object"==typeof a&&a.network)&&r.addEventListener&&(r.addEventListener("load",l.captureLoad.bind(l)),r.addEventListener("DOMContentLoaded",l.captureDomContentLoaded.bind(l))),r[o]=l,l}))()}},Rollbar:c}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}}},function(r,e,o){"use strict";function n(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports=function(r,e,o){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&n(e,r[a].prototype,o)}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+      // End Rollbar Snippet
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11834194-84"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-11834194-84', {"send_page_view":false,"linker":{"domains":["envato.com","activeden.net","audiojungle.net","themeforest.net","videohive.net","graphicriver.net","3docean.net","codecanyon.net","photodune.net","reshot.com"]},"custom_map":{"dimension20":"page_type","dimension21":"item_type"}});
+        gtag('config', 'AW-935285267');
+    </script>
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+  </noscript>
+
+  <link rel="stylesheet" href="https://mixkit.co/build/application-cd436492f8258a4606c189230f6bd2ec7a9f7f0590ef9e82ea1da34ef53857ca.css" media="all" data-turbo-track="reload" />
+  <script src="https://mixkit.co/build/packs/js/application-7bbe6a6903b5d99ed27d.js" crossorigin="anonymous" data-turbo-track="reload"></script>
+
+  <meta name="description" content="Choose from 903 Free People Stock Videos to download. Bring the energy that only people can add to your screens. From candid videos of friends wandering between stalls on market day, to colleagues discuss" />
+    <link rel="canonical" href="https://mixkit.co/free-stock-video/people/" />
+  <meta property="og:title" content="Download the Best Free People Videos | Mixkit" />
+  <meta property="og:description" content="Choose from 903 Free People Stock Videos to download. Bring the energy that only people can add to your screens. From candid videos of friends wandering between stalls on market day, to colleagues discuss" />
+    <meta property="og:url" content="https://mixkit.co/free-stock-video/people/" />
+  <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://mixkit.imgix.net/videos/preview/mixkit-people-pouring-a-warm-drink-around-a-campfire-513-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="mixkit.co" />
+    <meta property="twitter:url" content="https://mixkit.co/free-stock-video/people/">
+  <meta name="twitter:title" content="Download the Best Free People Videos | Mixkit" />
+  <meta name="twitter:description" content="Choose from 903 Free People Stock Videos to download. Bring the energy that only people can add to your screens. From candid videos of friends wandering between stalls on market day, to colleagues discuss">
+    <meta name="twitter:image" content="https://mixkit.imgix.net/videos/preview/mixkit-people-pouring-a-warm-drink-around-a-campfire-513-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" />
+
+  
+</head>
+
+<body data-controller="google-analytics"
+      data-analytics-processed="false"
+      data-action="click->google-analytics#trackClick"
+      data-analytics-page-type="tag"
+      data-analytics-item-type="video"
+      data-google-analytics-tracking-enabled-value="true">
+<div class="global-header" data-controller="global--header" id="global-header" data-analytics-section-id="header">
+  <a href="/" class="global-header__logo-wrapper" aria-label="Mixkit - Free assets for your next video project">
+    <svg width="206" height="48" viewBox="0 0 206 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="global-header__logo">
+      <path class="global-header__logo-brand" d="M96.802 13.89c-.61-1.155-1.624-2.11-3.004-2.866-1.38-.756-3.044-1.114-4.952-1.114-3.207 0-5.886 1.313-7.996 3.98-1.584-2.667-4.222-3.98-7.916-3.98-2.922 0-5.195.995-6.9 2.985v-2.309h-7.55v25.949h7.55v-13.93c0-.596.04-1.114.122-1.671a9.82 9.82 0 01.527-1.91c.284-.757.73-1.354 1.42-1.791.65-.438 1.503-.677 2.477-.677 2.8 0 4.222 1.632 4.222 4.895v15.124h7.55V22.247c.283-3.82 1.785-5.69 4.505-5.69 1.136 0 2.03.318 2.679.954.65.637 1.096 1.274 1.258 1.91.163.637.244 1.314.244 2.03v15.124h7.55V19.859c0-.875-.122-1.79-.406-2.746a15.89 15.89 0 00-1.38-3.223zM107.924 0c-1.218 0-2.233.438-3.045 1.274-.852.835-1.258 1.83-1.258 2.984 0 1.155.406 2.15 1.258 2.985.853.836 1.868 1.274 3.045 1.274 1.217 0 2.232-.438 3.044-1.274.852-.835 1.258-1.83 1.258-2.985 0-1.154-.406-2.149-1.258-2.984C110.156.438 109.141 0 107.924 0zM111.658 10.626h-7.55v25.949h7.55V10.626zM178.917 38.724c-1.217 0-2.232.438-3.044 1.274-.852.835-1.258 1.83-1.258 2.984 0 1.155.406 2.15 1.258 2.985.852.836 1.867 1.274 3.044 1.274 1.218 0 2.233-.438 3.045-1.274.852-.835 1.258-1.83 1.258-2.985 0-1.154-.406-2.149-1.258-2.984-.853-.876-1.868-1.274-3.045-1.274zM182.692 10.626h-7.55v25.949h7.55V10.626zM133.618 10.626l-4.952 7.204-4.912-7.204h-8.443l9.011 12.895-9.011 13.054h8.443l4.912-7.244 4.952 7.244h8.443L133.09 23.52l8.971-12.895h-8.443zM170.19 10.626h-9.092l-7.834 10.626V10.626h-7.55v25.949h7.55V25.51l8.93 11.064h9.66l-10.716-13.213 9.052-12.736zM199.375 10.626c0-4.1-3.369-7.402-7.55-7.402v7.402h-5.195v6.607h5.195v9.233c0 1.87.284 3.502.893 4.895.609 1.393 1.259 2.388 1.949 3.025.73.637 1.623 1.114 2.638 1.512 1.055.358 1.786.557 2.273.597.487.04.974.08 1.543.08 1.664 0 3.287-.08 4.83-.239v-6.248c-.771.08-1.461.159-2.151.199-.853 0-1.543-.12-2.192-.358-.609-.24-1.056-.518-1.34-.836-.284-.319-.487-.637-.609-1.035-.162-.398-.243-.677-.243-.836-.041-.159-.041-.278-.041-.358v-9.631h6.616v-6.607h-6.616z"/>
+      <path d="M15.892 36.742a34.619 34.619 0 019.148-15.426 35.196 35.196 0 00-11.473-7.618C9.268 11.931 4.657 10.413 0 10.418v26.323h15.892z" fill="#58C8D1"/>
+      <path d="M34.058 36.742h15.845V10.419c-9.32-.011-18.263 4.412-24.863 10.898a34.602 34.602 0 019.018 15.425z" fill="#F3556F"/>
+      <path d="M15.892 36.742h18.166a34.603 34.603 0 00-9.018-15.426 34.619 34.619 0 00-9.148 15.426z" fill="#383B76"/>
+    </svg>
+  </a>
+  <button class="global-header__menu-toggle" data-action="click->global--header#toggleMobileMenu" aria-label='Toggle Navigation'>
+    <span class="global-header__menu-toggle-line"></span>
+  </button>
+  <div class="global-header__search">
+    <form action="/search/" method="get" class="search-form search-form--header"
+      data-controller="search--form"
+      data-action="submit->search--form#search"
+      data-search--form-item-type-value="video"
+      data-search--form-autocomplete-value="{&quot;sfx&quot;:&quot;/free-sound-effects/search/autocomplete/&quot;,&quot;music&quot;:&quot;/free-stock-music/search/autocomplete/&quot;}"
+      data-search--form-show-clear-button-value="true"
+>
+  <div class="search-form__item-type-wrapper" data-test-id="search-form__type-select">
+    <div class="search-form__item-type-label" data-search--form-target="headerLabel"></div>
+    <div class="search-form__item-type-options" data-search--form-target="headerOptions">
+      <span class="search-form__item-type-option" data-action="click->search--form#itemTypeChange" data-type="video">Videos</span>
+      <span class="search-form__item-type-option" data-action="click->search--form#itemTypeChange" data-type="music">Music</span>
+      <span class="search-form__item-type-option" data-action="click->search--form#itemTypeChange" data-type="sfx">Sound Effects</span>
+      <span class="search-form__item-type-option" data-action="click->search--form#itemTypeChange" data-type="video_templates">Templates</span>
+      <span class="search-form__item-type-option" data-action="click->search--form#itemTypeChange" data-type="icons">Icons</span>
+    </div>
+  </div>
+  <div class="search-form__input-wrapper">
+    <input data-test-id="search-form__input" type="search" name="s" value="People" placeholder="Search" class="search-form__input" data-search--form-target="input" aria-label="Enter Search Text" data-action="keyup->search--form#handleAutocomplete" autocomplete="off">
+    <button type="submit" class="search-form__button-submit" aria-label="Search">
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 25 26'
+        class="search-form__submit-icon"
+      >
+        <path d='M24 24.21l-6.133-6.134M10.857 20.924c5.444 0 9.857-4.413 9.857-9.857 0-5.444-4.413-9.857-9.857-9.857C5.413 1.21 1 5.623 1 11.067c0 5.444 4.413 9.857 9.857 9.857z' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' />
+      </svg>
+    </button>
+    <button type="button" class="search-form__button-clear" data-action="click->search--form#clearSearchTerms">
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 25 26'
+        class="search-form__clear-icon"
+      >
+        <path d='M16.675 0H18.921V23.582H16.675z' transform='rotate(45 16.675 0)' />
+        <path d='M0 1.588H2.246V25.17H0z' transform='rotate(-45 0 1.588)' />
+      </svg>
+    </button>
+    <div class="search-form__autocomplete-results" data-search--form-target="autocompleteResults"></div>
+    <template data-search--form-target="autocompleteButton">
+      <button class="search-form__autocomplete-result" type="button" data-action="click->search--form#clickAutocompleteResult"></button>
+    </template>
+  </div>
+</form>
+
+  </div>
+  <nav class="global-header__navigation">
+    <a data-test-id="global-header__video-link" data-analytics-element-id="Video" class="global-header__navigation-link global-header__navigation-link--current" href="/free-stock-video/">Video</a>
+    <a data-test-id="global-header__music-link" data-analytics-element-id="Music" class="global-header__navigation-link" href="/free-stock-music/">Music</a>
+    <a data-test-id="global-header__sfx-link" data-analytics-element-id="Sound Effects" class="global-header__navigation-link" href="/free-sound-effects/">Sound Effects</a>
+    <div class="global-header__navigation-dropdown">
+      <a data-test-id="global-header__video-templates-link" data-analytics-element-id="Templates" class="global-header__navigation-link" href="/free-video-templates/">Templates</a>
+      <div class="global-header__navigation-dropdown-items">
+        <a data-test-id="global-header__video-templates-premiere-pro-link" data-analytics-element-id="Premiere Pro" class="global-header__navigation-link" href="/free-premiere-pro-templates/">Premiere Pro</a>
+        <a data-test-id="global-header__video-templates-after-effects-link" data-analytics-element-id="After Effects" class="global-header__navigation-link" href="/free-after-effects-templates/">After Effects</a>
+        <a data-test-id="global-header__video-templates-final-cut-pro-link" data-analytics-element-id="Final Cut Pro" class="global-header__navigation-link" href="/free-final-cut-pro-templates/">Final Cut Pro</a>
+        <a data-test-id="global-header__video-templates-davinci-resolve-link" data-analytics-element-id="DaVinci Resolve" class="global-header__navigation-link" href="/free-davinci-resolve-templates/">DaVinci Resolve</a>
+      </div>
+    </div>
+    <a data-test-id="global-header__icon-link" data-analytics-element-id="Icons" class="global-header__navigation-link global-header__navigation-link--external" rel="noopener noreferrer" target="_blank" href="https://www.reshot.com/free-svg-icons/?utm_source=mixkit&amp;utm_campaign=mixkit-header">Icons</a>
+  </nav>
+</div>
+
+    <div class="global-navigation" data-controller="global--sub-navigation--sub-navigation" data-action="resize@window->global--sub-navigation--sub-navigation#layout" id="global-navigation" style="--navigation-color: #306c71;" data-analytics-section-id="sub_navigation">
+  <nav class="global-navigation__inner" data-global--sub-navigation--sub-navigation-target="nav">
+        <div class="global-navigation__link-wrapper" data-global--sub-navigation--sub-navigation-target="link">
+          <a href="/free-stock-video/new/" class="global-navigation__link" data-analytics-element-id="New">
+            New
+          </a>
+        </div>
+        <div class="global-navigation__link-wrapper" data-global--sub-navigation--sub-navigation-target="link">
+          <a href="/free-vertical-videos/" class="global-navigation__link" data-analytics-element-id="Vertical">
+            Vertical
+          </a>
+        </div>
+        <div class="global-navigation__link-wrapper" data-global--sub-navigation--sub-navigation-target="link">
+          <a href="/free-stock-video/fashion/" class="global-navigation__link" data-analytics-element-id="Fashion">
+            Fashion
+          </a>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/nature/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Nature">
+            Nature
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/sky/" class="global-navigation__link" data-analytics-element-id="Nature-Sky">
+                  Sky
+                </a>
+                <a href="/free-stock-video/sea/" class="global-navigation__link" data-analytics-element-id="Nature-Sea">
+                  Sea
+                </a>
+                <a href="/free-stock-video/beach/" class="global-navigation__link" data-analytics-element-id="Nature-Beach">
+                  Beach
+                </a>
+                <a href="/free-stock-video/water/" class="global-navigation__link" data-analytics-element-id="Nature-Water">
+                  Water
+                </a>
+                <a href="/free-stock-video/flower/" class="global-navigation__link" data-analytics-element-id="Nature-Flower">
+                  Flower
+                </a>
+                <a href="/free-stock-video/snow/" class="global-navigation__link" data-analytics-element-id="Nature-Snow">
+                  Snow
+                </a>
+                <a href="/free-stock-video/rain/" class="global-navigation__link" data-analytics-element-id="Nature-Rain">
+                  Rain
+                </a>
+                <a href="/free-stock-video/fire/" class="global-navigation__link" data-analytics-element-id="Nature-Fire">
+                  Fire
+                </a>
+                <a href="/free-stock-video/forest/" class="global-navigation__link" data-analytics-element-id="Nature-Forest">
+                  Forest
+                </a>
+                <a href="/free-stock-video/sunset/" class="global-navigation__link" data-analytics-element-id="Nature-Sunset">
+                  Sunset
+                </a>
+                <a href="/free-stock-video/sun/" class="global-navigation__link" data-analytics-element-id="Nature-Sun">
+                  Sun
+                </a>
+                <a href="/free-stock-video/smoke/" class="global-navigation__link" data-analytics-element-id="Nature-Smoke">
+                  Smoke
+                </a>
+                <a href="/free-stock-video/night/" class="global-navigation__link" data-analytics-element-id="Nature-Night">
+                  Night
+                </a>
+                <a href="/free-stock-video/space/" class="global-navigation__link" data-analytics-element-id="Nature-Space">
+                  Space
+                </a>
+                <a href="/free-stock-video/earth/" class="global-navigation__link" data-analytics-element-id="Nature-Earth">
+                  Earth
+                </a>
+                <a href="/free-stock-video/cloud/" class="global-navigation__link" data-analytics-element-id="Nature-Clouds">
+                  Clouds
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/lifestyle/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Lifestyle">
+            Lifestyle
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/people/" class="global-navigation__link" data-analytics-element-id="Lifestyle-People">
+                  People
+                </a>
+                <a href="/free-stock-video/woman/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Woman">
+                  Woman
+                </a>
+                <a href="/free-stock-video/man/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Man">
+                  Man
+                </a>
+                <a href="/free-stock-video/couple/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Couple">
+                  Couple
+                </a>
+                <a href="/free-stock-video/baby/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Baby">
+                  Baby
+                </a>
+                <a href="/free-stock-video/sport/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Sport">
+                  Sport
+                </a>
+                <a href="/free-stock-video/dance/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Dance">
+                  Dance
+                </a>
+                <a href="/free-stock-video/music/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Music">
+                  Music
+                </a>
+                <a href="/free-stock-video/house/" class="global-navigation__link" data-analytics-element-id="Lifestyle-House">
+                  House
+                </a>
+                <a href="/free-stock-video/fashion/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Fashion">
+                  Fashion
+                </a>
+                <a href="/free-stock-video/love/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Love">
+                  Love
+                </a>
+                <a href="/free-stock-video/family/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Family">
+                  Family
+                </a>
+                <a href="/free-stock-video/party/" class="global-navigation__link" data-analytics-element-id="Lifestyle-Party">
+                  Party
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/business/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Business">
+            Business
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/office/" class="global-navigation__link" data-analytics-element-id="Business-Office">
+                  Office
+                </a>
+                <a href="/free-stock-video/phone/" class="global-navigation__link" data-analytics-element-id="Business-Phone">
+                  Phone
+                </a>
+                <a href="/free-stock-video/money/" class="global-navigation__link" data-analytics-element-id="Business-Money">
+                  Money
+                </a>
+                <a href="/free-stock-video/work/" class="global-navigation__link" data-analytics-element-id="Business-Work">
+                  Work
+                </a>
+                <a href="/free-stock-video/technology/" class="global-navigation__link" data-analytics-element-id="Business-Technology">
+                  Technology
+                </a>
+                <a href="/free-stock-video/laptop/" class="global-navigation__link" data-analytics-element-id="Business-Laptop">
+                  Laptop
+                </a>
+                <a href="/free-stock-video/team/" class="global-navigation__link" data-analytics-element-id="Business-Team">
+                  Team
+                </a>
+                <a href="/free-stock-video/presentation/" class="global-navigation__link" data-analytics-element-id="Business-Presentation">
+                  Presentation
+                </a>
+                <a href="/free-stock-video/video-call/" class="global-navigation__link" data-analytics-element-id="Business-Video Call">
+                  Video Call
+                </a>
+                <a href="/free-stock-video/social-media/" class="global-navigation__link" data-analytics-element-id="Business-Social Media">
+                  Social Media
+                </a>
+                <a href="/free-stock-video/home-office/" class="global-navigation__link" data-analytics-element-id="Business-Home Office">
+                  Home Office
+                </a>
+                <a href="/free-stock-video/profession/" class="global-navigation__link" data-analytics-element-id="Business-Profession">
+                  Profession
+                </a>
+                <a href="/free-stock-video/industry/" class="global-navigation__link" data-analytics-element-id="Business-Industry">
+                  Industry
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/animal/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Animals">
+            Animals
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/pet/" class="global-navigation__link" data-analytics-element-id="Animals-Pets">
+                  Pets
+                </a>
+                <a href="/free-stock-video/dog/" class="global-navigation__link" data-analytics-element-id="Animals-Dogs">
+                  Dogs
+                </a>
+                <a href="/free-stock-video/cat/" class="global-navigation__link" data-analytics-element-id="Animals-Cats">
+                  Cats
+                </a>
+                <a href="/free-stock-video/bird/" class="global-navigation__link" data-analytics-element-id="Animals-Birds">
+                  Birds
+                </a>
+                <a href="/free-stock-video/fish/" class="global-navigation__link" data-analytics-element-id="Animals-Fish">
+                  Fish
+                </a>
+                <a href="/free-stock-video/wildlife/" class="global-navigation__link" data-analytics-element-id="Animals-Wildlife">
+                  Wildlife
+                </a>
+                <a href="/free-stock-video/reptile/" class="global-navigation__link" data-analytics-element-id="Animals-Reptiles">
+                  Reptiles
+                </a>
+                <a href="/free-stock-video/safari/" class="global-navigation__link" data-analytics-element-id="Animals-Safari">
+                  Safari
+                </a>
+                <a href="/free-stock-video/zoo/" class="global-navigation__link" data-analytics-element-id="Animals-Zoo">
+                  Zoo
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/food/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Food">
+            Food
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/drink/" class="global-navigation__link" data-analytics-element-id="Food-Drink">
+                  Drink
+                </a>
+                <a href="/free-stock-video/coffee/" class="global-navigation__link" data-analytics-element-id="Food-Coffee">
+                  Coffee
+                </a>
+                <a href="/free-stock-video/tea/" class="global-navigation__link" data-analytics-element-id="Food-Tea">
+                  Tea
+                </a>
+                <a href="/free-stock-video/fruit/" class="global-navigation__link" data-analytics-element-id="Food-Fruit">
+                  Fruit
+                </a>
+                <a href="/free-stock-video/restaurant/" class="global-navigation__link" data-analytics-element-id="Food-Restaurant">
+                  Restaurant
+                </a>
+                <a href="/free-stock-video/beer/" class="global-navigation__link" data-analytics-element-id="Food-Beer">
+                  Beer
+                </a>
+                <a href="/free-stock-video/cocktail/" class="global-navigation__link" data-analytics-element-id="Food-Cocktail">
+                  Cocktail
+                </a>
+                <a href="/free-stock-video/salad/" class="global-navigation__link" data-analytics-element-id="Food-Salad">
+                  Salad
+                </a>
+                <a href="/free-stock-video/eating/" class="global-navigation__link" data-analytics-element-id="Food-Eating">
+                  Eating
+                </a>
+                <a href="/free-stock-video/vegetable/" class="global-navigation__link" data-analytics-element-id="Food-Vegetable">
+                  Vegetable
+                </a>
+                <a href="/free-stock-video/fast-food/" class="global-navigation__link" data-analytics-element-id="Food-Fast Food">
+                  Fast Food
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="/free-stock-video/transport/" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="Transport">
+            Transport
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-stock-video/car/" class="global-navigation__link" data-analytics-element-id="Transport-Car">
+                  Car
+                </a>
+                <a href="/free-stock-video/street/" class="global-navigation__link" data-analytics-element-id="Transport-Street">
+                  Street
+                </a>
+                <a href="/free-stock-video/city/" class="global-navigation__link" data-analytics-element-id="Transport-City">
+                  City
+                </a>
+                <a href="/free-stock-video/traffic/" class="global-navigation__link" data-analytics-element-id="Transport-Traffic">
+                  Traffic
+                </a>
+                <a href="/free-stock-video/road/" class="global-navigation__link" data-analytics-element-id="Transport-Road">
+                  Road
+                </a>
+                <a href="/free-stock-video/truck/" class="global-navigation__link" data-analytics-element-id="Transport-Truck">
+                  Truck
+                </a>
+                <a href="/free-stock-video/airplane/" class="global-navigation__link" data-analytics-element-id="Transport-Airplane">
+                  Airplane
+                </a>
+                <a href="/free-stock-video/taxi/" class="global-navigation__link" data-analytics-element-id="Transport-Taxi">
+                  Taxi
+                </a>
+                <a href="/free-stock-video/bicycle/" class="global-navigation__link" data-analytics-element-id="Transport-Bicycle">
+                  Bicycle
+                </a>
+                <a href="/free-stock-video/motorcycle/" class="global-navigation__link" data-analytics-element-id="Transport-Motorcycle">
+                  Motorcycle
+                </a>
+                <a href="/free-stock-video/drive/" class="global-navigation__link" data-analytics-element-id="Transport-Drive">
+                  Drive
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="global-navigation__link-wrapper global-navigation__link-wrapper--has-children" data-global--sub-navigation--sub-navigation-target="link" data-columns="1">
+          <a href="#" class="global-navigation__link" data-action="click->global--sub-navigation--sub-navigation#openModal" data-analytics-element-id="More Videos">
+            More Videos
+          </a>
+          <div class="global-navigation__link-children-outer">
+            <div class="global-navigation__link-children-inner">
+                <a href="/free-video-backgrounds/" class="global-navigation__link" data-analytics-element-id="More Videos-Backgrounds">
+                  Backgrounds
+                </a>
+                <a href="/free-double-exposure-videos/" class="global-navigation__link" data-analytics-element-id="More Videos-Double Exposure">
+                  Double Exposure
+                </a>
+                <a href="/free-stock-video/valentines-day/" class="global-navigation__link" data-analytics-element-id="More Videos-Valentines">
+                  Valentines
+                </a>
+                <a href="/free-stock-video/green-screen/" class="global-navigation__link" data-analytics-element-id="More Videos-Green Screen">
+                  Green Screen
+                </a>
+                <a href="/make-your-own-free-music-video/" class="global-navigation__link" data-analytics-element-id="More Videos-Music">
+                  Music
+                </a>
+                <a href="/free-drone-footage/" class="global-navigation__link" data-analytics-element-id="More Videos-Drone">
+                  Drone
+                </a>
+                <a href="/free-stock-video/christmas/" class="global-navigation__link" data-analytics-element-id="More Videos-Christmas">
+                  Christmas
+                </a>
+                <a href="/free-stock-video/abstract/" class="global-navigation__link" data-analytics-element-id="More Videos-Abstract">
+                  Abstract
+                </a>
+                <a href="/free-stock-video/light/" class="global-navigation__link" data-analytics-element-id="More Videos-Light">
+                  Light
+                </a>
+                <a href="/free-stock-video/particles/" class="global-navigation__link" data-analytics-element-id="More Videos-Particles">
+                  Particles
+                </a>
+                <a href="/free-stock-video/countdown/" class="global-navigation__link" data-analytics-element-id="More Videos-Countdown">
+                  Countdown
+                </a>
+            </div>
+          </div>
+        </div>
+    <div class="global-navigation__link-wrapper" data-global--sub-navigation--sub-navigation-target="more" data-columns="0" data-dropdown-direction="left">
+      <span class="global-navigation__link">More</span>
+      <div class="global-navigation__link-children-outer">
+        <div class="global-navigation__link-children-inner" data-global--sub-navigation--sub-navigation-target="moreLinks">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <template data-global--sub-navigation--sub-navigation-target="template">
+    <div class="global-navigation__modal">
+      <button class="global-navigation__modal-close-button"></button>
+    </div>
+  </template>
+</div>
+
+
+
+    <script data-controller="global--analytics"
+        data-global--analytics-action-value="People"
+        data-global--analytics-category-value="Search Result (Tag)"
+        data-global--analytics-label-value="Video"
+        data-global--analytics-value-value="903"
+        data-global--analytics-non-interaction-value="true">
+</script>
+
+
+    <div class="hero-search-results__container">
+  <h1 class="hero-search-results__heading">
+      903 Free People Stock Videos
+  </h1>
+            <button
+  class="filter-button"
+  data-controller="filter--button"
+  data-filters-applied="false"
+  data-action="click->filter--button#openFilterModal"
+  aria-label="Filter"
+>
+  <div class="filter-button__lines"></div>Filter
+</button>
+
+  <template id="filter-modal-template">
+    <div
+  class="filter-selector"
+  data-controller="filter--selector"
+  data-filter--selector-applicable-value="false"
+  data-filter--selector-base-uri-value="/free-stock-video/discover/people/"
+  data-filter--selector-facets-value="[{&quot;facet&quot;:&quot;tags&quot;,&quot;label&quot;:&quot;Tags&quot;,&quot;multi_select&quot;:true,&quot;options&quot;:[{&quot;slug&quot;:&quot;People&quot;,&quot;label&quot;:&quot;People&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;People Walking&quot;,&quot;label&quot;:&quot;People Walking&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Friend&quot;,&quot;label&quot;:&quot;Friend&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Walking&quot;,&quot;label&quot;:&quot;Walking&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Couple&quot;,&quot;label&quot;:&quot;Couple&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Tourism&quot;,&quot;label&quot;:&quot;Tourism&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;City&quot;,&quot;label&quot;:&quot;City&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Pedestrian&quot;,&quot;label&quot;:&quot;Pedestrian&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Urban&quot;,&quot;label&quot;:&quot;Urban&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Woman&quot;,&quot;label&quot;:&quot;Woman&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Happy People&quot;,&quot;label&quot;:&quot;Happy People&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Business&quot;,&quot;label&quot;:&quot;Business&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Happy&quot;,&quot;label&quot;:&quot;Happy&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Tourist&quot;,&quot;label&quot;:&quot;Tourist&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Friends&quot;,&quot;label&quot;:&quot;Friends&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Building&quot;,&quot;label&quot;:&quot;Building&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Street&quot;,&quot;label&quot;:&quot;Street&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Man&quot;,&quot;label&quot;:&quot;Man&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Friendship&quot;,&quot;label&quot;:&quot;Friendship&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;Working&quot;,&quot;label&quot;:&quot;Working&quot;,&quot;selected&quot;:false}]},{&quot;facet&quot;:&quot;orientation&quot;,&quot;label&quot;:&quot;Orientation&quot;,&quot;multi_select&quot;:false,&quot;options&quot;:[{&quot;slug&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;,&quot;selected&quot;:true},{&quot;slug&quot;:&quot;horizontal&quot;,&quot;label&quot;:&quot;Horizontal&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;vertical&quot;,&quot;label&quot;:&quot;Vertical&quot;,&quot;selected&quot;:false}]},{&quot;facet&quot;:&quot;resolution&quot;,&quot;label&quot;:&quot;Resolution&quot;,&quot;multi_select&quot;:false,&quot;options&quot;:[{&quot;slug&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;,&quot;selected&quot;:true},{&quot;slug&quot;:&quot;4k&quot;,&quot;label&quot;:&quot;4K Available&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;1080p&quot;,&quot;label&quot;:&quot;1080p Available&quot;,&quot;selected&quot;:false}]},{&quot;facet&quot;:&quot;duration&quot;,&quot;label&quot;:&quot;Duration&quot;,&quot;multi_select&quot;:false,&quot;options&quot;:[{&quot;slug&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;,&quot;selected&quot;:true},{&quot;slug&quot;:&quot;0-5s&quot;,&quot;label&quot;:&quot;\u003c 5 seconds&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;5-10s&quot;,&quot;label&quot;:&quot;5 to 10 seconds&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;10-20s&quot;,&quot;label&quot;:&quot;10 to 20 seconds&quot;,&quot;selected&quot;:false},{&quot;slug&quot;:&quot;20s-&quot;,&quot;label&quot;:&quot;\u003e 20 seconds&quot;,&quot;selected&quot;:false}]},{&quot;facet&quot;:&quot;sort&quot;,&quot;label&quot;:&quot;Sort&quot;,&quot;multi_select&quot;:false,&quot;options&quot;:[{&quot;slug&quot;:&quot;popular&quot;,&quot;label&quot;:&quot;Popular&quot;,&quot;selected&quot;:true},{&quot;slug&quot;:&quot;newest&quot;,&quot;label&quot;:&quot;Newest&quot;,&quot;selected&quot;:false}]}]"
+  data-filter--selector-filters-applied-value="false"
+>
+  <button
+    class="filter-selector__close"
+    data-controller="filter--button"
+    data-action="click->filter--button#closeModal"
+  ></button>
+  <div class="filter-selector__scroller">
+      <div class="filter-option">
+        <div class="filter-option__group-label">
+          Tags
+        </div>
+          <label
+            for="facet-tags-People"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-People"
+                id="facet-tags-People"
+                data-facet="People"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              People
+            </div>
+          </label>
+          <label
+            for="facet-tags-People Walking"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-People Walking"
+                id="facet-tags-People Walking"
+                data-facet="People Walking"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              People Walking
+            </div>
+          </label>
+          <label
+            for="facet-tags-Friend"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Friend"
+                id="facet-tags-Friend"
+                data-facet="Friend"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Friend
+            </div>
+          </label>
+          <label
+            for="facet-tags-Walking"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Walking"
+                id="facet-tags-Walking"
+                data-facet="Walking"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Walking
+            </div>
+          </label>
+          <label
+            for="facet-tags-Couple"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Couple"
+                id="facet-tags-Couple"
+                data-facet="Couple"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Couple
+            </div>
+          </label>
+          <label
+            for="facet-tags-Tourism"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Tourism"
+                id="facet-tags-Tourism"
+                data-facet="Tourism"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Tourism
+            </div>
+          </label>
+          <label
+            for="facet-tags-City"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-City"
+                id="facet-tags-City"
+                data-facet="City"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              City
+            </div>
+          </label>
+          <label
+            for="facet-tags-Pedestrian"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Pedestrian"
+                id="facet-tags-Pedestrian"
+                data-facet="Pedestrian"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Pedestrian
+            </div>
+          </label>
+          <label
+            for="facet-tags-Urban"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Urban"
+                id="facet-tags-Urban"
+                data-facet="Urban"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Urban
+            </div>
+          </label>
+          <label
+            for="facet-tags-Woman"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Woman"
+                id="facet-tags-Woman"
+                data-facet="Woman"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Woman
+            </div>
+          </label>
+          <label
+            for="facet-tags-Happy People"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Happy People"
+                id="facet-tags-Happy People"
+                data-facet="Happy People"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Happy People
+            </div>
+          </label>
+          <label
+            for="facet-tags-Business"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Business"
+                id="facet-tags-Business"
+                data-facet="Business"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Business
+            </div>
+          </label>
+          <label
+            for="facet-tags-Happy"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Happy"
+                id="facet-tags-Happy"
+                data-facet="Happy"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Happy
+            </div>
+          </label>
+          <label
+            for="facet-tags-Tourist"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Tourist"
+                id="facet-tags-Tourist"
+                data-facet="Tourist"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Tourist
+            </div>
+          </label>
+          <label
+            for="facet-tags-Friends"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Friends"
+                id="facet-tags-Friends"
+                data-facet="Friends"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Friends
+            </div>
+          </label>
+          <label
+            for="facet-tags-Building"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Building"
+                id="facet-tags-Building"
+                data-facet="Building"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Building
+            </div>
+          </label>
+          <label
+            for="facet-tags-Street"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Street"
+                id="facet-tags-Street"
+                data-facet="Street"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Street
+            </div>
+          </label>
+          <label
+            for="facet-tags-Man"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Man"
+                id="facet-tags-Man"
+                data-facet="Man"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Man
+            </div>
+          </label>
+          <label
+            for="facet-tags-Friendship"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Friendship"
+                id="facet-tags-Friendship"
+                data-facet="Friendship"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Friendship
+            </div>
+          </label>
+          <label
+            for="facet-tags-Working"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="checkbox"
+                class="filter-option__checkbox"
+                name="facet-tags-Working"
+                id="facet-tags-Working"
+                data-facet="Working"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Working
+            </div>
+          </label>
+      </div>
+      <div class="filter-option">
+        <div class="filter-option__group-label">
+          Orientation
+        </div>
+          <label
+            for="facet-orientation-all"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-orientation"
+                id="facet-orientation-all"
+                data-facet="all"
+                data-action="change->filter--selector#changeFilter"
+                checked
+                />
+            <div class="filter-option__facet">
+              All
+            </div>
+          </label>
+          <label
+            for="facet-orientation-horizontal"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-orientation"
+                id="facet-orientation-horizontal"
+                data-facet="horizontal"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Horizontal
+            </div>
+          </label>
+          <label
+            for="facet-orientation-vertical"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-orientation"
+                id="facet-orientation-vertical"
+                data-facet="vertical"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Vertical
+            </div>
+          </label>
+      </div>
+      <div class="filter-option">
+        <div class="filter-option__group-label">
+          Resolution
+        </div>
+          <label
+            for="facet-resolution-all"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-resolution"
+                id="facet-resolution-all"
+                data-facet="all"
+                data-action="change->filter--selector#changeFilter"
+                checked
+                />
+            <div class="filter-option__facet">
+              All
+            </div>
+          </label>
+          <label
+            for="facet-resolution-4k"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-resolution"
+                id="facet-resolution-4k"
+                data-facet="4k"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              4K Available
+            </div>
+          </label>
+          <label
+            for="facet-resolution-1080p"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-resolution"
+                id="facet-resolution-1080p"
+                data-facet="1080p"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              1080p Available
+            </div>
+          </label>
+      </div>
+      <div class="filter-option">
+        <div class="filter-option__group-label">
+          Duration
+        </div>
+          <label
+            for="facet-duration-all"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-duration"
+                id="facet-duration-all"
+                data-facet="all"
+                data-action="change->filter--selector#changeFilter"
+                checked
+                />
+            <div class="filter-option__facet">
+              All
+            </div>
+          </label>
+          <label
+            for="facet-duration-0-5s"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-duration"
+                id="facet-duration-0-5s"
+                data-facet="0-5s"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              &lt; 5 seconds
+            </div>
+          </label>
+          <label
+            for="facet-duration-5-10s"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-duration"
+                id="facet-duration-5-10s"
+                data-facet="5-10s"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              5 to 10 seconds
+            </div>
+          </label>
+          <label
+            for="facet-duration-10-20s"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-duration"
+                id="facet-duration-10-20s"
+                data-facet="10-20s"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              10 to 20 seconds
+            </div>
+          </label>
+          <label
+            for="facet-duration-20s-"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-duration"
+                id="facet-duration-20s-"
+                data-facet="20s-"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              &gt; 20 seconds
+            </div>
+          </label>
+      </div>
+      <div class="filter-option">
+        <div class="filter-option__group-label">
+          Sort
+        </div>
+          <label
+            for="facet-sort-popular"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-sort"
+                id="facet-sort-popular"
+                data-facet="popular"
+                data-action="change->filter--selector#changeFilter"
+                checked
+                />
+            <div class="filter-option__facet">
+              Popular
+            </div>
+          </label>
+          <label
+            for="facet-sort-newest"
+            class="filter-option__facet-label"
+          >
+              <input
+                type="radio"
+                class="filter-option__checkbox"
+                name="facet-sort"
+                id="facet-sort-newest"
+                data-facet="newest"
+                data-action="change->filter--selector#changeFilter"
+                
+                />
+            <div class="filter-option__facet">
+              Newest
+            </div>
+          </label>
+      </div>
+  </div>
+  <div class="filter-selector__apply-wrapper">
+    <button
+      class="filter-selector__apply-button"
+      data-action="click->filter--selector#applyFilters"
+    >
+      Apply
+    </button>
+    <button
+      class="filter-selector__clear-button"
+      data-action="click->filter--selector#clearFilters"
+    >
+      Clear
+    </button>
+  </div>
+</div>
+
+  </template>
+
+
+
+  <p class="hero-search-results__text">
+    Bring the energy that only people can add to your screens. From candid videos of friends wandering between stalls on market day, to colleagues discussing work in a cool startup office, these people can add personality to your next project. All stock video clips can be downloaded for free, to be used in your next awesome video project under the
+    <a href="/license/#videoFree" data-controller="license--modal" data-action="click->license--modal#open" data-license="videoFree">Mixkit License</a>!
+      Also check out <a href="/free-stock-video/child/">Child</a>, <a href="/free-stock-video/woman/">Woman</a> and <a href="/free-stock-video/man/">Man</a>.
+  </p>
+</div>
+
+
+      <div class="elements-video-items">
+  <div class="elements-video-items__inner">
+    <div class="elements-video-items__header">
+      <div class="elements-video-items__logo">
+        <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/stock-video/people?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class=""
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="/stock-video/people"
+  data-action="click->elements--link#logClickEvent"
+>
+  <img class="elements-video-items__logo-svg" alt="Envato Elements" width="254" height="27" loading="lazy" src="https://mixkit.co/build/elements-logo-c261bed7471105c650a86955a75ac1e08024ebe5c905547be1aae0274ac10eef.svg" />
+</a>
+
+      </div>
+      <div class="elements-video-items__heading">
+        <p class="elements-video-items__heading-title">Unlimited downloads of millions of creative assets.</p>
+        <p class="elements-video-items__heading-subtitle">Download premium stock videos, video templates and more with an Envato Elements subscription.</p>
+      </div>
+      <div class="elements-video-items__cta">
+        <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/stock-video/people?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-items__cta-button"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="/stock-video/people"
+  data-action="click->elements--link#logClickEvent"
+>
+  Get Unlimited Downloads
+</a>
+
+      </div>
+    </div>
+      <div
+  class="elements-slider"
+  data-controller="elements--slider"
+>
+  <button class="elements-slider__button--prev" data-action="click->elements--slider#prevSlide" aria-label="Previous Slide">
+    <div class="elements-slider__button_icon">
+      <svg viewBox="0 0 16 31" class="_2JTgl"><path d="M15.813 2.849L13.58.375.187 15.219 13.58 30.063l2.232-2.474-11.16-12.37 11.16-12.37z"></path></svg>
+    </div>
+  </button>
+  <button class="elements-slider__button--next" data-action="click->elements--slider#nextSlide" aria-label="Next Slide">
+    <div class="elements-slider__button_icon">
+      <svg viewBox="0 0 16 31" class="_1za8v"><path d="M.188 27.588l2.232 2.474L15.813 15.22 2.42.375.188 2.849l11.16 12.37-11.16 12.37z"></path></svg>
+    </div>
+  </button>
+  <div data-elements--slider-target="track">
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="ZEGF8AP"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/efbb9049-b312-4766-86ae-ae5f36a4eb03/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=e8fda30a56c5b59288a47651d786400a" class="elements-video-preview__thumb" alt="Two Adult People Resting in Flat" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/efbb9049-b312-4766-86ae-ae5f36a4eb03/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/two-adult-people-resting-in-flat-ZEGF8AP?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/two-adult-people-resting-in-flat-ZEGF8AP"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="4AYCT5J"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/c2e6101a-da98-4607-9183-f86f4ea6801b/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=f0d1dc6b756deae2afe432061b337470" class="elements-video-preview__thumb" alt="Businesspeople Meeting in Underground Parking Lot" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/c2e6101a-da98-4607-9183-f86f4ea6801b/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/businesspeople-meeting-in-underground-parking-lot-4AYCT5J?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/businesspeople-meeting-in-underground-parking-lot-4AYCT5J"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="7FLECH9"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/19c1b11e-78da-4705-ad36-b34ed8fae2b1/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=32662c29c530aed694f5214c8c4fe030" class="elements-video-preview__thumb" alt="Billard People" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/19c1b11e-78da-4705-ad36-b34ed8fae2b1/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/billard-people-7FLECH9?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/billard-people-7FLECH9"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="282YNQ9"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/405f3406-9bc8-4e1a-a607-a902de059a31/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=1e3279454fb42c624ab882b9d2d540c1" class="elements-video-preview__thumb" alt="Fun people married on vacation enjoy life on beach on summer white sandy background 4K" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/405f3406-9bc8-4e1a-a607-a902de059a31/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/fun-people-married-on-vacation-enjoy-life-on-beach-282YNQ9?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/fun-people-married-on-vacation-enjoy-life-on-beach-282YNQ9"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="79JMJM7"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/f97ac2be-d115-4e99-b30d-6284a46dae22/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=71cd13cd8d75dddbc37cb398274174df" class="elements-video-preview__thumb" alt="Business People Working Together in Home Office. Focused Business Woman" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/f97ac2be-d115-4e99-b30d-6284a46dae22/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/business-people-working-together-in-home-office-fo-79JMJM7?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/business-people-working-together-in-home-office-fo-79JMJM7"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="GVNFBSR"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/76202e73-0b00-4907-992d-24f95ab99a6b/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=6bcd5480d269ed51b678b148497dfe30" class="elements-video-preview__thumb" alt="Young Guy Looks at Business People" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/76202e73-0b00-4907-992d-24f95ab99a6b/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/young-guy-looks-at-business-people-GVNFBSR?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/young-guy-looks-at-business-people-GVNFBSR"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="9ZBUEFN"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/536aa5e9-85d5-4c08-b731-24409062d376/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=16e09ffa5d6f6a4868c6b31ab18b06bd" class="elements-video-preview__thumb" alt="African American Business People Working in Cafe" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/536aa5e9-85d5-4c08-b731-24409062d376/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/african-american-business-people-working-in-cafe-9ZBUEFN?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/african-american-business-people-working-in-cafe-9ZBUEFN"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+      <div class="elements-slider__slide" data-elements--slider-target="slideItem">
+        <div class="elements-video-preview"
+     data-controller="elements--video-preview"
+     data-action="mouseover->elements--video-preview#mouseOver mouseout->elements--video-preview#mouseOut"
+     data-elements--video-preview-item-id-value="M8D9GSZ"
+     data-elements--video-preview-item-type-value="stock-video"
+>
+  <div class="elements-video-preview__thumb-wrapper">
+    <img src="https://elements-video-cover-images-0.imgix.net/files/ed265493-9127-4435-99c7-d7bcf47bca46/inline_image_preview.jpg?auto=compress%2Cformat&amp;fit=min&amp;h=225&amp;w=400&amp;s=6b16bade2bb520289c876172cf2c69c7" class="elements-video-preview__thumb" alt="Joyful Young People Having Fun in Swimming Pool" width="400" height="225">
+  </div>
+  <div class="elements-video-preview__video-wrapper">
+    <video src="https://video-previews.elements.envatousercontent.com/files/ed265493-9127-4435-99c7-d7bcf47bca46/video_preview_h264.mp4" playsinline loop muted preload="none" class="elements-video-preview__video" data-elements--video-preview-target="video"></video>
+  </div>
+  <div class="elements-video-preview__overlay-wrapper">
+    <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/joyful-young-people-having-fun-in-swimming-pool-M8D9GSZ?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_video_tag_results"
+  class="elements-video-preview__link-wrapper"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_video_tag_results"
+  data-elements--link-uri-value="https://elements.envato.com/joyful-young-people-having-fun-in-swimming-pool-M8D9GSZ"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+        <div class="elements-video-preview__item-button">
+          <p>View on Envato Elements</p>
+        </div>
+
+</a>
+  </div>
+</div>
+
+      </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+    <div class="free-stock-video-tag__container">
+        <div class="item-grid-wrapper" style="--columns: 3">
+  
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="513"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-people-pouring-a-warm-drink-around-a-campfire-513-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="People pouring a warm drink around a campfire" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-people-pouring-a-warm-drink-around-a-campfire-513-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/people-pouring-a-warm-drink-around-a-campfire-513/" class="item-grid-video-player__overlay-link">
+      People pouring a warm drink around a campfire
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/people-pouring-a-warm-drink-around-a-campfire-513/">People pouring a warm drink around a campfire</a>
+      </h2>
+        <p class="item-grid-card__description">People sharing a warm drink around a camp fire in the early evening.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4157"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-fireworks-illuminating-the-beach-sky-4157-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Fireworks illuminating the beach sky" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-fireworks-illuminating-the-beach-sky-4157-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/fireworks-illuminating-the-beach-sky-4157/" class="item-grid-video-player__overlay-link">
+      Fireworks illuminating the beach sky
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/fireworks-illuminating-the-beach-sky-4157/">Fireworks illuminating the beach sky</a>
+      </h2>
+        <p class="item-grid-card__description">Fireworks illuminating the beach sky and the sea. People admiring the fireworks exploding in the sky on the seaside in an evening celebration.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="43153"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-lovers-walking-through-a-forest-43153-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Lovers walking through a forest" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-lovers-walking-through-a-forest-43153-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/lovers-walking-through-a-forest-43153/" class="item-grid-video-player__overlay-link">
+      Lovers walking through a forest
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/lovers-walking-through-a-forest-43153/">Lovers walking through a forest</a>
+      </h2>
+        <p class="item-grid-card__description">A couple taking a walk through a spring forest looking for a suitable place to camp.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="8739"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-worried-and-sad-woman-outdoors-8739-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Worried and sad woman, outdoors" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-worried-and-sad-woman-outdoors-8739-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/worried-and-sad-woman-outdoors-8739/" class="item-grid-video-player__overlay-link">
+      Worried and sad woman, outdoors
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/worried-and-sad-woman-outdoors-8739/">Worried and sad woman, outdoors</a>
+      </h2>
+        <p class="item-grid-card__description">Young worried and sad woman on the street with her hands to her face, while running her hands and fingers through her face and hair.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="3428"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-street-with-people-walking-at-dusk-3428-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Street with people walking at dusk" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-street-with-people-walking-at-dusk-3428-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/street-with-people-walking-at-dusk-3428/" class="item-grid-video-player__overlay-link">
+      Street with people walking at dusk
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/street-with-people-walking-at-dusk-3428/">Street with people walking at dusk</a>
+      </h2>
+        <p class="item-grid-card__description">Street with old buildings, with many people walking from one side to the other, signs and cars passing nearby, as it gets dark.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4530"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-lovers-walking-through-a-lavender-field-4530-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Lovers walking through a lavender field" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-lovers-walking-through-a-lavender-field-4530-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/lovers-walking-through-a-lavender-field-4530/" class="item-grid-video-player__overlay-link">
+      Lovers walking through a lavender field
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/lovers-walking-through-a-lavender-field-4530/">Lovers walking through a lavender field</a>
+      </h2>
+        <p class="item-grid-card__description">Enamored couple walking hand in hand through a lavender field, with hills and unfocused houses in the background, during a sunny day.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4401"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-crowds-of-people-cross-a-street-junction-4401-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Crowds of people cross a street junction" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-crowds-of-people-cross-a-street-junction-4401-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/crowds-of-people-cross-a-street-junction-4401/" class="item-grid-video-player__overlay-link">
+      Crowds of people cross a street junction
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/crowds-of-people-cross-a-street-junction-4401/">Crowds of people cross a street junction</a>
+      </h2>
+        <p class="item-grid-card__description">View from the top of a Japanese street junction in an afternoon, as crowds of people cross and cars pass.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="43148"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-couple-walking-in-the-forest-43148-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Couple walking in the forest" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-couple-walking-in-the-forest-43148-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/couple-walking-in-the-forest-43148/" class="item-grid-video-player__overlay-link">
+      Couple walking in the forest
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/couple-walking-in-the-forest-43148/">Couple walking in the forest</a>
+      </h2>
+        <p class="item-grid-card__description">A man and a woman hiking in a park in a forest near the mountains in nature.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4331"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-traffic-on-a-rainy-night-4331-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Traffic on a rainy night" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-traffic-on-a-rainy-night-4331-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/traffic-on-a-rainy-night-4331/" class="item-grid-video-player__overlay-link">
+      Traffic on a rainy night
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/traffic-on-a-rainy-night-4331/">Traffic on a rainy night</a>
+      </h2>
+        <p class="item-grid-card__description">New York street on a rainy night, the asphalt reflects the lights, while cars, motorcycles, taxis and people pass by.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4547"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-people-having-a-work-meeting-around-a-table-4547-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="People having a work meeting around a table" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-people-having-a-work-meeting-around-a-table-4547-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/people-having-a-work-meeting-around-a-table-4547/" class="item-grid-video-player__overlay-link">
+      People having a work meeting around a table
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/people-having-a-work-meeting-around-a-table-4547/">People having a work meeting around a table</a>
+      </h2>
+        <p class="item-grid-card__description">Business people sitting around a table at a successful business meeting, with water, computers, and papers.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="43152"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-young-people-walking-through-a-forest-43152-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Young people walking through a forest" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-young-people-walking-through-a-forest-43152-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/young-people-walking-through-a-forest-43152/" class="item-grid-video-player__overlay-link">
+      Young people walking through a forest
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/young-people-walking-through-a-forest-43152/">Young people walking through a forest</a>
+      </h2>
+        <p class="item-grid-card__description">A couple of young people walking through the forest with hiking equipment during a sunless afternoon.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4556"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-friends-with-colored-smoke-bombs-4556-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Friends with colored smoke bombs" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-friends-with-colored-smoke-bombs-4556-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/friends-with-colored-smoke-bombs-4556/" class="item-grid-video-player__overlay-link">
+      Friends with colored smoke bombs
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/friends-with-colored-smoke-bombs-4556/">Friends with colored smoke bombs</a>
+      </h2>
+        <p class="item-grid-card__description">Young people enjoying colorful smoke bombs on a great plain, with trees on the horizon, on a sunny afternoon.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4640"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-group-of-friends-partying-happily-4640-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Group of friends partying happily" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/group-of-friends-partying-happily-4640/" class="item-grid-video-player__overlay-link">
+      Group of friends partying happily
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/group-of-friends-partying-happily-4640/">Group of friends partying happily</a>
+      </h2>
+        <p class="item-grid-card__description">A young couple dancing in front of the camera as another group behind, inside a living room.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4643"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-joyful-lovers-hugging-4643-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Joyful lovers hugging" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-joyful-lovers-hugging-4643-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/joyful-lovers-hugging-4643/" class="item-grid-video-player__overlay-link">
+      Joyful lovers hugging
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/joyful-lovers-hugging-4643/">Joyful lovers hugging</a>
+      </h2>
+        <p class="item-grid-card__description">Man and woman in love meeting, joyfully hug each other, in a great walker, during a warm sunset.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4519"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-students-walking-in-a-university-4519-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Students walking in a university" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-students-walking-in-a-university-4519-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/students-walking-in-a-university-4519/" class="item-grid-video-player__overlay-link">
+      Students walking in a university
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/students-walking-in-a-university-4519/">Students walking in a university</a>
+      </h2>
+        <p class="item-grid-card__description">Students with school bags walking towards an old university campus building on a sunny day.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4764"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-cute-old-couple-in-a-park-4764-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Cute old couple in a park" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-cute-old-couple-in-a-park-4764-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/cute-old-couple-in-a-park-4764/" class="item-grid-video-player__overlay-link">
+      Cute old couple in a park
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/cute-old-couple-in-a-park-4764/">Cute old couple in a park</a>
+      </h2>
+        <p class="item-grid-card__description">Cute old couple, hugging in a park, with many trees, during a sunny day.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="8736"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-profile-of-a-distressed-young-woman-8736-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Profile of a distressed young woman" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-profile-of-a-distressed-young-woman-8736-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/profile-of-a-distressed-young-woman-8736/" class="item-grid-video-player__overlay-link">
+      Profile of a distressed young woman
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/profile-of-a-distressed-young-woman-8736/">Profile of a distressed young woman</a>
+      </h2>
+        <p class="item-grid-card__description">Face of a grieving girl, seen up close in profile, as she slowly begins to cry.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="3469"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-children-playing-with-a-dancing-fountain-3469-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Children playing with a dancing fountain" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-children-playing-with-a-dancing-fountain-3469-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/children-playing-with-a-dancing-fountain-3469/" class="item-grid-video-player__overlay-link">
+      Children playing with a dancing fountain
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/children-playing-with-a-dancing-fountain-3469/">Children playing with a dancing fountain</a>
+      </h2>
+        <p class="item-grid-card__description">Children playing with the jets of water from a dancing fountain on the floor of a plaza, during the afternoon.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="28609"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-time-lapse-of-across-work-in-the-city-of-beijing-28609-1.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Time lapse of across work in the city of Beijing" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-time-lapse-of-across-work-in-the-city-of-beijing-28609-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/time-lapse-of-across-work-in-the-city-of-beijing-28609/" class="item-grid-video-player__overlay-link">
+      Time lapse of across work in the city of Beijing
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/time-lapse-of-across-work-in-the-city-of-beijing-28609/">Time lapse of across work in the city of Beijing</a>
+      </h2>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="114"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-two-people-hiking-114-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Two people hiking" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-two-people-hiking-114-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/two-people-hiking-114/" class="item-grid-video-player__overlay-link">
+      Two people hiking
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/two-people-hiking-114/">Two people hiking</a>
+      </h2>
+        <p class="item-grid-card__description">Two people in hiking gear hike through desert type ground, walking towards green trees and bushes.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="41581"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-loving-couple-sitting-on-the-shore-of-a-lake-outdoors-41581-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Loving couple sitting on the shore of a lake outdoors" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-loving-couple-sitting-on-the-shore-of-a-lake-outdoors-41581-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/loving-couple-sitting-on-the-shore-of-a-lake-outdoors-41581/" class="item-grid-video-player__overlay-link">
+      Loving couple sitting on the shore of a lake outdoors
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/loving-couple-sitting-on-the-shore-of-a-lake-outdoors-41581/">Loving couple sitting on the shore of a lake outdoors</a>
+      </h2>
+        <p class="item-grid-card__description">Loving couple sitting on a log on the shore of a lake outside, sharing an affectionate hug.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4811"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-formal-dressed-people-worked-in-an-office-4811-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Formal dressed people worked in an office" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-formal-dressed-people-worked-in-an-office-4811-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/formal-dressed-people-worked-in-an-office-4811/" class="item-grid-video-player__overlay-link">
+      Formal dressed people worked in an office
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/formal-dressed-people-worked-in-an-office-4811/">Formal dressed people worked in an office</a>
+      </h2>
+        <p class="item-grid-card__description">A man and a woman dressed in suits working in an office, he on a computer and she writing on a notebook. surrounded by papers and notebooks.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4344"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-people-dancing-at-a-night-club-4344-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="People dancing at a night club" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-people-dancing-at-a-night-club-4344-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/people-dancing-at-a-night-club-4344/" class="item-grid-video-player__overlay-link">
+      People dancing at a night club
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/people-dancing-at-a-night-club-4344/">People dancing at a night club</a>
+      </h2>
+        <p class="item-grid-card__description">Above view in a nightclub full of people dancing, in the roof, there are laser beams, blue and pink canyons circling.</p>
+      
+    </div>
+</div>
+
+
+    </div>
+    <div class="item-grid-item">
+      
+              <div class="item-grid-card item-grid-card--show-meta">
+      <div class="item-grid-video-player "
+     
+     data-controller="item-grid--video-player"
+     data-action="mouseover->item-grid--video-player#mouseOver mouseout->item-grid--video-player#mouseOut"
+     data-item-grid--video-player-item-id-value="4000"
+     data-item-grid--video-player-item-type-value="Video"
+>
+  <div class="item-grid-video-player__thumb-wrapper">
+    <img src="https://mixkit.imgix.net/videos/preview/mixkit-busy-street-in-the-city-4000-0.jpg?q=80&amp;auto=format%2Ccompress&amp;w=460" class="item-grid-video-player__thumb" alt="Busy street in the city" width="460" height="259" lazyload>
+  </div>
+  <div class="item-grid-video-player__video-wrapper">
+    <video src="https://assets.mixkit.co/videos/preview/mixkit-busy-street-in-the-city-4000-small.mp4" playsinline loop muted preload="none" class="item-grid-video-player__video" data-item-grid--video-player-target="video"></video>
+  </div>
+  <div class="item-grid-video-player__overlay-wrapper">
+    <a href="/free-stock-video/busy-street-in-the-city-4000/" class="item-grid-video-player__overlay-link">
+      Busy street in the city
+    </a>
+    <button type="button" aria-label="View Fullscreen" class="item-grid-video-player__overlay-fullscreen" data-action="click->item-grid--video-player#fullScreen"></button>
+  </div>
+</div>
+
+
+    <div class="item-grid-card__meta">
+      <h2 class="item-grid-card__title">
+          <a href="/free-stock-video/busy-street-in-the-city-4000/">Busy street in the city</a>
+      </h2>
+        <p class="item-grid-card__description">Fast motion shot of a busy street with people and cars crossing in the city</p>
+      
+    </div>
+</div>
+
+
+    </div>
+</div>
+          <div class="pagination__wrapper">
+        <a class="pagination__link--current" aria-label="Go to page 1" href="/free-stock-video/people/">1</a>
+        <a class="pagination__link" aria-label="Go to page 2" href="/free-stock-video/people/?page=2">2</a>
+        <a class="pagination__link" aria-label="Go to page 3" href="/free-stock-video/people/?page=3">3</a>
+        <a class="pagination__link" aria-label="Go to page 4" href="/free-stock-video/people/?page=4">4</a>
+        <a class="pagination__link" aria-label="Go to page 5" href="/free-stock-video/people/?page=5">5</a>
+        <a class="pagination__link" aria-label="Go to page 6" href="/free-stock-video/people/?page=6">6</a>
+        <span class="pagination__link--cut">...</span>
+        <a class="pagination__link" aria-label="Go to page 37" href="/free-stock-video/people/?page=37">37</a>
+        <a class="pagination__link" aria-label="Go to page 38" href="/free-stock-video/people/?page=38">38</a>
+    <a class="pagination__link--next" aria-label="Go to next page" href="/free-stock-video/people/?page=2">
+      <svg width='10' height='17' class="pagination__arrow-icon" viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <path d='M1.2042e-06 15.5833L1.42857 17L10 8.5L1.42857 0L0 1.41667L7.14286 8.5L1.2042e-06 15.5833Z' fill='#111111' />
+      </svg>
+</a>  </div>
+
+    </div>
+
+<div data-modal-target="container" class="modal__overlay" data-controller="modal" data-action="click->modal#close">
+  <div class="modal__loading">
+    <svg class="modal__loading-spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="modal__loading-spinner-circle" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
+      </circle>
+    </svg>
+  </div>
+  <div data-modal-target="content" class="modal__content" tabindex="-1" aria-label="Modal" data-action="click->modal#stopClickPropagation">
+  </div>
+</div>
+
+<div class="global-footer" id="global-footer" data-turbo-permanent>
+  <div class="global-footer__columns">
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--554cfab393" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-stock-video/">Videos</a>
+    <label for="global-footer-column--554cfab393" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-stock-video/nature/">Nature</a>
+      <a class="global-footer-link-column__link" href="/free-stock-video/lifestyle/">Lifestyle</a>
+      <a class="global-footer-link-column__link" href="/free-stock-video/business/">Business</a>
+      <a class="global-footer-link-column__link" href="/free-stock-video/animal/">Animals</a>
+      <a class="global-footer-link-column__link" href="/free-stock-video/food/">Food</a>
+      <a class="global-footer-link-column__link" href="/free-stock-video/zoom-virtual-background/">Zoom Backgrounds</a>
+      <a class="global-footer-link-column__link" href="/free-vertical-videos/">Vertical</a>
+      <a class="global-footer-link-column__link" href="/free-video-backgrounds/">Backgrounds</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--47dcbd834e" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-stock-music/">Music</a>
+    <label for="global-footer-column--47dcbd834e" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-stock-music/ambient/">Ambient</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/cinematic/">Cinematic</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/corporate/">Corporate</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/drum-and-bass/">Drum &amp; Bass</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/experimental/">Experimental</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/funk/">Funk</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/hip-hop/">Hip-Hop</a>
+      <a class="global-footer-link-column__link" href="/free-stock-music/jazz/">Jazz</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--241b98a5c9" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-sound-effects/">Sound Effects</a>
+    <label for="global-footer-column--241b98a5c9" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-sound-effects/animals/">Animals</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/game/">Game</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/human/">Human</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/instrument/">Instrument</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/lifestyle/">Lifestyle</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/nature/">Nature</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/technology/">Technology</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/transition/">Transition</a>
+      <a class="global-footer-link-column__link" href="/free-sound-effects/warfare/">Warfare</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--a48d9345de" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-premiere-pro-templates/">Premiere Pro</a>
+    <label for="global-footer-column--a48d9345de" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/call-outs/">Call-outs</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/instagram/">Instagram</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/logo/">Logo</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/lower-thirds/">Lower-thirds</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/openers/">Opener</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/slideshow/">Slideshows</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/titles/">Titles</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/transitions/">Transitions</a>
+      <a class="global-footer-link-column__link" href="/free-premiere-pro-templates/youtube/">YouTube</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--569248c23e" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-after-effects-templates/">After Effects</a>
+    <label for="global-footer-column--569248c23e" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/audio-visualizer/">Audio visualizer</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/call-outs/">Call-outs</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/instagram/">Instagram</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/lower-thirds/">Lower-thirds</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/openers/">Opener</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/slideshow/">Slideshows</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/title/">Titles</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/transitions/">Transitions</a>
+      <a class="global-footer-link-column__link" href="/free-after-effects-templates/youtube/">YouTube</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--0960dfde26" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-final-cut-pro-templates/">Final Cut Pro</a>
+    <label for="global-footer-column--0960dfde26" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/instagram/">Instagram</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/logo/">Logo</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/lower-thirds/">Lower-thirds</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/openers/">Opener</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/promotion/">Promotion</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/slideshow/">Slideshows</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/title/">Titles</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/transitions/">Transitions</a>
+      <a class="global-footer-link-column__link" href="/free-final-cut-pro-templates/youtube/">YouTube</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--0f4324d6a7" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/free-davinci-resolve-templates/">DaVinci Resolve</a>
+    <label for="global-footer-column--0f4324d6a7" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/free-davinci-resolve-templates/call-outs/">Call-outs</a>
+      <a class="global-footer-link-column__link" href="/free-davinci-resolve-templates/instagram/">Instagram</a>
+      <a class="global-footer-link-column__link" href="/free-davinci-resolve-templates/lower-thirds/">Lower-thirds</a>
+      <a class="global-footer-link-column__link" href="/free-davinci-resolve-templates/titles/">Titles</a>
+      <a class="global-footer-link-column__link" href="/free-davinci-resolve-templates/youtube/">YouTube</a>
+  </div>
+</div>
+
+    <div class="global-footer-link-column">
+  <input type="radio" name="global-footer-column__toggle-radio" class="global-footer-column__toggle-radio" id="global-footer-column--1ae2341190" />
+  <h4 class="global-footer-link-column__title-wrapper">
+    <a class="global-footer-link-column__title" href="/">Mixkit</a>
+    <label for="global-footer-column--1ae2341190" class="global-footer-link-column__toggle-button"></label>
+  </h4>
+  <div class="global-footer-link-column__links">
+      <a class="global-footer-link-column__link" href="/license/">License</a>
+      <a class="global-footer-link-column__link" href="/terms/">Terms</a>
+      <a class="global-footer-link-column__link" href="/sitemap/">Sitemap</a>
+      <a class="global-footer-link-column__link" href="https://envato.com/privacy/">Privacy</a>
+      <a class="global-footer-link-column__link" href="/blog/">Blog</a>
+      <a class="global-footer-link-column__link" href="/free-stock-art/">Art</a>
+  </div>
+</div>
+
+  </div>
+  <div class="global-footer__copyright">
+    <div class="global-footer__column-logo">
+      <a href="/">
+        <img class="global-footer__logo" alt="Mixkit" title="Mixkit" src="https://mixkit.co/build/mixkit-logo--black-a90b84b6ac6ad0fbd410b16466b4cb252d399b5caaf03603f36c52ffc648455c.svg" width="152" height="35" />
+      </a>
+    </div>
+    <div class="global-footer__content">
+      <p class="global-footer__notice">Copyright &copy; 2022. All rights reserved - Made by
+        <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_footer"
+  class="global-footer__notice-link"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_footer"
+  data-elements--link-uri-value="/"
+  data-action="click->elements--link#logClickEvent"
+>
+  Envato Elements
+</a>
+
+      </p>
+    </div>
+    <div class="global-footer__social">
+      <a class="global-footer__social-link" title="Mixkit on Instagram" target="_blank" rel="noopener noreferrer" href="https://instagram.com/mixkit_co">
+        <svg class="global-footer__social-icon" aria-label="Instagram" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00084 0C6.55657 0 6.24981 0.0106875 5.2898 0.054375C4.33167 0.09825 3.67766 0.249937 3.10541 0.4725C2.51346 0.702375 2.01133 1.00988 1.51108 1.51031C1.01045 2.01056 0.702945 2.51269 0.472317 3.10444C0.24919 3.67688 0.0973135 4.33106 0.0541881 5.28881C0.0112501 6.24881 0 6.55575 0 9C0 11.4443 0.0108751 11.7501 0.0543756 12.7101C0.0984385 13.6682 0.250128 14.3222 0.472505 14.8944C0.70257 15.4864 1.01007 15.9885 1.51052 16.4888C2.01058 16.9894 2.51271 17.2976 3.10428 17.5275C3.67691 17.7501 4.33111 17.9018 5.28905 17.9456C6.24906 17.9893 6.55563 18 8.99972 18C11.4442 18 11.75 17.9893 12.71 17.9456C13.6681 17.9018 14.3229 17.7501 14.8955 17.5275C15.4873 17.2976 15.9887 16.9894 16.4887 16.4888C16.9894 15.9885 17.2969 15.4864 17.5275 14.8946C17.7487 14.3222 17.9006 13.668 17.9456 12.7102C17.9888 11.7502 18 11.4443 18 9C18 6.55575 17.9888 6.249 17.9456 5.289C17.9006 4.33087 17.7487 3.67688 17.5275 3.10463C17.2969 2.51269 16.9894 2.01056 16.4887 1.51031C15.9881 1.00969 15.4875 0.702188 14.895 0.4725C14.3212 0.249937 13.6668 0.09825 12.7087 0.054375C11.7487 0.0106875 11.4431 0 8.99803 0H9.00084ZM8.70104 1.62188H8.70099H8.70094C8.51898 1.6218 8.35036 1.62172 8.19362 1.62197V1.61972C6.51623 1.62159 6.19448 1.63284 5.36422 1.67034C4.48671 1.71065 4.01027 1.8569 3.69301 1.98065C3.27301 2.14415 2.973 2.33915 2.658 2.65415C2.343 2.96915 2.14762 3.26915 1.98449 3.68915C1.86131 4.0064 1.71468 4.48265 1.67455 5.36015C1.63143 6.3089 1.6228 6.5924 1.6228 8.99578C1.6228 11.3992 1.63143 11.6842 1.67455 12.6329C1.71449 13.5104 1.86131 13.9867 1.98449 14.3035C2.148 14.7237 2.343 15.023 2.658 15.338C2.973 15.653 3.27301 15.848 3.69301 16.0111C4.01045 16.1343 4.48671 16.2809 5.36422 16.3214C6.31298 16.3645 6.59779 16.3739 9.00101 16.3739C11.404 16.3739 11.689 16.3645 12.6378 16.3214C13.5153 16.2813 13.9919 16.135 14.3088 16.0113C14.729 15.8482 15.0281 15.6532 15.3431 15.3382C15.6581 15.0233 15.8535 14.7243 16.0166 14.3043C16.1398 13.9874 16.2864 13.5112 16.3265 12.6337C16.3696 11.6849 16.379 11.3999 16.379 8.99803C16.379 6.59615 16.3696 6.31115 16.3265 5.3624C16.2866 4.4849 16.1398 4.00865 16.0166 3.69178C15.8531 3.27178 15.6581 2.97178 15.3431 2.65678C15.0283 2.34178 14.7288 2.14678 14.3088 1.98365C13.9916 1.86047 13.5153 1.71384 12.6378 1.67372C11.6888 1.63059 11.404 1.62197 9.00101 1.62197L8.70104 1.62188ZM12.7251 4.19601C12.7251 3.59958 13.2089 3.11639 13.8051 3.11639V3.11601C14.4014 3.11601 14.8851 3.59976 14.8851 4.19601C14.8851 4.79226 14.4014 5.27601 13.8051 5.27601C13.2089 5.27601 12.7251 4.79226 12.7251 4.19601ZM9.00064 4.37822C6.44826 4.37832 4.37891 6.44772 4.37891 9.0001C4.37891 11.5525 6.44837 13.621 9.00083 13.621C11.5533 13.621 13.622 11.5525 13.622 9.0001C13.622 6.44766 11.5531 4.37822 9.00064 4.37822ZM9.00089 6.00007C10.6577 6.00007 12.0009 7.34313 12.0009 9.00007C12.0009 10.6568 10.6577 12.0001 9.00089 12.0001C7.34393 12.0001 6.00085 10.6568 6.00085 9.00007C6.00085 7.34313 7.34393 6.00007 9.00089 6.00007Z" fill="#2A2A2A"/>
+        </svg>
+      </a>
+      <a class="global-footer__social-link" title="Mixkit on YouTube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCtmuFBbkECnsHJujGDcE9SA">
+        <svg class="global-footer__social-icon" aria-label="YouTube" width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0544 0.543911C24.135 0.843194 24.9859 1.72503 25.2747 2.84488C25.7995 4.87448 25.7995 9.10925 25.7995 9.10925C25.7995 9.10925 25.7995 13.3439 25.2747 15.3736C24.9859 16.4935 24.135 17.3753 23.0544 17.6747C21.0963 18.2185 13.2435 18.2185 13.2435 18.2185C13.2435 18.2185 5.39072 18.2185 3.43241 17.6747C2.35188 17.3753 1.50093 16.4935 1.21214 15.3736C0.6875 13.3439 0.6875 9.10925 0.6875 9.10925C0.6875 9.10925 0.6875 4.87448 1.21214 2.84488C1.50093 1.72503 2.35188 0.843194 3.43241 0.543911C5.39072 0 13.2435 0 13.2435 0C13.2435 0 21.0963 0 23.0544 0.543911ZM11.0276 5.41643V13.2947L17.4287 9.35572L11.0276 5.41643Z" fill="#2A2A2A"/>
+        </svg>
+      </a>
+      <a class="global-footer__social-link" title="Mixkit on Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/mixkit_co">
+        <svg class="global-footer__social-icon" aria-label="Twitter" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7302 3.93749C17.7302 4.16249 17.7302 4.27499 17.7302 4.49999C17.7302 9.78748 13.5855 15.75 6.2171 15.75C3.91447 15.75 1.8421 15.075 -3.51353e-06 13.95C0.345391 13.95 0.690788 13.95 0.921051 13.95C2.87828 13.95 4.60525 13.275 5.98682 12.2625C4.25985 12.2625 2.76316 11.1375 2.1875 9.44998C2.41777 9.44998 2.64803 9.56248 2.99342 9.56248C3.33881 9.56248 3.6842 9.56248 4.02959 9.44998C2.18749 9.11248 0.805913 7.42499 0.805913 5.51249C1.38157 5.84999 1.95723 5.96249 2.64802 5.96249C1.61184 5.28749 0.805913 4.04999 0.805913 2.7C0.805913 2.025 1.03618 1.2375 1.38157 0.674999C3.3388 3.03749 6.33222 4.61249 9.78616 4.83749C9.67103 4.49999 9.67104 4.27499 9.67104 3.93749C9.67104 1.8 11.5131 2.6822e-08 13.7006 2.6822e-08C14.852 2.6822e-08 15.8881 0.449999 16.694 1.2375C17.6151 1.0125 18.5361 0.674999 19.2269 0.225C18.8815 1.125 18.3059 1.9125 17.3848 2.475C18.1908 2.3625 18.9967 2.1375 19.6875 1.8C19.2269 2.7 18.5362 3.37499 17.7302 3.93749Z" fill="#2A2A2A"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div
+  class="elements-toast-banner__wrapper"
+  data-controller="elements--toast-banner"
+  data-elements--toast-banner-visible-value="false"
+>
+  <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_global_promo"
+  class="elements-toast-banner__copy"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_global_promo"
+  data-elements--link-uri-value="/"
+  data-action="click->elements--link#logClickEvent"
+>
+  
+      <img class="elements-toast-banner__logo" alt="Envato Elements" width="205" height="22" src="https://mixkit.co/build/elements-logo--white-7c8fe4b620642471f7868e4df4854ff6f516e598655ce27cf16a6e4fe585b63a.svg" />
+    <span class="elements-toast-banner__copy-large">Millions of creative assets</span>
+    <span class="elements-toast-banner__copy-small">Unlimited downloads. One low cost.</span>
+
+</a>
+
+  <a
+  title="Envato Elements"
+  rel="noopener"
+  target="_blank"
+  href="https://elements.envato.com/?utm_source=mixkit&amp;utm_medium=referral&amp;utm_campaign=elements_mixkit_cs_global_promo"
+  class="elements-toast-banner__button"
+  data-controller="elements--link"
+  data-elements--link-campaign-value="elements_mixkit_cs_global_promo"
+  data-elements--link-uri-value="/"
+  data-action="click->elements--link#logClickEvent"
+>
+  Get Unlimited Downloads
+</a>
+
+
+  <button
+    type='button'
+    name='clear'
+    class="elements-toast-banner__close-button"
+    data-action="click->elements--toast-banner#dismiss"
+    aria-label="Close"
+  >
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      fill='none'
+      viewBox='0 0 25 26'
+    >
+      <path d='M16.675 0H18.921V23.582H16.675z' transform='rotate(45 16.675 0)' />
+      <path d='M0 1.588H2.246V25.17H0z' transform='rotate(-45 0 1.588)' />
+    </svg>
+  </button>
+</div>
+
+<div id="global-browser-support" data-nosnippet>
+  Our site is great except that we don‘t support your browser. We recommend using the latest version of
+  <a href="https://www.google.com/chrome/" rel="nofollow">Google Chrome</a>,
+  <a href="https://www.mozilla.org/en-US/firefox/new/" rel="nofollow">Mozilla Firefox</a>,
+  <a href="https://www.microsoft.com/en-us/edge" rel="nofollow">Microsoft Edge</a>, or
+  <a href="https://support.apple.com/en_AU/downloads/safari" rel="nofollow">Apple Safari</a>.
+</div>
+<script>
+  var browserSupportsAbortController = typeof AbortController !== "undefined"
+  var browserSupportsCss = !!((window.CSS && window.CSS.supports) || window.supportsCSS || false);
+  var browserSupportsCustomElements = !!(window.customElements);
+  var isIE = navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1;
+  if (browserSupportsAbortController && browserSupportsCss && browserSupportsCustomElements && !isIE) {
+    document.getElementById('global-browser-support').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

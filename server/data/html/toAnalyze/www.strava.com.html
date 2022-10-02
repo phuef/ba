@@ -1,0 +1,1359 @@
+<!-- Orion-App Layout -->
+<!DOCTYPE html>
+<html class='logged-out responsive feed3p0 old-login strava-orion responsive' dir='ltr' lang='en-US' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://opengraphprotocol.org/schema/' xmlns='http://www.w3.org/TR/html5'>
+<!--
+layout orion app
+-->
+<head>
+<meta charset='UTF-8'>
+<title>Strava Global Heatmap</title>
+<meta content='width = device-width, initial-scale = 1, maximum-scale = 1' name='viewport'>
+<style type='text/css'>
+.spinner, .spinner .status {
+  position: relative;
+}
+.spinner {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.spinner .status {
+  top: 2px;
+  margin-left: 0.5em;
+}
+.spinner .status:empty {
+  display: none;
+}
+.spinner.lg .graphic {
+  border-width: 3px;
+  height: 32px;
+  width: 32px;
+}
+.spinner.tiny {
+  height: 10px;
+  width: 10px;
+}
+.spinner.centered, .spinner.vcentered {
+  box-sizing: border-box;
+  width: 100%;
+}
+.spinner.vcentered {
+  left: 0;
+  margin-top: -12px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+}
+.spinner .graphic, .ajax-loading-image {
+  animation: spin 1.2s infinite linear;
+  box-sizing: border-box;
+  border-color: #eee;
+  border-radius: 50%;
+  border-style: solid;
+  border-top-color: #666;
+  border-top-style: solid;
+  border-width: 2px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+</style>
+
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-app-icons-efdf71eb8396c6244ee501d4a36741c282a460e635ef893687478ceb367a642d.css" />
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-orion-12740e7437ef22184e1c2562e19f39311b37f636341ba2fd12e27ec6455f4af7.css" />
+
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-180x180.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='180x180'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-152x152.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='152x152'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-144x144.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='144x144'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-120x120.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='120x120'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-114x114.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='114x114'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-76x76.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='76x76'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-72x72.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='72x72'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-60x60.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='60x60'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-57x57.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='57x57'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-32x32.png?v=dLlWydWlG8' rel='icon' sizes='32x32' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/icon-strava-chrome-192.png?v=dLlWydWlG8' rel='icon' sizes='192x192' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-96x96.png?v=dLlWydWlG8' rel='icon' sizes='96x96' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-16x16.png?v=dLlWydWlG8' rel='icon' sizes='16x16' type='image/png'>
+<link href='/manifest.json?v=dLlWydWlG8' rel='manifest'>
+<meta content='#FC5200' name='msapplication-TileColor'>
+<meta content='https://d3nn82uaxijpm6.cloudfront.net/mstile-144x144.png?v=dLlWydWlG8' name='msapplication-TileImage'>
+<meta content='#F7F7FA' name='theme-color'>
+<meta content='Strava' name='apple-mobile-web-app-title'>
+<meta content='Strava' name='application-name'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black' name='apple-mobile-web-app-status-bar-style'>
+
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Strava",
+  "url": "https://www.strava.com/",
+  "logo": "https://d3nn82uaxijpm6.cloudfront.net/assets/brands/strava/logo-strava-lg-5671105ffddb86e437bb68503a4973e8bf07e2a41c0b332d3e3bced21d537e98.png",
+  "sameAs": [
+    "https://facebook.com/Strava",
+    "https://twitter.com/strava",
+    "https://instagram.com/strava",
+    "https://youtube.com/stravainc",
+    "https://blog.strava.com",
+    "https://github.com/strava",
+    "https://medium.com/strava-engineering"
+  ]
+}
+
+
+</script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kfVPYJfmjdlGOt45/Ca1UEJc9YPvckDprya0bX35xGBRytcKJtJeNB99Lfdy9rL38Oz5ytt/LniyXr6etIg9fg==" />
+<link rel="stylesheet" media="screen" href="//d3nn82uaxijpm6.cloudfront.net/packs/css/global-c6da620d.css" />
+<script src="//d3nn82uaxijpm6.cloudfront.net/packs/js/runtime-1402f10fd329bff5556f.js"></script>
+<script src="//d3nn82uaxijpm6.cloudfront.net/packs/js/16971-6d13851441e62d1c0c45.js"></script>
+<script src="//d3nn82uaxijpm6.cloudfront.net/packs/js/global-a34dc590a0b6c73c086c.js"></script>
+
+<script>
+  !function() {
+    if (!!window.stravaPublicServiceEnv) {
+      // Object containing no secret key value pairs that are expected to be seen and used in the browser.
+      // This keys are commonly passed to 3rd party libs or tooling.
+      window.stravaPublicServiceEnv({
+        MUX_ENV_KEY: "bqst82u23r97a7fuo892gfpn2",
+        MUX_DATA_VIEWER_USER_ID: null,
+        VIDEOJS_LOG_LEVEL: "error"
+      });
+    }
+  }();
+</script>
+
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-head-1d4a9d2681e471734266f7b43fe544210c9f0d14dc0753baea00408575ff81ab.js"></script>
+
+
+<meta content='Strava Global Heatmap' property='og:title'>
+<meta content='Strava' property='og:site_name'>
+<meta content='https://www.strava.com/heatmap' property='og:url'>
+<meta content='Over 1 billion activities, 13 trillion data points create the ultimate map of athlete playgrounds.' property='og:description'>
+<meta content='284597785309' property='fb:app_id'>
+<meta content='https://d3nn82uaxijpm6.cloudfront.net/assets/website/heatmap/fb/heatmap-d31ff07df8339b44371bc78dee596642d9faca031132c130a03efba03aa82b57.jpg' property='og:image'>
+<meta content='website' property='og:type'>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.3/mapbox-gl-geocoder.min.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet'>
+<link href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.3/mapbox-gl-geocoder.css' rel='stylesheet'>
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/website/heatmap-b54603e31fd328c2ca99303291bf375ceb0cbc2a157ca65d7d42c8f3aed2fe09.css" />
+
+
+<script>
+  !function(options){
+    window.Strava = window.Strava || {};
+    var _enabled = true;
+    var _options = options;
+    var _snowplowReady = null;
+  
+    window.Strava.ExternalAnalytics = window.Strava.ExternalAnalytics || (
+      {
+        isEnabled: function() {
+          return _enabled;
+        },
+        isDebug: function() {
+          return _options.debug;
+        },
+        track: function() {
+        },
+        trackV2: function(event) {
+          var eventData = {
+            'category': event.category,
+            'page': event.page,
+            'action': event.action,
+            'element': event.element || null,
+            'properties': event.properties || {}
+          }
+          if (this.isEnabled()) {
+            snowplow('trackSelfDescribingEvent', {
+              schema: 'iglu:com.strava/track/jsonschema/1-0-0',
+              data: eventData
+            });
+          } else {
+            if(this.isDebug()){
+              // toggle defined in - https://github.com/strava/active/blob/main/lib/strava/external_analytics.rb
+              // to turn on - Strava::ExternalAnalytics.turn_on_debug
+              // to turn off - Strava::ExternalAnalytics.turn_off_debug
+              !!console.table && console.table(eventData);
+            }
+          }
+        },
+        trackLink: function() {
+        },
+        trackForm: function() {
+        },
+        identifyV2: function () {
+        },
+        getExperimentContext: function(pageProperties) {
+          var experiment = ( pageProperties || {} ).experiment_info || {};
+          if (experiment.experiment_cohort && experiment.experiment_name) {
+            this.log('found experiment with values', experiment);
+            return {
+              schema: 'iglu:com.strava/web_experiment/jsonschema/1-0-0',
+              data: {
+                experiment_name: experiment.experiment_name,
+                cohort: experiment.experiment_cohort,
+                forced: experiment.experiment_forced === true
+              }
+            };
+          } else {
+            return null;
+          }
+        },
+        page: function(pageProperties) {
+          if(this.isEnabled()) {
+            snowplow('trackPageView');
+          }
+        },
+        identify: function(athleteId, options, eventName) {
+          if (this.isEnabled()) {
+            var properties = options || {}
+            properties.athlete_id = athleteId;
+            var eventData = {
+              'category': 'identify',
+              'page': null,
+              'action': eventName,
+              'element': null,
+              'properties': properties
+            };
+            snowplow('trackSelfDescribingEvent', {
+              schema: 'iglu:com.strava/track/jsonschema/1-0-0',
+              data: eventData
+            });
+          }
+        },
+        reset: function() {
+          if(this.isEnabled()) {
+            snowplow('setUserId', null)
+            var spCookie = document.cookie.match('_sp_id\\.[a-f0-9]+')
+            if(spCookie != null) {
+              document.cookie = spCookie[0] + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+            }
+          }
+        },
+        setup: function(athleteId, pageProperties) {
+          if(this.isEnabled()) {
+            snowplow("newTracker", "cf", "c.strava.com", {
+              appId: "strava-web",
+              platform: "web"
+            });
+            snowplow('setUserId', athleteId);
+            var experimentContext = this.getExperimentContext(pageProperties);
+            if (experimentContext) {
+              snowplow('addGlobalContexts', [experimentContext]);
+            }
+            snowplow('enableFormTracking');
+          }
+        },
+        getDomainUserId: function() {
+          var d = jQuery.Deferred();
+          if (this.isEnabled()) {
+            if (!_snowplowReady) {
+              _snowplowReady = jQuery.Deferred();
+              snowplow(function(){
+                _snowplowReady.resolve(this.cf.getDomainUserId());
+              });
+            }
+            _snowplowReady.always(function(getDomainUserId){
+              d.resolve(getDomainUserId);
+            });
+          } else {
+            d.reject(null);
+          }
+          return d;
+        },
+        log: function(message, values) {
+          if(this.isDebug()) {
+            console.log(message, 'background-color: yellow; color: blue; font-size: medium;', values);
+          }
+        },
+        debug: function(value) {
+          _options.debug = value;
+        }
+      }
+    )
+  }({
+    is_mobile: false,
+    os: "",
+    debug: false,
+    athlete_id: null,
+    locale: "en-US"
+  });
+</script>
+
+<script>
+  !function(){
+    var analytics = window.analytics = window.analytics || [];
+    if(analytics.invoked) {
+      window.console && console.error && console.error("Segment snippet included twice.");
+    } else {
+      (function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","https://d3nn82uaxijpm6.cloudfront.net/8f96b1247cf4359f8fec.js","snowplow"));
+      var pageProperties = null;
+      var athleteId = null;
+      Strava.ExternalAnalytics.setup(athleteId, pageProperties);
+      Strava.ExternalAnalytics.page(pageProperties);
+    }
+  }();
+</script>
+
+<script>
+  !function(debug){
+    window.Strava = window.Strava || {};
+    var _enabled = false;
+    var _debug = !!debug;
+    var _branchData = null;
+  
+    window.Strava.BranchIO = window.Strava.BranchIO || (
+      {
+        isEnabled: function() {
+          return _enabled;
+        },
+        isDebug: function() {
+          return _debug;
+        },
+        dataToLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+  
+          var d = this.data()
+          var that = this;
+          d.done(function(data) {
+            that.log('storing data %o to local storage', data)
+            _branchData.data(data)
+          });
+          d.fail(function(message) {
+            that.log('failed to retrieve data from branch');
+            _branchData.data({})
+          });
+          return d;
+        },
+        createLink: function(options) {
+          var d = jQuery.Deferred();
+          var data = null;
+          const that = this;
+          var callback = function(e, l) {
+            if (!e) {
+              d.resolve(l);
+            } else {
+              d.reject(e);
+            }
+          }
+          if (options.peek_data) {
+            data = this.dataFromLocalStorage();
+            if (data && data.data_parsed && data.data_parsed['~referring_link']) {
+              d.resolve(data.data_parsed['~referring_link']);
+            } else {
+              d.reject();
+            }
+          } else {
+  
+            Strava.ExternalAnalytics
+              .getDomainUserId()
+              .always(function(domainUserId){
+                if (domainUserId) {
+                  options.data['domainUserId'] = domainUserId;
+                }
+  
+                if(that.isEnabled()) {
+                  branch.link(options, callback);
+                };
+            });
+          }
+          return d;
+        },
+        dataFromLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+          return _branchData.data();
+        },
+        clearLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+          _branchData.data({});
+        },
+        data: function(checkLocalStorage) {
+          var d = jQuery.Deferred();
+          var that = this;
+          var c = function(message, meta_data) {
+            var storedData = null;
+  
+            if(message) {
+              d.reject(message);
+            } else {
+              if (checkLocalStorage == true && (meta_data == null || meta_data.data == "" || meta_data.data == null)) {
+                storedData = that.dataFromLocalStorage();
+                that.clearLocalStorage();
+  
+                d.resolve(storedData);
+              } else {
+                d.resolve(meta_data);
+              }
+            }
+          };
+  
+          if(this.isEnabled()) {
+            branch.data(c);
+            this.log('%cdata (branch enabled)');
+          } else {
+            this.log('%cdata (branch disabled)');
+            d.resolve({});
+          }
+          return d;
+        },
+        identify: function(athleteId) {
+          var callback = function(error, data) {
+            if (error) {
+              console.log(error);
+            }
+          }
+          if(this.isEnabled()) {
+            branch.setIdentity(athleteId, callback);
+          }
+        },
+        track: function(eventName, metaData) {
+          var callback = function(error, data) {
+            if (error) {
+              console.log(error);
+            }
+          }
+          if(this.isEnabled()) {
+            branch.track(eventName, metaData, callback);
+          }
+        },
+        log: function(message, values) {
+          if(this.isDebug()) {
+            console.log(message, 'background-color: yellow; color: blue; font-size: medium;', values);
+          }
+        },
+        debug: function(value) {
+          _debug = value;
+        }
+      }
+    )
+  }(false);
+</script>
+
+
+</head>
+<body>
+
+<header id='global-header'><!--
+deploy: afd9c5a9e870b2db98b63a0481c976a194c71002
+-->
+<!--[if lte IE 8]>
+<div class='alert alert-warning message warning mb-0 text-center'>
+<p>It looks like you're using a version of Internet Explorer that Strava no longer supports. Please <a href='http://www.microsoft.com/en-us/download/ie.aspx?q=internet+explorer'>upgrade your web browser</a> &mdash; <a href='https://strava.zendesk.com/entries/20420212-Supported-Browsers-on-Strava'>Learn more</a>.</p>
+</div>
+<![endif]-->
+<nav class='nav-bar container collapsable-nav' role='navigation'>
+<div title="Return to the Strava home page" class="branding"><a class="branding-content" href="/"><span class="sr-only">Strava</span></a></div>
+<!-- / Nav Menu Button -->
+<a href="#container-nav" aria-expanded="false" aria-controls="container-nav" data-toggle="collapse" class="btn btn-default btn-mobile-menu" role="button">Menu</a>
+<div class='nav-container collapse' id='container-nav'>
+<ul class='user-nav nav-group'>
+<li class='nav-item'>
+<a class="nav-link" href="/mobile">Mobile</a>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="/features">Features</a>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="/subscribe?cta=premium&amp;element=nav&amp;origin=logged_out_global_nav">Subscription</a>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="http://blog.strava.com/?utm_source=website-header">Blog</a>
+</li>
+<li class='nav-object-group'>
+<div class='nav-item logged_out_nav'>
+<a class='btn btn-primary btn-signup' data-segioevent='{&quot;name&quot;:&quot;Signup Flow&quot;,&quot;method&quot;:&quot;web&quot;,&quot;source&quot;:&quot;Global Header&quot;}' href='/register?cta=sign-up&amp;element=global-header&amp;plan=free&amp;source=website_heatmap'>
+Sign Up
+</a>
+</div>
+<div class='nav-item logged_out_nav'>
+<a class='btn btn-default btn-login' data-segioevent='{&quot;name&quot;:&quot;Login Flow&quot;,&quot;method&quot;:&quot;web&quot;,&quot;source&quot;:&quot;Global Header&quot;}' href='https://www.strava.com/login?cta=log-in&amp;element=global-header&amp;source=website_heatmap'>
+Log In
+</a>
+</div>
+</li>
+</ul>
+
+</div>
+</nav>
+</header>
+
+
+
+
+<div id='sidebar'>
+<div class='sidebar-header'>
+<div class='toggle-triangle carat up-carat'></div>
+<h3 class='title topless bottomless'>Global Heatmap</h3>
+</div>
+<div class='content' id='js-sidebar-content'>
+<div class='section'>
+<h5 class='topless'>Heatmap Color</h5>
+<div class='btn-group btn-group-sm btn-group-justified' data-toggle='buttons'>
+<label class='map-color btn btn-default active' data-color='hot'>
+<input id='color-hot' name='map_color' type='radio' value='hot'>
+Hot
+</input>
+</label>
+<label class='map-color btn btn-default' data-color='blue'>
+<input id='color-blue' name='map_color' type='radio' value='blue'>
+Blue
+</input>
+</label>
+<label class='map-color btn btn-default' data-color='purple'>
+<input id='color-purple' name='map_color' type='radio' value='purple'>
+<span class="translation_missing" title="translation missing: en-US.views.global_heatmap.color_options.purple">Purple</span>
+</input>
+</label>
+<label class='map-color btn btn-default' data-color='gray'>
+<input id='color-gray' name='map_color' type='radio' value='gray'>
+Gray
+</input>
+</label>
+<label class='map-color btn btn-default' data-color='bluered'>
+<input id='color-bluered' name='map_color' type='radio' value='bluered'>
+Red
+</input>
+</label>
+</div>
+<h5>Activity Type</h5>
+<div class='btn-group btn-group-sm btn-group-justified' data-toggle='buttons'>
+<label class='map-type btn btn-default active' data-type='all'>
+<input id='type-all' name='map_type' type='radio' value='all'>
+All
+</input>
+</label>
+<label class='map-type btn btn-default' data-type='ride'>
+<input id='type-ride' name='map_type' type='radio' value='ride'>
+<span class="app-icon-wrapper  "><span title="Rides" class="app-icon icon-ride icon-dark">Rides</span></span>
+</label>
+<label class='map-type btn btn-default' data-type='run'>
+<input id='type-run' name='map_type' type='radio' value='run'>
+<span class="app-icon-wrapper  "><span title="Runs" class="app-icon icon-run icon-dark">Runs</span></span>
+</label>
+<label class='map-type btn btn-default' data-type='water'>
+<input id='type-water' name='map_type' type='radio' value='water'>
+<span class="app-icon-wrapper  "><span title="Water" class="app-icon icon-swimming icon-dark">Water</span></span>
+</label>
+<label class='map-type btn btn-default' data-type='winter'>
+<input id='type-winter' name='map_type' type='radio' value='winter'>
+<span class="app-icon-wrapper  "><span title="Winter activities" class="app-icon icon-snow icon-dark">Winter activities</span></span>
+</label>
+</div>
+<h5>Heat Opacity</h5>
+<div class='btn-group btn-group-sm btn-group-justified' data-toggle='buttons'>
+<label class='map-opacity btn btn-default' data-opacity='0'>
+<input id='opacity-0' name='map_opacity' type='radio' value='0'>
+0%
+</input>
+</label>
+<label class='map-opacity btn btn-default' data-opacity='40'>
+<input id='opacity-40' name='map_opacity' type='radio' value='40'>
+40%
+</input>
+</label>
+<label class='map-opacity btn btn-default' data-opacity='60'>
+<input id='opacity-60' name='map_opacity' type='radio' value='60'>
+60%
+</input>
+</label>
+<label class='map-opacity btn btn-default active' data-opacity='80'>
+<input id='opacity-80' name='map_opacity' type='radio' value='80'>
+80%
+</input>
+</label>
+<label class='map-opacity btn btn-default' data-opacity='100'>
+<input id='opacity-100' name='map_opacity' type='radio' value='100'>
+100%
+</input>
+</label>
+</div>
+<h5>Layers</h5>
+<div class='btn-group btn-group-justified' role='group'>
+<div class='btn-group btn-group-sm'>
+<button class='btn btn-default active' id='view-maps' type='button'>
+Map
+</button>
+</div>
+<div class='btn-group btn-group-sm'>
+<button class='btn btn-default' id='view-labels' type='button'>
+Labels
+</button>
+</div>
+</div>
+<h5>Map Styles</h5>
+<div class='btn-group btn-group-grid' data-toggle='buttons'>
+<label class='btn btn-xs btn-default active'>
+<input name='map_style' type='radio' value='dark'>
+Dark
+</input>
+</label>
+<label class='btn btn-xs btn-default'>
+<input name='map_style' type='radio' value='light'>
+Light
+</input>
+</label>
+<label class='btn btn-xs btn-default'>
+<input name='map_style' type='radio' value='standard'>
+Standard
+</input>
+</label>
+<label class='btn btn-xs btn-default'>
+<input name='map_style' type='radio' value='satellite'>
+Satellite
+</input>
+</label>
+<label class='btn btn-xs btn-default'>
+<input name='map_style' type='radio' value='hybrid'>
+Hybrid
+</input>
+</label>
+<label class='btn btn-xs btn-default'>
+<input name='map_style' type='radio' value='winter'>
+Winter
+</input>
+</label>
+</div>
+<div class='show-terrain mt-md'>
+<label for='show-3d-terrain'>
+Show 3D Terrain
+<input id='show-3d-terrain' name='3d_terrain' type='checkbox'>
+</label>
+</div>
+</div>
+<div class='info'>
+<div class='section'>
+<a href='https://medium.com/strava-engineering/the-global-heatmap-now-6x-hotter-23fc01d301de'>Discover</a> how the heatmap was built.
+<br>
+<a href='https://metro.strava.com'>Learn</a> how Strava Metro can help your community.
+</div>
+</div>
+<div class='labs-disclaimer-spacer hidden-xs'></div>
+<div class='section labs-disclaimer'>
+<button class='btn btn-link' data-target='#learn-more-modal' data-toggle='modal'>
+Learn about heatmap updates.
+</button>
+</div>
+</div>
+</div>
+<div id='controls'>
+<div class='btn btn-default btn-sm control-zoomUp' id='zoomUp' type='button'>
++
+</div>
+<div class='btn btn-default btn-sm control-zoomDown' id='zoomDown' type='button'>
+-
+</div>
+</div>
+<div id='mapholder'>
+<div id='maprotor'>
+<div id='map'></div>
+</div>
+</div>
+<div aria-labelledby='modal-title-zoomed-in-modal' class='modal fade' id='zoomed-in-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button data-dismiss="modal" aria-label="close" class="btn close btn-icon btn-icon-only"><span class="app-icon-wrapper  "><span class="app-icon icon-remove icon-white"></span></span></button>
+<h4 id='modal-title-zoomed-in-modal'>Log In to See More</h4>
+</div>
+<div class='modal-body'>
+<p class='pt-md'>Street-level detail is available only to registered Strava athletes. Log in or sign up to make the most of the Global Heatmap.</p>
+<ul class='pt-md pb-md'>
+<li class='sign-up'>
+<a class='btn btn-primary btn-signup' data-segioevent='{&quot;name&quot;:&quot;RegisterFlow ViewForm&quot;,&quot;source&quot;:&quot;heatmap_zoomed_in_modal&quot;}' href='/register/free?cta=sign-up&amp;element=button&amp;source=global-heatmap'>
+Sign Up
+</a>
+</li>
+<li class='login'>
+<a class='btn btn-default btn-login' href='https://www.strava.com/login'>
+Log In
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div aria-labelledby='modal-title-learn-more-modal' class='modal fade' id='learn-more-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button data-dismiss="modal" aria-label="close" class="btn close btn-icon btn-icon-only"><span class="app-icon-wrapper  "><span class="app-icon icon-remove icon-white"></span></span></button>
+<h4 id='modal-title-learn-more-modal'>The Global Heatmap</h4>
+</div>
+<div class='modal-body'>
+<p>Athletes from around the world come here to discover new places to be active. Here’s what you should know about the heatmap and the data it reflects:</p>
+<ul>
+<li>The heatmap shows &#39;heat&#39; made by aggregated, public activities over the last year.</li>
+<li>The heatmap is updated monthly.</li>
+<li>Activity that athletes mark as private is not visible.</li>
+<li>Athletes may opt out by updating their <a href='https://www.strava.com/settings/privacy' target='_blank'>privacy settings</a>.</li>
+<li>Areas with very little activity may not show any &#39;heat.&#39;</li>
+</ul>
+<div class='modal-footer'>
+<p>Visit the <a href='https://blog.strava.com/en/press/heatmap-updates/' target='_blank'>Strava blog</a> to learn more or close this window to explore the heatmap.</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<script id='lightbox-template' type='text/template'>
+<div class='lightbox-window modal-content'>
+<div class='close-lightbox'>
+<button class='btn btn-unstyled btn-close'>
+<div class='app-icon icon-close icon-xs icon-dark'></div>
+</button>
+</div>
+</div>
+</script>
+<script id='popover-template' type='text/template'>
+<div class='popover'></div>
+</script>
+<script>
+  window._asset_host = "https://d3nn82uaxijpm6.cloudfront.net";
+  window._measurement_preference = "meters";
+  window._date_preference = "%m/%d/%Y";
+  window._datepicker_preference_format = "mm/dd/yy";
+  
+  jQuery(document).ready(function() {
+    Strava.Util.EventLogging.createInstance("https://analytics.strava.com","7215fa60b5f01ecc3967543619f7e3d9", null);
+  });
+</script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/i18n/locales/en-US-5b3a1e86949dc7d513e40b2c20a3384ec96ea10576e2460afedd95c32d2d697f.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/application-5bc6279b396cf34ba178154c0bcd9d3a8b55cfb46dc5534663a7cc25c0bd476e.js"></script>
+
+<script src="https://www.strava.com/cookie-banner"></script>
+<script>
+  jQuery(document).ready(function(){
+    typeof StravaCookieBanner !== 'undefined' && StravaCookieBanner.render();
+  });
+</script>
+
+
+<div id='fb-root'></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: "284597785309",
+      status: true,
+      cookie: true,
+      xfbml: true,
+      version: "v7.0"
+    });
+    Strava.Facebook.PermissionsManager.getInstance().facebookReady();
+    jQuery('#fb-root').trigger('facebook:init');
+  };
+  (function(d){
+    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    ref.parentNode.insertBefore(js, ref);
+  }(document));
+</script>
+
+
+<script>
+  jQuery('document').ready(function() {
+    setTimeout(function() {
+      jQuery('#face-pile').css('visibility', 'visible');
+    }, 300);
+  });
+  var ua = navigator.userAgent;
+  var checker = {
+    ios: ua.match(/(iPhone|iPod|iPad)/),
+    android: ua.match(/Android/)
+  };
+  
+  var regButton = jQuery('#get-started-button');
+  if (checker.android || checker.ios) {
+    regUrl = regButton.attr('href');
+    if (checker.android) {
+      regUrl = 'https://market.android.com/details?id=com.strava';
+    } else if (checker.ios) {
+      regUrl = 'http://itunes.apple.com/app/strava-cycling/id426826309';
+    }
+    regButton.attr('href', regUrl).text('Get the App');
+  }
+  regButton.css('visibility', 'visible');
+</script>
+<script>
+  var currentAthlete = new Strava.Models.CurrentAthlete({"logged_in":false});
+  HAML.globals = function() {
+    return {
+      currentAthlete: currentAthlete,
+      renderPartial: function(name, context) {
+        if (context == null) {
+          context = this;
+        }
+        return JST[name](context);
+      }
+    }
+  }
+</script>
+
+<script>
+  new Strava.Initializer();
+</script>
+<script>
+  var map;
+  var version = 19;
+  var initialZoom = 6;
+  var authorized = "false" === 'true';
+  var initialLat = 38.36;
+  var initialLng = -120.9;
+  var maxZoom = 20;
+  var tileDomains = [
+      '//heatmap-external-a.strava.com',
+      '//heatmap-external-b.strava.com',
+      '//heatmap-external-c.strava.com'
+  ];
+  var isRetina = window.devicePixelRatio >= 2;
+  var MAX_TILE_ZOOM = isRetina ? 10.0 : 11.0;
+  var MAX_AUTH_TILE_ZOOM = isRetina ? 14.0 : 15.0;
+  var modalShown = false;
+  var state = {
+    showMaps: true,
+    showLabels: false,
+    show3dTerrain: false,
+    prevStyle: null,
+    loadedSources: []
+  };
+  var style = {
+    hybrid: false,
+    satellite: false,
+    winter: false,
+    standard: false,
+    light: false,
+    dark: false
+  };
+  let geolocateControl;
+  
+  // router
+  var RouterClass = Backbone.Router.extend({
+    routes: {
+      ':zoom/:lng/:lat/:color/:type': 'setCenter'
+    },
+    setCenter: function(zoom, lng, lat, color, type) {
+  
+      // Handle outdated links
+      if (color == 'yellow' || color == 'orange') {
+        color = 'hot';
+      }
+  
+      if (type == 'bike'){
+        type = 'ride';
+      }
+  
+      if (type == 'both') {
+        type = 'all';
+      }
+  
+      state.color = color;
+      state.type = type;
+  
+      if (!isNaN(lat)) {
+        initialLat = lat;
+      }
+  
+      if (!isNaN(lng)) {
+        initialLng = lng;
+      }
+  
+      initialZoom = zoom - 1;
+  
+      if (initialZoom > maxZoom) {
+        initialZoom = maxZoom;
+      }
+    }
+  });
+  
+  var router = new RouterClass();
+  Backbone.history.start({ hashChange: true });
+  
+  function getMaxTileZoom() {
+    return authorized ? MAX_AUTH_TILE_ZOOM : MAX_TILE_ZOOM;
+  }
+  
+  function setTerrainExaggeration() {
+    var exaggeration = Math.exp((20 - map.getZoom()) / 12);
+    map.setTerrain({ source: 'mapbox-dem-terrain', exaggeration: exaggeration });
+  }
+  
+  mapboxgl.accessToken = "pk.eyJ1Ijoic3RyYXZhIiwiYSI6IlpoeXU2U0UifQ.c7yhlZevNRFCqHYm6G6Cyg";
+  var defaultStyle = "mapbox://styles/strava/cl004oy02000014nq9wu7ftaw";
+  var winterStyle = "mapbox://styles/strava/ck5iqot2i0ezy1ik9lmbk7fcq";
+  var satelliteStyle = "mapbox://styles/strava/ckzn9habn001i15qtww7535k9";
+  var hybridStyle = "mapbox://styles/strava/cl004r067001z15pphpkm632k";
+  var darkStyle = "mapbox://styles/strava/ckzn9ervt003j15p7z9y0t2yz";
+  var lightStyle = "mapbox://styles/strava/ckzn9flus007n15r4s4c2u0oj";
+  
+  function initMap() {
+    state.prevStyle = getStyle();
+  
+    map = new mapboxgl.Map({
+      container: 'map',
+      style: getStyle(),
+      zoom: initialZoom,
+      minZoom: 1,
+      maxZoom: maxZoom,
+      center: [initialLng, initialLat],
+      trackResize: false,
+      hash: false,
+      transformRequest: function(url) {
+        if (authorized && url.includes('strava.com')) {
+          return {
+            url: url.replace('/tiles/', '/tiles-auth/'),
+            credentials: 'include'
+          }
+        };
+      }
+    });
+  
+    map.addControl(new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+    }));
+  
+    geolocateControl = new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    });
+    map.addControl(geolocateControl);
+  
+    map.on('zoomstart', function() {
+      var currentMapZoom = map.getZoom();
+      if (authorized === false && currentMapZoom >= getMaxTileZoom() && modalShown === false) {
+        jQuery('#zoomed-in-modal').modal('show');
+        modalShown = true;
+      }
+    });
+  
+    // idle event
+    map.on('moveend', idleEvent);
+    map.on('zoom', function() {
+      if (state.show3dTerrain) {
+        setTerrainExaggeration();
+      }
+    });
+    map.on('load', function() {
+      updateMapStyles();
+      geolocateControl.trigger();
+    });
+  }
+  
+  
+  function updateState() {
+    state.color = jQuery('.map-color.active').data('color');
+    state.type = jQuery('.map-type.active').data('type');
+    state.opacity = jQuery('.map-opacity.active').data('opacity');
+  }
+  
+  function getStyle() {
+    if (style.satellite) {
+      return satelliteStyle;
+    } else if (style.hybrid) {
+      return hybridStyle;
+    } else if (style.winter) {
+      return winterStyle;
+    } else if (style.standard) {
+      return defaultStyle;
+    } else if (style.light) {
+      return lightStyle;
+    } else if (style.dark) {
+      return darkStyle;
+    } else {
+      if (state.color == 'gray' || state.color == 'orange' || state.color == 'bluered') {
+        return lightStyle;
+      } else {
+        return darkStyle;
+      }
+    }
+  }
+  
+  function sourceName() {
+    return 'heat-' + state.type + '-' + state.color;
+  }
+  
+  function getSource() {
+    var path = /tiles/ + state.type + '/' + state.color + '/{z}/{x}/{y}.png?v=' + version;
+    path = path.replace(/\.png(?=$|\?)/, isRetina ? '@2x.png' : '.png');
+  
+    return {
+      'type': 'raster',
+      'tiles': tileDomains.map( function(d) { return d + path; } ),
+      'tileSize': 512,
+      'maxzoom': getMaxTileZoom(),
+      'minzoom': 0
+    }
+  }
+  
+  function getLayer() {
+    return {
+      'id': 'heat',
+      'type': 'raster',
+      'source': sourceName(),
+      'minzoom': 0,
+      // Half max
+      'maxzoom': 20.5
+    }
+  }
+  
+  function updateMapStyles() {
+    if (map == null) return;
+    updateState();
+  
+    var isStyleLoaded = true;
+  
+    if (getStyle() != state.prevStyle) {
+      isStyleLoaded = false;
+      map.setStyle(getStyle());
+      state.prevStyle = getStyle();
+      // Sources are cleared when style gets reset
+      state.loadedSources = [];
+    }
+  
+    if (!isStyleLoaded) {
+      map.once('styledata', function () {
+        toggleLabels(state.showLabels);
+        toggleMap(state.showMaps);
+        updateMapSource();
+        if (state.show3dTerrain) {
+          add3dTerrain();
+        }
+      });
+    } else {
+      updateMapSource();
+    }
+  }
+  
+  function updateMapStyle(e) {
+    Object.keys(style).forEach(function(v) {
+      style[v] = false;
+    });
+    style[e.target.value] = true;
+    updateMapStyles();
+  }
+  
+  function updateMapSource() {
+    state.type = jQuery('.map-type.active').data('type');
+    var source = sourceName();
+  
+    function addHeatLayer() {
+      if (map.getLayer('heat')) {
+        map.removeLayer('heat');
+      }
+      afterLayer = false;
+      map.style.stylesheet.layers.forEach(function(layer) {
+        if (layer.id == 'waterway-label') {
+          afterLayer = layer.id;
+        }
+      });
+  
+      map.addLayer(getLayer(), afterLayer);
+      if (map.style._sourceCaches['other:'+ source]) {
+        map.style._sourceCaches['other:'+ source]._source.attribution = '&copy; '+ new Date().getFullYear() +' Strava';
+      }
+      updateOpacity();
+      toggleLabels(state.showLabels);
+      idleEvent();
+    }
+  
+    if (state.loadedSources.indexOf(source) == -1) {
+      state.loadedSources.push(source);
+      map.addSource(source, getSource());
+      map.once('sourcedata', addHeatLayer);
+    } else {
+      addHeatLayer();
+    }
+  }
+  
+  function updateOpacity() {
+    state.opacity = jQuery('.map-opacity.active').data('opacity');
+    map.setPaintProperty('heat', 'raster-opacity', state.opacity / 100);
+  }
+  
+  function toggleLabels(show) {
+    setting = 'none';
+    if (show) {
+      setting = 'visible';
+    }
+    map.style.stylesheet.layers.forEach(function(layer) {
+      if (layer.type === 'symbol') {
+        if (map.getLayoutProperty(layer.id, 'visibility') != setting) {
+          map.setLayoutProperty(layer.id, 'visibility', setting);
+        }
+      }
+    });
+  }
+  
+  function toggleMap(show) {
+    setting = 'none';
+    if (show) {
+      setting = 'visible';
+    }
+    map.style.stylesheet.layers.forEach(function(layer) {
+      if (layer.id != 'heat' && layer.id != 'background' && layer.type != 'symbol') {
+        if (map.getLayoutProperty(layer.id, 'visibility') != setting) {
+          map.setLayoutProperty(layer.id, 'visibility', setting);
+        }
+      }
+    });
+  }
+  
+  function idleEvent(e, style, view) {
+    var lat = map.getCenter().lat.toFixed(5);
+    var lng = map.getCenter().lng.toFixed(5);
+    // The plus 1 here is because 512 tiles cause extra zooming, we
+    // thus correct for this so that old links are the same
+    var zoom = (map.getZoom() + 1.0).toFixed(2);
+    router.navigate(zoom + '/' + lng + '/' + lat + '/' + state.color + '/' + state.type, { trigger: false, replace: true });
+  
+    // updateTwitterLink();
+  }
+  
+  var terrainTooltip;
+  function removeTerrainTooltip() {
+    if (terrainTooltip) {
+      terrainTooltip.remove();
+      map.off('mouseup', removeTerrainTooltip);
+    }
+  }
+  function add3dTerrain() {
+    if (!map.getSource('mapbox-dem-terrain')) {
+      map.addSource('mapbox-dem-terrain', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14
+      });
+     setTerrainExaggeration();
+      map.addLayer({
+        id: 'sky',
+        type: 'sky',
+        paint: {
+          // set up the sky layer to use a color gradient
+          'sky-type': 'gradient',
+          // the sky will be lightest in the center and get darker moving radially outward
+          // this simulates the look of the sun just below the horizon
+          'sky-gradient': [
+            'interpolate',
+            ['linear'],
+            ['sky-radial-progress'],
+            0.8,
+            'rgba(135, 206, 235, 1.0)',
+            1,
+            'rgba(0,0,0,0.1)'
+          ],
+          'sky-gradient-center': [0, 0],
+          'sky-gradient-radius': 90,
+          'sky-opacity': [
+            'interpolate',
+            ['exponential', 0.1],
+            ['zoom'],
+            5,
+            0,
+            22,
+            1
+          ]
+        }
+      });
+  
+      if (!terrainTooltip) {
+        terrainTooltip = new mapboxgl.Popup({
+          className: 'terrain-tooltip',
+          closeButton: false,
+          closeOnClick: false,
+          maxWidth: 'none',
+          offset: [0, 40]
+        })
+        .setHTML("Ctrl + click and drag to adjust pitch")
+        .trackPointer()
+        .addTo(map);
+  
+        map.on('mouseup', removeTerrainTooltip);
+      }
+    }
+  }
+  
+  function remove3dTerrain() {
+    map.off('mouseup', removeTerrainTooltip);
+    if (terrainTooltip) {
+      terrainTooltip.remove();
+      terrainTooltip = null;
+    }
+    map.setTerrain(null);
+    map.removeSource('mapbox-dem-terrain');
+    map.removeLayer('sky');
+  }
+  
+  jQuery(function() {
+  
+    var callAuth = "false" === 'true';
+  
+    if (callAuth) {
+      jQuery.ajax( {
+        url: 'https://heatmap-external-a.strava.com/auth',
+        xhrFields: {
+          withCredentials: true
+        }
+      })
+      .done(function() {
+        authorized = true;
+        initMap();
+      })
+      .fail(function () {
+        initMap();
+      })}
+      else {
+        initMap();
+      }
+  
+    // display learn more modal on page load
+    jQuery('#learn-more-modal').modal('show');
+  
+    jQuery('#learn-more-modal').on('hidden.bs.modal', function (e) {
+      var currentMapZoom = map.getZoom();
+      if (authorized === false && currentMapZoom >= getMaxTileZoom && modalShown === false) {
+        jQuery('#zoomed-in-modal').modal('show');
+        modalShown = true;
+      }
+    });
+  
+    jQuery('#view-labels').click(function() {
+      jQuery(this).blur();
+      state.showLabels = !state.showLabels;
+      jQuery(this).toggleClass('active', state.showLabels);
+      toggleLabels(state.showLabels);
+    });
+  
+    jQuery('#view-maps').click(function() {
+      jQuery(this).blur();
+      state.showMaps = !state.showMaps;
+      jQuery(this).toggleClass('active', state.showMaps);
+      toggleMap(state.showMaps);
+    });
+  
+    jQuery('#color-' + state.color).click();
+    jQuery('#type-' + state.type).click();
+  
+    jQuery('#js-sidebar-content').find('input[name="map_color"]').on('change', updateMapStyles);
+    jQuery('#js-sidebar-content').find('input[name="map_opacity"]').on('change', updateOpacity);
+    jQuery('#js-sidebar-content').find('input[name="map_type"]').on('change', updateMapSource);
+    jQuery('#js-sidebar-content').find('input[name="map_style"]').on('change', updateMapStyle);
+  
+    jQuery('#show-3d-terrain').on('change', function() {
+      state.show3dTerrain = !state.show3dTerrain;
+  
+      if (state.show3dTerrain) {
+        add3dTerrain();
+        map.setPitch(70);
+      } else {
+        remove3dTerrain()
+        map.setPitch(0);
+        map.rotateTo(0, { duration: 0 });
+      }
+    });
+  
+    // sidebar hide/show toggle
+    jQuery('#sidebar .title').parent().on('click', function() {
+      if (jQuery('#sidebar .content').is(':hidden')) {
+        jQuery('#sidebar .content').slideDown(100);
+        jQuery('#sidebar .toggle-triangle').removeClass('down-carat');
+        jQuery('#sidebar .toggle-triangle').addClass('up-carat');
+      } else {
+        jQuery('#sidebar .content').slideUp(100);
+        jQuery('#sidebar .toggle-triangle').removeClass('up-carat');
+        jQuery('#sidebar .toggle-triangle').addClass('down-carat');
+      }
+    });
+    // if in "mobile view" don't show the sidebar initially.
+    if (jQuery(window).width() < 700) {
+      jQuery('#sidebar .title').parent().click();
+    }
+    jQuery('#zoomUp').on('click', function() {
+      map.setZoom(map.getZoom() + 1);
+    });
+    jQuery('#zoomDown').on('click', function() {
+      map.setZoom(map.getZoom() - 1);
+    });
+  
+    function resizeHook() {
+      var mapHeight = jQuery(window).height() - jQuery('#global-header').outerHeight();
+      jQuery('#map').height(mapHeight);
+      jQuery('#map').width(jQuery(window).width());
+      if (map){
+        map.resize();
+      }
+    }
+    // window.onresize = resizeHook;
+    jQuery(window).on('resize', resizeHook);
+    resizeHook();
+  });
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register("/service_worker.js?v=dLlWydWlG8").then(function(registration) {
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+<script>
+  jQuery(document).ready(function() {
+    // Scroll Tracking
+    jQuery(document).one('scroll', function(){
+      Strava.ExternalAnalytics.trackV2({
+        category: 'page_scrolled'
+      });
+    });
+  });
+</script>
+<script>
+  // Mobile Menu transition handler
+  jQuery('.collapsable-nav #container-nav')
+    .on('show.bs.collapse', function(){
+      jQuery('.smartbanner-content').slideUp(100);
+      jQuery('html').addClass('mobile-menu-open');
+    })
+    .on('hidden.bs.collapse', function(){
+      jQuery('.smartbanner-content').slideDown(100);
+      jQuery('html').removeClass('mobile-menu-open');
+    });
+</script>
+
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/bootstrap.min-2319b0c15c5e724e0c5d5d22453428398a67760bcea15fef2865429d03387fbc.js"></script>
+
+</body>
+</html>

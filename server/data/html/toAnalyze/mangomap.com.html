@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Socio-Economic Data - Interactive Web Map</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="488" />
+	<meta property="og:image:height" content="386" />
+
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png">
+	
+	<!-- <link rel='shortcut icon' type='image/x-icon' href='/assets/favicon.ico' /> -->
+<!-- 	<link rel="icon" type='image/x-icon' href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type='image/x-icon' href="/assets/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type='image/x-icon' href="/assets/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type='image/x-icon' href="/assets/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type='image/x-icon' href="/assets/favicon-16x16.png" sizes="16x16"> -->
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+	<script type="text/javascript">
+		var _GEO_HOST = "mangomap.com",
+        _PDR_ERV = true;
+
+		/* To Inform safari user who viewing mango in private mode */
+		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		if(isSafari){
+			try {
+				localStorage.setItem('safari-private', '');
+			}
+			catch(err) {
+				alert("Sorry, Safari's private browsing mode is incompatible with Mango. Please view this page in a normal Safari window.");
+			}
+		}
+	</script>
+
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#82b1ff>"
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,900&subset=cyrillic,greek,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+
+	<!-- Init All tracking events -->
+	<script type="text/javascript">(function(o){var b="https://rapidzebra.io/anywhere/",t="6d7fe2f1058940ea97a5f9eb839c4f7137b446fb40914bf187513301294f89bc",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({"app":true});</script>
+	<!-- Testing Segment -->
+
+
+	<!-- End of tracking -->
+  <script type="text/javascript">
+    var OWNER_VIEW = 'false' === 'true',
+    _WORKSPACE_NAME = "users_workspace",
+	_PDR_ERV = true,
+	FOR_PORTAL = false,
+	L_PREFER_CANVAS = true;
+</script>
+
+
+	<link rel="stylesheet" media="all" href="/assets/application_base-fcd0cebdde7c2a7ed084642554a59f502cd350366bc44816e440957cab4d3f57.css" />
+	<link rel="stylesheet" media="all" href="/assets/application-bffde6efe88eab3ce9578214a96432d40588e8d75466acacf3f1cbdde1766895.css" />  
+	<script src="/assets/application-2a264d7b0392ea0d7b76806c7777333ee0450842c4a4e912e9ab57e5ba241811.js"></script>
+
+	<style type="text/css" media="screen">
+		.gray-font{
+			color: #444;
+		}
+		.m-icon_64x64{
+			margin-left: -20px;
+		}
+
+	</style>
+  
+	<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+</script>
+
+
+
+		<script>
+			ga('create', 'UA-21466273-5', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+			<script>
+				ga('create', "UA-21466273-1", 'auto', 'clientTracker');
+				ga('clientTracker.send', 'pageview');
+			</script>
+
+
+
+
+		<meta name="description" content="from 2014 American Community Survey" />
+	<meta name="keywords" content="Socio-Economic Data, Layer Group, Layer Group, Layer Group, Dealer Locations, Median Income (Household), Unemployment Rate, Dealer Locations_61152, Population Density, Dealer Locations_47020" />
+	<meta content='https://mangomap.com/images/thumnails/a3800dd8-a4cd-11e6-9744-06c182e4d011_big.png' property='og:image'>
+	<meta content='Socio-Economic Data' property='og:title'>
+	<meta content="from 2014 American Community Survey" property='og:description'>
+	<meta content='https://mangomap.com/mango-business/maps/57040/Socio-Economic%20Data?map_id=57040' property='og:url'>
+	<meta name="bitly-verification" content="9842ad0cc52f"/>
+
+	<!-- For twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@mangomap">
+	<meta name="twitter:title" content="Socio-Economic Data">
+	<meta name="twitter:description" content="from 2014 American Community Survey">
+	<meta name="twitter:image" content='https://mangomap.com/images/thumnails/a3800dd8-a4cd-11e6-9744-06c182e4d011_big.png'>
+
+	<link rel="stylesheet" media="all" href="/assets/application_map_view-458cba68697c03a7abf22afde2f3bf419b3f4673326ee7465258404b041416f1.css" />
+
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/SO1Rhiez44Wm76gZNj3HOjCORUSmIFtgKmqvGRI/aV60fsihMC6CBIx/Z5mzZGvXsTdns4trze7FT4JwqSvkA==" />
+</head>
+<body>
+	<script>
+	MangoGis.BIG_SPINNER = MangoGis.init("MangoGis.Spinner", $("body"));
+	MangoGis.BIG_SPINNER.show();
+	$(document).ready(function(){
+		MangoGis.PORTAL_SPINNER = MangoGis.init("MangoGis.Spinner", $(".viewport-border"));
+		MangoGis.BIG_SPINNER.hide();
+	});
+</script>
+
+	<div id='big-modal' class="big-modall m-modal" style="display: none;"></div>
+		
+	<div id='small-modal' class="small-modal m-modal" style="display: none;"></div>
+	<div id='big-modal' class="big-modall m-modal" style="display: none;"></div>
+
+		<style type="text/css" media="screen">
+	body{
+		overflow: hidden !important;
+	}
+
+    .left-container{
+        margin-top: 27px;
+    }
+
+    #leaflet-top-left{
+		z-index: 3;
+    }
+
+	.tool_control{
+		z-index: 1202;
+	}
+
+	.loading_control{
+		visibility: hidden;
+	}
+
+</style>
+
+<div class="fixed full loading-container-big top-left display-none" style="z-index: 21422;"></div>
+
+
+
+<div class="roboto-condensed">
+
+
+	<div id="m-main-container" style="background: #9D9D9D;">
+		
+			<style type="text/css" media="screen">
+	.content-section {
+		display: flex; /* or inline-flex */
+		flex-direction: row;
+	}
+
+	.flex_item {
+	  flex-grow: 0; 
+	}
+
+	.flex_item_align_center{
+		align-self: center;
+	}
+
+	.flex_item_align_end{
+		align-self: flex-end;
+	}
+
+	.flex_item_grow_1{
+		flex-grow: 1;
+	}
+</style>
+
+	<div id="map_header" class="map_header relative" style="z-index: 1001; width: 100%; background: #0c47a1">
+
+			<div class="padding-medium content-section">
+				
+				<div class="flex_item flex_item_align_center custom-logo-container">
+					
+						<div>
+							<img src="//mangomap.com/images/custom_logos/7dd05f24-a4a1-11e6-a028-06c182e4d011/default/84a24f5e-41e2-11e7-bc99-06c182e4d011.png" alt="Socio-Economic Data | mango-business" style="height: 70px;" class="map_logo custom_logo" />	
+						</div>
+
+				</div>
+
+				<div class="margin-left-large margin-right-4xlarge flex_item flex_item_align_center long-and-description" style="color: #ebeef0;">
+					<div class="map-name-and-description margin-left-medium">
+						<h1 class="h1 title bold no-margin" style="font-size: 24px;">Socio-Economic Data</h1>		
+							<h2 class="h2 display-block description no-margin">from 2014 American Community Survey</h2>
+					</div>
+				</div>
+
+				<div class="flex_item_grow_1 flex_item_align_center menu_holder">
+					<div class="pull-right menu-container">
+
+</div>
+
+<div class='menu-popup no-padding display-none' style="border: none;">
+	<div class='gray_background' style='height: 60px; width: 100%; color: #FFF; background: #82b1ff;'><div class='padding-left-medium table-cell vertical-align-middle bold' style='height: 60px; font-size: 20px;'><div class='box-title'>title</div></div></div>
+	<div class='redactor-editor padding-large content-popup scroll-y'></div>
+	<div class="footer-popup display-none gray_background padding-top-large padding-bottom-large" style="width: 100%; background: #82b1ff;"><div id="accept-button-container" class="margin-right-xlarge" style="height: 36px;"></div></div>
+</div>
+
+				</div>
+
+			</div>
+
+		<div class="class">
+			<div class="map-header-menu" style="background-color: #82b1ff !important; color: #FFF;">
+	<div class="kite kite--top kite--fill">
+		<div class="kite__item">
+				<div class="menu_item expand-collapse" group="portal-nav">
+					<i class="fa fa-chevron-up" aria-hidden="true"></i>
+				</div>
+
+				<div class="menu_item" group="portal-nav" data-open-current-tab="true" title="Maps" data-url="/mango-business/maps"  style="width: 80px;">
+					<i class="ms ms-sphere"></i>
+					Maps	
+				</div>
+				<div class="menu_item" group="portal-nav" data-open-current-tab="true" title="Data" data-url="/mango-business/data" style="width: 80px;">
+					<i class="ms ms-database-o"></i>
+					Data	
+				</div>
+		</div>
+		<div class="pull_right menu-right">
+
+
+
+				<div class="kite__item menu_item map-bookmark" group="map-header-control"><i class="fa fa-bookmark" ></i></div>
+				<div class="kite__item menu_item map-share" group="map-header-control"><i class="fa fa-share-alt "></i></div>
+			
+				<i class="kite__item menu_item zoom-in ms ms-zoom-in" group="map-header-control"></i>
+				<i class="kite__item menu_item zoom-out ms ms-zoom-out" group="map-header-control"></i>
+
+				<i class="kite__item menu_item ms ms-printer print-map" group="map-header-control"></i>
+
+				<div class="kite__item menu_item refresh" group="map-header-control"><i class="fas fa-sync-alt"></i></div>
+
+				<div class="kite__item menu_item new-search-container" group="no-group">
+					<div class="search-menu-container display-none">
+						<div class="padding-bottom-small auto-complete-header padding-top-small padding-left-small" style="background-color: #82b1ff !important; color: #FFF;display: block;">
+							<div class="kite kite--middle kite--fill cursor-pointer">
+								<div data-value="address_search" class="address_search kite__item search-menu-item"><i class="fa fa-home margin-right-small" aria-hidden="true"></i>Address</div>
+								<div data-value="attribute_search" class="attribute_search kite__item search-menu-item"><i class="ms ms-layers margin-right-small" aria-hidden="true"></i>Data</div>
+								<div data-value="coordinate_search" class="coordinate_search kite__item search-menu-item"><i class="fa fa-crosshairs margin-right-small" aria-hidden="true"></i>Coordinate</div>
+							</div>
+						</div>
+						<div class="address-dropdown-menu-container" class="standard-color"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+	
+		</div>
+	</div>
+
+
+
+
+		<div id="viewport" class="viewport fixed"></div>
+
+		<div class="sharing-controls-container absolute"></div>
+
+		<div class="identify-panel">
+			
+			<div class="kite kite--top kite--fill">
+				<div class="kite__item tools-panel-body identify-body relative">
+					<div class="title-bar" style="background-color: #82b1ff !important;">
+						<div class="kite__item bold center full-width identify-title m-text_ellipsis" style="width: 280px;">Feature Info </div>
+					</div>
+					<div id="info-window-container" class=""></div>
+				</div>
+				<div class="tool-menu" style="background-color: #82b1ff !important; color: #FFF;">
+					<div class="vmenu_item menu_item collapse-identify" group="identify-control"><i class="fa fa-chevron-right"></i></div>
+				
+						<div class="display-none identify-tool-controls">
+							<i class="ms ms-draw-line editing_btn vmenu_item menu_item" group="identify-control"></i>	
+							<i class="ms ms-draw-extent editing_geometry_btn vmenu_item menu_item" group="identify-control"></i>
+							<div class="display-none">
+								<div class="editing_permission_btn vmenu_item menu_item" group="identify-control">
+									<i class="fa fa-users"></i>
+								</div>
+							</div> 
+							<div class="add_geometry_btn vmenu_item menu_item" group="identify-control"><i class="fas fa-plus "></i></div>
+							<div class="remove-feature warning vmenu_item menu_item" group="identify-control"><i class="fas fa-trash "></i></div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="open-legend absolute open-legend-collapsed" style="background-color: #82b1ff !important;"></div>
+
+		<div class="map-tools-panel" >
+			<div class="absolute copyright_footer m-text_ellipsis">
+				<div class="base_map_attr_container pull_right">
+					<div class="kite kite--middle trans-white  map-attr-big-screen m-attribution pull_right padding-small">
+						<div class="kite__item kite--middle attribution-text margin-right-small display-none">
+							<div class="copyright_text kite__item"></div>
+							<div class="kite__item base_map_attr">
+								<span class="kite__item base-map-lang display-inline">Base map</span> 
+							</div>
+						</div>
+						<i class="cursor-pointer attribution-info kite__item far fa-info-circle" style="font-size: 15px;"></i>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="tools-and-legend kite kite--top kite--fill">
+				<div class="tool-menu legend-tool-menu " style="background-color: #82b1ff !important; color: #FFF;">
+					<div class="vmenu_item menu_item expand-collapse-map-tools" group="map-tool-control" id="expand-collapse-map-tools"><i class="fa fa-chevron-right "></i></div>
+					<i class="ms ms-layers vmenu_item menu_item" id="legend-container" group="map-tool-control"></i>	
+
+
+
+
+						<div class="center vmenu_item menu_item" id="bookmark-control-container" group="map-tool-control"><i class="fa fa-bookmark "></i></div>
+					
+				</div>
+
+				<div class="kite__item full-height legend-container-loader relative" style="background: #FFF;">
+					<div class="title-bar" style="background-color: #82b1ff !important;">
+						<div class="kite__item bold center full-width tool-title m-text_ellipsis"></div>
+					</div>
+					<div class="tools-panel-body legend-panel-body relative">
+						<div class="legend-container display-none">
+
+							<div id="MangoGis-legend-container" class="no-padding scroll-y" style="width: 300px; max-height: 200px;">
+	<div class='legend relative legend_visible'>
+		<div class="legend_body" id="legend_body">
+
+
+			   <div class="relative m-group-container  " id="8b70c3d0-a4ce-11e6-b922-06c182e4d011" data-id="8b70c3d0-a4ce-11e6-b922-06c182e4d011" >
+						<div class="absolute pull_right" style="z-index: 2; right: 5px; top: 9px;"><input name="legend-radio" id="radio-8b70c3d0-a4ce-11e6-b922-06c182e4d011" data-id="8b70c3d0-a4ce-11e6-b922-06c182e4d011"  class="layer-group-toggle m-radio absolute layer-group-switch" type="radio" checked ><label class="" for="radio-8b70c3d0-a4ce-11e6-b922-06c182e4d011"></label></div>
+
+					<div id="group-layer-container-8b70c3d0-a4ce-11e6-b922-06c182e4d011" class="kite kite--top kite--fill m-group-layer group-layer-container ">
+						<div class="kite__item margin-left-small">
+
+									<!-- Raster Layer or WMS Layer -->
+
+
+									<!--Single Color -->
+										<div class="layer_container m-layer-container layer_75adfcf2-e6c3-11e6-8c63-06c182e4d011">
+											<div class="layer-body">
+												<div class="m-layer-content">
+													<h1 class="basic_title no-margin m-layer-title" title="Dealer Locations">Dealer Locations<br/></h1>
+													<h2 class="m-sub-header weight-normal m-layer-description margin-top-small display-none"></h2>
+												</div>
+												<div class="margin-left-xlarge margin-top-small">
+													<div id="layer-icon-container-75adfcf2-e6c3-11e6-8c63-06c182e4d011" class="layer-icon-container"></div>
+												</div>
+											</div>
+										</div>
+
+
+									<!-- Raster Layer or WMS Layer -->
+
+
+									<!--Single Color -->
+										<div class="layer_container m-layer-container layer_364f5a42-a4ce-11e6-b922-06c182e4d011">
+											<div class="layer-body">
+												<div class="kite kite--fill">
+													<div class="m-layer-content">
+														<h1 class="basic_title no-margin m-layer-title" title="Median Income (Household)">Median Income (Household)<br/></h1>
+														<h2 class="m-sub-header weight-normal m-layer-description display-none"></h2>
+													</div>
+												</div>
+												<div id="layer-icon-container" class="padding-top-medium layer-icon-container padding-left-xlarge">
+													<!-- Graduated Color Layer -->
+
+														<!-- Bubble Legend -->
+															<div id="layer-icon-container-364f5a42-a4ce-11e6-b922-06c182e4d011" data-style="horizontal" class="layer-icon-container"></div>
+
+
+													<!-- Unique Color -->
+												</div>
+
+												<div class="kite kite--middle kite--fill padding-left-xlarge">
+													<div class="m-layer-content">
+														<div class="full-width label-container" id="label-container-364f5a42-a4ce-11e6-b922-06c182e4d011" ></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+
+						</div>
+					</div>
+					<div class="absolute full m-trans-overlay display-none"></div>
+				</div>
+
+
+			   <div class="relative m-group-container  layergroup-print-hidden m-layer-hidden" id="f014fbb8-a4cd-11e6-a87e-06c182e4d011" data-id="f014fbb8-a4cd-11e6-a87e-06c182e4d011" >
+						<div class="absolute pull_right" style="z-index: 2; right: 5px; top: 9px;"><input name="legend-radio" id="radio-f014fbb8-a4cd-11e6-a87e-06c182e4d011" data-id="f014fbb8-a4cd-11e6-a87e-06c182e4d011"  class="layer-group-toggle m-radio absolute layer-group-switch" type="radio"  ><label class="" for="radio-f014fbb8-a4cd-11e6-a87e-06c182e4d011"></label></div>
+
+					<div id="group-layer-container-f014fbb8-a4cd-11e6-a87e-06c182e4d011" class="kite kite--top kite--fill m-group-layer group-layer-container ">
+						<div class="kite__item margin-left-small">
+
+									<!-- Raster Layer or WMS Layer -->
+
+
+									<!--Single Color -->
+										<div class="layer_container m-layer-container layer_ded06932-a4cd-11e6-b922-06c182e4d011">
+											<div class="layer-body">
+												<div class="kite kite--fill">
+													<div class="m-layer-content">
+														<h1 class="basic_title no-margin m-layer-title" title="Unemployment Rate">Unemployment Rate<br/></h1>
+														<h2 class="m-sub-header weight-normal m-layer-description display-none"></h2>
+													</div>
+												</div>
+												<div id="layer-icon-container" class="padding-top-medium layer-icon-container padding-left-xlarge">
+													<!-- Graduated Color Layer -->
+
+														<!-- Bubble Legend -->
+															<div id="layer-icon-container-ded06932-a4cd-11e6-b922-06c182e4d011" data-style="horizontal" class="layer-icon-container"></div>
+
+
+													<!-- Unique Color -->
+												</div>
+
+												<div class="kite kite--middle kite--fill padding-left-xlarge">
+													<div class="m-layer-content">
+														<div class="full-width label-container" id="label-container-ded06932-a4cd-11e6-b922-06c182e4d011" ></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+
+						</div>
+					</div>
+					<div class="absolute full m-trans-overlay display-none"></div>
+				</div>
+
+
+			   <div class="relative m-group-container  layergroup-print-hidden m-layer-hidden" id="a381cb28-a4cd-11e6-9744-06c182e4d011" data-id="a381cb28-a4cd-11e6-9744-06c182e4d011" >
+						<div class="absolute pull_right" style="z-index: 2; right: 5px; top: 9px;"><input name="legend-radio" id="radio-a381cb28-a4cd-11e6-9744-06c182e4d011" data-id="a381cb28-a4cd-11e6-9744-06c182e4d011"  class="layer-group-toggle m-radio absolute layer-group-switch" type="radio"  ><label class="" for="radio-a381cb28-a4cd-11e6-9744-06c182e4d011"></label></div>
+
+					<div id="group-layer-container-a381cb28-a4cd-11e6-9744-06c182e4d011" class="kite kite--top kite--fill m-group-layer group-layer-container ">
+						<div class="kite__item margin-left-small">
+
+									<!-- Raster Layer or WMS Layer -->
+
+
+									<!--Single Color -->
+										<div class="layer_container m-layer-container layer_aa6b2fb0-a4cd-11e6-9744-06c182e4d011">
+											<div class="layer-body">
+												<div class="kite kite--fill">
+													<div class="m-layer-content">
+														<h1 class="basic_title no-margin m-layer-title" title="Population Density">Population Density<br/></h1>
+														<h2 class="m-sub-header weight-normal m-layer-description display-none"></h2>
+													</div>
+												</div>
+												<div id="layer-icon-container" class="padding-top-medium layer-icon-container padding-left-xlarge">
+													<!-- Graduated Color Layer -->
+
+														<!-- Bubble Legend -->
+															<div id="layer-icon-container-aa6b2fb0-a4cd-11e6-9744-06c182e4d011" data-style="horizontal" class="layer-icon-container"></div>
+
+
+													<!-- Unique Color -->
+												</div>
+
+												<div class="kite kite--middle kite--fill padding-left-xlarge">
+													<div class="m-layer-content">
+														<div class="full-width label-container" id="label-container-aa6b2fb0-a4cd-11e6-9744-06c182e4d011" ></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+
+						</div>
+					</div>
+					<div class="absolute full m-trans-overlay display-none"></div>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+
+						</div>
+						<div class="query-container display-none">
+							<div id="query-tool-body" class="query-tool-body no-padding overflow-hidden" style="width: 300px;">
+								<div class="query_tool_control_container"></div>
+							</div>
+						</div>
+						<div class="proximity-container display-none">
+							<div id="proximity-analysis-tool-body" class="no-padding overflow-hidden proximity-analysis-tool-body" style="width: 300px;">
+								<div class="proximity_analysis_tool_control_container"></div>
+							</div>
+						</div>
+						<div class="advanced-search-container display-none">
+							<div id="advanced-search-tool-body" class="no-padding overflow-hidden" style="width: 300px;">
+								<div class="advanced_search_control_container"></div>
+							</div>
+						</div>
+						<div class="base-map-container scroll-y display-none">
+						</div>
+						<div class="share-map-container display-none"></div>
+						<div class="street-view-container display-none absolute full-height">
+							<div class="middle-vertical padding-medium center">
+								<div>
+									Center your desired location under the cross hairs and click the launch streetview button.
+								</div>
+								<div class="launch-button button neutral margin-top-medium margin-center" style="width: 150px;">Launch Streetview</div>
+							</div>
+						</div>
+						<div class="geo-location-container display-none absolute full">
+							<div class="middle-vertical padding-medium center geolocation-container"></div>
+						</div>
+						<div class="measuring-container display-none">
+							<div class="kite kite--middle kite--fill">
+								<div class="kite__item center padding-large half-width cursor-pointer measure-distance">
+									<i class="ms ms-measure-distance" style="font-size: 50px;"></i>
+									</br>
+									<span>Measure distances</span>
+								</div>
+								<div class="kite__item center padding-large border-left-gray cursor-pointer half-width measure-area">
+									<i class="ms ms-measure-area" style="font-size: 50px;"></i>
+									</br>
+									<span>Measure areas</span>
+								</div>
+							</div>
+							<div class="measuring-instruction padding-small gray_background center"></div>
+
+							<div class="margin-top-medium " style="height: 30px;">
+								<div class="measuring-result center bold display-none"></div>
+							</div>
+
+							<div class="reset_measure_btn button margin-center" style="width: 100px; background-color: #82b1ff !important; color: #FFF;">
+								Reset
+							</div>
+
+						</div>
+						<div class="bookmark-control-container display-none scroll-y"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<h3 class="legend_footer padding-medium" style="background-color: #82b1ff !important;">
+				<a class="no-underline mango-branding-logo" target="_blank" style="color: #FFF" href="https://mangomap.com/?utm_source=mango&utm_medium=map&utm_campaign=map_legend">
+					<div class="kite kite--middle">
+						<div class="kite__item">
+							<img style="vertical-align:middle" alt="Icon" src="/assets/favicon-20x20.png" />
+						</div>
+						<div class="kite__item margin-left-small">
+							<span class="powered-by">CREATED WITH </span>
+						</div>
+						<div class="kite__item">
+							<span class="mango-color-orange" style="padding-left: 3px;">MANGO</span>
+						</div>
+					</div>
+				</a>
+			</h3>
+
+	</div>
+	<div class="query-table-container display-none">
+		<div class="kite kite--middle kite--fill" style="background-color: #82b1ff !important;">
+			<div class="kite__item padding-medium flex-big-item bold query-result-table-header important-client m-text_ellipsis">Selection Table</div>
+			<div class="kite__item kite--right close-query-result-btn align-self-center margin-right-large center bold cursor_pointer padding-right-large" style="font-size: 20px;">
+				<i class="fa fa-times" style="font-size: 30px;"></i>
+			</div>
+		</div>
+		<div class="query-table-body scroll-x panel-text">
+		</div>
+	</div>
+</div>
+
+
+	<div class="display-none m-unsupport-banner orange-back-ground table center">
+	<div class="table-cell vertical-align-middle kite kite--middle">
+		<div class="kite__item bold">Your browser is out of date! Update your browser to view this website correctly.</div> 
+		<div class="kite__item m-medium-button dark-green-button margin-left-small" style="padding: 6px 10px;"><a class="no-underline" style="color: #FFF;" href="http://browsehappy.com/">Upgrade My Browser Now</a></div>
+	</div>
+</div>
+
+
+	<!-- Custom theme -->
+	<link rel="stylesheet" media="screen" href="/assets/themes/light-a21f954a350bd14d78a8aac46fd76c16e8d654d3f6ba52c76ad7913043486053.css" />
+
+	<script src="/assets/application_map_view-0e79defcb4b8a3403f19ca783126b37f75489e524213cf6137ec569f64de7156.js"></script>
+
+
+		<script>
+		MangoGis.SPINNER = MangoGis.init("MangoGis.Spinner", $(".loading-container-big"));
+		//MangoGis.SPINNER.show();
+	</script>
+		<script src="//cdn.maptiks.com/maptiks-leaflet.min.js"></script>
+		<script>
+			maptiks.trackcode="acf6ecc8-324a-45b9-a84b-10d403b5171f";
+		</script>
+
+	<script type="text/javascript" charset="utf-8">
+		var map;
+		var USER_EMAIL = "";
+		(function($) {			
+			HIGHLIGHT_LAYER_POPUP = new L.InfoWindowPanel();
+
+			MangoGis.MAP_PRESENTER = MangoGis.init("MangoGis.MapPresenter", "a3800dd8-a4cd-11e6-9744-06c182e4d011", true); 
+
+			if( MangoGis.Util.msie() && parseInt( MangoGis.Util.browserVersion ) < 10  ) {
+				$(".unsupport-banner").show();
+			}
+			
+			MangoGis.SPINNER.hide();
+		}(jQuery));
+		
+	</script>
+
+	
+</body>
+</html>
