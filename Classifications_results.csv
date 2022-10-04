@@ -1,0 +1,40 @@
+urls;cp;cdt;sc;;;
+https://howmuch.net/cost-of-living/ny/new-york;IGV;IGV;TRUE;;;
+https://urban.jrc.ec.europa.eu/trends?lng=en&ctx=ardeco&ts=ARDECO&pil=indicator-level&is=ARDECO;IGV;noIV;FALSE;;;
+https://data.unhcr.org/en/country/uga;IGV;noIV;FALSE;;;cp= classifications made by participants
+https://pbpmaps.carto.com/builder/45180c5a-29d4-11e7-8c77-0e05a8b3e3d7/embed;IGV;IGV;TRUE;;;cdt= classifications made by the decision tree
+https://www.google.com/maps;IGV;noIV;FALSE;;;sc= same classification
+https://www.bing.com/maps;IGV;noIV;FALSE;;;
+https://www.maptiler.com/maps/3d/#10.7466/46.7681/11992/270/-20;IGV;IGV;TRUE;;;
+https://vaccinevisualizer.com/;IGV;IGV;TRUE;;;
+https://public.tableau.com/app/profile/sat.covid.dashboard/viz/SATCOVIDDashboard/1-dash-tiles;IV;IV;TRUE;;;
+https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg;IV;noIV;FALSE;;;
+https://www.innerbody.com/image/cardov.html;IV;IGV;FALSE;;;
+https://www.federalreserve.gov/releases/z1/dataviz/dfa/compare/chart/;IV;IV;TRUE;;;
+https://formidable.com/open-source/victory/gallery/brush-and-zoom;IV;noIV;FALSE;;;
+https://canvasjs.com/javascript-charts/synchronized-charts/;IV;noIV;FALSE;;;
+https://www.highcharts.com/demo/spline-inverted;IV;IV;TRUE;;;
+https://apexcharts.com/angular-chart-demos/box-whisker-charts/boxplot-scatter/;IV;IV;TRUE;;;
+https://www.dwitter.net/;IV;IV;TRUE;;;
+https://mynoise.net/;noIV;noIV;TRUE;;;
+https://www.google.de/;noIV;noIV;TRUE;;;
+https://twitter.com/;noIV;noIV;TRUE;;;
+https://duckduckgo.com/;noIV;IV;FALSE;;;
+https://www.ebay.de/;noIV;noIV;TRUE;;;
+https://www.youtube.com/;noIV;noIV;TRUE;;;
+https://www.esa.int/;noIV;noIV;TRUE;;;
+;;;;;;
+;;;;;;
+IGVs classified right;4;;;;;
+IGVs classified wrong;4;;;;0;
+IGVs percent classified right;0,5;;;amount of FALSE classifications;9;
+;;;;amount of TRUE classifications;15;
+;;;;;;
+IVs classified right;5;;;classifications made right;0,63;
+IVs classified wrong;4;;;;;
+IVs percent classified right;0,555555556;;;;;
+;;;;;;
+;;;;;;
+noIVs classified right;6;;;;;
+noIVs classified wrong;1;;;;;
+noIVs percent classified right;0,857142857;;;;;
