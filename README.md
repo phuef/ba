@@ -1,6 +1,6 @@
 
 # About
-This repository contains a prototypical implementation of a search engine for interactive (geo) visualizations. It consists of a server handling the search queries and a website providing the user interface. 
+This repository contains a prototypical implementation of a search engine for interactive (geo) visualizations, used in [https://doi.org/10.5194/agile-giss-4-27-2023](https://doi.org/10.5194/agile-giss-4-27-2023). It consists of a server handling the search queries and a website providing the user interface. 
 
 # Website
 The User Interface enables the user to search for keywords, through the search bar.
